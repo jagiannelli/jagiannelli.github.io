@@ -1,191 +1,220 @@
 <!DOCTYPE html>
 <!--**************************************-->
-<!--* Generated from MathBook XML source *-->
-<!--*    on 2016-12-28T22:59:32Z    *-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:44+01:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
-<html>
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>JAG Second Order Differential Equations</title>
-<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
-// contrib directory for accessibility menu, moot after v2.6+?
-MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        // [Contrib]accessibility menu moot after v2.6+?
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
-        equationNumbers: { autoNumber: "none",
-                           useLabelIds: true,
-                           // JS comment, XML CDATA protect XHTML quality of file
-                           // if removed in XSL, use entities
-                           //<![CDATA[
-                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
-                           //]]>
-                         },
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
         TagSide: "right",
         TagIndent: ".8em",
     },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
     "HTML-CSS": {
         scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
     },
 });
-    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>$(function () {
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
     // Make *any* div with class 'sagecell-sage' an executable Sage cell
     // Their results will be linked, only within language type
     sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
                            linked: true,
                            languages: ['sage'],
-                           evalButtonText: 'Evaluate Sage Code'});
+                           evalButtonText: 'Evaluate (Sage)'});
 });
 </script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="jagbook.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
-\newcommand{\notdivide}{{\not{\mid}}}
-\newcommand{\notsubset}{\not\subset}
-\newcommand{\lcm}{\operatorname{lcm}}
-\newcommand{\gf}{\operatorname{GF}}
-\newcommand{\inn}{\operatorname{Inn}}
-\newcommand{\aut}{\operatorname{Aut}}
-\newcommand{\Hom}{\operatorname{Hom}}
-\newcommand{\cis}{\operatorname{cis}}
-\newcommand{\chr}{\operatorname{char}}
-\newcommand{\Null}{\operatorname{Null}}
-\newcommand{\lt}{ &lt; }
-\newcommand{\gt}{ &gt; }
-\newcommand{\amp}{ &amp; }
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+\newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+\newcommand{\fd}[1]{#1'}
+\newcommand{\sd}[1]{#1''}
+\newcommand{\td}[1]{#1'''}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand \dd[1]  { \,\textrm d{#1}                       }   
+\newcommand \de[2]  { \frac{\mathrm d{#1}}{\mathrm d{#2}}   }   
+\newcommand \intl[4]{ \int\limits_{#1}^{#2}{#3}\dd{#4}      }   
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://www.giannelli.co.uk" target="_blank"><img src="images/cover_aata_2014.png"></a><div class="title-container">
+<a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg" alt="Logo image for document"></a><div class="title-container">
 <h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
 <p class="byline"></p>
 </div>
 </div></div>
-<nav id="primary-navbar"><div class="container">
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-part-1.html">Index</a><a class="next-button button toolbar-item" href="system-of-de.html">Next</a><a class="up-button button toolbar-item" href="differential.html">Up</a><a class="previous-button toolbar-item button" href="first-order-de.html">Prev</a>
+<a class="index-button toolbar-item button" href="index-38.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="first-order-de.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="differential.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="system-of-de.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="first-order-de.html">Prev</a><a class="up-button button toolbar-item" href="differential.html">Up</a><a class="next-button button toolbar-item" href="system-of-de.html">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="first-order-de.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="differential.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="system-of-de.html" title="Next" alt="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter.html"><span class="title">Front Matter</span></a></h2>
+<nav id="toc"><h2 class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></h2>
 <ul>
-<li><a href="biography-1.html">About John A Giannelli</a></li>
-<li><a href="dedication-1.html">Dedication</a></li>
-<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
-<li><a href="preface-1.html">Preface</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">About John A Giannelli</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 </ul>
-<h2 class="link"><a href="sets.html"><span class="codenumber">1</span><span class="title">Quick Guide to SageMath</span></a></h2>
+<h2 class="link"><a href="sets.html" data-scroll="sets"><span class="codenumber">1</span><span class="title">Quick Guide to Using SageMath</span></a></h2>
 <ul>
-<li><a href="sage-online.html">SageMath Online</a></li>
-<li><a href="section-2.html">Running From Source</a></li>
-<li><a href="section-3.html">Executing Sage Commands</a></li>
+<li><a href="sage-online.html" data-scroll="sage-online">SageMath Online</a></li>
+<li><a href="section-2.html" data-scroll="section-2">Running From Source</a></li>
 </ul>
-<h2 class="link"><a href="basics.html"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
+<h2 class="link"><a href="basics.html" data-scroll="basics"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
 <ul>
-<li><a href="section-4.html">How to define functions</a></li>
-<li><a href="section-5.html">Symbolic Manipulation</a></li>
-<li><a href="section-6.html">Declaring Variables and Plotting</a></li>
+<li><a href="section-3.html" data-scroll="section-3">Executing Sage Commands</a></li>
+<li><a href="section-4.html" data-scroll="section-4">How to define functions</a></li>
+<li><a href="section-5.html" data-scroll="section-5">Symbolic Manipulation</a></li>
+<li><a href="section-6.html" data-scroll="section-6">Declaring Variables and Plotting</a></li>
+<li><a href="section-7.html" data-scroll="section-7">Sage and Python</a></li>
 </ul>
-<h2 class="link"><a href="integers.html"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
+<h2 class="link"><a href="integers.html" data-scroll="integers"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
 <ul>
-<li><a href="calculus-limits.html">Calculating Limits</a></li>
-<li><a href="calculus-integration.html">Integration</a></li>
-<li><a href="integers-sage.html">Sage</a></li>
-<li><a href="integers-sage-exercises.html">Sage Exercises</a></li>
-<li><a href="references-1.html">References</a></li>
+<li><a href="calculus-limits.html" data-scroll="calculus-limits">Calculating Limits</a></li>
+<li><a href="calculus-derivatives.html" data-scroll="calculus-derivatives">Derivatives</a></li>
+<li><a href="calculus-integration.html" data-scroll="calculus-integration">Integration</a></li>
+<li><a href="integers-sage.html" data-scroll="integers-sage">Sage</a></li>
+<li><a href="cap-2017-hw2.html" data-scroll="cap-2017-hw2">CAP 2017, HW 2 due January 31</a></li>
+<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 3 due February 7</a></li>
+<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 4 due February 14</a></li>
+<li><a href="references-2.html" data-scroll="references-2">References</a></li>
 </ul>
-<h2 class="link active"><a href="differential.html"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
+<h2 class="link active"><a href="differential.html" data-scroll="differential"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
 <ul>
-<li><a href="first-order-de.html">First Order Differential Equations</a></li>
-<li><a href="second-order-de.html" class="active">Second Order Differential Equations</a></li>
-<li><a href="system-of-de.html">Systems Of Equations</a></li>
-<li><a href="exercises-de.html">Exercises</a></li>
-<li><a href="references-2.html">References (places I plagiarized)</a></li>
+<li><a href="first-order-de.html" data-scroll="first-order-de">First Order Differential Equations</a></li>
+<li><a href="second-order-de.html" data-scroll="second-order-de" class="active">Second Order Differential Equations</a></li>
+<li><a href="system-of-de.html" data-scroll="system-of-de">Systems Of Equations</a></li>
+<li><a href="exercises-de.html" data-scroll="exercises-de">Exercises</a></li>
+<li><a href="references-3.html" data-scroll="references-3">References (places I plagiarized)</a></li>
 </ul>
-<h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
+<h2 class="link"><a href="linear-algebra-exam.html" data-scroll="linear-algebra-exam"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
 <ul>
-<li><a href="appendix-1.html">Notation</a></li>
-<li><a href="appendix-2.html">Hints and Solutions to Selected Exercises</a></li>
-<li><a href="appendix-gfdl.html">GNU Free Documentation License</a></li>
-<li><a href="index-part-1.html">Index</a></li>
-<li><a href="colophon-1.html">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="second-order-de"><header title="Section 4.2 Second Order Differential Equations"><h1 class="heading hide-type" alt="Section 4.2 Second Order Differential Equations">
-<span class="type">Section</span><span class="codenumber">4.2</span><span class="title">Second Order Differential Equations</span><a href="second-order-de.html" class="permalink">¶ permalink</a>
-</h1></header><section class="subsection" id="subsection-8"><header title="Subsection 4.2.1 First Example"><h1 class="heading hide-type" alt="Subsection 4.2.1 First Example">
+<li><a href="section-18.html" data-scroll="section-18">A1</a></li>
+<li><a href="section-19.html" data-scroll="section-19">A2</a></li>
+<li><a href="section-20.html" data-scroll="section-20">A3</a></li>
+<li><a href="section-product-rule.html" data-scroll="section-product-rule">The Product Rule</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
+<li><a href="appendix-2.html" data-scroll="appendix-2">Hints and Solutions to Selected Exercises</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="index-38.html" data-scroll="index-38">Index</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="second-order-de"><header title="Section 4.2 Second Order Differential Equations"><h2 class="heading hide-type" alt="Section 4.2 Second Order Differential Equations">
+<span class="type">Section</span><span class="codenumber">4.2</span><span class="title">Second Order Differential Equations</span>
+</h2>
+<a href="second-order-de.html" class="permalink">¶</a></header><section class="subsection" id="subsection-10"><header title="Subsection 4.2.1 First Example"><h3 class="heading hide-type" alt="Subsection 4.2.1 First Example">
 <span class="type">Subsection</span><span class="codenumber">4.2.1</span><span class="title">First Example</span>
-</h1></header><p id="p-107">For this first example, we'll look at a harmonic oscillator problem with unit constants.</p>\begin{equation}\frac{d^2 y}{dx^2} + y(x) = 0\label{men-11}\tag{4.2.1}\end{equation}<p id="p-108">Initial conditions:</p>\begin{equation}y(0) = 0\label{men-12}\tag{4.2.2}\end{equation}\begin{equation}\frac{dy}{dx}(0) = 1\label{men-13}\tag{4.2.3}\end{equation}<section class="subsubsection" id="subsubsection-6"><header title="Subsubsection 4.2.1.1 The General Solution"><h1 class="heading hide-type" alt="Subsubsection 4.2.1.1 The General Solution">
+</h3></header><p id="p-240">For this first example, we'll look at a harmonic oscillator problem with unit constants.</p>
+\begin{equation}
+\frac{d^2 y}{dx^2} + y(x) = 0\tag{4.2.1}
+\end{equation}
+<p id="p-241">Initial conditions:</p>
+\begin{equation}
+y(0) = 0\tag{4.2.2}
+\end{equation}
+
+\begin{equation}
+\frac{dy}{dx}(0) = 1\tag{4.2.3}
+\end{equation}
+<section class="subsubsection" id="subsubsection-13"><header title="Subsubsection 4.2.1.1 The General Solution"><h4 class="heading hide-type" alt="Subsubsection 4.2.1.1 The General Solution">
 <span class="type">Subsubsection</span><span class="codenumber">4.2.1.1</span><span class="title">The General Solution</span>
-</h1></header><p id="p-109">As before, we define \(y(x)\) and our DE. Notice the \(2\) as the third argument to the 
+</h4></header><p id="p-242">As before, we define \(y(x)\) and our DE. Notice the \(2\) as the third argument to the <tt class="code-inline tex2jax_ignore">
                     diff()
-                 method.
-                    This tells the method to differentiate twice. We could have used diff(y,x,x) instead.
-                    Notice also we are using the alias <!--Style me with CSS--><em>diff</em> for <!--Style me with CSS--><em>derivative</em>.
-                </p>
-<div class="sagecell-sage" id="sage-43"><script type="text/x-sage">y = function('y')(x)
+                </tt> method. This tells the method to differentiate twice. We could have used <tt class="code-inline tex2jax_ignore">diff(y,x,x)</tt> instead. Notice also we are using the alias <em class="emphasis">diff</em> for <em class="emphasis">derivative</em>.</p>
+<div class="sagecell-sage" id="sage-88"><script type="text/x-sage">y = function('y')(x)
 harmonic = diff(y,x,2) + y == 0
 harmonic
 </script></div>
-<p id="p-110">Now obtain the general solution:</p>
-<div class="sagecell-sage" id="sage-44"><script type="text/x-sage">sol_general = desolve(harmonic,y)
+<p id="p-243">Now obtain the general solution:</p>
+<div class="sagecell-sage" id="sage-89"><script type="text/x-sage">sol_general = desolve(harmonic,y)
 show(sol_general)
 </script></div>
-<p id="p-111">This is the general solution as can be seen by the \(K_1,K_2\) constants.
-                </p>
-<p id="p-112">
-                    \begin{equation}K_{2} \cos\left(x\right) + K_{1} \sin\left(x\right)\label{men-14}\tag{4.2.4}\end{equation}
-                </p></section><section class="subsubsection" id="subsubsection-7"><header title="Subsubsection 4.2.1.2 Initial Conditions"><h1 class="heading hide-type" alt="Subsubsection 4.2.1.2 Initial Conditions">
+<p id="p-244">This is the general solution as can be seen by the \(K_1,K_2\) constants.</p>
+<p id="p-245"></p>
+\begin{equation}
+K_{2} \cos\left(x\right) + K_{1} \sin\left(x\right)\tag{4.2.4}
+\end{equation}
+</section><section class="subsubsection" id="subsubsection-14"><header title="Subsubsection 4.2.1.2 Initial Conditions"><h4 class="heading hide-type" alt="Subsubsection 4.2.1.2 Initial Conditions">
 <span class="type">Subsubsection</span><span class="codenumber">4.2.1.2</span><span class="title">Initial Conditions</span>
-</h1></header><p id="p-113">From the <!--Style me with CSS--><em>Docstring</em> for desolve we find that \(ics\) should be \([0,0,1]\) so
-                    let us try it.
-                </p>
-<div class="sagecell-sage" id="sage-45"><script type="text/x-sage">sol_initial_con = desolve(harmonic,y,ics=[0,0,1])
+</h4></header><p id="p-246">From the <em class="emphasis">Docstring</em> for <tt class="code-inline tex2jax_ignore">desolve</tt> we find that \(ics\) should be \([0,0,1]\) so let us try it.</p>
+<div class="sagecell-sage" id="sage-90"><script type="text/x-sage">sol_initial_con = desolve(harmonic,y,ics=[0,0,1])
 show(sol_initial_con)
 </script></div>
-<p id="p-114">
-                    \begin{equation}\sin\left(x\right)\label{men-15}\tag{4.2.5}\end{equation}
-                </p>
-<p id="p-115">Here we have again stored the solution to a variable sol_initial_con and used 
+<p id="p-247"></p>
+\begin{equation}
+\sin\left(x\right)\tag{4.2.5}
+\end{equation}
+<p id="p-248">Here we have again stored the solution to a variable <tt class="code-inline tex2jax_ignore">sol_initial_con</tt> and used <tt class="code-inline tex2jax_ignore">
                     show()
-                 to pretty=print the output.
-                </p>
-<p id="p-116">Try using some other initial conditions, for example,
-                    \([0,1,1]\)
-                </p>
-<div class="sagecell-sage" id="sage-46"><script type="text/x-sage">sol_initial_con = desolve(harmonic,y,ics=[0,1,1])
+                </tt> to pretty=print the output.</p>
+<p id="p-249">Try using some other initial conditions, for example, \([0,1,1]\)</p>
+<div class="sagecell-sage" id="sage-91"><script type="text/x-sage">sol_initial_con = desolve(harmonic,y,ics=[0,1,1])
 show(sol_initial_con)
 </script></div>
-<p id="p-117">
-                    \begin{equation}\cos\left(x\right) + \sin\left(x\right)\label{men-16}\tag{4.2.6}\end{equation}
-                </p>
-<p id="p-118">As you can see these two <!--Style me with CSS--><em>particular</em> solutions are instances of the <!--Style me with CSS--><em>general</em> solution
-                    given above.
-                </p></section><section class="subsubsection" id="subsubsection-8"><header title="Subsubsection 4.2.1.3 Symbolic Differential Equations"><h1 class="heading hide-type" alt="Subsubsection 4.2.1.3 Symbolic Differential Equations">
+<p id="p-250"></p>
+\begin{equation}
+\cos\left(x\right) + \sin\left(x\right)\tag{4.2.6}
+\end{equation}
+<p id="p-251">As you can see these two <em class="emphasis">particular</em> solutions are instances of the <em class="emphasis">general</em> solution given above.</p></section><section class="subsubsection" id="subsubsection-15"><header title="Subsubsection 4.2.1.3 Symbolic Differential Equations"><h4 class="heading hide-type" alt="Subsubsection 4.2.1.3 Symbolic Differential Equations">
 <span class="type">Subsubsection</span><span class="codenumber">4.2.1.3</span><span class="title">Symbolic Differential Equations</span>
-</h1></header><p id="p-119">Let us now try and solve the same equation this time with a mass \(m\) and spring constant \(k\).
-                </p>\begin{equation}m\frac{d^2 y}{dx^2} + ky(x) = 0\label{men-17}\tag{4.2.7}\end{equation}<p id="p-120">Now we have to define additional variables for the two constants. It is also useful to add some
-                    constraints onto these variables.
-                    We do this using the assume() method:
-                </p>
-<div class="sagecell-sage" id="sage-47"><script type="text/x-sage">y = function('y')(x)
+</h4></header><p id="p-252">Let us now try and solve the same equation this time with a mass \(m\) and spring constant \(k\text{.}\)</p>
+\begin{equation}
+m\frac{d^2 y}{dx^2} + ky(x) = 0\tag{4.2.7}
+\end{equation}
+<p id="p-253">Now we have to define additional variables for the two constants. It is also useful to add some constraints onto these variables. We do this using the <tt class="code-inline tex2jax_ignore">assume()</tt> method:</p>
+<div class="sagecell-sage" id="sage-92"><script type="text/x-sage">y = function('y')(x)
 m = var('m')
 k = var('k')
 assume(m>0)
@@ -194,14 +223,13 @@ harmonic2 = m*diff(y,x,2) + k*y == 0
 sol2=desolve(harmonic2,y,ivar=x)
 show(sol2)
 </script></div>
-<p id="p-121">
-                    \begin{equation}K_{2} \cos\left(\frac{\sqrt{k} x}{\sqrt{m}}\right) + K_{1} \sin\left(\frac{\sqrt{k}
-                        x}{\sqrt{m}}\right)
-                    \label{men-18}\tag{4.2.8}\end{equation}
-                </p>
-<p id="p-122">Notice that we had to specify which of the variables \((x,m,k)\) is the independent variable using
-                    the ivar=x argument.
-                </p></section></section></section></div></main>
+<p id="p-254"></p>
+\begin{equation}
+K_{2} \cos\left(\frac{\sqrt{k} x}{\sqrt{m}}\right) + K_{1} \sin\left(\frac{\sqrt{k}
+x}{\sqrt{m}}\right)
+\tag{4.2.8}
+\end{equation}
+<p id="p-255">Notice that we had to specify which of the variables \((x,m,k)\) is the independent variable using the <tt class="code-inline tex2jax_ignore">ivar=x</tt> argument.</p></section></section></section></div></main>
 </div>
 </body>
 </html>

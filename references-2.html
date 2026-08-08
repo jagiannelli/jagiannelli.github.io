@@ -1,144 +1,152 @@
 <!DOCTYPE html>
 <!--**************************************-->
-<!--* Generated from MathBook XML source *-->
-<!--*    on 2016-12-28T22:59:32Z    *-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:44+01:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
-<html>
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JAG References (places I plagiarized)</title>
-<meta name="Keywords" content="Authored in MathBook XML">
+<title>JAG References</title>
+<meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
-// contrib directory for accessibility menu, moot after v2.6+?
-MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        // [Contrib]accessibility menu moot after v2.6+?
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
-        equationNumbers: { autoNumber: "none",
-                           useLabelIds: true,
-                           // JS comment, XML CDATA protect XHTML quality of file
-                           // if removed in XSL, use entities
-                           //<![CDATA[
-                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
-                           //]]>
-                         },
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
         TagSide: "right",
         TagIndent: ".8em",
     },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
     "HTML-CSS": {
         scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
     },
 });
-    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="jagbook.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
-\newcommand{\notdivide}{{\not{\mid}}}
-\newcommand{\notsubset}{\not\subset}
-\newcommand{\lcm}{\operatorname{lcm}}
-\newcommand{\gf}{\operatorname{GF}}
-\newcommand{\inn}{\operatorname{Inn}}
-\newcommand{\aut}{\operatorname{Aut}}
-\newcommand{\Hom}{\operatorname{Hom}}
-\newcommand{\cis}{\operatorname{cis}}
-\newcommand{\chr}{\operatorname{char}}
-\newcommand{\Null}{\operatorname{Null}}
-\newcommand{\lt}{ &lt; }
-\newcommand{\gt}{ &gt; }
-\newcommand{\amp}{ &amp; }
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+\newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+\newcommand{\fd}[1]{#1'}
+\newcommand{\sd}[1]{#1''}
+\newcommand{\td}[1]{#1'''}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand \dd[1]  { \,\textrm d{#1}                       }   
+\newcommand \de[2]  { \frac{\mathrm d{#1}}{\mathrm d{#2}}   }   
+\newcommand \intl[4]{ \int\limits_{#1}^{#2}{#3}\dd{#4}      }   
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://www.giannelli.co.uk" target="_blank"><img src="images/cover_aata_2014.png"></a><div class="title-container">
+<a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg" alt="Logo image for document"></a><div class="title-container">
 <h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
 <p class="byline"></p>
 </div>
 </div></div>
-<nav id="primary-navbar"><div class="container">
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-part-1.html">Index</a><a class="next-button button toolbar-item" href="backmatter.html">Next</a><a class="up-button button toolbar-item" href="differential.html">Up</a><a class="previous-button toolbar-item button" href="differential.html">Prev</a>
+<a class="index-button toolbar-item button" href="index-38.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="cap-2017-hw3.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="differential.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="differential.html">Prev</a><a class="up-button button toolbar-item" href="differential.html">Up</a><a class="next-button button toolbar-item" href="backmatter.html">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="cap-2017-hw3.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="differential.html" title="Next" alt="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter.html"><span class="title">Front Matter</span></a></h2>
+<nav id="toc"><h2 class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></h2>
 <ul>
-<li><a href="biography-1.html">About John A Giannelli</a></li>
-<li><a href="dedication-1.html">Dedication</a></li>
-<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
-<li><a href="preface-1.html">Preface</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">About John A Giannelli</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 </ul>
-<h2 class="link"><a href="sets.html"><span class="codenumber">1</span><span class="title">Quick Guide to SageMath</span></a></h2>
+<h2 class="link"><a href="sets.html" data-scroll="sets"><span class="codenumber">1</span><span class="title">Quick Guide to Using SageMath</span></a></h2>
 <ul>
-<li><a href="sage-online.html">SageMath Online</a></li>
-<li><a href="section-2.html">Running From Source</a></li>
-<li><a href="section-3.html">Executing Sage Commands</a></li>
+<li><a href="sage-online.html" data-scroll="sage-online">SageMath Online</a></li>
+<li><a href="section-2.html" data-scroll="section-2">Running From Source</a></li>
 </ul>
-<h2 class="link"><a href="basics.html"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
+<h2 class="link"><a href="basics.html" data-scroll="basics"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
 <ul>
-<li><a href="section-4.html">How to define functions</a></li>
-<li><a href="section-5.html">Symbolic Manipulation</a></li>
-<li><a href="section-6.html">Declaring Variables and Plotting</a></li>
+<li><a href="section-3.html" data-scroll="section-3">Executing Sage Commands</a></li>
+<li><a href="section-4.html" data-scroll="section-4">How to define functions</a></li>
+<li><a href="section-5.html" data-scroll="section-5">Symbolic Manipulation</a></li>
+<li><a href="section-6.html" data-scroll="section-6">Declaring Variables and Plotting</a></li>
+<li><a href="section-7.html" data-scroll="section-7">Sage and Python</a></li>
 </ul>
-<h2 class="link"><a href="integers.html"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
+<h2 class="link active"><a href="integers.html" data-scroll="integers"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
 <ul>
-<li><a href="calculus-limits.html">Calculating Limits</a></li>
-<li><a href="calculus-integration.html">Integration</a></li>
-<li><a href="integers-sage.html">Sage</a></li>
-<li><a href="integers-sage-exercises.html">Sage Exercises</a></li>
-<li><a href="references-1.html">References</a></li>
+<li><a href="calculus-limits.html" data-scroll="calculus-limits">Calculating Limits</a></li>
+<li><a href="calculus-derivatives.html" data-scroll="calculus-derivatives">Derivatives</a></li>
+<li><a href="calculus-integration.html" data-scroll="calculus-integration">Integration</a></li>
+<li><a href="integers-sage.html" data-scroll="integers-sage">Sage</a></li>
+<li><a href="cap-2017-hw2.html" data-scroll="cap-2017-hw2">CAP 2017, HW 2 due January 31</a></li>
+<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 3 due February 7</a></li>
+<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 4 due February 14</a></li>
+<li><a href="references-2.html" data-scroll="references-2" class="active">References</a></li>
 </ul>
-<h2 class="link active"><a href="differential.html"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
+<h2 class="link"><a href="differential.html" data-scroll="differential"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
 <ul>
-<li><a href="first-order-de.html">First Order Differential Equations</a></li>
-<li><a href="second-order-de.html">Second Order Differential Equations</a></li>
-<li><a href="system-of-de.html">Systems Of Equations</a></li>
-<li><a href="exercises-de.html">Exercises</a></li>
-<li><a href="references-2.html" class="active">References (places I plagiarized)</a></li>
+<li><a href="first-order-de.html" data-scroll="first-order-de">First Order Differential Equations</a></li>
+<li><a href="second-order-de.html" data-scroll="second-order-de">Second Order Differential Equations</a></li>
+<li><a href="system-of-de.html" data-scroll="system-of-de">Systems Of Equations</a></li>
+<li><a href="exercises-de.html" data-scroll="exercises-de">Exercises</a></li>
+<li><a href="references-3.html" data-scroll="references-3">References (places I plagiarized)</a></li>
 </ul>
-<h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
+<h2 class="link"><a href="linear-algebra-exam.html" data-scroll="linear-algebra-exam"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
 <ul>
-<li><a href="appendix-1.html">Notation</a></li>
-<li><a href="appendix-2.html">Hints and Solutions to Selected Exercises</a></li>
-<li><a href="appendix-gfdl.html">GNU Free Documentation License</a></li>
-<li><a href="index-part-1.html">Index</a></li>
-<li><a href="colophon-1.html">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="references" id="references-2"><header title="References 4.5 References (places I plagiarized)"><h1 class="heading hide-type" alt="References 4.5 References (places I plagiarized)">
-<span class="type">Section</span><span class="codenumber">4.5</span><span class="title">References (places I plagiarized)</span>
-</h1></header><article class="bib" id="biblio-2"><div class="bibitem">[1]</div>  <div class="bibentry">
-            Strang, Gilbert and Moler, Cleve <i>Learn Differential Equations: Up Close with Gilbert Strang and Cleve
-            Moler</i>.
-            RES.18-009 Fall 2015. Massachusetts Institute of Technology:
-            <a class="external-url" href="https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/" target="_blank">
-                MIT OpenCourseWare
-            </a>
-        </div></article><article class="bib" id="biblio-3"><div class="bibitem">[2]</div>  <div class="bibentry">
-            Lutus, Paul <i>Applying Sage To Physics - Differential Equations</i>.
-            <a class="external-url" href="http://arachnoid.com/sage/differential1.html" target="_blank">Arachnoid - Mathematics - Sage</a>
-        </div></article><article class="bib" id="biblio-4"><div class="bibitem">[3]</div>  <div class="bibentry">
-            <i>Dr Underwood's Physics YouTube page</i>.
-            <a class="external-url" href="https://www.youtube.com/watch?v=KdXKW6IP_Qc" target="_blank">Differential Equations in Sage - Part 1</a>
-        </div></article><article class="bib" id="biblio-5"><div class="bibitem">[4]</div>  <div class="bibentry">
-            <i>Dr Underwood's Physics YouTube page</i>.
-            <a class="external-url" href="https://www.youtube.com/watch?v=546in5004jU" target="_blank">Differential Equations in Sage - Part 2</a>
-        </div></article></section></div></main>
+<li><a href="section-18.html" data-scroll="section-18">A1</a></li>
+<li><a href="section-19.html" data-scroll="section-19">A2</a></li>
+<li><a href="section-20.html" data-scroll="section-20">A3</a></li>
+<li><a href="section-product-rule.html" data-scroll="section-product-rule">The Product Rule</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
+<li><a href="appendix-2.html" data-scroll="appendix-2">Hints and Solutions to Selected Exercises</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="index-38.html" data-scroll="index-38">Index</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="references" id="references-2"><header title="References 3.8 References"><h2 class="heading hide-type" alt="References 3.8 References">
+<span class="type">Section</span><span class="codenumber">3.8</span><span class="title">References</span>
+</h2></header><article class="bib" id="james_stewart"><div class="bibitem">[1]</div>  <div class="bibentry">Stuart, James <i>Essential Calculus: Early Transcendentals</i>. Second Edition, 2013. ISBN-13: 978-1133112280, ISBN-10: 1133112285 <a class="external-url" href="https://www.amazon.co.uk/Essential-Calculus-Transcendentals-James-Stewart/dp/1133112285/ref=sr_1_1?ie=UTF8&amp;qid=1482949757&amp;sr=8-1&amp;keywords=9781133112280" target="_blank">Amazon UK</a>
+</div></article><article class="bib" id="sage_tutorial_limits"><div class="bibitem">[2]</div>  <div class="bibentry"><a class="external-url" href="https://www.sagemath.org/calctut/limits.html" target="_blank">Sage Calculus Tutorial - Limits</a></div></article><article class="bib" id="sage_tutorial_continuity"><div class="bibitem">[3]</div>  <div class="bibentry"><a class="external-url" href="https://www.sagemath.org/calctut/continuity.html" target="_blank">Sage Calculus Tutorial - Continuity</a></div></article><article class="bib" id="sage_tutorial_onesided"><div class="bibitem">[4]</div>  <div class="bibentry"><a class="external-url" href="https://www.sagemath.org/calctut/onesided.html" target="_blank">Sage Calculus Tutorial - One Sided Limits</a></div></article><article class="bib" id="sage_tutorial_inflimits"><div class="bibitem">[5]</div>  <div class="bibentry"><a class="external-url" href="https://www.sagemath.org/calctut/inflimits.html" target="_blank">Sage Calculus Tutorial - Limits At Infinity</a></div></article><article class="bib" id="sage_tutorial_slantasymp"><div class="bibitem">[6]</div>  <div class="bibentry"><a class="external-url" href="https://www.sagemath.org/calctut/slantasymp.html" target="_blank">Sage Calculus Tutorial - Slant Asymptotes</a></div></article></section></div></main>
 </div>
 </body>
 </html>

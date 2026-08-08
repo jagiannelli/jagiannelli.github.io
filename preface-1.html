@@ -1,134 +1,157 @@
 <!DOCTYPE html>
 <!--**************************************-->
-<!--* Generated from MathBook XML source *-->
-<!--*    on 2016-12-28T22:59:32Z    *-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:44+01:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
-<html>
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>JAG Preface</title>
-<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
-// contrib directory for accessibility menu, moot after v2.6+?
-MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        // [Contrib]accessibility menu moot after v2.6+?
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
-        equationNumbers: { autoNumber: "none",
-                           useLabelIds: true,
-                           // JS comment, XML CDATA protect XHTML quality of file
-                           // if removed in XSL, use entities
-                           //<![CDATA[
-                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
-                           //]]>
-                         },
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
         TagSide: "right",
         TagIndent: ".8em",
     },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
     "HTML-CSS": {
         scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
     },
 });
-    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="jagbook.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
-\newcommand{\notdivide}{{\not{\mid}}}
-\newcommand{\notsubset}{\not\subset}
-\newcommand{\lcm}{\operatorname{lcm}}
-\newcommand{\gf}{\operatorname{GF}}
-\newcommand{\inn}{\operatorname{Inn}}
-\newcommand{\aut}{\operatorname{Aut}}
-\newcommand{\Hom}{\operatorname{Hom}}
-\newcommand{\cis}{\operatorname{cis}}
-\newcommand{\chr}{\operatorname{char}}
-\newcommand{\Null}{\operatorname{Null}}
-\newcommand{\lt}{ &lt; }
-\newcommand{\gt}{ &gt; }
-\newcommand{\amp}{ &amp; }
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+\newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+\newcommand{\fd}[1]{#1'}
+\newcommand{\sd}[1]{#1''}
+\newcommand{\td}[1]{#1'''}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand \dd[1]  { \,\textrm d{#1}                       }   
+\newcommand \de[2]  { \frac{\mathrm d{#1}}{\mathrm d{#2}}   }   
+\newcommand \intl[4]{ \int\limits_{#1}^{#2}{#3}\dd{#4}      }   
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://www.giannelli.co.uk" target="_blank"><img src="images/cover_aata_2014.png"></a><div class="title-container">
+<a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg" alt="Logo image for document"></a><div class="title-container">
 <h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
 <p class="byline"></p>
 </div>
 </div></div>
-<nav id="primary-navbar"><div class="container">
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-part-1.html">Index</a><a class="next-button button toolbar-item" href="sets.html">Next</a><a class="up-button button toolbar-item" href="frontmatter.html">Up</a><a class="previous-button toolbar-item button" href="acknowledgement-1.html">Prev</a>
+<a class="index-button toolbar-item button" href="index-38.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="acknowledgement-1.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="frontmatter.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sets.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="acknowledgement-1.html">Prev</a><a class="up-button button toolbar-item" href="frontmatter.html">Up</a><a class="next-button button toolbar-item" href="sets.html">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="acknowledgement-1.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="frontmatter.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="sets.html" title="Next" alt="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
-<nav id="toc"><h2 class="link active"><a href="frontmatter.html"><span class="title">Front Matter</span></a></h2>
+<nav id="toc"><h2 class="link active"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></h2>
 <ul>
-<li><a href="biography-1.html">About John A Giannelli</a></li>
-<li><a href="dedication-1.html">Dedication</a></li>
-<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
-<li><a href="preface-1.html" class="active">Preface</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">About John A Giannelli</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="active">Preface</a></li>
 </ul>
-<h2 class="link"><a href="sets.html"><span class="codenumber">1</span><span class="title">Quick Guide to SageMath</span></a></h2>
+<h2 class="link"><a href="sets.html" data-scroll="sets"><span class="codenumber">1</span><span class="title">Quick Guide to Using SageMath</span></a></h2>
 <ul>
-<li><a href="sage-online.html">SageMath Online</a></li>
-<li><a href="section-2.html">Running From Source</a></li>
-<li><a href="section-3.html">Executing Sage Commands</a></li>
+<li><a href="sage-online.html" data-scroll="sage-online">SageMath Online</a></li>
+<li><a href="section-2.html" data-scroll="section-2">Running From Source</a></li>
 </ul>
-<h2 class="link"><a href="basics.html"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
+<h2 class="link"><a href="basics.html" data-scroll="basics"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
 <ul>
-<li><a href="section-4.html">How to define functions</a></li>
-<li><a href="section-5.html">Symbolic Manipulation</a></li>
-<li><a href="section-6.html">Declaring Variables and Plotting</a></li>
+<li><a href="section-3.html" data-scroll="section-3">Executing Sage Commands</a></li>
+<li><a href="section-4.html" data-scroll="section-4">How to define functions</a></li>
+<li><a href="section-5.html" data-scroll="section-5">Symbolic Manipulation</a></li>
+<li><a href="section-6.html" data-scroll="section-6">Declaring Variables and Plotting</a></li>
+<li><a href="section-7.html" data-scroll="section-7">Sage and Python</a></li>
 </ul>
-<h2 class="link"><a href="integers.html"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
+<h2 class="link"><a href="integers.html" data-scroll="integers"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
 <ul>
-<li><a href="calculus-limits.html">Calculating Limits</a></li>
-<li><a href="calculus-integration.html">Integration</a></li>
-<li><a href="integers-sage.html">Sage</a></li>
-<li><a href="integers-sage-exercises.html">Sage Exercises</a></li>
-<li><a href="references-1.html">References</a></li>
+<li><a href="calculus-limits.html" data-scroll="calculus-limits">Calculating Limits</a></li>
+<li><a href="calculus-derivatives.html" data-scroll="calculus-derivatives">Derivatives</a></li>
+<li><a href="calculus-integration.html" data-scroll="calculus-integration">Integration</a></li>
+<li><a href="integers-sage.html" data-scroll="integers-sage">Sage</a></li>
+<li><a href="cap-2017-hw2.html" data-scroll="cap-2017-hw2">CAP 2017, HW 2 due January 31</a></li>
+<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 3 due February 7</a></li>
+<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 4 due February 14</a></li>
+<li><a href="references-2.html" data-scroll="references-2">References</a></li>
 </ul>
-<h2 class="link"><a href="differential.html"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
+<h2 class="link"><a href="differential.html" data-scroll="differential"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
 <ul>
-<li><a href="first-order-de.html">First Order Differential Equations</a></li>
-<li><a href="second-order-de.html">Second Order Differential Equations</a></li>
-<li><a href="system-of-de.html">Systems Of Equations</a></li>
-<li><a href="exercises-de.html">Exercises</a></li>
-<li><a href="references-2.html">References (places I plagiarized)</a></li>
+<li><a href="first-order-de.html" data-scroll="first-order-de">First Order Differential Equations</a></li>
+<li><a href="second-order-de.html" data-scroll="second-order-de">Second Order Differential Equations</a></li>
+<li><a href="system-of-de.html" data-scroll="system-of-de">Systems Of Equations</a></li>
+<li><a href="exercises-de.html" data-scroll="exercises-de">Exercises</a></li>
+<li><a href="references-3.html" data-scroll="references-3">References (places I plagiarized)</a></li>
 </ul>
-<h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
+<h2 class="link"><a href="linear-algebra-exam.html" data-scroll="linear-algebra-exam"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
 <ul>
-<li><a href="appendix-1.html">Notation</a></li>
-<li><a href="appendix-2.html">Hints and Solutions to Selected Exercises</a></li>
-<li><a href="appendix-gfdl.html">GNU Free Documentation License</a></li>
-<li><a href="index-part-1.html">Index</a></li>
-<li><a href="colophon-1.html">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+<li><a href="section-18.html" data-scroll="section-18">A1</a></li>
+<li><a href="section-19.html" data-scroll="section-19">A2</a></li>
+<li><a href="section-20.html" data-scroll="section-20">A3</a></li>
+<li><a href="section-product-rule.html" data-scroll="section-product-rule">The Product Rule</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
+<li><a href="appendix-2.html" data-scroll="appendix-2">Hints and Solutions to Selected Exercises</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="index-38.html" data-scroll="index-38">Index</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="preface" id="preface-1"><header title="Preface  Preface"><h1 class="heading hide-type" alt="Preface  Preface">
 <span class="type">Preface</span><span class="codenumber"></span><span class="title">Preface</span>
-</h1></header><p id="p-9">I have a degree in Physics from many years ago and have recently taken to refreshing it.  First by working my way through the fine <a class="external-url" href="http://theoreticalminimum.com/courses" target="_blank">Theoretical Minimum</a> material by Leonard Susskind
-            and more recently the fantastic series of Linear Algebra lectures given by Gilbert Strang at MIT. These lectures are hosted at <a class="external-url" href="https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/" target="_blank">MITOPENCOURSEWARE Linear Algebra</a></p>
-<p id="p-10">This notebook is an online repository of some Sage Math techniques I have come across.  It is at a very rudimentary level and is far from organised.  It is really just one big dumping ground for stuff I have found useful.  Over time it may become more coherent and be useful to someone else. </p>
-<p id="p-11">The format of this book is taken from Robert Beezer's wonderful work with <a class="external-url" href="http://mathbook.pugetsound.edu" target="_blank">MathBook XML</a>. Many of the examples I use may come directly from him.
-            Hopefully, if he ever sees this notebook, he will not be annoyed but instead take it as a complement that I have chosen his work a a fine starting point for my notes. Keep up the good work Robert!</p>
-<p id="p-12">Sage (<a class="external-url" href="http://sagemath.org" target="_blank">sagemath.org</a>) is a free, open source, software system for advanced mathematics, which is ideal for assisting with a study of abstract algebra. Sage can be used either on your own computer, a local server, or on SageMathCloud (<a class="external-url" href="https://cloud.sagemath.com" target="_blank">https://cloud.sagemath.com</a>). </p>
-<cite class="attribution">John A Giannelli<br>Linlithgow, Scotland 2016</cite></section></div></main>
+</h1></header><p id="p-10">I have a degree in Physics from many years ago and have recently taken to refreshing my knowledge and bring it up to date with recent developments.  This is exactly what <a class="external-url" href="https://en.wikipedia.org/wiki/Leonard_Susskind" target="_blank">Leonard Susskind</a>'s is trying to help people like me with his fine set <a class="external-url" href="http://theoreticalminimum.com/courses" target="_blank">Theoretical Minimum</a> material. Each step of the way I have had to go further and further back into my past studies - almost back to high school! On refreshing my maths knowledge I came across the fantastic series of Linear Algebra lectures given by Gilbert Strang at MIT. These lectures are hosted at <a class="external-url" href="https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/" target="_blank">MITOPENCOURSEWARE Linear Algebra</a></p>
+<p id="p-11">My aim is to eventually have refreshed my maths to such an extent that I can get past the first couple of chapters of <a class="external-url" href="https://www.amazon.co.uk/Quantum-Field-Theory-Gifted-Amateur/dp/019969933X" target="_blank">Quantum Field Theory For the Gifted Amateur</a>. This is not happening very quickly but with all this wonderful material available for free I am slowly getting there!</p>
+<p id="p-12">This notebook is an online repository of some Sage Math techniques I have come across in the above pursuits. It is at a very rudimentary level and is far from organised. Over time it may become more coherent and be useful to others.</p>
+<p id="p-13">Another motivating factor is that my daughter, Anna, has just  embarked on a four year <a class="external-url" href="http://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=view&amp;code=B64Z" target="_blank">Maths and Biology Degree at Edinburgh University</a>. I'm hoping that this manual may provide here with some useful material to make here learning experience more fruitful.</p>
+<p id="p-14">The format of this book is taken from Robert Beezer's wonderful work with <a class="external-url" href="http://mathbook.pugetsound.edu" target="_blank">MathBook XML</a>.</p>
+<p id="p-15">Sage (<a class="external-url" href="http://sagemath.org" target="_blank">sagemath.org</a>) is a free, open source, software system for advanced mathematics, which is ideal for assisting with a study of abstract algebra. Sage can be used either on your own computer, a local server, or on SageMathCloud (<a class="external-url" href="https://cloud.sagemath.com" target="_blank">https://cloud.sagemath.com</a>).</p>
+<cite class="attribution">John A Giannelli<br>Linlithgow, Scotland 2017</cite></section></div></main>
 </div>
 </body>
 </html>

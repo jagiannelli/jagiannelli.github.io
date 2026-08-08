@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:44+01:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JAG Derivatives</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="jagbook.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+\newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+\newcommand{\fd}[1]{#1'}
+\newcommand{\sd}[1]{#1''}
+\newcommand{\td}[1]{#1'''}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand \dd[1]  { \,\textrm d{#1}                       }   
+\newcommand \de[2]  { \frac{\mathrm d{#1}}{\mathrm d{#2}}   }   
+\newcommand \intl[4]{ \int\limits_{#1}^{#2}{#3}\dd{#4}      }   
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg" alt="Logo image for document"></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-38.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calculus-limits.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="calculus-integration.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="calculus-limits.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="calculus-integration.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="biography-1.html" data-scroll="biography-1">About John A Giannelli</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+<h2 class="link"><a href="sets.html" data-scroll="sets"><span class="codenumber">1</span><span class="title">Quick Guide to Using SageMath</span></a></h2>
+<ul>
+<li><a href="sage-online.html" data-scroll="sage-online">SageMath Online</a></li>
+<li><a href="section-2.html" data-scroll="section-2">Running From Source</a></li>
+</ul>
+<h2 class="link"><a href="basics.html" data-scroll="basics"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
+<ul>
+<li><a href="section-3.html" data-scroll="section-3">Executing Sage Commands</a></li>
+<li><a href="section-4.html" data-scroll="section-4">How to define functions</a></li>
+<li><a href="section-5.html" data-scroll="section-5">Symbolic Manipulation</a></li>
+<li><a href="section-6.html" data-scroll="section-6">Declaring Variables and Plotting</a></li>
+<li><a href="section-7.html" data-scroll="section-7">Sage and Python</a></li>
+</ul>
+<h2 class="link active"><a href="integers.html" data-scroll="integers"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
+<ul>
+<li><a href="calculus-limits.html" data-scroll="calculus-limits">Calculating Limits</a></li>
+<li><a href="calculus-derivatives.html" data-scroll="calculus-derivatives" class="active">Derivatives</a></li>
+<li><a href="calculus-integration.html" data-scroll="calculus-integration">Integration</a></li>
+<li><a href="integers-sage.html" data-scroll="integers-sage">Sage</a></li>
+<li><a href="cap-2017-hw2.html" data-scroll="cap-2017-hw2">CAP 2017, HW 2 due January 31</a></li>
+<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 3 due February 7</a></li>
+<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 4 due February 14</a></li>
+<li><a href="references-2.html" data-scroll="references-2">References</a></li>
+</ul>
+<h2 class="link"><a href="differential.html" data-scroll="differential"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
+<ul>
+<li><a href="first-order-de.html" data-scroll="first-order-de">First Order Differential Equations</a></li>
+<li><a href="second-order-de.html" data-scroll="second-order-de">Second Order Differential Equations</a></li>
+<li><a href="system-of-de.html" data-scroll="system-of-de">Systems Of Equations</a></li>
+<li><a href="exercises-de.html" data-scroll="exercises-de">Exercises</a></li>
+<li><a href="references-3.html" data-scroll="references-3">References (places I plagiarized)</a></li>
+</ul>
+<h2 class="link"><a href="linear-algebra-exam.html" data-scroll="linear-algebra-exam"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">A1</a></li>
+<li><a href="section-19.html" data-scroll="section-19">A2</a></li>
+<li><a href="section-20.html" data-scroll="section-20">A3</a></li>
+<li><a href="section-product-rule.html" data-scroll="section-product-rule">The Product Rule</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
+<li><a href="appendix-2.html" data-scroll="appendix-2">Hints and Solutions to Selected Exercises</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="index-38.html" data-scroll="index-38">Index</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="calculus-derivatives"><header title="Section 3.2 Derivatives"><h2 class="heading hide-type" alt="Section 3.2 Derivatives">
+<span class="type">Section</span><span class="codenumber">3.2</span><span class="title">Derivatives</span>
+</h2>
+<a href="calculus-derivatives.html" class="permalink">¶</a></header><p id="p-79">Here are some basic examples to give a quick overview (without explanation) of how SageMath can be helpful for calculating derivatives:</p>
+<div class="sagecell-sage" id="sage-30"><script type="text/x-sage">var('x, y')
+f(x, y) = 4 * x^5 * y^3 + 7 * y * x^2 - 6 * x + 2 * y
+show("f(x,y):",f)
+
+dfdx(x, y) = f.diff(x)
+show("df/dx:",dfdx)
+dfdy(x, y) = diff(f, y)
+show("df/dy:",dfdy)
+
+
+d2fdx2(x, y) = derivative(f, x, 2)    # Alias for diff
+show("Second x derivative :",d2fdx2)
+
+# Trigonometric functions
+g(x) = sqrt(x^3 + csc(x))
+show("g(x):",g)
+dgdx(x) = g.diff(x)
+show("dg/dx:",dgdx)
+
+# Implicit differentiation
+# The next line tells Sage that y is a function of x
+y(x) = function('y')(x)
+expr = 4 * y^2 + sin(y) == x^2
+
+show("Expression:",expr)
+
+# take the derivative and solve for dy/dx
+dydx = solve(diff(expr), diff(y))
+show(dydx[0])
+</script></div>
+<p id="p-80">The following examples are taken from <a knowl="./knowl/james_stewart.html" knowl-id="xref-james_stewart" alt="Bibliographic Entry 3.8.1 Essential Calculus: Early Transcendentals" title="Bibliographic Entry 3.8.1 Essential Calculus: Early Transcendentals">[3.8.1]</a>.</p>
+<p id="p-81">All the examples,and more, can been found in this (public) <a class="external-url" href="https://cloud.sagemath.com/projects/aab56d83-dc7e-435a-9c97-f420f3cfc10b/files/Calculus_Derivatives.sagews" target="_blank">Cloud SageMath Worksheet</a>.</p>
+<p id="p-82">Some of the examples from that worksheet are recreated here.</p>
+<section class="subsection" id="subsection-6"><header title="Subsection 3.2.1 Examples From Chapter 2"><h3 class="heading hide-type" alt="Subsection 3.2.1 Examples From Chapter 2">
+<span class="type">Subsection</span><span class="codenumber">3.2.1</span><span class="title">Examples From Chapter 2</span>
+</h3></header><section class="subsubsection" id="subsubsection-4"><header title="Subsubsection 3.2.1.1 Section 2.1"><h4 class="heading hide-type" alt="Subsubsection 3.2.1.1 Section 2.1">
+<span class="type">Subsubsection</span><span class="codenumber">3.2.1.1</span><span class="title">Section 2.1</span>
+</h4></header><p id="p-83"> Section 2.1, Exercise 25 - 30, Page 82</p>
+<div class="sagecell-sage" id="sage-31"><script type="text/x-sage">t=var('t')
+f=3*x^2-4*x+1
+show("f(t) = ", f, ", f'(t) = ", f.diff())
+
+f=2*t^3+t
+show("f(t) = ", f, ", f'(t) = ", f.diff())
+
+f=(2*t+1)/(t+3)
+show("f(t) = ", f, ", f'(t) = ", f.diff().simplify_full())
+
+f=1/x^2
+show("f(t) = ", f, ", f'(t) = ", f.diff())
+
+f=sqrt(1-2*x)
+show("f(t) = ", f, ", f'(t) = ", f.diff())
+
+f=4/sqrt(1-x)
+show("f(t) = ", f, ", f'(t) = ", f.diff())
+</script></div>
+<p id="p-84"> Section 2.1, Exercise 34, Page 82</p>
+<div class="sagecell-sage" id="sage-32"><script type="text/x-sage">f(x)=(tan(x)-1)/(x - pi/4)
+f.show()  #Strange format but the displayed equation is correct!
+limit=f.limit(x=pi/4);limit.show()
+F=f.plot(0,pi,ymin=-5,ymax=5,exclude=[pi/2])
+
+p1=(0,limit.n())
+p2=(pi/4,limit.n())
+p3=(pi/4,0)
+pt1 = point(p1, rgbcolor='white', faceted=True, pointsize=30)
+pt2 = point(p2, rgbcolor='black', pointsize=30)
+pt3 = point(p3, rgbcolor='black', pointsize=30)
+l1 = line([p1, p2], linestyle='--')
+l2 = line([p2, p3], linestyle='--')
+
+plt=F+pt2+l1+l2
+plt.axes_labels([r'$x$',r'$\frac{\tan x - 1}{x - \pi/4}$'])
+show(plt)
+</script></div>
+<p id="p-85"> Section 2.1, Exercise 49, Page 83</p>
+<div class="sagecell-sage" id="sage-33"><script type="text/x-sage">f(x)=x*sin(1/x)
+Df=f.diff().simplify_full()
+
+show("f(t) = ", f, ", f'(t) = ",Df)
+show(Df.limit(x=0), " = undefined")
+
+pltLargeScale=f.plot(-pi,pi)+Df.plot(-pi,pi,color='red',ymin=-2,ymax=2,detect_poles='show')
+pltSmallScale=f.plot(-pi/10,pi/10)+Df.plot(-pi/10,pi/10,color='red',ymin=-1,ymax=1,detect_poles='show')
+show(pltLargeScale)
+show(pltSmallScale)
+</script></div>
+<p id="p-86"> Section 2.1, Exercise 50, Page 83</p>
+<div class="sagecell-sage" id="sage-34"><script type="text/x-sage">f(x)=x^2*sin(1/x)
+Df=f.diff().simplify_full()
+
+show("f(t) = ", f, ", f'(t) = ",Df)
+show(Df.limit(x=0),  " = indeterminate")
+
+pltLargeScale=f.plot(-pi,pi)+Df.plot(-pi,pi,color='red',ymin=-2,ymax=2,detect_poles='show')
+pltSmallScale=f.plot(-pi/10,pi/10)+Df.plot(-pi/10,pi/10,color='red',ymin=-1,ymax=1,detect_poles='show')
+show(pltLargeScale)
+show(pltSmallScale)
+</script></div></section><section class="subsubsection" id="subsubsection-5"><header title="Subsubsection 3.2.1.2 Section 2.2"><h4 class="heading hide-type" alt="Subsubsection 3.2.1.2 Section 2.2">
+<span class="type">Subsubsection</span><span class="codenumber">3.2.1.2</span><span class="title">Section 2.2</span>
+</h4></header><p id="p-87"> Section 2.2, Exercise 44, Page 94</p>
+<div class="sagecell-sage" id="sage-35"><script type="text/x-sage">f=2*x^2-x^3
+f1=f.diff()
+f2=f1.diff()
+f3=f2.diff()
+f4=f3.diff()
+show("f = ",f)
+show("First Derivative = ",f1)
+show("Second Derivative = ", f2)
+show("Third Derivative = ", f3)
+show("Fourth Derivative = ", f4)
+
+p=plot(f, (x,-5,5), ymin=-8,ymax=5,color='blue')
+p += plot(f1, (x,-5,5),color='green')
+p += plot(f2, (x,-5,5),color='purple')
+p += plot(f3, (x,-5,5),color='red')
+p += plot(f4, (x,-5,5),color='orange',linestyle='--')
+p
+</script></div></section><section class="subsubsection" id="subsubsection-6"><header title="Subsubsection 3.2.1.3 Section 2.3"><h4 class="heading hide-type" alt="Subsubsection 3.2.1.3 Section 2.3">
+<span class="type">Subsubsection</span><span class="codenumber">3.2.1.3</span><span class="title">Section 2.3</span>
+</h4></header><p id="p-88"> Section 2.3, Exercises 29, Page 105</p>
+<div class="sagecell-sage" id="sage-36"><script type="text/x-sage">f(x)=3*x^2-x^3
+Df=f.diff()
+show(f,Df)
+m,c=var('m c')
+pt1=(1,2)
+m=Df(x=1)
+#y=m*x+c => c=y-mx at (1,2)
+c=pt1[1]-m*pt1[0]  # pt1[0] is first element of (1,2) tuple = 1, pt2[1] = 2
+y(x)=m*x+c
+
+Plot=point(pt1,rgbcolor='black', pointsize=30)+plot(f,-1,3)+plot(y,-1,3,color='red')
+Plot.show(ymax=6,ymin=-2)
+</script></div>
+<p id="p-89"> Section 2.3, Exercises 30, Page 105</p>
+<div class="sagecell-sage" id="sage-37"><script type="text/x-sage">g(x)=x-sqrt(x)
+Dg=g.diff()
+show(g,Dg)
+m,c=var('m c')
+pt1=(1,0)
+m=Dg(x=1)
+#y=m*x+c => c=y-mx at (1,0)
+c=pt1[1]-m*pt1[0]  # pt1[0] is first element of (1,0) tuple = 1, pt2[1] = 0
+y(x)=m*x+c
+point(pt1,rgbcolor='black', pointsize=30)+plot(g,0,3)+plot(y,0,3,color='red')
+</script></div></section><section class="subsubsection" id="subsubsection-7"><header title="Subsubsection 3.2.1.4 Section 2.4"><h4 class="heading hide-type" alt="Subsubsection 3.2.1.4 Section 2.4">
+<span class="type">Subsubsection</span><span class="codenumber">3.2.1.4</span><span class="title">Section 2.4</span>
+</h4></header><p id="p-90"> Section 2.4, Exercises 27, Page 112</p>
+<div class="sagecell-sage" id="sage-38"><script type="text/x-sage">y(x)=(x^2-1)/(x^2+x+1)
+y.show()
+dydx=y.diff(x).simplify_full()
+
+m,c=var('m c')
+pt1=(1,0)
+m=dydx(x=1)
+#y=m*x+c => c=y-mx at (1,0)
+c=pt1[1]-m*pt1[0]  # pt1[0] is first element of (1,0) tuple = 1, pt2[1] = 0
+y_line(x)=m*x+c
+point(pt1,rgbcolor='black', pointsize=30)+plot(y,-3,3)+plot(y_line,-3,3,color='red')+plot(dydx,-3,3, color='green')
+</script></div>
+<p id="p-91">We have performed the same action - plot a graph and its tangent line - several times now. Time to encapsulate it in our own function! Run the next sage cell example to define the function <em class="emphasis">plot_tangentline</em>.</p>
+<p id="p-92">This is a Python function that takes three arguments: </p>
+<ol id="ol-2" style="list-style-type: decimal;">
+<li id="li-17">\(f\) the function we want to plot.</li>
+<li id="li-18">\(pt\) the point on the function for which we want to draw the tangent line.</li>
+<li id="li-19">\(xrange\) the range of x coordinates that we want the graph to span.</li>
+</ol>
+<p id="p-93">Running the next sage cell will not produce any visible results but will just stores this user defined method in memory for use in other cells. The next few examples make use of this <em class="emphasis">user defined function</em> to save a bit of typing.</p>
+<p id="p-94">Remember to run this before running any other Sage Cell that makes use of it.</p>
+<article class="definition-like" id="plot_tangentline"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.2.1</span><span class="title">Utility method <tt class="code-inline tex2jax_ignore">plot_tangentline()</tt></span>
+</h6>
+<div class="sagecell-sage" id="sage-39"><script type="text/x-sage">def plot_tangentline(f, pt, xrange ):
+    (a,b) = pt
+    dydx=f.diff(x)
+    m=dydx(x=a)
+    c=b-m*a
+    dydx=f.diff(x)
+    y(x)=m*x+c
+    tangent="y={}".format(y(x))
+    return point(pt,rgbcolor='black', pointsize=30) \
+        +plot(f,xrange,legend_label='f(x)',detect_poles='show') \
+        +plot(dydx,xrange, color='green',legend_label='f\'(x)',linestyle='--',detect_poles='show') \
+        +plot(y,xrange,color='red',legend_label=tangent)
+</script></div></article><p id="p-95">Redo the previous example using our method:</p>
+<div class="sagecell-sage" id="sage-40"><script type="text/x-sage">plot_tangentline(f=(x^2-1)/(x^2+x+1), pt=(1,0), xrange=(x,-3,3))
+</script></div>
+<p id="p-96">Now wasn't that a lot easier!  No for the rest.</p>
+<p id="p-97"> Section 2.4, Exercises 28 - 31, Page 112</p>
+<div class="sagecell-sage" id="sage-41"><script type="text/x-sage">f28=sqrt(x)/(x+1)
+show(f28)
+plot_tangentline(f28, pt=(4,0.4), xrange=(x,0,5)).show(ymax=1)
+
+f29=cos(x)-sin(x)
+show(f29)
+plot_tangentline(f29, pt=(pi,-1), xrange=(x,-2*pi,2*pi)).show(ymin=-5)
+
+f30=x-tan(x)
+show(f30)
+plot_tangentline(f30, pt=(pi,pi), xrange=(x,0,2*pi)).show(ymin=-5,ymax=5)
+
+f31=1/(1+x^2)
+show(f31)
+plot_tangentline(f31, pt=(-1,1/2), xrange=(x,-5,5)).show(ymin=-1,ymax=2)
+</script></div>
+<p id="p-98"> Section 2.4, Exercise 36, Page 113, Nth Derivative of a function</p>
+<p id="p-99">The second argument to the diff method is the derivative order: 1 for 1st derivative, 2 for second derivative, etc.</p>
+<div class="sagecell-sage" id="sage-42"><script type="text/x-sage">f=x*sin(x)
+f.show()
+f.diff(x,1).show()
+f.diff(x,2).show()
+f.diff(x,3).show()
+f.diff(x,10).show()
+f.diff(x,34).show()
+f.diff(x,35).show()
+f.diff(x,36).show()
+</script></div>
+<p id="p-100"> Section 2.4, Exercise 52, Page 114</p>
+<p id="p-101">This demonstrates the use of some predefined names: <em class="emphasis">omega</em> and <em class="emphasis">mu</em>. These will get formatted to \(\omega\) and \(\mu\) when you use <em class="emphasis">show()</em>.  Find out about <em class="emphasis">LaTex</em> to see what the other possibilities are, for example, <em class="emphasis">xi</em> for \(\xi\) and <em class="emphasis">Xi</em> for uppercase \(\Xi\text{,}\) and so on.</p>
+<div class="sagecell-sage" id="sage-43"><script type="text/x-sage">theta, mu, W = var('theta, mu, W')
+F(theta)= mu*W/(mu*sin(theta)+cos(theta))
+show(F)
+
+dF = F.diff(theta)
+show(dF)
+for solution in solve(dF,theta):
+    show(solution)
+#[show(solution) for solution in solve(dF,theta)]
+
+plot(F(W=50, mu=0.6), (theta,-2*pi,2*pi),ymin=-1000,ymax=1000,detect_poles='show')
+</script></div></section></section><section class="subsection" id="subsection-7"><header title="Subsection 3.2.2 Section 2.6 Implicit Differentiation"><h3 class="heading hide-type" alt="Subsection 3.2.2 Section 2.6 Implicit Differentiation">
+<span class="type">Subsection</span><span class="codenumber">3.2.2</span><span class="title">Section 2.6 Implicit Differentiation</span>
+</h3></header><p id="p-102"> Section 2.6, Example 2 - The Folium Of Descartes</p>
+\begin{equation*}
+x^3+y^3 = 6 x y
+\end{equation*}
+<p id="p-103">To plot this function we use the SageMath <em class="emphasis">implicit_plot</em> method.</p>
+<div class="sagecell-sage" id="sage-44"><script type="text/x-sage">x,y = var ('x y')
+expr=x^3+y^3==6*x*y
+implicit_plot(expr, (x,-2,5), (y,-2,5), figsize=4, axes="true" )
+</script></div>
+<p id="p-104">Lets explore this function a bit more with SageMath.  Some of this may not make anysense just now but will become clearer as course proceeds.</p>
+<div class="sagecell-sage" id="sage-45"><script type="text/x-sage">f(x, y)=x^3+y^3-6*x*y
+P=contour_plot(f, (x, -3, 5), (y, -3, 5), cmap = 'Reds', contours=range(-50,55,5), colorbar=True)+implicit_plot(f, (x,-3,5), (y,-3,5), figsize=4, axes="true" )
+show(P)
+fx(x,y)= f.diff(x)
+fy(x,y)= f.diff(y)
+show(fx, fy)
+
+pretty_print(html('Solution for $\\frac {\\partial f} {\\partial x} = 0$ and $\\frac {\\partial f} {\\partial y} = 0$'))
+solutions=solve([fx==0, fy==0], (x, y))
+for solution in solutions:
+    show(solution)
+
+show(f.gradient())
+H = f.hessian()
+show(H(x,y))
+
+pretty_print(html("And of course if the Hessian has positive determinant and $f_{xx}$ is positive, we have a local minimum."))
+pretty_print(html("$$f_{xx}=%s$$"%H(2,2)[0,0]))
+pretty_print(html("$$D=%s$$"%H(2,2).det()))
+pretty_print(html("$$f_{xx}=%s$$"%H(0,0)[0,0]))
+pretty_print(html("$$D=%s$$"%H(0,0).det()))
+</script></div>
+<p id="p-105">Now that we have familiarised our self with the shape of this equation lets now use sage to find the equation of the line at \((3,3)\text{.}\) Implicit differentiation is required here to compute \(\frac{dy}{dx}\) so that we can find the gradient at this point.</p>
+<p id="p-106">Next find the horizontal axis of the curve by using the <em class="emphasis">solve()</em> passing in our expression and the partial derivative (set equal to zero - although this is assumed if we do not explicitly say so).</p>
+<p id="p-107">The solutions are printed using a for loop (learn some Python!) and an <em class="emphasis">if</em> statement that prints results only if \(x\) and \(y\) are real - in the 'ring' <em class="emphasis">RR</em>.  There are two solutions, which we can see from the plot that this is correct.  Take some time to understand the code used to do the plotting.</p>
+<article class="definition-like" id="point_with_coords"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.2.2</span><span class="title">Utility method <tt class="code-inline tex2jax_ignore">point_with_coords()</tt></span>
+</h6>
+<div class="sagecell-sage" id="sage-46"><script type="text/x-sage">def point_with_coords(pt, xrange, yrange, color='black', pointsize=30):
+    plt=point(pt,rgbcolor=color, pointsize=pointsize)
+    pt_shifted=(pt[0]+(xrange[2]-xrange[1])/10,pt[1]+(yrange[2]-yrange[1])/10)
+    plt +=text('({0:.2f},{1:.2f})'.format(float(pt[0]),float(pt[1])), pt_shifted, color=color)
+    return plt
+</script></div></article><article class="definition-like" id="cross_hair"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.2.3</span><span class="title">Utility method <tt class="code-inline tex2jax_ignore">cross_hair()</tt></span>
+</h6>
+<div class="sagecell-sage" id="sage-47"><script type="text/x-sage">def cross_hair(pt, xrange, yrange):
+    plt=point_with_coords(pt,xrange,yrange)
+    pt1=(xrange[1],pt[1])
+    pt2=(xrange[2],pt[1])
+    plt += line([pt1, pt2], linestyle='--')
+    pt1=(pt[0], yrange[1])
+    pt2=(pt[0],yrange[2])
+    plt += line([pt1, pt2], linestyle='--')
+    return plt
+</script></div></article><div class="sagecell-sage" id="sage-48"><script type="text/x-sage">x,y = var('x,y')
+expr = x^3+y^3==6*x*y
+show(expr)
+f(x,y) = expr.lhs() - expr.rhs() # We want f(x,y) = 0.
+dydx(x,y) = f.implicit_derivative(y,x)
+show(dydx)
+
+xrange = (x,-2,5)
+yrange = (y,-2,5)
+
+pt=(3,3)
+m=dydx(x=pt[0],y=pt[1])
+#y=mx+c => c=y-mx (at point (3,3))
+c=pt[1]-m*pt[0]
+Y(x) = m*x + c
+tangent="y={}".format(Y(x))
+P=plot(Y,xrange,color='red',legend_label=tangent, ymin=yrange[1], ymax=yrange[2])
+P += point_with_coords(pt, xrange, yrange, color='red', pointsize=60)
+
+# Gradient is Horizontal
+pts=[]
+for solution in solve([expr, dydx==0],x,y,solution_dict=True):
+    if solution[x] in RR and solution[y] in RR:
+        print("x = {0}   y = {1}".format(solution[x], solution[y]))
+        pts.append((solution[x],solution[y]))
+
+P += implicit_plot(expr, xrange, yrange, axes="true" )
+for pt in pts:
+    P += cross_hair(pt, xrange, yrange)
+
+show(P)
+</script></div>
+<p id="p-108"> Section 2.6, Exercise 3, Page 127</p>
+<div class="sagecell-sage" id="sage-49"><script type="text/x-sage">x,y = var('x,y')
+expr=x^3+y^3 == 1
+show(expr)
+f(x) = expr.lhs() - expr.rhs() # Notice the '1' has been moved to the same side.
+dydx = f.implicit_derivative(y,x)
+show("Derivative: ", dydx)
+</script></div>
+<p id="p-109">Summary</p>
+<p id="p-110">Differentiate the full equation with respect to \(x\text{.}\)  Use the chain rule for \(y\) variable results in:</p>
+\begin{equation*}
+x \ {\mapsto}\ 3 \, x^{2} + 3 \, y^{2} \frac {dy}{dx} = 0
+\end{equation*}
+<p>Rearranging gives:</p>
+\begin{equation*}
+\frac {dy}{dx} = - \frac {x^2}{y^2}
+\end{equation*}
+<p id="p-111">The remaining equations in this section will be solved without explanation.</p>
+<p id="p-112">The following examples make use of this predefined function.  It is not very robust and assumes that the \(expr\) argumnet is sage Expression type with variable \(x\) and \(y\text{.}\)</p>
+<p id="p-113">Make sure you run this before running the other examples.  There will be no output but the function will be stored in memory available for use in other cells.</p>
+<article class="definition-like" id="my_implicit_derivative"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.2.4</span>
+</h6>Utility method <tt class="code-inline tex2jax_ignore">my_implicit_derivative()</tt><div class="sagecell-sage" id="sage-50"><script type="text/x-sage">def my_implicit_derivative(expr):
+    show(expr)
+    f(x,y) = expr.lhs() - expr.rhs()
+    dydx = f.implicit_derivative(y,x)
+    pretty_print(r'\frac {dy}{dx}='+LatexExpr(latex(dydx)))
+    # show("Dy=",dydx) #Use this instead of the one above if you are using the online sage notebook.
+    return dydx
+</script></div></article><p id="p-114"> Section 2.6, Exercise 4, Page 127</p>
+<div class="sagecell-sage" id="sage-51"><script type="text/x-sage">x,y = var('x,y')
+expr = 2*x^3 + x^2*y - x*y^3 == 2
+show(expr)
+f(x) = expr.lhs() - expr.rhs() # Notice the '2' has been moved to the other side.
+dydx = f.implicit_derivative(y,x)
+show("Derivative: ", dydx)
+</script></div>
+<p id="p-115"> Section 2.6, Exercise 5, Page 127</p>
+<div class="sagecell-sage" id="sage-52"><script type="text/x-sage">x,y = var('x,y')
+expr = x^2 + x*y - y^2 == 4
+show(expr)
+f(x) = expr.lhs() - expr.rhs()
+dydx = f.implicit_derivative(y,x)
+show("Derivative: ", dydx)
+</script></div>
+<p id="p-116"> Section 2.6, Exercise 6, Page 127</p>
+<div class="sagecell-sage" id="sage-53"><script type="text/x-sage">x,y = var('x,y')
+expr = y^5 + x^2*y^3 == 1+x^4*y
+show(expr)
+f(x) = expr.lhs() - expr.rhs()
+dydx = f.implicit_derivative(y,x)
+show("Derivative: ", dydx)
+</script></div>
+<p id="p-117"> Section 2.6, Exercise 7 - 16, Page 127</p>
+<div class="sagecell-sage" id="sage-54"><script type="text/x-sage">x,y = var('x,y')
+my_implicit_derivative(y*cos(x) == x^2 + y^2)
+
+my_implicit_derivative(cos(x*y) == 1+sin(y))
+
+my_implicit_derivative(4*cos(x)*sin(y) == 1)
+
+pretty_print(html('\nWhich is the same as $\\frac {dy}{dx} = tan(x)tan(y)$'))
+
+my_implicit_derivative(y*sin(x^2) == x*sin(y^2))
+
+my_implicit_derivative(tan(x/y) == x+y).simplify_trig()
+
+my_implicit_derivative(sqrt(x+y) == 1+x^2*y^2)
+
+my_implicit_derivative(sqrt(x*y) == 1+x^2*y).simplify_full()
+
+my_implicit_derivative(x*sin(y) +y*sin(x) == 1)
+
+my_implicit_derivative(y*cos(x) == 1+sin(x*y))
+
+my_implicit_derivative(tan(x-y) == y/(1+x^2))
+pretty_print('Is this last one correct??!!')
+</script></div>
+<p id="p-118"> Section 2.6, Exercise 19, Page 127</p>
+<div class="sagecell-sage" id="sage-55"><script type="text/x-sage">x,y,m= var('x,y,m')
+expr=x^2+x*y+y^2 == 3
+dydx = my_implicit_derivative(expr)
+dydx.show()
+pt=(1,1)
+
+m=dydx(x=1,y=1)
+#y=mx+c => c=y-mx (at point (1,1))
+c=pt[1]-m*pt[0]
+Y(x) = m*x + c
+tangent="y={}".format(Y(x))
+P1=point(pt,rgbcolor='black', pointsize=30)
+P2=implicit_plot(expr, (x,-2,2), (y,-2,2))
+P3=plot(Y,(x,-2,2),color='red',legend_label=tangent)
+P1+P2+P3
+</script></div>
+<p id="p-119"> Section 2.6, Exercise 20, Page 127</p>
+<div class="sagecell-sage" id="sage-56"><script type="text/x-sage">x,y,m= var('x,y,m')
+expr=x^2+2*x*y-y^2+x == 2
+dydx = my_implicit_derivative(expr)
+dydx.show()
+pt=(1,2)
+
+m=dydx(x=pt[0],y=pt[1])
+#y=mx+c => c=y-mx (at point (1,1))
+c=pt[1]-m*pt[0]
+Y(x) = m*x + c
+tangent="y={}".format(Y(x))
+P1=point(pt,rgbcolor='black', pointsize=30)
+P2=implicit_plot(expr, (x,-10,10), (y,-10,10),axes="true")
+P3=plot(Y,(x,-5,5),color='red',legend_label=tangent,ymin=-5,ymax=5)
+P1+P2+P3
+</script></div>
+<p id="p-120"> Section 2.6, Exercise 21 - Cardioid, Page 127</p>
+<div class="sagecell-sage" id="sage-57"><script type="text/x-sage">x,y,m= var('x,y,m')
+expr=x^2+y^2 == (2*x^2+2*y^2-x)^2
+dydx = my_implicit_derivative(expr)
+
+pt=(0,1/2)
+
+m=dydx(x=pt[0],y=pt[1])
+#y=mx+c => c=y-mx (at point (1,1))
+c=pt[1]-m*pt[0]
+Y(x) = m*x + c
+tangent="y={}".format(Y(x))
+P1=point(pt,rgbcolor='black', pointsize=30)
+P2=implicit_plot(expr, (x,-1,1), (y,-1,1),axes="true")
+P3=plot(Y,(x,-1,1),color='red',legend_label=tangent,ymin=-1,ymax=1)
+P1+P2+P3
+</script></div>
+<p id="p-121"> Section 2.6, Exercise 23 - Lemniscate, Page 127</p>
+<div class="sagecell-sage" id="sage-58"><script type="text/x-sage">x,y,m= var('x,y,m')
+expr=2*(x^2+y^2)^2 == 25*(x^2-y^2)
+dydx = my_implicit_derivative(expr)
+pt=(3,1)
+
+m=dydx(x=pt[0],y=pt[1])
+#y=mx+c => c=y-mx (at point (1,1))
+c=pt[1]-m*pt[0]
+Y(x) = m*x + c
+tangent="y={}".format(Y(x))
+P1=point(pt,rgbcolor='black', pointsize=30)
+P2=implicit_plot(expr, (x,-5,5), (y,-5,5),axes="true")
+P3=plot(Y,(x,-5,5),color='red',legend_label=tangent,ymin=-5,ymax=5)
+P1+P2+P3
+</script></div></section></section></div></main>
+</div>
+</body>
+</html>

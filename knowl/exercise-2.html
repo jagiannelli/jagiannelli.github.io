@@ -1,46 +1,23 @@
+<!doctype html>
+<html lang="en-US">
 <!--**************************************-->
-<!--* Generated from MathBook XML source *-->
-<!--*    on 2016-12-28T19:15:22Z    *-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:45+01:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
-<article class="exercise-like"><h5 class="heading">
-<span class="type">Exercise</span><span class="codenumber">1</span>
-</h5>
-<p id="p-127">Response to Exponential Input</p>
-<p id="p-128">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + e^{st}\tag{4.4.5}\end{equation}\begin{equation}y=y(0)\:at\:t=0\tag{4.4.6}\end{equation}<p id="p-129">This is the standard growth equation  with an exponential forcing term \(e^{st}\).</p>
-<p id="p-130">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = Ye^{st}\end{equation*}<p id="p-131">where \(Y\) is a constant.</p>
-<p id="p-132">Substituting we get:</p>\begin{equation*}Ys e^{st} = aY e^{st} + e^{st}\end{equation*}<p id="p-133">Rearranging gives:</p>\begin{equation*}Y=\frac{1}{s-a}\end{equation*}<p id="p-134">Full solution is the <!--Style me with CSS--><em>particular</em> solution plus <!--Style me with CSS--><em>null</em> (or <!--Style me with CSS--><em>homogeneous</em>) solution:</p>\begin{equation*}y(t)=\frac{e^{st}}{s-a} + C e^{st}\end{equation*}<p id="p-135">From the initial conditions we get:</p>\begin{equation*}y(0) = \frac{1}{s-a} + C\end{equation*}<p id="p-136">Substituting in \(y(t)\) gives:</p>\begin{equation*}y(t)=\frac{e^{st}}{s-a} + \left[y(0) -\frac{1}{s-a}\right] e^{st}\end{equation*}<p id="p-137">Rearranging we can see the effect of the forcing in addition to the homogeneous term:</p>\begin{equation*}y(t)= y(0) e^{st} + \frac{e^{st}-e^{at}}{s-a}\end{equation*}<p id="p-138">In Strang's terminology:</p>\begin{equation}y(t) = y_p + y_n = y(0) e^{st} + \frac{e^{st}-e^{at}}{s-a}\tag{4.4.7}\end{equation}<p id="p-139">That is, the solution is a combination of the standard homogeneous term - the standard growth factor - plus an extra term coming from the forcing factor.
-                Notice that this extra term has a singularity (division by zero) at \(s=a\). This is <!--Style me with CSS--><em>Resonance</em>.</p>
-<p id="p-140">This singularity can be handled using  <!--Style me with CSS--><em>L'Hopital's Rule</em><a knowl="./knowl/hospital.html" knowl-id="xref-hospital" alt="Principle 4.0.3 L'Hôpital's Rule " title="Principle 4.0.3 L'Hôpital's Rule ">4.0.3</a></p>
-<figure class="figure-like" id="figure-6"><img width="100%" src="images/strang_exp_response.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">4.4.1</span>Gilbert Strang In Action</figcaption></figure><p id="p-141">The full solution, using L'Hopital, should match the final solution in
-                <a class="external-url" href="https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/differential-equations-and-linear-algebra/first-order-equations/response-to-exponential-input/" target="_blank">Strang's Lecture</a>.</p>\begin{equation}y(t)=y_{0} e^{a t} + t e^{s t}\tag{4.4.8}\end{equation}<p id="p-142">Now try and solve this using SageMath.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-1" id="hint-1"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-143">Remind yourself how to obtain the homogeneous (null) solution:</p>
-<pre class="code-block tex2jax_ignore">t,a = var('t,a')
-y = function('y')(t)
-de1 = diff(y,t) == a*y
-sol1 = desolve(de1,y, ivar=t)
-show(sol1)
-</pre>
-<p id="p-144">\(C e^{\left(a t\right)}\) and is the general solution to \(\frac{dy}{dt} - ay = 0\).</p>
-<p id="p-145">Also have a look at the screenshot above!</p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-146">Sage Commands:</p>
-<pre class="code-block tex2jax_ignore">t, s, a, y0 = var ('t, s, a, y0')
-y = function('y')(t)
-de = diff(y,t) == a*y + e^(s*t)
-sol=desolve(de,y, ivar=t, ics=[0,y0])
-show(sol)
-</pre>
-<p id="p-147">This results in:</p>\begin{equation*}\frac{{\left(a - s\right)} y_{0} e^{\left(a t\right)} + e^{\left(a t\right)} - e^{\left(s t\right)}}{a - s}\end{equation*}<p id="p-148">This is not quite the same format as Strang but it is easy to see that it is equivalent.</p>
-<p id="p-149">
-                As mentioned above this solution can be taken further by using L'Hopital's Rule.<a knowl="./knowl/hospital.html" knowl-id="xref-hospital" alt="Principle 4.0.3 L'Hôpital's Rule " title="Principle 4.0.3 L'Hôpital's Rule ">4.0.3</a>
-                We can circumvent the \(0/0\) catastrophe by differentiating the numerator and denominator.
-            </p>
-<p id="p-150">Sage Commands:</p>
-<pre class="code-block tex2jax_ignore">numerator = e^(s*t) - e^(a*t)
-numerator.diff(s)
-denominator= s - a
-denominator.diff(s)
-</pre>
-<p id="p-151">This results in \(\frac{f'(x)}{g'(x)}=\frac{t e^{s t}}{1}=t e^{s t}\)</p>
-<p id="p-152">Hence the full solution using L'Hopital now matches Strang's final solution:</p>\begin{equation*}y(t)=y_{0} e^{a t} + t e^{s t}\end{equation*}</span></span> </article><span class="incontext"><a href="exercises-de.html#exercise-2">in-context</a></span>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="exercise-like"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2</span>
+</h6>
+<p>Differentiate \(\frac{x^{2} - 2 \, \sqrt{x}}{x}\) showing each step and stating which rules are used.</p>
+<div class="hidden-knowl-wrapper solutions">
+<span><a knowl="./knowl/answer-2-hidden.html" knowl-id="hidden-answer-2" alt="Answer 3.5.1.2.1 " title="Answer 3.5.1.2.1 "><span class="solution"><span class="type">Answer</span></span></a></span><span><a knowl="./knowl/solution-2-hidden.html" knowl-id="hidden-solution-2" alt="Solution 3.5.1.2.1 " title="Solution 3.5.1.2.1 "><span class="solution"><span class="type">Solution</span></span></a></span>
+</div></article><span class="incontext"><a href="cap-2017-hw2.html#exercise-2">in-context</a></span>
+</body>
+</html>

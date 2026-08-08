@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:45+01:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h6 class="heading">
+<span class="type">Solution</span><span class="codenumber">4.4.1.1</span>
+</h6>
+<p>Sage Commands:</p>
+<pre class="code-block tex2jax_ignore">t, s, a, y0 = var ('t, s, a, y0')
+y = function('y')(t)
+de = diff(y,t) == a*y + e^(s*t)
+sol=desolve(de,y, ivar=t, ics=[0,y0])
+show(sol)
+</pre>
+<p>This results in:</p>
+\begin{equation*}
+\frac{{\left(a - s\right)} y_{0} e^{\left(a t\right)} + e^{\left(a t\right)} - e^{\left(s t\right)}}{a - s}
+\end{equation*}
+<p>This is not quite the same format as Strang but it is easy to see that it is equivalent.</p>
+<p>As mentioned above this solution can be taken further by using L'Hopital's Rule.<a knowl="./knowl/hospital.html" knowl-id="xref-hospital" alt="Principle 4.0.3 L'Hôpital's Rule" title="Principle 4.0.3 L'Hôpital's Rule">Principle 3</a> We can circumvent the \(0/0\) catastrophe by differentiating the numerator and denominator.</p>
+<p>Sage Commands:</p>
+<pre class="code-block tex2jax_ignore">numerator = e^(s*t) - e^(a*t)
+numerator.diff(s)
+denominator= s - a
+denominator.diff(s)
+</pre>
+<p>This results in \(\frac{f'(x)}{g'(x)}=\frac{t e^{s t}}{1}=t e^{s t}\)</p>
+<p>Hence the full solution using L'Hopital now matches Strang's final solution:</p>
+\begin{equation*}
+y(t)=y_{0} e^{a t} + t e^{s t}
+\end{equation*}
+</span><span class="incontext"><a href="exercises-de.html#solution-16">in-context</a></span>
+</body>
+</html>

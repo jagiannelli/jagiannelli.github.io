@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:45+01:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
+</head>
+<body>
+<article class="definition-like"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.2.2</span><span class="title">Utility method <tt class="code-inline tex2jax_ignore">point_with_coords()</tt></span>
+</h6>
+<div class="sagecell-sage" id="sage-46"><script type="text/x-sage">def point_with_coords(pt, xrange, yrange, color='black', pointsize=30):
+    plt=point(pt,rgbcolor=color, pointsize=pointsize)
+    pt_shifted=(pt[0]+(xrange[2]-xrange[1])/10,pt[1]+(yrange[2]-yrange[1])/10)
+    plt +=text('({0:.2f},{1:.2f})'.format(float(pt[0]),float(pt[1])), pt_shifted, color=color)
+    return plt
+</script></div></article><span class="incontext"><a href="calculus-derivatives.html#point_with_coords">in-context</a></span>
+</body>
+</html>

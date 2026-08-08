@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:45+01:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>The rate of change of mass is proportional to the current mass:</p>
+\begin{equation*}
+\frac{dM}{dt} \propto M
+\end{equation*}
+<p>Lets call the constant of proportionality \(\lambda\text{.}\)</p>
+\begin{equation*}
+\frac{dM}{dt} = -\lambda M
+\end{equation*}
+<p>The negative is because this is a decay.</p>
+<p>The solution of this equation is:</p>
+\begin{equation*}
+M_t = M_0 e^{-\lambda t}
+\end{equation*}
+<p>(where \(M_0\) is the mass at \(t=0\text{.}\))</p>
+<p>At the half-life \(t=T_{\frac{1}{2}}\) and \(M_t = \frac{M_0}{2}\text{:}\)</p>
+\begin{equation*}
+\frac{M_0}{2} = M_0 \exp\left({-\lambda T_{\frac{1}{2}}}\right)
+\end{equation*}
+
+\begin{equation*}
+2 = \exp\left({\lambda T_{\frac{1}{2}}}\right)
+\end{equation*}
+
+\begin{equation*}
+\log{2} = \lambda T_{\frac{1}{2}}
+\end{equation*}
+
+\begin{equation*}
+\lambda = \frac{log2}{T_{\frac{1}{2}}}
+\end{equation*}
+<p>We are told that the half-life is \(5\) days.</p>
+\begin{equation*}
+\lambda \approx 0.1386
+\end{equation*}
+<p>Substituting with the original mass gives us:</p>
+\begin{equation*}
+M_t = 800 e^{-0.1386t}
+\end{equation*}
+<p>where \(M_t\) is the mass in \(mg\) and \(t\) is the time in days.</p></span></body>
+</html>

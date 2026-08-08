@@ -1,22 +1,23 @@
+<!doctype html>
+<html lang="en-US">
 <!--**************************************-->
-<!--* Generated from MathBook XML source *-->
-<!--*    on 2016-12-28T19:15:22Z    *-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:45+01:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
-<article class="exercise-like"><h5 class="heading">
-<span class="type">Exercise</span><span class="codenumber">2</span>
-</h5>
-<p id="p-153">Response to Oscillating Input</p>
-<p id="p-154">Consider the following differential equation:</p>\begin{equation}\frac{dy}{dt} = ay + \cos\left(\omega t\right)\tag{4.4.9}\end{equation}\begin{equation}y=y(0)\:at\:t=0\tag{4.4.10}\end{equation}<p id="p-155">This is the standard growth equation  with a sinuosoidal input term \(\cos\left(\omega t\right)\).</p>
-<p id="p-156">We look for a <!--Style me with CSS--><em>particular</em> solutions of the form:</p>\begin{equation*}y_p = M\cos\left(\omega t\right) + N\sin\left(\omega t\right)\end{equation*}<p id="p-157">where \(M\) and \(N\) are constants.</p>
-<p id="p-158">Now try and solve this using SageMath.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-159">Sage Commands:</p>
-<pre class="code-block tex2jax_ignore">t, omega, a, y0 = var ('t, omega, a, y0')
-y = function('y')(t)
-de = diff(y,t) == a*y + cos(omega*t)
-sol=desolve(de,y, ivar=t, ics=[0,y0])
-show(sol)
-</pre>
-<p id="p-160">This results in:</p>\begin{equation*}\frac{{\left(a^{2} + \omega^{2}\right)} y_{0} e^{\left(a t\right)} - a \cos\left(\omega t\right) + a e^{\left(a t\right)} + \omega \sin\left(\omega t\right)}{a^{2} + \omega^{2}}\end{equation*}</span></span> </article><span class="incontext"><a href="exercises-de.html#exercise-3">in-context</a></span>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="exercise-like"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">3</span>
+</h6>
+<p>Use <a knowl="./knowl/definition-linear-approx.html" knowl-id="xref-definition-linear-approx" alt="Definition 3.5.3 Linear Approximation" title="Definition 3.5.3 Linear Approximation">Linear Approximation 3</a> to calculate \(\sqrt{99.8}\text{.}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<span><a knowl="./knowl/answer-3-hidden.html" knowl-id="hidden-answer-3" alt="Answer 3.5.1.3.1 " title="Answer 3.5.1.3.1 "><span class="solution"><span class="type">Answer</span></span></a></span><span><a knowl="./knowl/solution-3-hidden.html" knowl-id="hidden-solution-3" alt="Solution 3.5.1.3.1 " title="Solution 3.5.1.3.1 "><span class="solution"><span class="type">Solution</span></span></a></span>
+</div></article><span class="incontext"><a href="cap-2017-hw2.html#exercise-3">in-context</a></span>
+</body>
+</html>

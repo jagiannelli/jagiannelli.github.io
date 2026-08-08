@@ -1,11 +1,39 @@
+<!doctype html>
+<html lang="en-US">
 <!--**************************************-->
-<!--* Generated from MathBook XML source *-->
-<!--*    on 2016-12-28T19:15:22Z    *-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:45+01:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
-<article class="list"><h5 class="heading">
-<span class="type">Item</span><span class="codenumber">B</span>
-</h5>
-<p id="p-190">List on the Title Page, as authors, one or more persons or entities responsible for authorship of the modifications in the Modified Version, together with at least five of the principal authors of the Document (all of its principal authors, if it has fewer than five), unless they release you from this requirement.</p></article><span class="incontext"><a href="appendix-gfdl.html#li-16">in-context</a></span>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
+</head>
+<body>
+<article class="listitem"><h6 class="heading">
+<span class="type">Item</span><span class="codenumber">3</span>
+</h6>
+<p>Creating lists using python methods.</p>
+<div class="sagecell-sage" id="sage-20"><script type="text/x-sage">myBigList = list()
+myBigList.extend(myList)
+print("List after extending: " + str(myBigList))
+myBigList.append(listTransport)
+print("List after appending another list:" + str(myBigList))
+
+listNumbers = range(1, 31, 5)
+print("A list of integers: " + str(listNumbers))
+</script></div>
+<p>This is not a python tutorial so have a look <a class="external-url" href="https://docs.python.org/3/library/functions.html" target="_blank">here</a> for more information on <tt class="code-inline tex2jax_ignore">range()</tt> and <tt class="code-inline tex2jax_ignore">append()</tt>.</p></article><span class="incontext"><a href="section-7.html#li-16">in-context</a></span>
+</body>
+</html>

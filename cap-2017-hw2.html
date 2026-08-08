@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:44+01:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JAG CAP 2017, HW 2 due January 31</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="jagbook.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+\newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+\newcommand{\fd}[1]{#1'}
+\newcommand{\sd}[1]{#1''}
+\newcommand{\td}[1]{#1'''}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand \dd[1]  { \,\textrm d{#1}                       }   
+\newcommand \de[2]  { \frac{\mathrm d{#1}}{\mathrm d{#2}}   }   
+\newcommand \intl[4]{ \int\limits_{#1}^{#2}{#3}\dd{#4}      }   
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg" alt="Logo image for document"></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-38.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="integers-sage.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="cap-2017-hw3.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="integers-sage.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="cap-2017-hw3.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="biography-1.html" data-scroll="biography-1">About John A Giannelli</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+<h2 class="link"><a href="sets.html" data-scroll="sets"><span class="codenumber">1</span><span class="title">Quick Guide to Using SageMath</span></a></h2>
+<ul>
+<li><a href="sage-online.html" data-scroll="sage-online">SageMath Online</a></li>
+<li><a href="section-2.html" data-scroll="section-2">Running From Source</a></li>
+</ul>
+<h2 class="link"><a href="basics.html" data-scroll="basics"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
+<ul>
+<li><a href="section-3.html" data-scroll="section-3">Executing Sage Commands</a></li>
+<li><a href="section-4.html" data-scroll="section-4">How to define functions</a></li>
+<li><a href="section-5.html" data-scroll="section-5">Symbolic Manipulation</a></li>
+<li><a href="section-6.html" data-scroll="section-6">Declaring Variables and Plotting</a></li>
+<li><a href="section-7.html" data-scroll="section-7">Sage and Python</a></li>
+</ul>
+<h2 class="link active"><a href="integers.html" data-scroll="integers"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
+<ul>
+<li><a href="calculus-limits.html" data-scroll="calculus-limits">Calculating Limits</a></li>
+<li><a href="calculus-derivatives.html" data-scroll="calculus-derivatives">Derivatives</a></li>
+<li><a href="calculus-integration.html" data-scroll="calculus-integration">Integration</a></li>
+<li><a href="integers-sage.html" data-scroll="integers-sage">Sage</a></li>
+<li><a href="cap-2017-hw2.html" data-scroll="cap-2017-hw2" class="active">CAP 2017, HW 2 due January 31</a></li>
+<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 3 due February 7</a></li>
+<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 4 due February 14</a></li>
+<li><a href="references-2.html" data-scroll="references-2">References</a></li>
+</ul>
+<h2 class="link"><a href="differential.html" data-scroll="differential"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
+<ul>
+<li><a href="first-order-de.html" data-scroll="first-order-de">First Order Differential Equations</a></li>
+<li><a href="second-order-de.html" data-scroll="second-order-de">Second Order Differential Equations</a></li>
+<li><a href="system-of-de.html" data-scroll="system-of-de">Systems Of Equations</a></li>
+<li><a href="exercises-de.html" data-scroll="exercises-de">Exercises</a></li>
+<li><a href="references-3.html" data-scroll="references-3">References (places I plagiarized)</a></li>
+</ul>
+<h2 class="link"><a href="linear-algebra-exam.html" data-scroll="linear-algebra-exam"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">A1</a></li>
+<li><a href="section-19.html" data-scroll="section-19">A2</a></li>
+<li><a href="section-20.html" data-scroll="section-20">A3</a></li>
+<li><a href="section-product-rule.html" data-scroll="section-product-rule">The Product Rule</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
+<li><a href="appendix-2.html" data-scroll="appendix-2">Hints and Solutions to Selected Exercises</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="index-38.html" data-scroll="index-38">Index</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="cap-2017-hw2"><header title="Section 3.5 CAP 2017, HW 2 due January 31"><h2 class="heading hide-type" alt="Section 3.5 CAP 2017, HW 2 due January 31">
+<span class="type">Section</span><span class="codenumber">3.5</span><span class="title">CAP 2017, HW 2 due January 31</span>
+</h2>
+<a href="cap-2017-hw2.html" class="permalink">¶</a></header><section class="exercises" id="exercises-1"><header title="Exercises 3.5.1 Exercises"><h3 class="heading hide-type" alt="Exercises 3.5.1 Exercises">
+<span class="type">Subsection</span><span class="codenumber">3.5.1</span><span class="title">Exercises</span>
+</h3></header><article class="definition-like" id="definition-derivative"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.5.1</span><span class="title">The Definition of a Derivative</span>
+</h6>
+<p id="p-126">The computation of the slope of a tangent line, the <em class="emphasis">instantaneous</em> rate of change of a function, at \(x=a\) can be found from the following limit:</p>
+\begin{equation}
+f'(x)=\lim_{a \to x} \frac {f(x) - f(a)} {x-a}\tag{3.5.1}
+\end{equation}
+<p id="p-127">With a small adjustment in notation this limit can be rephrased.</p>
+<p id="p-128">The derivative of \(f(x)\) with respect to \(x\) is the function \(f'(x)\) and is defined as:</p>
+\begin{equation}
+f'(x)=\lim_{h \to 0} \frac {f(x+h) - f(x)} {h}\tag{3.5.2}
+\end{equation}
+</article><article class="definition-like" id="definition-derivative-power"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.5.2</span><span class="title">The Power Rule</span>
+</h6>
+<p id="p-129">If \(f: \mathbb{R} \rightarrow \mathbb{R}\) is a function such that \(f(x) = x^r\text{,}\) and \(f\) is differentiable at \(x\text{,}\) then, :</p>
+\begin{equation}
+f'(x) = rx^{r-1}\tag{3.5.3}
+\end{equation}
+</article><article class="definition-like" id="definition-linear-approx"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.5.3</span><span class="title">Linear Approximation</span>
+</h6>
+<p id="p-130">Given a twice continuously differentiable function \(f\) of one real number variable, Taylor's theorem for the case \(n = 1 \) states that:</p>
+\begin{equation*}
+f(x) = f(a) + f'(a)(x - a) + R_2\ 
+\end{equation*}
+<p>where \(R_2\) is the remainder term. The linear approximation is obtained by dropping the remainder:</p>
+\begin{equation}
+f(x) \approx f(a) + f'(a)(x - a)\text{.}\tag{3.5.4}
+\end{equation}
+<p>This is a good approximation for \(x\) when it is close enough to \(a\text{;}\) since a curve, when closely observed, will begin to resemble a straight line. Therefore, the expression on the right-hand side is just the equation for the tangent line to the graph of \(f\) at \((a,f(a))\text{.}\)  For this reason, this process is also called the <em class="emphasis">tangent line approximation</em>.</p></article><article class="exercise-like" id="exercise-1"><h6 class="heading"><span class="codenumber">1</span></h6>
+<p id="p-131">From first principles find the derivative of \(\fe{f}{x}=\sqrt{3x+1}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-answer-1" id="answer-1"><span class="solution"><span class="type">Answer</span></span></a><span id="hk-answer-1" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-132">Both methods yield \(\fe{\fd{f}}{x}=\frac{3}{2\sqrt{3x+1}}\text{.}\)</p></span></span><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="solution"><span class="type">Solution</span></span></a><span id="hk-solution-1" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-133">First Method:</p>
+<p id="p-134"></p>
+\begin{align*}
+\fe{\fd{f}}{x}&amp;=\lim_{a\to x}\frac{\fe{f}{x}-\fe{f}{a}}{x-a}\\
+&amp;=\lim_{a\to x}\frac{\sqrt{3x+1}-\sqrt{3a+1}}{x-a}\\
+&amp;=\lim_{a\to x}\frac{\sqrt{3x+1}-\sqrt{3a+1}}{x-a}\cdot\frac{\sqrt{3x+1}+\sqrt{3a+1}}{\sqrt{3x+1}+\sqrt{3a+1}}\\
+&amp;=\lim_{a\to x}\frac{(3x+1)-(3a+1)}{(x-a)\left(\sqrt{3x+1}+\sqrt{3a+1}\right)}\\
+&amp;=\lim_{a\to x}\frac{3(x-a)}{(x-a)\left(\sqrt{3x+1}+\sqrt{3a+1}\right)}\\
+&amp;=\lim_{a\to x}\frac{3}{\sqrt{3x+1}+\sqrt{3a+1}}\\
+&amp;=\frac{3}{\sqrt{3x+1}+\sqrt{3x+1}}\\
+&amp;=\frac{3}{2\sqrt{3x+1}}
+\end{align*}
+<p id="p-135">Second Method:</p>
+<p id="p-136"></p>
+\begin{align*}
+\fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}\\
+&amp;=\lim_{h\to0}\frac{\sqrt{3(x+h)+1}-\sqrt{3x+1}}{h}\\
+&amp;=\lim_{h\to0}\frac{\sqrt{3(x+h)+1}-\sqrt{3x+1}}{h}\cdot\frac{\sqrt{3(x+h)+1}+\sqrt{3x+1}}{\sqrt{3(x+h)+1}+\sqrt{3x+1}}\\
+&amp;=\lim_{h\to0}\frac{\left(3(x+h)+1\right)-(3x+1)}{h\left(\sqrt{3(x+h)+1}+\sqrt{3x+1}\right)}\\
+&amp;=\lim_{h\to0}\frac{3h}{h\left(\sqrt{3(x+h)+1}+\sqrt{3x+1}\right)}\\
+&amp;=\lim_{h\to0}\frac{3}{\left(\sqrt{3(x+h)+1}+\sqrt{3x+1}\right)}\\
+&amp;=\frac{3}{\sqrt{3x+1}+\sqrt{3x+1}}\\
+&amp;=\frac{3}{2\sqrt{3x+1}}
+\end{align*}
+</span></span>
+</div></article><article class="exercise-like" id="exercise-2"><h6 class="heading"><span class="codenumber">2</span></h6>
+<p id="p-137">Differentiate \(\frac{x^{2} - 2 \, \sqrt{x}}{x}\) showing each step and stating which rules are used.</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-answer-2" id="answer-2"><span class="solution"><span class="type">Answer</span></span></a><span id="hk-answer-2" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-138">\(1+\dfrac{1}{\sqrt{x^3}}\)</p></span></span><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="solution"><span class="type">Solution</span></span></a><span id="hk-solution-2" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-139"></p>
+\begin{align*}
+\fe{f}{x}&amp;=\frac{x^{2} - 2 \, \sqrt{x}}{x}\\
+\text{Expand this to:}\\
+\fe{f}{x}&amp;=x - \frac{2}{\sqrt{x}}\\
+\text{Differentiate each part using the power law: } \de {x^r}x = r x^{r-1}\\
+\fe{\fd{f}}{x}&amp;=1+\dfrac{1}{\sqrt{x^3}}
+\end{align*}
+</span></span>
+</div></article><article class="exercise-like" id="exercise-3"><h6 class="heading"><span class="codenumber">3</span></h6>
+<p id="p-140">Use <a knowl="./knowl/definition-linear-approx.html" knowl-id="xref-definition-linear-approx" alt="Definition 3.5.3 Linear Approximation" title="Definition 3.5.3 Linear Approximation">Linear Approximation 3</a> to calculate \(\sqrt{99.8}\text{.}\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-answer-3" id="answer-3"><span class="solution"><span class="type">Answer</span></span></a><span id="hk-answer-3" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-141">\(9.9000\)</p></span></span><a knowl="" class="id-ref" refid="hk-solution-3" id="solution-3"><span class="solution"><span class="type">Solution</span></span></a><span id="hk-solution-3" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-142"></p>
+\begin{align*}
+\fe{f}{x}&amp;=\fe{f}{a} + \fe{\fd{f}}{a}(x-a)\\
+TBD
+\end{align*}
+</span></span>
+</div></article><article class="exercise-like" id="exercise-4"><h6 class="heading"><span class="codenumber">4</span></h6>
+<p id="p-143">Implicit Differentiation</p>
+<p id="p-144">\(y \cos\left(x\right) = \sin\left(x y\right) + 1\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-answer-4" id="answer-4"><span class="solution"><span class="type">Answer</span></span></a><span id="hk-answer-4" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-145">\(\frac{dy}{dx} = -\frac{y \cos\left(x y\right)}{x \cos\left(x y\right) - \cos\left(x\right)} - \frac{y \sin\left(x\right)}{x \cos\left(x y\right) - \cos\left(x\right)}\)</p></span></span><a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="solution"><span class="type">Solution</span></span></a><span id="hk-solution-4" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-146"></p>
+\begin{align*}
+y \cos\left(x\right)&amp;=1 + \sin\left(x y\right)\\
+\text{Differentiate through:}\\
+y \frac{d\left(\cos\left(x\right)\right)}{dx} + \frac{dy}{dx}\cos\left(x\right)&amp;=
+\frac{d\left(\sin\left(xy\right)\right)}{dx}\\
+- y \sin\left(x\right) + \frac{dy}{dx}\cos\left(x\right)&amp;=
+\frac{d\left(\sin\left(xy\right)\right)}{dx}\\
+\text{Now set } u = xy\\
+\frac{d\left(\sin\left(u\right)\right)}{dx}&amp;= \frac{d\left(\sin\left(u\right)\right)}{du}\frac{du}{dx}\\
+&amp;= \cos\left(u\right)\frac{du}{dx}\\
+&amp;= \cos\left(u\right)\left(x\frac{dy}{dx} + y\frac{dx}{dx}\right)\\
+&amp;= x\cos\left(xy\right)\frac{dy}{dx} + y\cos\left(xy\right)\\
+\text{Substituting this into our main equation:}\\
+- y \sin\left(x\right) + \frac{dy}{dx}\cos\left(x\right)&amp;=
+x\cos\left(xy\right)\frac{dy}{dx} + y\cos\left(xy\right)\\
+\text{Rearranging:}\\
+\frac{dy}{dx}&amp;= \frac{y \cos\left(x y\right) + y \sin\left(x\right)}{ \cos\left(x\right) - x \cos\left(x y\right) }
+\end{align*}
+</span></span>
+</div></article><article class="exercise-like" id="exercise-5"><h6 class="heading"><span class="codenumber">5</span></h6>
+<p id="p-147">Implicit Differentiation</p>
+<p id="p-148">\(xy+2x+3x^2 = 4\)</p>
+<div class="hidden-knowl-wrapper solutions">
+<a knowl="" class="id-ref" refid="hk-answer-5" id="answer-5"><span class="solution"><span class="type">Answer</span></span></a><span id="hk-answer-5" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-149">\(\fe{\fd{y}}{x} = \frac{y}{x} - \frac{2}{x} - 6\)</p></span></span><a knowl="" class="id-ref" refid="hk-solution-5" id="solution-5"><span class="solution"><span class="type">Solution</span></span></a><span id="hk-solution-5" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-150">Implicit:</p>
+\begin{gather*}
+xy+2x+3x^2 = 4\\
+\text{Differentiate each part using the product rule for } xy\\
+x\frac{dy}{dx} + y\frac{dx}{dx} + 2 + 6x = 0\\
+x\frac{dy}{dx} + y + 2 + 6x = 0\\
+\text{Rearranging gives:} \\
+\frac{dy}{dx} = -\frac{\left(y+2+6x\right)}{x}\\
+\text{Rearranging original equation for } y\\
+y = \frac{4}{x} -2 -3x\\
+\text{Substituting gives } y\\
+\frac{dy}{dx} = -\frac{\left(\frac{4}{x} -2 -3x+2+6x\right)}{x}\\
+\frac{dy}{dx} = -\frac{4}{x^2}-3
+\end{gather*}
+<p id="p-151">Explicit:</p>
+\begin{gather*}
+xy+2x+3x^2 = 4\\
+\text{Solve for } y\\
+y = \frac{4}{x} -2 -3x\\
+\text{And differentiate } y\\
+\frac{dy}{dx} = -\frac{4}{x^2} -3
+\end{gather*}
+<p id="p-152">As you can see the results are the same for each method.</p>
+<p id="p-153">The problem that implicit differentiation solves is that it is often difficult or impossible to rearrange to have \(y\) on the left by its own.</p></span></span>
+</div></article></section><p id="p-154">Implicit Differentiation of \(y \cos\left(x\right) = \sin\left(x y\right) + 1\)</p>
+<div class="sagecell-sage" id="sage-61"><script type="text/x-sage">x,y = var('x,y')
+expr = y*cos(x) == 1 + sin(x*y)
+show(expr)
+f(x,y) = expr.lhs() - expr.rhs() # We want f(x,y) = 0.
+dydx = f.implicit_derivative(y,x)
+show(LatexExpr(r"\frac{dy}{dx} = "), dydx)
+</script></div>
+<p id="p-155">Implicit Differentiation of \(xy+2x+3x^2 = 4\)</p>
+<div class="sagecell-sage" id="sage-62"><script type="text/x-sage">x,y = var('x,y')
+expr = x*y+2*x+3*x^2 == 4
+show(expr)
+f(x,y) = expr.lhs() - expr.rhs() # We want f(x,y) = 0.
+dydx = f.implicit_derivative(y,x).expand()
+show(LatexExpr(r"\frac{dy}{dx} = "), dydx)
+</script></div>
+<p id="p-156">Exercise 2.1</p>
+<div class="sagecell-sage" id="sage-63"><script type="text/x-sage">f=(x^2-2*sqrt(x))/x
+show("f(x) = ", f)
+show("f(x) = ", f.expand())
+show("f'(x) = ", f.expand().diff())
+</script></div>
+<p id="p-157">Exercise 2.2</p>
+<div class="sagecell-sage" id="sage-64"><script type="text/x-sage">f=x^2*tan(x)*sin(x)
+show(f.diff().simplify_trig())
+show(f.diff().simplify_full())
+show(f.diff())
+show(f.diff().expand())
+show("Which is simpler?")
+show("Note that Sage doesn't seem to like sec() cosec()")
+</script></div>
+<p id="p-158">Exercise 2.3</p>
+<div class="sagecell-sage" id="sage-65"><script type="text/x-sage">var('t')
+f=(1+tan(t))^(1/3)
+show("f(t) = ", f)
+show("f'(t) = ", f.diff(t))
+</script></div>
+<p id="p-159">Exercise 2.4</p>
+<div class="sagecell-sage" id="sage-66"><script type="text/x-sage">f=x*sin(1/x)
+show("f(x) = ", f)
+show("f'(x) = ", f.diff())
+show("f'(x) = ",f.diff().simplify_full())
+</script></div>
+<p id="p-160">Exercise 2.5</p>
+<div class="sagecell-sage" id="sage-67"><script type="text/x-sage">var('v')
+f=(v/(v^3+1))^6
+show("f(v) = ", f)
+show("f'(v) = ", f.diff(v))
+show("f'(v) = ",f.diff(v).simplify_full())
+</script></div>
+<p id="p-161">Exercise 3.1</p>
+<div class="sagecell-sage" id="sage-68"><script type="text/x-sage">y(x)=x + tan(x)
+y.show()
+dydx=y.diff(x).simplify_full()
+
+m,c=var('m c')
+pt1=(pi,pi)
+m=dydx(x=pi)
+#y=m*x+c => c=y-mx at x = pi
+c=pt1[1]-m*pt1[0]  # pt1[0] is first element of (pi,pi) tuple = pi, pt2[1] = pi
+y_line(x)=m*x+c
+tangent="y={}".format(y_line(x))
+p1=point(pt1,rgbcolor='black', pointsize=30)
+p2=plot(y,0,2*pi, ymin=-10,ymax=10,detect_poles='show')
+p3=plot(y_line,0,2*pi,color='red', legend_label=tangent)
+p4=plot(dydx,0,2*pi, color='green',detect_poles='show')
+p1+p2+p3+p4
+</script></div>
+<p id="p-162">Exercise 3.2</p>
+<div class="sagecell-sage" id="sage-69"><script type="text/x-sage">y(x)=sqrt(x)/(x+1)
+y.show()
+dydx=y.diff(x).simplify_full()
+
+m,c=var('m c')
+pt1=(4,0.4)
+m=dydx(x=4)
+#y=m*x+c => c=y-mx at x = 4
+c=pt1[1]-m*pt1[0]  # pt1[0] is first element of (4,0.4) tuple = 4, pt2[1] = 0.4
+y_line(x)=m*x+c
+tangent="y={}".format(y_line(x))
+p1=point(pt1,rgbcolor='black', pointsize=30)
+p2=plot(y,0,2*pi, ymin=-0.1,ymax=1,detect_poles='show')
+p3=plot(y_line,0,2*pi,color='red', legend_label=tangent)
+p4=plot(dydx,0,2*pi, color='green',detect_poles='show')
+p1+p2+p3+p4
+</script></div>
+<p id="p-163">Exercise 4</p>
+<div class="sagecell-sage" id="sage-70"><script type="text/x-sage">
+</script></div></section></div></main>
+</div>
+</body>
+</html>

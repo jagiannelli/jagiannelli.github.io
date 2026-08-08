@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:45+01:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><span class="solution"><p>Remind yourself how to obtain the homogeneous (null) solution:</p>
+<pre class="code-block tex2jax_ignore">t,a = var('t,a')
+y = function('y')(t)
+de1 = diff(y,t) == a*y
+sol1 = desolve(de1,y, ivar=t)
+show(sol1)
+</pre>
+<p>\(C e^{\left(a t\right)}\) and is the general solution to \(\frac{dy}{dt} - ay = 0\text{.}\)</p>
+<p>Also have a look at the screenshot above!</p></span></body>
+</html>

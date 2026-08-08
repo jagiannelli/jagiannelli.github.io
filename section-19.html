@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:44+01:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JAG A2</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="jagbook.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+\newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+\newcommand{\fd}[1]{#1'}
+\newcommand{\sd}[1]{#1''}
+\newcommand{\td}[1]{#1'''}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand \dd[1]  { \,\textrm d{#1}                       }   
+\newcommand \de[2]  { \frac{\mathrm d{#1}}{\mathrm d{#2}}   }   
+\newcommand \intl[4]{ \int\limits_{#1}^{#2}{#3}\dd{#4}      }   
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg" alt="Logo image for document"></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-38.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-18.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="linear-algebra-exam.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-20.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-18.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="linear-algebra-exam.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-20.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="biography-1.html" data-scroll="biography-1">About John A Giannelli</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+<h2 class="link"><a href="sets.html" data-scroll="sets"><span class="codenumber">1</span><span class="title">Quick Guide to Using SageMath</span></a></h2>
+<ul>
+<li><a href="sage-online.html" data-scroll="sage-online">SageMath Online</a></li>
+<li><a href="section-2.html" data-scroll="section-2">Running From Source</a></li>
+</ul>
+<h2 class="link"><a href="basics.html" data-scroll="basics"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
+<ul>
+<li><a href="section-3.html" data-scroll="section-3">Executing Sage Commands</a></li>
+<li><a href="section-4.html" data-scroll="section-4">How to define functions</a></li>
+<li><a href="section-5.html" data-scroll="section-5">Symbolic Manipulation</a></li>
+<li><a href="section-6.html" data-scroll="section-6">Declaring Variables and Plotting</a></li>
+<li><a href="section-7.html" data-scroll="section-7">Sage and Python</a></li>
+</ul>
+<h2 class="link"><a href="integers.html" data-scroll="integers"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
+<ul>
+<li><a href="calculus-limits.html" data-scroll="calculus-limits">Calculating Limits</a></li>
+<li><a href="calculus-derivatives.html" data-scroll="calculus-derivatives">Derivatives</a></li>
+<li><a href="calculus-integration.html" data-scroll="calculus-integration">Integration</a></li>
+<li><a href="integers-sage.html" data-scroll="integers-sage">Sage</a></li>
+<li><a href="cap-2017-hw2.html" data-scroll="cap-2017-hw2">CAP 2017, HW 2 due January 31</a></li>
+<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 3 due February 7</a></li>
+<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 4 due February 14</a></li>
+<li><a href="references-2.html" data-scroll="references-2">References</a></li>
+</ul>
+<h2 class="link"><a href="differential.html" data-scroll="differential"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
+<ul>
+<li><a href="first-order-de.html" data-scroll="first-order-de">First Order Differential Equations</a></li>
+<li><a href="second-order-de.html" data-scroll="second-order-de">Second Order Differential Equations</a></li>
+<li><a href="system-of-de.html" data-scroll="system-of-de">Systems Of Equations</a></li>
+<li><a href="exercises-de.html" data-scroll="exercises-de">Exercises</a></li>
+<li><a href="references-3.html" data-scroll="references-3">References (places I plagiarized)</a></li>
+</ul>
+<h2 class="link active"><a href="linear-algebra-exam.html" data-scroll="linear-algebra-exam"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">A1</a></li>
+<li><a href="section-19.html" data-scroll="section-19" class="active">A2</a></li>
+<li><a href="section-20.html" data-scroll="section-20">A3</a></li>
+<li><a href="section-product-rule.html" data-scroll="section-product-rule">The Product Rule</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
+<li><a href="appendix-2.html" data-scroll="appendix-2">Hints and Solutions to Selected Exercises</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="index-38.html" data-scroll="index-38">Index</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-19"><header title="Section 5.2 A2"><h2 class="heading hide-type" alt="Section 5.2 A2">
+<span class="type">Section</span><span class="codenumber">5.2</span><span class="title">A2</span>
+</h2></header><article class="example-like" id="exam_a2"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">5.2.1</span>
+</h6>
+<p id="p-316">Let \(A\) be a subspace of \(\mathbb{R}3\) of dimension 2 and let \(\vec{b}\) be a fixed non-zero vector in \(\mathbb{R}3\text{.}\)</p>
+<p id="p-317">Let \(A′\) denote the subset of \(\mathbb{R}3\) consisting of all vectors of the form \(\vec{a} + \vec{b}\) where \(\vec{a}\) is in the subspace \(A\text{.}\)</p>
+<p id="p-318">For which vectors \(\vec{b}\) is \(A′\) also a subspace? Justify your answer.</p>
+<p id="p-319">[7 marks]</p></article><p id="p-320">Before grappling this problem it helps  to get a picture.  I believe this is the best way to approach any problem. (Maybe this is just the old physicist in me).  Sometimes it is not possible but not very often.</p>
+<p id="p-321">So lets first look at how SageMath can help us here. Since \(A\) is a subspace \(\mathbb{R}3\) then it must be a plane passing through the origin; subspaces must contain the \(\left\{0\right\}\) vector and pass through the origin.</p>
+<p id="p-322">Take, for example, the plane passing through the origin given by:</p>
+\begin{equation*}
+2 x - 4 y + 2 z = 0
+\end{equation*}
+<p id="p-323">Consider the case where our vector \(\vec{a}\) is the direction vector starting at position \((2,2,2)\) and extending to \((3,4,5)\text{.}\) This lies on the plane going through the origin and is our subspace \(A\text{.}\)</p>
+<p id="p-324">Let the point \(P\)  be the start of \(\vec{a}\) and the point \(Q\) be the endpoint. These points are also the position vectors \(\vec{OP}\) and \(\vec{OQ}\) and also lie on the plane (since the origin is on the plane).  Hence, a normal to the plane is given by the cross-product:</p>
+\begin{equation*}
+\vec{n} = \vec{OP} \times \vec{a}
+\end{equation*}
+<p id="p-325">(We could have taken the cross product of any of these three vectors since they are all in the same plane.)</p>
+<p id="p-326">We know that the dot product of the normal \(\vec{n}\) with any of our three vectors should be zero. This enables us to use implicit_plot3d() passing in an equation for any point on the plane. We have defined \(f(x,y,z)\) as the function to represent any point on this plane. In the sage cell this is achieved by the following technique:<pre class="code-block tex2jax_ignore">p = vector([x, y, z])
+pA = a - p
+f(x,y,z) = n.dot_product(pA)
+</pre>The resultant function is:</p>
+\begin{equation*}
+2 x - 4 y + 2 z = 0
+\end{equation*}
+<p>This confirms our initial equation above.</p>
+<p id="p-327">Now we have all we need to plot the plane. There are several ways of plotting this plane in SageMath. The one adopted here is to use implicit_plot3d().  We pass into this method the above function \(f\) set equal to zero and the \(x,y,z\) ranges. The next Sage Cell brings this together. Our vector \(\vec{a}\) is the yellow arrow,  the origin is shown as the black dot in the centre, the plane is drawn in blue.</p>
+<p id="p-328">Now add another vector \(\vec{b}\) which is also on the same plane. This shown as the green arrow. To do this we introduce another point \(S=(-1,2,5)\text{.}\)  You might wonder how we know that this point lies on our plane.  It was found using the following trick.<pre class="code-block tex2jax_ignore">f=n[0]*x+n[1]*y+n[2]*z==0
+show(f(x=-1,y=2))
+</pre>Here \(n[0]\) is the \(x\)-coordinate of the normal, \(n[1]\) is the \(y\)-coordinate, and so on. They are the coefficients of the standard equation of a plane (\(a x + b y + c z = d\)). With \(d = 0\) is the plane case when the plane passes through the origin.  The results are:</p>
+\begin{equation*}
+2 z - 10 = 0
+\end{equation*}
+<p>From this, we can find the \(z\)-coordinate of \(S\) which ensure that the point fits onto our plane.</p>
+<p id="p-329">Now for the full picture.  Lets find another vector \(\vec{c}\) that does not lie on our plane. Lets also form another plane which contains this new vector and vector \(\vec{a}\) (the yellow arrow).</p>
+<p id="p-330">Try the point \(R=(5,0,3)\text{.}\)</p>
+<p id="p-331">Evaluating the following SageCell and playing with the resultant plot (zooming in and out and rotating) should convince you of the official Edinburgh University <a knowl="./knowl/a2_solution.html" knowl-id="xref-a2_solution" alt="Solution 5.2.1 " title="Solution 5.2.1 ">solution 1</a> to the problem.</p>
+<div class="sagecell-sage" id="sage-102"><script type="text/x-sage">var ('x,y,z')
+ptP=(2,2,2)
+ptQ=(3,4,5)
+
+OP=vector(ptP);
+OQ=vector(ptQ);
+
+show("OP = ",OP.column())
+show("OQ = ",OQ.column())
+
+a=OQ-OP
+show("a = OQ - OP =",a.column())
+
+n=OP.cross_product(a);
+show("Normal to plane = ", n.normalized().column())
+
+f=n[0]*x+n[1]*y+n[2]*z==0
+show(f(x=1,y=3))
+show(f(x=-1,y=2))
+
+# p (lower case) is any position vector on the plane. Since 'a' is on the plane
+# we can write an general equation for the plane by this trick:
+p = vector([x, y, z])
+pA = a - p;
+f(x,y,z) = n.dot_product(pA)
+show("f(x,y,z) = ", f)
+
+#The Origin
+P0 = point3d((0, 0, 0), color = 'black', size = 15)
+
+# Vector a
+a_arrow=arrow(OP,OQ,color='yellow',width=10)
+
+ptS=(-1,2,5)
+OS=vector(ptS);
+
+show("OS = ",OS.column())
+
+b=OS-OP
+show("b = OS - OP =",b.column())
+b_arrow=arrow(OQ,OS,color='green',width=10)
+
+
+ptR=(5,0,3)
+OR=vector(ptR)
+show("OR = ",OR.column())
+
+c=OR-OP
+show("c = OR - OP =",c.column())
+c_arrow=arrow(OQ,OR,color='black',width=10)
+
+# normal to plane containing a and c
+n2=a.cross_product(c)
+
+pC = p - OR;
+g(x,y,z) = n2.dot_product(pC)
+show("g(x,y,z) = ", g)
+
+plane=implicit_plot3d(f, (x, -7, 7), (y, -7, 7), (z, -7, 7), color = 'blue',opacity=0.6)
+plane2=implicit_plot3d(g, (x, -7, 7), (y, -7, 7), (z, -7, 7), color = 'red',opacity=0.6)
+final_plot = P0 + a_arrow + b_arrow + c_arrow + plane + plane2
+final_plot.show(aspect_ratio=1)
+</script></div>
+<a knowl="" class="id-ref" refid="hk-a2_solution" id="a2_solution"><span class="solution"><span class="type">Solution</span></span></a><span id="hk-a2_solution" class="hidden-content tex2jax_ignore"><span class="solution"><article class="theorem-like" id="proposition-1"><h6 class="heading">
+<span class="type">Proposition</span><span class="codenumber">5.2.2</span>
+</h6>
+<p id="p-332">\(A'\) is a subspace if and only if \(\vec{b} \in A\text{.}\)</p></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-1" id="proof-1"><article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6></article></a></div>
+<div id="hk-proof-1" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-333">If \(A \subset \mathbb{R}3\) be a subspace of rank 2 then it is a plane through the origin. If \(\vec{x} \in A\) then</p>
+\begin{equation*}
+\vec{x} = t_1 \vec{v_1} + t_2 \vec{v_2}
+\end{equation*}
+<p>for direction vectors \(\vec{v_1},\vec{v_2}\text{.}\)</p>
+<p id="p-334">If \(\vec{b} \in A\)and \(\vec{b} \ne 0\) then</p>
+\begin{equation*}
+\vec{b} = b_1 \vec{v_1} + b_2 \vec{v_2}
+\end{equation*}
+<p>and so \(A'\) is</p>
+\begin{equation*}
+A′ = \{ t_1\vec{v_1} + t_2 \vec{v_2} + b_1 \vec{v_1} + b_2 \vec{v_2} | t_1,t_2 \in \mathbb{R} \}
+\end{equation*}
+
+\begin{equation*}
+= \{ (t_1 + b_1)\vec{v_1} + (t_2 + b_2)\vec{v_2}  | t_1,t_2 \in \mathbb{R} \}
+\end{equation*}
+
+\begin{equation*}
+= \{ s_1 \vec{v_1} + s_2 \vec{v_2}  | s_1,s_2 \in \mathbb{R} \}
+\end{equation*}
+
+\begin{equation*}
+= A
+\end{equation*}
+<p>Hence \(A'\) is also a plane through the origin.</p>
+<p id="p-335">If \(\vec{b} \notin A\) then</p>
+\begin{equation*}
+A′ = \{ \vec{b} + t_1 \vec{v_1} + t_2 \vec{v_2} | t_1,t_2 \in \mathbb{R} \}
+\end{equation*}
+<p>which is a plane <em class="emphasis">not</em> through the origin, and so is not a subspace.</p>
+<p id="p-336">(This is hopefully illustrated with the Sage Cell simulation.)</p></article></div></span></span></section></div></main>
+</div>
+</body>
+</html>

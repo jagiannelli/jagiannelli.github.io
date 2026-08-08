@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:45+01:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We know that the dot product of the normal \(\vec{n}\) with any of our three vectors should be zero. This enables us to use implicit_plot3d() passing in an equation for any point on the plane. We have defined \(f(x,y,z)\) as the function to represent any point on this plane. In the sage cell this is achieved by the following technique:<pre class="code-block tex2jax_ignore">p = vector([x, y, z])
+pA = a - p
+f(x,y,z) = n.dot_product(pA)
+</pre>The resultant function is:</p>
+\begin{equation*}
+2 x - 4 y + 2 z = 0
+\end{equation*}
+<p>This confirms our initial equation above.</p>
+<span class="incontext"><a href="section-19.html#p-326">in-context</a></span>
+</body>
+</html>

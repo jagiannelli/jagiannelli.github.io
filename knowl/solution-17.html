@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:45+01:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h6 class="heading">
+<span class="type">Solution</span><span class="codenumber">4.4.2.1</span>
+</h6>
+<p>Sage Commands:</p>
+<pre class="code-block tex2jax_ignore">t, omega, a, y0 = var ('t, omega, a, y0')
+y = function('y')(t)
+de = diff(y,t) == a*y + cos(omega*t)
+sol=desolve(de,y, ivar=t, ics=[0,y0])
+show(sol)
+</pre>
+<p>This results in:</p>
+\begin{equation*}
+\frac{{\left(a^{2} + \omega^{2}\right)} y_{0} e^{\left(a t\right)} - a \cos\left(\omega t\right) + a e^{\left(a t\right)} + \omega \sin\left(\omega t\right)}{a^{2} + \omega^{2}}
+\end{equation*}
+</span><span class="incontext"><a href="exercises-de.html#solution-17">in-context</a></span>
+</body>
+</html>

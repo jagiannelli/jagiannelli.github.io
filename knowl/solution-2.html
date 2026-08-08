@@ -1,18 +1,28 @@
+<!doctype html>
+<html lang="en-US">
 <!--**************************************-->
-<!--* Generated from MathBook XML source *-->
-<!--*    on 2016-12-28T19:15:22Z    *-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:45+01:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
-<span class="solution"><h5 class="heading">
-<span class="type">Solution</span><span class="codenumber">4.4.2.1</span>
-</h5>
-<p id="p-159">Sage Commands:</p>
-<pre class="code-block tex2jax_ignore">t, omega, a, y0 = var ('t, omega, a, y0')
-y = function('y')(t)
-de = diff(y,t) == a*y + cos(omega*t)
-sol=desolve(de,y, ivar=t, ics=[0,y0])
-show(sol)
-</pre>
-<p id="p-160">This results in:</p>\begin{equation*}\frac{{\left(a^{2} + \omega^{2}\right)} y_{0} e^{\left(a t\right)} - a \cos\left(\omega t\right) + a e^{\left(a t\right)} + \omega \sin\left(\omega t\right)}{a^{2} + \omega^{2}}\end{equation*}</span><span class="incontext"><a href="exercises-de.html#solution-2">in-context</a></span>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<span class="solution"><h6 class="heading">
+<span class="type">Solution</span><span class="codenumber">3.5.1.2.1</span>
+</h6>
+<p></p>
+\begin{align*}
+\fe{f}{x}&amp;=\frac{x^{2} - 2 \, \sqrt{x}}{x}\\
+\text{Expand this to:}\\
+\fe{f}{x}&amp;=x - \frac{2}{\sqrt{x}}\\
+\text{Differentiate each part using the power law: } \de {x^r}x = r x^{r-1}\\
+\fe{\fd{f}}{x}&amp;=1+\dfrac{1}{\sqrt{x^3}}
+\end{align*}
+</span><span class="incontext"><a href="cap-2017-hw2.html#solution-2">in-context</a></span>
+</body>
+</html>

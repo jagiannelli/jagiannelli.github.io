@@ -1,50 +1,19 @@
+<!doctype html>
+<html lang="en-US">
 <!--**************************************-->
-<!--* Generated from MathBook XML source *-->
-<!--*    on 2016-12-28T19:15:22Z    *-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:45+01:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
-<h5 class="heading"><span class="type">Paragraph</span></h5><p>Let us break this entry down:
-
-            </p><ul style="list-style-type: disc;">
-<li id="li-7">
-                    var('r c t') tells Sage to pre-declare the variables that will be used.
-                </li>
-<li id="li-8">
-                    \(y = function('y')(t)\)
-                    tells Sage that \(y\) is a function of \(t\), e.g. as though every time we type \(y\) we mean \(
-                    y(t)\).
-                    This is a way to identify \(y\) as a function, not just a variable, and associate it with \(t\).
-                </li>
-<li id="li-9">
-                    \(de = y + r*c*diff(y,t) == 0\)
-                    creates a variable \(de\) that contains one of the statements of the DE.
-                </li>
-<li id="li-10">
-                    \(des = desolve(de,[y,t],[0,1])\)
-                    invokes the Sage DE solver using our definition \(de\) as an argument, and:
-                </li>
-<li id="li-11">
-                    \([y,t]\)
-                    identifies \(y\) as the function of interest and \(t\) as the dependent variable
-                </li>
-<li id="li-12">
-                    \([0,1]\)
-                    sets the initial conditions: at \(t = 0, y = 1\), or as we expressed it above, "\(y(0) =1\)".
-                </li>
-</ul><p>
-
-            <p id="p-59">Now let us plot this</p>
-            <div class="sagecell-sage" id="sage-25"><script type="text/x-sage">f(t,r,c) = des
-plot(f(t,1,1),(t,0,5),figsize=(4,3))
-</script></div>
-
-            <p id="p-60">Let us now take a more general solution.</p>
-            <div class="sagecell-sage" id="sage-26"><script type="text/x-sage">f(t,a,b,r,c) = (a-b) * des + b
-show(f)
-lbl = text("$RC \, Circuit, \, r = 10000\Omega, \, c = 100\mu f $",(3,3),fontsize=12,rgbcolor='#006000')
-p = plot(f(t,0,10,10000,100e-6),(t,0,5), figsize=(4,3),axes_labels=['time','v'])
-show(p+lbl)
-</script></div>
-        </p><span class="incontext"><a href="section-6.html#p-58">in-context</a></span>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Creating lists using python methods.</p>
+<span class="incontext"><a href="section-7.html#p-58">in-context</a></span>
+</body>
+</html>

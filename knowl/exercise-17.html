@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2026-08-08T13:37:45+01:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="exercise-like"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">1</span>
+</h6>
+<p>Response to Exponential Input</p>
+<p>Consider the following differential equation:</p>
+\begin{equation}
+\frac{dy}{dt} = ay + e^{st}\tag{4.4.5}
+\end{equation}
+
+\begin{equation}
+y=y(0)\:at\:t=0\tag{4.4.6}
+\end{equation}
+<p>This is the standard growth equation  with an exponential forcing term \(e^{st}\text{.}\)</p>
+<p>We look for a <em class="emphasis">particular</em> solutions of the form:</p>
+\begin{equation*}
+y_p = Ye^{st}
+\end{equation*}
+<p>where \(Y\) is a constant.</p>
+<p>Substituting we get:</p>
+\begin{equation*}
+Ys e^{st} = aY e^{st} + e^{st}
+\end{equation*}
+<p>Rearranging gives:</p>
+\begin{equation*}
+Y=\frac{1}{s-a}
+\end{equation*}
+<p>Full solution is the <em class="emphasis">particular</em> solution plus <em class="emphasis">null</em> (or <em class="emphasis">homogeneous</em>) solution:</p>
+\begin{equation*}
+y(t)=\frac{e^{st}}{s-a} + C e^{st}
+\end{equation*}
+<p>From the initial conditions we get:</p>
+\begin{equation*}
+y(0) = \frac{1}{s-a} + C
+\end{equation*}
+<p>Substituting in \(y(t)\) gives:</p>
+\begin{equation*}
+y(t)=\frac{e^{st}}{s-a} + \left[y(0) -\frac{1}{s-a}\right] e^{st}
+\end{equation*}
+<p>Rearranging we can see the effect of the forcing in addition to the homogeneous term:</p>
+\begin{equation*}
+y(t)= y(0) e^{st} + \frac{e^{st}-e^{at}}{s-a}
+\end{equation*}
+<p>In Strang's terminology:</p>
+\begin{equation}
+y(t) = y_p + y_n = y(0) e^{st} + \frac{e^{st}-e^{at}}{s-a}\tag{4.4.7}
+\end{equation}
+<p>That is, the solution is a combination of the standard homogeneous term - the standard growth factor - plus an extra term coming from the forcing factor. Notice that this extra term has a singularity (division by zero) at \(s=a\text{.}\) This is <em class="emphasis">Resonance</em>.</p>
+<p>This singularity can be handled using  <em class="emphasis">L'Hopital's Rule</em><a knowl="./knowl/hospital.html" knowl-id="xref-hospital" alt="Principle 4.0.3 L'Hôpital's Rule" title="Principle 4.0.3 L'Hôpital's Rule">Principle 3</a></p>
+<figure class="figure-like"><img width="100%" src="images/strang_exp_response.png" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">4.4.1</span>Gilbert Strang In Action</figcaption></figure><p>The full solution, using L'Hopital, should match the final solution in <a class="external-url" href="https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/differential-equations-and-linear-algebra/first-order-equations/response-to-exponential-input/" target="_blank">Strang's Lecture</a>.</p>
+\begin{equation}
+y(t)=y_{0} e^{a t} + t e^{s t}\tag{4.4.8}
+\end{equation}
+<p>Now try and solve this using SageMath.</p>
+<div class="hidden-knowl-wrapper solutions">
+<span><a knowl="./knowl/hint-1-hidden.html" knowl-id="hidden-hint-1" alt="Hint 4.4.1.1 " title="Hint 4.4.1.1 "><span class="solution"><span class="type">Hint</span></span></a></span><span><a knowl="./knowl/solution-16-hidden.html" knowl-id="hidden-solution-16" alt="Solution 4.4.1.1 " title="Solution 4.4.1.1 "><span class="solution"><span class="type">Solution</span></span></a></span>
+</div></article><span class="incontext"><a href="exercises-de.html#exercise-17">in-context</a></span>
+</body>
+</html>
