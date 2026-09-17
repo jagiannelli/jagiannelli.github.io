@@ -1,57 +1,141 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2026-08-08T13:37:44+01:00    *-->
-<!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
-<!--*                                    *-->
-<!--**************************************-->
-<html lang="en-US">
-<head>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>JAG CAP 2017, HW 2 due January 31</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']],
-    },
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends upper-alpha; prefix: ''; suffix: '. '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
-    // Make *any* div with class 'sagecell-sage' an executable Sage cell
-    // Their results will be linked, only within language type
-    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
-                           linked: true,
-                           languages: ['sage'],
-                           evalButtonText: 'Evaluate (Sage)'});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:image" content="https://jagiannelli.github.io/external/images/jg.jpeg">
+<meta property="og:image" content="https://jagiannelli.github.io/external/images/jg.jpeg">
+<meta name="twitter:image:alt" content="Document Logo">
+<meta property="og:image:alt" content="Document Logo">
+<meta name="twitter:title" content="John Giannelli">
+<meta property="og:title" content="John Giannelli">
+<meta property="book:title" content="John Giannelli">
+<meta name="twitter:description" content="Musings on Sage Math">
+<meta property="og:description" content="Musings on Sage Math">
+<meta name="twitter:card" content="summary_large_image">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.2.13';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.a45d14e8fc8c534a.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.538acb8e671a3b5d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.1bda041f5a098305.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
 });
-</script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
-<link href="jagbook.css" rel="stylesheet" type="text/css">
+</script>
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\Z}{\mathbb{Z}}
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://github.com/jagiannelli"><img src="external/images/jg.jpeg" alt="Logo image"></a><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="jagbook.html"><span class="title">John Giannelli</span> <span class="subtitle">Musings on Sage Math</span></a></div>
+<p class="byline">John A Giannelli</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="book-index.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="integers-sage.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="integers.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="cap-2017-hw3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\reals}{\mathbb{R}}
 \newcommand{\real}[1]{\mathbb{R}^{#1}}
 \newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
@@ -78,119 +162,254 @@ MathJax.Hub.Config({
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg" alt="Logo image for document"></a><div class="title-container">
-<h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
-<p class="byline"></p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar" style=""><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-38.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="integers-sage.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="cap-2017-hw3.html" title="Next" alt="Next">Next</a></span>
-</div>
-<button class="sidebar-right-toggle-button button active">Annotations</button>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="integers-sage.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="cap-2017-hw3.html" title="Next" alt="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></h2>
-<ul>
-<li><a href="biography-1.html" data-scroll="biography-1">About John A Giannelli</a></li>
-<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="about-the-author.html" class="internal"><span class="title">About John A Giannelli</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="dedication.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgements.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
-<h2 class="link"><a href="sets.html" data-scroll="sets"><span class="codenumber">1</span><span class="title">Quick Guide to Using SageMath</span></a></h2>
-<ul>
-<li><a href="sage-online.html" data-scroll="sage-online">SageMath Online</a></li>
-<li><a href="section-2.html" data-scroll="section-2">Running From Source</a></li>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Quick Guide to Using SageMath</span></a></div>
+<ul id="ptx-toc-group-sets" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-introduction.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What Is SageMath?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-online.html" class="internal"><span class="codenumber">1.2</span> <span class="title">SageMath Online</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-from-source.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Running From Source</span></a></div>
+<ul id="ptx-toc-group-sage-from-source" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-from-source.html#sage-from-source-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Building SageMath</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-from-source.html#sage-from-source-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Running SageMath Notebook from the command line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-from-source.html#sage-from-source-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Running SageMath From the command line</span></a></div></li>
 </ul>
-<h2 class="link"><a href="basics.html" data-scroll="basics"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
-<ul>
-<li><a href="section-3.html" data-scroll="section-3">Executing Sage Commands</a></li>
-<li><a href="section-4.html" data-scroll="section-4">How to define functions</a></li>
-<li><a href="section-5.html" data-scroll="section-5">Symbolic Manipulation</a></li>
-<li><a href="section-6.html" data-scroll="section-6">Declaring Variables and Plotting</a></li>
-<li><a href="section-7.html" data-scroll="section-7">Sage and Python</a></li>
+</li>
 </ul>
-<h2 class="link active"><a href="integers.html" data-scroll="integers"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
-<ul>
-<li><a href="calculus-limits.html" data-scroll="calculus-limits">Calculating Limits</a></li>
-<li><a href="calculus-derivatives.html" data-scroll="calculus-derivatives">Derivatives</a></li>
-<li><a href="calculus-integration.html" data-scroll="calculus-integration">Integration</a></li>
-<li><a href="integers-sage.html" data-scroll="integers-sage">Sage</a></li>
-<li><a href="cap-2017-hw2.html" data-scroll="cap-2017-hw2" class="active">CAP 2017, HW 2 due January 31</a></li>
-<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 3 due February 7</a></li>
-<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 4 due February 14</a></li>
-<li><a href="references-2.html" data-scroll="references-2">References</a></li>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="basics.html" class="internal"><span class="codenumber">2</span> <span class="title">Basic Sage Commands</span></a></div>
+<ul id="ptx-toc-group-basics" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="basics-introduction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">What’s in This Chapter</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-executing-commands.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Executing Sage Commands</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-defining-functions.html" class="internal"><span class="codenumber">2.3</span> <span class="title">How to define functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-symbolic-manipulation.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Symbolic Manipulation</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-variables-plotting.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Declaring Variables and Plotting</span></a></div>
+<ul id="ptx-toc-group-sage-variables-plotting" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-variables-plotting.html#sage-variables-plotting-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Use SageMath to solve differential equations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-and-python.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Sage and Python</span></a></div>
+<ul id="ptx-toc-group-sage-and-python" class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Lists, Tuples, and Dictionaries</span></a></div>
+<ul id="ptx-toc-group-sage-and-python-3" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3-3" class="internal"><span class="codenumber">2.6.1.1</span> <span class="title">Lists</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3-4" class="internal"><span class="codenumber">2.6.1.2</span> <span class="title">Tuples </span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3-5" class="internal"><span class="codenumber">2.6.1.3</span> <span class="title">Dictionaries (Associative Arrays) </span></a></div></li>
 </ul>
-<h2 class="link"><a href="differential.html" data-scroll="differential"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
-<ul>
-<li><a href="first-order-de.html" data-scroll="first-order-de">First Order Differential Equations</a></li>
-<li><a href="second-order-de.html" data-scroll="second-order-de">Second Order Differential Equations</a></li>
-<li><a href="system-of-de.html" data-scroll="system-of-de">Systems Of Equations</a></li>
-<li><a href="exercises-de.html" data-scroll="exercises-de">Exercises</a></li>
-<li><a href="references-3.html" data-scroll="references-3">References (places I plagiarized)</a></li>
+</li></ul>
+</li>
 </ul>
-<h2 class="link"><a href="linear-algebra-exam.html" data-scroll="linear-algebra-exam"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
-<ul>
-<li><a href="section-18.html" data-scroll="section-18">A1</a></li>
-<li><a href="section-19.html" data-scroll="section-19">A2</a></li>
-<li><a href="section-20.html" data-scroll="section-20">A3</a></li>
-<li><a href="section-product-rule.html" data-scroll="section-product-rule">The Product Rule</a></li>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="integers.html" class="internal"><span class="codenumber">3</span> <span class="title">Calculus</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-integers">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-introduction.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Calculus in SageMath</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-limits.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Calculating Limits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="calculus-derivatives.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Derivatives</span></a></div>
+<ul id="ptx-toc-group-calculus-derivatives" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Examples From Chapter 2</span></a></div>
+<ul id="ptx-toc-group-calculus-derivatives-3" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-2" class="internal"><span class="codenumber">3.3.1.1</span> <span class="title">Section 2.1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-3" class="internal"><span class="codenumber">3.3.1.2</span> <span class="title">Section 2.2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-4" class="internal"><span class="codenumber">3.3.1.3</span> <span class="title">Section 2.3</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-5" class="internal"><span class="codenumber">3.3.1.4</span> <span class="title">Section 2.4</span></a></div></li>
 </ul>
-<h2 class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></h2>
-<ul>
-<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
-<li><a href="appendix-2.html" data-scroll="appendix-2">Hints and Solutions to Selected Exercises</a></li>
-<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
-<li><a href="index-38.html" data-scroll="index-38">Index</a></li>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="cap-2017-hw2"><header title="Section 3.5 CAP 2017, HW 2 due January 31"><h2 class="heading hide-type" alt="Section 3.5 CAP 2017, HW 2 due January 31">
-<span class="type">Section</span><span class="codenumber">3.5</span><span class="title">CAP 2017, HW 2 due January 31</span>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Section 2.6 Implicit Differentiation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-integration.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Integration</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="integers-sage.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Sage</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="cap-2017-hw2.html" class="internal"><span class="codenumber">3.6</span> <span class="title">CAP 2017, HW 2 due January 31</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-cap-2017-hw2"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw2.html#cap-2017-hw2-5" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cap-2017-hw3.html" class="internal"><span class="codenumber">3.7</span> <span class="title">CAP 2017, HW 3 due February 7</span></a></div>
+<ul id="ptx-toc-group-cap-2017-hw3" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-rumour" class="internal"><span class="codenumber">3.7.1</span> <span class="title">Rumour Spread and the Logistic Function</span></a></div>
+<ul id="ptx-toc-group-hw3-rumour" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-rumour-6" class="internal"><span class="codenumber">3.7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-decay" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Radioactive Decay: Bismuth-210</span></a></div>
+<ul id="ptx-toc-group-hw3-decay" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-decay-3" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-taylor" class="internal"><span class="codenumber">3.7.3</span> <span class="title">Second Derivatives and Taylor Series</span></a></div>
+<ul id="ptx-toc-group-hw3-taylor" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-taylor-4" class="internal"><span class="codenumber">3.7.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-mvt" class="internal"><span class="codenumber">3.7.4</span> <span class="title">The Mean Value Theorem</span></a></div>
+<ul id="ptx-toc-group-hw3-mvt" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-mvt-3" class="internal"><span class="codenumber">3.7.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="cap-2017-hw3.html#cap-2017-hw3-7" class="internal"><span class="codenumber">3.7.5</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cap-2017-hw4.html" class="internal"><span class="codenumber">3.8</span> <span class="title">CAP 2017, HW 4 due February 14</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="calculus-references.html" class="internal"><span class="codenumber">3.9</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="differential.html" class="internal"><span class="codenumber">4</span> <span class="title">Differential Equations</span></a></div>
+<ul id="ptx-toc-group-differential" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="first-order-de.html" class="internal"><span class="codenumber">4.1</span> <span class="title">First Order Differential Equations</span></a></div>
+<ul id="ptx-toc-group-first-order-de" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="first-order-de.html#first-order-de-2" class="internal"><span class="codenumber">4.1.1</span> <span class="title">First Example</span></a></div>
+<ul id="ptx-toc-group-first-order-de-2" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-3" class="internal"><span class="codenumber">4.1.1.1</span> <span class="title">The General Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-4" class="internal"><span class="codenumber">4.1.1.2</span> <span class="title">Initial Conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-5" class="internal"><span class="codenumber">4.1.1.3</span> <span class="title">Plotting the Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-6" class="internal"><span class="codenumber">4.1.1.4</span> <span class="title">Numerical Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-7" class="internal"><span class="codenumber">4.1.1.5</span> <span class="title">Plotting the Vector Field</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-3" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Second Example</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="second-order-de.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Second Order Differential Equations</span></a></div>
+<ul id="ptx-toc-group-second-order-de" class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="second-order-de.html#second-order-de-2" class="internal"><span class="codenumber">4.2.1</span> <span class="title">First Example</span></a></div>
+<ul id="ptx-toc-group-second-order-de-2" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-3" class="internal"><span class="codenumber">4.2.1.1</span> <span class="title">The General Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-4" class="internal"><span class="codenumber">4.2.1.2</span> <span class="title">Initial Conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-5" class="internal"><span class="codenumber">4.2.1.3</span> <span class="title">Symbolic Differential Equations</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="system-of-de.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Systems Of Equations</span></a></div>
+<ul id="ptx-toc-group-system-of-de" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="system-of-de.html#system-of-de-2" class="internal"><span class="codenumber">4.3.1</span> <span class="title">First Example</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-de.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="differential-references.html" class="internal"><span class="codenumber">4.5</span> <span class="title">References (places I plagiarized)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="linear-algebra-exam.html" class="internal"><span class="codenumber">5</span> <span class="title">Linear Algebra</span></a></div>
+<ul id="ptx-toc-group-linear-algebra-exam" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-introduction.html" class="internal"><span class="codenumber">5.1</span> <span class="title">About This Exam</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a1.html" class="internal"><span class="codenumber">5.2</span> <span class="title">A1</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a2.html" class="internal"><span class="codenumber">5.3</span> <span class="title">A2</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a3.html" class="internal"><span class="codenumber">5.4</span> <span class="title">A3</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-product-rule.html" class="internal"><span class="codenumber">5.5</span> <span class="title">The Product Rule</span></a></div>
+<ul id="ptx-toc-group-section-product-rule" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-product-rule.html#section-product-rule-9" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions.html" class="internal"><span class="codenumber">B.</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">C.</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="book-index.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="cap-2017-hw2">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">CAP 2017, HW 2 due January 31</span>
+</h1>
+<article class="definition definition-like" id="definition-derivative"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Definition of a Derivative.</span>
 </h2>
-<a href="cap-2017-hw2.html" class="permalink">¶</a></header><section class="exercises" id="exercises-1"><header title="Exercises 3.5.1 Exercises"><h3 class="heading hide-type" alt="Exercises 3.5.1 Exercises">
-<span class="type">Subsection</span><span class="codenumber">3.5.1</span><span class="title">Exercises</span>
-</h3></header><article class="definition-like" id="definition-derivative"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">3.5.1</span><span class="title">The Definition of a Derivative</span>
-</h6>
-<p id="p-126">The computation of the slope of a tangent line, the <em class="emphasis">instantaneous</em> rate of change of a function, at \(x=a\) can be found from the following limit:</p>
+<div class="para" id="definition-derivative-2-1">The computation of the slope of a tangent line, the <em class="emphasis">instantaneous</em> rate of change of a function, at <span class="process-math">\(x=a\)</span> can be found from the following limit:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-derivative-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="definition-derivative-2-2">
 \begin{equation}
-f'(x)=\lim_{a \to x} \frac {f(x) - f(a)} {x-a}\tag{3.5.1}
+f'(x)=\lim_{a \to x} \frac {f(x) - f(a)} {x-a}\tag{3.6.1}
 \end{equation}
-<p id="p-127">With a small adjustment in notation this limit can be rephrased.</p>
-<p id="p-128">The derivative of \(f(x)\) with respect to \(x\) is the function \(f'(x)\) and is defined as:</p>
+</div>
+<div class="para" id="definition-derivative-2-3">With a small adjustment in notation this limit can be rephrased.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-derivative-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="definition-derivative-2-4">The derivative of <span class="process-math">\(f(x)\)</span> with respect to <span class="process-math">\(x\)</span> is the function <span class="process-math">\(f'(x)\)</span> and is defined as:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-derivative-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="definition-derivative-2-5">
 \begin{equation}
-f'(x)=\lim_{h \to 0} \frac {f(x+h) - f(x)} {h}\tag{3.5.2}
+f'(x)=\lim_{h \to 0} \frac {f(x+h) - f(x)} {h}\tag{3.6.2}
 \end{equation}
-</article><article class="definition-like" id="definition-derivative-power"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">3.5.2</span><span class="title">The Power Rule</span>
-</h6>
-<p id="p-129">If \(f: \mathbb{R} \rightarrow \mathbb{R}\) is a function such that \(f(x) = x^r\text{,}\) and \(f\) is differentiable at \(x\text{,}\) then, :</p>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.6.1: The Definition of a Derivative"><a tabindex="-1" href="#definition-derivative" title="Copy heading and permalink for Definition 3.6.1: The Definition of a Derivative" aria-label="Copy heading and permalink for Definition 3.6.1: The Definition of a Derivative">🔗</a></div>
+</article>
+<article class="definition definition-like" id="definition-derivative-power"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Power Rule.</span>
+</h2>
+<div class="para logical" id="definition-derivative-power-2-1">
+<div class="para">If <span class="process-math">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> is a function such that <span class="process-math">\(f(x) = x^r\text{,}\)</span> and <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x\text{,}\)</span> then, :</div>
+<div class="displaymath process-math" id="definition-derivative-power-2-1-5">
 \begin{equation}
-f'(x) = rx^{r-1}\tag{3.5.3}
+f'(x) = rx^{r-1}\tag{3.6.3}
 \end{equation}
-</article><article class="definition-like" id="definition-linear-approx"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">3.5.3</span><span class="title">Linear Approximation</span>
-</h6>
-<p id="p-130">Given a twice continuously differentiable function \(f\) of one real number variable, Taylor's theorem for the case \(n = 1 \) states that:</p>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-derivative-power-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.6.2: The Power Rule"><a tabindex="-1" href="#definition-derivative-power" title="Copy heading and permalink for Definition 3.6.2: The Power Rule" aria-label="Copy heading and permalink for Definition 3.6.2: The Power Rule">🔗</a></div>
+</article>
+<article class="definition definition-like" id="definition-linear-approx"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linear Approximation.</span>
+</h2>
+<div class="para logical" id="definition-linear-approx-2-1">
+<div class="para">Given a twice continuously differentiable function <span class="process-math">\(f\)</span> of one real number variable, Taylor’s theorem for the case <span class="process-math">\(n = 1 \)</span> states that:</div>
+<div class="displaymath process-math" id="definition-linear-approx-2-1-3">
 \begin{equation*}
 f(x) = f(a) + f'(a)(x - a) + R_2\ 
 \end{equation*}
-<p>where \(R_2\) is the remainder term. The linear approximation is obtained by dropping the remainder:</p>
+</div>
+<div class="para">where <span class="process-math">\(R_2\)</span> is the remainder term. The linear approximation is obtained by dropping the remainder:</div>
+<div class="displaymath process-math" id="definition-linear-approx-2-1-5">
 \begin{equation}
-f(x) \approx f(a) + f'(a)(x - a)\text{.}\tag{3.5.4}
+f(x) \approx f(a) + f'(a)(x - a)\text{.}\tag{3.6.4}
 \end{equation}
-<p>This is a good approximation for \(x\) when it is close enough to \(a\text{;}\) since a curve, when closely observed, will begin to resemble a straight line. Therefore, the expression on the right-hand side is just the equation for the tangent line to the graph of \(f\) at \((a,f(a))\text{.}\)  For this reason, this process is also called the <em class="emphasis">tangent line approximation</em>.</p></article><article class="exercise-like" id="exercise-1"><h6 class="heading"><span class="codenumber">1</span></h6>
-<p id="p-131">From first principles find the derivative of \(\fe{f}{x}=\sqrt{3x+1}\)</p>
-<div class="hidden-knowl-wrapper solutions">
-<a knowl="" class="id-ref" refid="hk-answer-1" id="answer-1"><span class="solution"><span class="type">Answer</span></span></a><span id="hk-answer-1" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-132">Both methods yield \(\fe{\fd{f}}{x}=\frac{3}{2\sqrt{3x+1}}\text{.}\)</p></span></span><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="solution"><span class="type">Solution</span></span></a><span id="hk-solution-1" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-133">First Method:</p>
-<p id="p-134"></p>
+</div>
+<div class="para">This is a good approximation for <span class="process-math">\(x\)</span> when it is close enough to <span class="process-math">\(a\text{;}\)</span> since a curve, when closely observed, will begin to resemble a straight line. Therefore, the expression on the right-hand side is just the equation for the tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\((a,f(a))\text{.}\)</span>  For this reason, this process is also called the <em class="emphasis">tangent line approximation</em>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-linear-approx-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.6.3: Linear Approximation"><a tabindex="-1" href="#definition-linear-approx" title="Copy heading and permalink for Definition 3.6.3: Linear Approximation" aria-label="Copy heading and permalink for Definition 3.6.3: Linear Approximation">🔗</a></div>
+</article>
+<section class="exercises" id="cap-2017-hw2-5">
+<h2 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h2>
+<article class="exercise exercise-like" id="cap-2017-hw2-5-1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="cap-2017-hw2-5-1-1-1">From first principles find the derivative of <span class="process-math">\(\fe{f}{x}=\sqrt{3x+1}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="cap-2017-hw2-5-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="cap-2017-hw2-5-1-2-1">Both methods yield <span class="process-math">\(\fe{\fd{f}}{x}=\frac{3}{2\sqrt{3x+1}}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.6.1.1"><a tabindex="-1" href="#cap-2017-hw2-5-1-2" title="Copy heading and permalink for Answer 3.6.1.1" aria-label="Copy heading and permalink for Answer 3.6.1.1">🔗</a></div>
+</div></details>
+<details id="cap-2017-hw2-5-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="cap-2017-hw2-5-1-3-1">First Method:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="cap-2017-hw2-5-1-3-2">
+<div class="displaymath process-math" id="cap-2017-hw2-5-1-3-2-1">
 \begin{align*}
 \fe{\fd{f}}{x}&amp;=\lim_{a\to x}\frac{\fe{f}{x}-\fe{f}{a}}{x-a}\\
 &amp;=\lim_{a\to x}\frac{\sqrt{3x+1}-\sqrt{3a+1}}{x-a}\\
@@ -201,8 +420,13 @@ f(x) \approx f(a) + f'(a)(x - a)\text{.}\tag{3.5.4}
 &amp;=\frac{3}{\sqrt{3x+1}+\sqrt{3x+1}}\\
 &amp;=\frac{3}{2\sqrt{3x+1}}
 \end{align*}
-<p id="p-135">Second Method:</p>
-<p id="p-136"></p>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cap-2017-hw2-5-1-3-3">Second Method:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="cap-2017-hw2-5-1-3-4">
+<div class="displaymath process-math" id="cap-2017-hw2-5-1-3-4-1">
 \begin{align*}
 \fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}\\
 &amp;=\lim_{h\to0}\frac{\sqrt{3(x+h)+1}-\sqrt{3x+1}}{h}\\
@@ -213,11 +437,29 @@ f(x) \approx f(a) + f'(a)(x - a)\text{.}\tag{3.5.4}
 &amp;=\frac{3}{\sqrt{3x+1}+\sqrt{3x+1}}\\
 &amp;=\frac{3}{2\sqrt{3x+1}}
 \end{align*}
-</span></span>
-</div></article><article class="exercise-like" id="exercise-2"><h6 class="heading"><span class="codenumber">2</span></h6>
-<p id="p-137">Differentiate \(\frac{x^{2} - 2 \, \sqrt{x}}{x}\) showing each step and stating which rules are used.</p>
-<div class="hidden-knowl-wrapper solutions">
-<a knowl="" class="id-ref" refid="hk-answer-2" id="answer-2"><span class="solution"><span class="type">Answer</span></span></a><span id="hk-answer-2" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-138">\(1+\dfrac{1}{\sqrt{x^3}}\)</p></span></span><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="solution"><span class="type">Solution</span></span></a><span id="hk-solution-2" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-139"></p>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-1-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.1.1"><a tabindex="-1" href="#cap-2017-hw2-5-1-3" title="Copy heading and permalink for Solution 3.6.1.1" aria-label="Copy heading and permalink for Solution 3.6.1.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.6.1"><a tabindex="-1" href="#cap-2017-hw2-5-1" title="Copy heading and permalink for Exercise 3.6.1" aria-label="Copy heading and permalink for Exercise 3.6.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="cap-2017-hw2-5-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="cap-2017-hw2-5-2-1-1">Differentiate <span class="process-math">\(\frac{x^{2} - 2 \, \sqrt{x}}{x}\)</span> showing each step and stating which rules are used.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="cap-2017-hw2-5-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="cap-2017-hw2-5-2-2-1">
+<span class="process-math">\(1+\dfrac{1}{\sqrt{x^3}}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.6.2.1"><a tabindex="-1" href="#cap-2017-hw2-5-2-2" title="Copy heading and permalink for Answer 3.6.2.1" aria-label="Copy heading and permalink for Answer 3.6.2.1">🔗</a></div>
+</div></details>
+<details id="cap-2017-hw2-5-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="cap-2017-hw2-5-2-3-1">
+<div class="displaymath process-math" id="cap-2017-hw2-5-2-3-1-1">
 \begin{align*}
 \fe{f}{x}&amp;=\frac{x^{2} - 2 \, \sqrt{x}}{x}\\
 \text{Expand this to:}\\
@@ -225,21 +467,59 @@ f(x) \approx f(a) + f'(a)(x - a)\text{.}\tag{3.5.4}
 \text{Differentiate each part using the power law: } \de {x^r}x = r x^{r-1}\\
 \fe{\fd{f}}{x}&amp;=1+\dfrac{1}{\sqrt{x^3}}
 \end{align*}
-</span></span>
-</div></article><article class="exercise-like" id="exercise-3"><h6 class="heading"><span class="codenumber">3</span></h6>
-<p id="p-140">Use <a knowl="./knowl/definition-linear-approx.html" knowl-id="xref-definition-linear-approx" alt="Definition 3.5.3 Linear Approximation" title="Definition 3.5.3 Linear Approximation">Linear Approximation 3</a> to calculate \(\sqrt{99.8}\text{.}\)</p>
-<div class="hidden-knowl-wrapper solutions">
-<a knowl="" class="id-ref" refid="hk-answer-3" id="answer-3"><span class="solution"><span class="type">Answer</span></span></a><span id="hk-answer-3" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-141">\(9.9000\)</p></span></span><a knowl="" class="id-ref" refid="hk-solution-3" id="solution-3"><span class="solution"><span class="type">Solution</span></span></a><span id="hk-solution-3" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-142"></p>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.2.1"><a tabindex="-1" href="#cap-2017-hw2-5-2-3" title="Copy heading and permalink for Solution 3.6.2.1" aria-label="Copy heading and permalink for Solution 3.6.2.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.6.2"><a tabindex="-1" href="#cap-2017-hw2-5-2" title="Copy heading and permalink for Exercise 3.6.2" aria-label="Copy heading and permalink for Exercise 3.6.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="cap-2017-hw2-5-3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="cap-2017-hw2-5-3-1-1">Use <a href="cap-2017-hw2.html#definition-linear-approx" class="xref" data-knowl="./knowl/xref/definition-linear-approx.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.6.3: Linear Approximation">Linear Approximation 3.6.3</a> to calculate <span class="process-math">\(\sqrt{99.8}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="cap-2017-hw2-5-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="cap-2017-hw2-5-3-2-1">
+<span class="process-math">\(9.9000\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.6.3.1"><a tabindex="-1" href="#cap-2017-hw2-5-3-2" title="Copy heading and permalink for Answer 3.6.3.1" aria-label="Copy heading and permalink for Answer 3.6.3.1">🔗</a></div>
+</div></details>
+<details id="cap-2017-hw2-5-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="cap-2017-hw2-5-3-3-1">
+<div class="displaymath process-math" id="cap-2017-hw2-5-3-3-1-1">
 \begin{align*}
 \fe{f}{x}&amp;=\fe{f}{a} + \fe{\fd{f}}{a}(x-a)\\
 TBD
 \end{align*}
-</span></span>
-</div></article><article class="exercise-like" id="exercise-4"><h6 class="heading"><span class="codenumber">4</span></h6>
-<p id="p-143">Implicit Differentiation</p>
-<p id="p-144">\(y \cos\left(x\right) = \sin\left(x y\right) + 1\)</p>
-<div class="hidden-knowl-wrapper solutions">
-<a knowl="" class="id-ref" refid="hk-answer-4" id="answer-4"><span class="solution"><span class="type">Answer</span></span></a><span id="hk-answer-4" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-145">\(\frac{dy}{dx} = -\frac{y \cos\left(x y\right)}{x \cos\left(x y\right) - \cos\left(x\right)} - \frac{y \sin\left(x\right)}{x \cos\left(x y\right) - \cos\left(x\right)}\)</p></span></span><a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="solution"><span class="type">Solution</span></span></a><span id="hk-solution-4" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-146"></p>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.3.1"><a tabindex="-1" href="#cap-2017-hw2-5-3-3" title="Copy heading and permalink for Solution 3.6.3.1" aria-label="Copy heading and permalink for Solution 3.6.3.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.6.3"><a tabindex="-1" href="#cap-2017-hw2-5-3" title="Copy heading and permalink for Exercise 3.6.3" aria-label="Copy heading and permalink for Exercise 3.6.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="cap-2017-hw2-5-4"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="cap-2017-hw2-5-4-1-1">Implicit Differentiation<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="cap-2017-hw2-5-4-1-2">
+<span class="process-math">\(y \cos\left(x\right) = \sin\left(x y\right) + 1\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="cap-2017-hw2-5-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="cap-2017-hw2-5-4-2-1">
+<span class="process-math">\(\frac{dy}{dx} = -\frac{y \cos\left(x y\right)}{x \cos\left(x y\right) - \cos\left(x\right)} - \frac{y \sin\left(x\right)}{x \cos\left(x y\right) - \cos\left(x\right)}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.6.4.1"><a tabindex="-1" href="#cap-2017-hw2-5-4-2" title="Copy heading and permalink for Answer 3.6.4.1" aria-label="Copy heading and permalink for Answer 3.6.4.1">🔗</a></div>
+</div></details>
+<details id="cap-2017-hw2-5-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="cap-2017-hw2-5-4-3-1">
+<div class="displaymath process-math" id="cap-2017-hw2-5-4-3-1-1">
 \begin{align*}
 y \cos\left(x\right)&amp;=1 + \sin\left(x y\right)\\
 \text{Differentiate through:}\\
@@ -258,12 +538,33 @@ x\cos\left(xy\right)\frac{dy}{dx} + y\cos\left(xy\right)\\
 \text{Rearranging:}\\
 \frac{dy}{dx}&amp;= \frac{y \cos\left(x y\right) + y \sin\left(x\right)}{ \cos\left(x\right) - x \cos\left(x y\right) }
 \end{align*}
-</span></span>
-</div></article><article class="exercise-like" id="exercise-5"><h6 class="heading"><span class="codenumber">5</span></h6>
-<p id="p-147">Implicit Differentiation</p>
-<p id="p-148">\(xy+2x+3x^2 = 4\)</p>
-<div class="hidden-knowl-wrapper solutions">
-<a knowl="" class="id-ref" refid="hk-answer-5" id="answer-5"><span class="solution"><span class="type">Answer</span></span></a><span id="hk-answer-5" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-149">\(\fe{\fd{y}}{x} = \frac{y}{x} - \frac{2}{x} - 6\)</p></span></span><a knowl="" class="id-ref" refid="hk-solution-5" id="solution-5"><span class="solution"><span class="type">Solution</span></span></a><span id="hk-solution-5" class="hidden-content tex2jax_ignore"><span class="solution"><p id="p-150">Implicit:</p>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.4.1"><a tabindex="-1" href="#cap-2017-hw2-5-4-3" title="Copy heading and permalink for Solution 3.6.4.1" aria-label="Copy heading and permalink for Solution 3.6.4.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.6.4"><a tabindex="-1" href="#cap-2017-hw2-5-4" title="Copy heading and permalink for Exercise 3.6.4" aria-label="Copy heading and permalink for Exercise 3.6.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="cap-2017-hw2-5-5"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="cap-2017-hw2-5-5-1-1">Implicit Differentiation<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="cap-2017-hw2-5-5-1-2">
+<span class="process-math">\(xy+2x+3x^2 = 4\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="cap-2017-hw2-5-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="cap-2017-hw2-5-5-2-1">
+<span class="process-math">\(\fe{\fd{y}}{x} = \frac{y}{x} - \frac{2}{x} - 6\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.6.5.1"><a tabindex="-1" href="#cap-2017-hw2-5-5-2" title="Copy heading and permalink for Answer 3.6.5.1" aria-label="Copy heading and permalink for Answer 3.6.5.1">🔗</a></div>
+</div></details>
+<details id="cap-2017-hw2-5-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="cap-2017-hw2-5-5-3-1">
+<div class="para">Implicit:</div>
+<div class="displaymath process-math" id="cap-2017-hw2-5-5-3-1-1">
 \begin{gather*}
 xy+2x+3x^2 = 4\\
 \text{Differentiate each part using the product rule for } xy\\
@@ -277,7 +578,12 @@ y = \frac{4}{x} -2 -3x\\
 \frac{dy}{dx} = -\frac{\left(\frac{4}{x} -2 -3x+2+6x\right)}{x}\\
 \frac{dy}{dx} = -\frac{4}{x^2}-3
 \end{gather*}
-<p id="p-151">Explicit:</p>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="cap-2017-hw2-5-5-3-2">
+<div class="para">Explicit:</div>
+<div class="displaymath process-math" id="cap-2017-hw2-5-5-3-2-1">
 \begin{gather*}
 xy+2x+3x^2 = 4\\
 \text{Solve for } y\\
@@ -285,32 +591,47 @@ y = \frac{4}{x} -2 -3x\\
 \text{And differentiate } y\\
 \frac{dy}{dx} = -\frac{4}{x^2} -3
 \end{gather*}
-<p id="p-152">As you can see the results are the same for each method.</p>
-<p id="p-153">The problem that implicit differentiation solves is that it is often difficult or impossible to rearrange to have \(y\) on the left by its own.</p></span></span>
-</div></article></section><p id="p-154">Implicit Differentiation of \(y \cos\left(x\right) = \sin\left(x y\right) + 1\)</p>
-<div class="sagecell-sage" id="sage-61"><script type="text/x-sage">x,y = var('x,y')
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cap-2017-hw2-5-5-3-3">As you can see the results are the same for each method.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-5-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cap-2017-hw2-5-5-3-4">The problem that implicit differentiation solves is that it is often difficult or impossible to rearrange to have <span class="process-math">\(y\)</span> on the left by its own.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-5-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.5.1"><a tabindex="-1" href="#cap-2017-hw2-5-5-3" title="Copy heading and permalink for Solution 3.6.5.1" aria-label="Copy heading and permalink for Solution 3.6.5.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.6.5"><a tabindex="-1" href="#cap-2017-hw2-5-5" title="Copy heading and permalink for Exercise 3.6.5" aria-label="Copy heading and permalink for Exercise 3.6.5">🔗</a></div>
+</article>
+<section class="conclusion" id="cap-2017-hw2-5-6">
+<div class="para" id="cap-2017-hw2-5-6-1">Implicit Differentiation of <span class="process-math">\(y \cos\left(x\right) = \sin\left(x y\right) + 1\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="cap-2017-hw2-5-6-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y = var('x,y')
 expr = y*cos(x) == 1 + sin(x*y)
 show(expr)
 f(x,y) = expr.lhs() - expr.rhs() # We want f(x,y) = 0.
 dydx = f.implicit_derivative(y,x)
 show(LatexExpr(r"\frac{dy}{dx} = "), dydx)
 </script></div>
-<p id="p-155">Implicit Differentiation of \(xy+2x+3x^2 = 4\)</p>
-<div class="sagecell-sage" id="sage-62"><script type="text/x-sage">x,y = var('x,y')
+<div class="para" id="cap-2017-hw2-5-6-3">Implicit Differentiation of <span class="process-math">\(xy+2x+3x^2 = 4\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="cap-2017-hw2-5-6-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y = var('x,y')
 expr = x*y+2*x+3*x^2 == 4
 show(expr)
 f(x,y) = expr.lhs() - expr.rhs() # We want f(x,y) = 0.
 dydx = f.implicit_derivative(y,x).expand()
 show(LatexExpr(r"\frac{dy}{dx} = "), dydx)
 </script></div>
-<p id="p-156">Exercise 2.1</p>
-<div class="sagecell-sage" id="sage-63"><script type="text/x-sage">f=(x^2-2*sqrt(x))/x
+<div class="para" id="cap-2017-hw2-5-6-5">Exercise 2.1<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="cap-2017-hw2-5-6-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f=(x^2-2*sqrt(x))/x
 show("f(x) = ", f)
 show("f(x) = ", f.expand())
 show("f'(x) = ", f.expand().diff())
 </script></div>
-<p id="p-157">Exercise 2.2</p>
-<div class="sagecell-sage" id="sage-64"><script type="text/x-sage">f=x^2*tan(x)*sin(x)
+<div class="para" id="cap-2017-hw2-5-6-7">Exercise 2.2<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-6-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="cap-2017-hw2-5-6-8" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f=x^2*tan(x)*sin(x)
 show(f.diff().simplify_trig())
 show(f.diff().simplify_full())
 show(f.diff())
@@ -318,27 +639,31 @@ show(f.diff().expand())
 show("Which is simpler?")
 show("Note that Sage doesn't seem to like sec() cosec()")
 </script></div>
-<p id="p-158">Exercise 2.3</p>
-<div class="sagecell-sage" id="sage-65"><script type="text/x-sage">var('t')
+<div class="para" id="cap-2017-hw2-5-6-9">Exercise 2.3<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-6-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="cap-2017-hw2-5-6-10" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">var('t')
 f=(1+tan(t))^(1/3)
 show("f(t) = ", f)
 show("f'(t) = ", f.diff(t))
 </script></div>
-<p id="p-159">Exercise 2.4</p>
-<div class="sagecell-sage" id="sage-66"><script type="text/x-sage">f=x*sin(1/x)
+<div class="para" id="cap-2017-hw2-5-6-11">Exercise 2.4<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-6-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="cap-2017-hw2-5-6-12" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f=x*sin(1/x)
 show("f(x) = ", f)
 show("f'(x) = ", f.diff())
 show("f'(x) = ",f.diff().simplify_full())
 </script></div>
-<p id="p-160">Exercise 2.5</p>
-<div class="sagecell-sage" id="sage-67"><script type="text/x-sage">var('v')
+<div class="para" id="cap-2017-hw2-5-6-13">Exercise 2.5<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-6-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="cap-2017-hw2-5-6-14" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">var('v')
 f=(v/(v^3+1))^6
 show("f(v) = ", f)
 show("f'(v) = ", f.diff(v))
 show("f'(v) = ",f.diff(v).simplify_full())
 </script></div>
-<p id="p-161">Exercise 3.1</p>
-<div class="sagecell-sage" id="sage-68"><script type="text/x-sage">y(x)=x + tan(x)
+<div class="para" id="cap-2017-hw2-5-6-15">Exercise 3.1<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-6-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="cap-2017-hw2-5-6-16" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">y(x)=x + tan(x)
 y.show()
 dydx=y.diff(x).simplify_full()
 
@@ -355,8 +680,9 @@ p3=plot(y_line,0,2*pi,color='red', legend_label=tangent)
 p4=plot(dydx,0,2*pi, color='green',detect_poles='show')
 p1+p2+p3+p4
 </script></div>
-<p id="p-162">Exercise 3.2</p>
-<div class="sagecell-sage" id="sage-69"><script type="text/x-sage">y(x)=sqrt(x)/(x+1)
+<div class="para" id="cap-2017-hw2-5-6-17">Exercise 3.2<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-6-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="cap-2017-hw2-5-6-18" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">y(x)=sqrt(x)/(x+1)
 y.show()
 dydx=y.diff(x).simplify_full()
 
@@ -373,9 +699,19 @@ p3=plot(y_line,0,2*pi,color='red', legend_label=tangent)
 p4=plot(dydx,0,2*pi, color='green',detect_poles='show')
 p1+p2+p3+p4
 </script></div>
-<p id="p-163">Exercise 4</p>
-<div class="sagecell-sage" id="sage-70"><script type="text/x-sage">
-</script></div></section></div></main>
+<div class="para" id="cap-2017-hw2-5-6-19">Exercise 4<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw2-5-6-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="cap-2017-hw2-5-6-20" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></div></section><div class="autopermalink" aria-hidden="true" data-description="Exercises 3.6"><a tabindex="-1" href="#cap-2017-hw2-5" title="Copy heading and permalink for Exercises 3.6" aria-label="Copy heading and permalink for Exercises 3.6">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 3.6: CAP 2017, HW 2 due January 31"><a tabindex="-1" href="#cap-2017-hw2" title="Copy heading and permalink for Section 3.6: CAP 2017, HW 2 due January 31" aria-label="Copy heading and permalink for Section 3.6: CAP 2017, HW 2 due January 31">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="integers-sage.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="cap-2017-hw3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="definition definition-like"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Utility method <code class="code-inline tex2jax_ignore">plot_tangentline()</code>.</span>
+</h2>
+<div id="plot_tangentline-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def plot_tangentline(f, pt, xrange ):
+    (a,b) = pt
+    dydx=f.diff(x)
+    m=dydx(x=a)
+    c=b-m*a
+    dydx=f.diff(x)
+    y(x)=m*x+c
+    tangent="y={}".format(y(x))
+    return point(pt,rgbcolor='black', pointsize=30) \
+        +plot(f,xrange,legend_label='f(x)',detect_poles='show') \
+        +plot(dydx,xrange, color='green',legend_label='f\'(x)',linestyle='--',detect_poles='show') \
+        +plot(y,xrange,color='red',legend_label=tangent)
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.3.1: Utility method plot_tangentline()"><a tabindex="-1" href="#plot_tangentline" title="Copy heading and permalink for Definition 3.3.1: Utility method plot_tangentline()" aria-label="Copy heading and permalink for Definition 3.3.1: Utility method plot_tangentline()">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="calculus-derivatives.html#plot_tangentline">In Context</a></span>
+</body>
+</html>

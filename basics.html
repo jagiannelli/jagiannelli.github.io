@@ -1,57 +1,141 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2026-08-08T13:37:44+01:00    *-->
-<!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
-<!--*                                    *-->
-<!--**************************************-->
-<html lang="en-US">
-<head>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>JAG Basic Sage Commands</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']],
-    },
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends upper-alpha; prefix: ''; suffix: '. '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
-    // Make *any* div with class 'sagecell-sage' an executable Sage cell
-    // Their results will be linked, only within language type
-    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
-                           linked: true,
-                           languages: ['sage'],
-                           evalButtonText: 'Evaluate (Sage)'});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:image" content="https://jagiannelli.github.io/external/images/jg.jpeg">
+<meta property="og:image" content="https://jagiannelli.github.io/external/images/jg.jpeg">
+<meta name="twitter:image:alt" content="Document Logo">
+<meta property="og:image:alt" content="Document Logo">
+<meta name="twitter:title" content="John Giannelli">
+<meta property="og:title" content="John Giannelli">
+<meta property="book:title" content="John Giannelli">
+<meta name="twitter:description" content="Musings on Sage Math">
+<meta property="og:description" content="Musings on Sage Math">
+<meta name="twitter:card" content="summary_large_image">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.2.13';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.a45d14e8fc8c534a.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.538acb8e671a3b5d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.1bda041f5a098305.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
 });
-</script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
-<link href="jagbook.css" rel="stylesheet" type="text/css">
+</script>
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\Z}{\mathbb{Z}}
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://github.com/jagiannelli"><img src="external/images/jg.jpeg" alt="Logo image"></a><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="jagbook.html"><span class="title">John Giannelli</span> <span class="subtitle">Musings on Sage Math</span></a></div>
+<p class="byline">John A Giannelli</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="book-index.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sage-from-source.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="jagbook.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="basics-introduction.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\reals}{\mathbb{R}}
 \newcommand{\real}[1]{\mathbb{R}^{#1}}
 \newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
@@ -78,83 +162,191 @@ MathJax.Hub.Config({
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg" alt="Logo image for document"></a><div class="title-container">
-<h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
-<p class="byline"></p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar" style=""><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-38.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-2.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="index.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-3.html" title="Next" alt="Next">Next</a></span>
-</div>
-<button class="sidebar-right-toggle-button button active">Annotations</button>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-2.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="index.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-3.html" title="Next" alt="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></h2>
-<ul>
-<li><a href="biography-1.html" data-scroll="biography-1">About John A Giannelli</a></li>
-<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="about-the-author.html" class="internal"><span class="title">About John A Giannelli</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="dedication.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgements.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
-<h2 class="link"><a href="sets.html" data-scroll="sets"><span class="codenumber">1</span><span class="title">Quick Guide to Using SageMath</span></a></h2>
-<ul>
-<li><a href="sage-online.html" data-scroll="sage-online">SageMath Online</a></li>
-<li><a href="section-2.html" data-scroll="section-2">Running From Source</a></li>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Quick Guide to Using SageMath</span></a></div>
+<ul id="ptx-toc-group-sets" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-introduction.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What Is SageMath?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-online.html" class="internal"><span class="codenumber">1.2</span> <span class="title">SageMath Online</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-from-source.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Running From Source</span></a></div>
+<ul id="ptx-toc-group-sage-from-source" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-from-source.html#sage-from-source-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Building SageMath</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-from-source.html#sage-from-source-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Running SageMath Notebook from the command line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-from-source.html#sage-from-source-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Running SageMath From the command line</span></a></div></li>
 </ul>
-<h2 class="link active"><a href="basics.html" data-scroll="basics"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
-<ul>
-<li><a href="section-3.html" data-scroll="section-3">Executing Sage Commands</a></li>
-<li><a href="section-4.html" data-scroll="section-4">How to define functions</a></li>
-<li><a href="section-5.html" data-scroll="section-5">Symbolic Manipulation</a></li>
-<li><a href="section-6.html" data-scroll="section-6">Declaring Variables and Plotting</a></li>
-<li><a href="section-7.html" data-scroll="section-7">Sage and Python</a></li>
+</li>
 </ul>
-<h2 class="link"><a href="integers.html" data-scroll="integers"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
-<ul>
-<li><a href="calculus-limits.html" data-scroll="calculus-limits">Calculating Limits</a></li>
-<li><a href="calculus-derivatives.html" data-scroll="calculus-derivatives">Derivatives</a></li>
-<li><a href="calculus-integration.html" data-scroll="calculus-integration">Integration</a></li>
-<li><a href="integers-sage.html" data-scroll="integers-sage">Sage</a></li>
-<li><a href="cap-2017-hw2.html" data-scroll="cap-2017-hw2">CAP 2017, HW 2 due January 31</a></li>
-<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 3 due February 7</a></li>
-<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 4 due February 14</a></li>
-<li><a href="references-2.html" data-scroll="references-2">References</a></li>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="basics.html" class="internal"><span class="codenumber">2</span> <span class="title">Basic Sage Commands</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-basics">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="basics-introduction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">What’s in This Chapter</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-executing-commands.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Executing Sage Commands</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-defining-functions.html" class="internal"><span class="codenumber">2.3</span> <span class="title">How to define functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-symbolic-manipulation.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Symbolic Manipulation</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-variables-plotting.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Declaring Variables and Plotting</span></a></div>
+<ul id="ptx-toc-group-sage-variables-plotting" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-variables-plotting.html#sage-variables-plotting-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Use SageMath to solve differential equations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-and-python.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Sage and Python</span></a></div>
+<ul id="ptx-toc-group-sage-and-python" class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Lists, Tuples, and Dictionaries</span></a></div>
+<ul id="ptx-toc-group-sage-and-python-3" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3-3" class="internal"><span class="codenumber">2.6.1.1</span> <span class="title">Lists</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3-4" class="internal"><span class="codenumber">2.6.1.2</span> <span class="title">Tuples </span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3-5" class="internal"><span class="codenumber">2.6.1.3</span> <span class="title">Dictionaries (Associative Arrays) </span></a></div></li>
 </ul>
-<h2 class="link"><a href="differential.html" data-scroll="differential"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
-<ul>
-<li><a href="first-order-de.html" data-scroll="first-order-de">First Order Differential Equations</a></li>
-<li><a href="second-order-de.html" data-scroll="second-order-de">Second Order Differential Equations</a></li>
-<li><a href="system-of-de.html" data-scroll="system-of-de">Systems Of Equations</a></li>
-<li><a href="exercises-de.html" data-scroll="exercises-de">Exercises</a></li>
-<li><a href="references-3.html" data-scroll="references-3">References (places I plagiarized)</a></li>
+</li></ul>
+</li>
 </ul>
-<h2 class="link"><a href="linear-algebra-exam.html" data-scroll="linear-algebra-exam"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
-<ul>
-<li><a href="section-18.html" data-scroll="section-18">A1</a></li>
-<li><a href="section-19.html" data-scroll="section-19">A2</a></li>
-<li><a href="section-20.html" data-scroll="section-20">A3</a></li>
-<li><a href="section-product-rule.html" data-scroll="section-product-rule">The Product Rule</a></li>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="integers.html" class="internal"><span class="codenumber">3</span> <span class="title">Calculus</span></a></div>
+<ul id="ptx-toc-group-integers" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-introduction.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Calculus in SageMath</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-limits.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Calculating Limits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="calculus-derivatives.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Derivatives</span></a></div>
+<ul id="ptx-toc-group-calculus-derivatives" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Examples From Chapter 2</span></a></div>
+<ul id="ptx-toc-group-calculus-derivatives-3" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-2" class="internal"><span class="codenumber">3.3.1.1</span> <span class="title">Section 2.1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-3" class="internal"><span class="codenumber">3.3.1.2</span> <span class="title">Section 2.2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-4" class="internal"><span class="codenumber">3.3.1.3</span> <span class="title">Section 2.3</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-5" class="internal"><span class="codenumber">3.3.1.4</span> <span class="title">Section 2.4</span></a></div></li>
 </ul>
-<h2 class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></h2>
-<ul>
-<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
-<li><a href="appendix-2.html" data-scroll="appendix-2">Hints and Solutions to Selected Exercises</a></li>
-<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
-<li><a href="index-38.html" data-scroll="index-38">Index</a></li>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="chapter" id="basics"><header title="Chapter 2 Basic Sage Commands"><h1 class="heading" alt="Chapter 2 Basic Sage Commands">
-<span class="type">Chapter</span><span class="codenumber">2</span><span class="title">Basic Sage Commands</span>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Section 2.6 Implicit Differentiation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-integration.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Integration</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="integers-sage.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cap-2017-hw2.html" class="internal"><span class="codenumber">3.6</span> <span class="title">CAP 2017, HW 2 due January 31</span></a></div>
+<ul id="ptx-toc-group-cap-2017-hw2" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw2.html#cap-2017-hw2-5" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cap-2017-hw3.html" class="internal"><span class="codenumber">3.7</span> <span class="title">CAP 2017, HW 3 due February 7</span></a></div>
+<ul id="ptx-toc-group-cap-2017-hw3" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-rumour" class="internal"><span class="codenumber">3.7.1</span> <span class="title">Rumour Spread and the Logistic Function</span></a></div>
+<ul id="ptx-toc-group-hw3-rumour" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-rumour-6" class="internal"><span class="codenumber">3.7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-decay" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Radioactive Decay: Bismuth-210</span></a></div>
+<ul id="ptx-toc-group-hw3-decay" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-decay-3" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-taylor" class="internal"><span class="codenumber">3.7.3</span> <span class="title">Second Derivatives and Taylor Series</span></a></div>
+<ul id="ptx-toc-group-hw3-taylor" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-taylor-4" class="internal"><span class="codenumber">3.7.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-mvt" class="internal"><span class="codenumber">3.7.4</span> <span class="title">The Mean Value Theorem</span></a></div>
+<ul id="ptx-toc-group-hw3-mvt" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-mvt-3" class="internal"><span class="codenumber">3.7.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="cap-2017-hw3.html#cap-2017-hw3-7" class="internal"><span class="codenumber">3.7.5</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cap-2017-hw4.html" class="internal"><span class="codenumber">3.8</span> <span class="title">CAP 2017, HW 4 due February 14</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="calculus-references.html" class="internal"><span class="codenumber">3.9</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="differential.html" class="internal"><span class="codenumber">4</span> <span class="title">Differential Equations</span></a></div>
+<ul id="ptx-toc-group-differential" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="first-order-de.html" class="internal"><span class="codenumber">4.1</span> <span class="title">First Order Differential Equations</span></a></div>
+<ul id="ptx-toc-group-first-order-de" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="first-order-de.html#first-order-de-2" class="internal"><span class="codenumber">4.1.1</span> <span class="title">First Example</span></a></div>
+<ul id="ptx-toc-group-first-order-de-2" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-3" class="internal"><span class="codenumber">4.1.1.1</span> <span class="title">The General Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-4" class="internal"><span class="codenumber">4.1.1.2</span> <span class="title">Initial Conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-5" class="internal"><span class="codenumber">4.1.1.3</span> <span class="title">Plotting the Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-6" class="internal"><span class="codenumber">4.1.1.4</span> <span class="title">Numerical Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-7" class="internal"><span class="codenumber">4.1.1.5</span> <span class="title">Plotting the Vector Field</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-3" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Second Example</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="second-order-de.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Second Order Differential Equations</span></a></div>
+<ul id="ptx-toc-group-second-order-de" class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="second-order-de.html#second-order-de-2" class="internal"><span class="codenumber">4.2.1</span> <span class="title">First Example</span></a></div>
+<ul id="ptx-toc-group-second-order-de-2" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-3" class="internal"><span class="codenumber">4.2.1.1</span> <span class="title">The General Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-4" class="internal"><span class="codenumber">4.2.1.2</span> <span class="title">Initial Conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-5" class="internal"><span class="codenumber">4.2.1.3</span> <span class="title">Symbolic Differential Equations</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="system-of-de.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Systems Of Equations</span></a></div>
+<ul id="ptx-toc-group-system-of-de" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="system-of-de.html#system-of-de-2" class="internal"><span class="codenumber">4.3.1</span> <span class="title">First Example</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-de.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="differential-references.html" class="internal"><span class="codenumber">4.5</span> <span class="title">References (places I plagiarized)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="linear-algebra-exam.html" class="internal"><span class="codenumber">5</span> <span class="title">Linear Algebra</span></a></div>
+<ul id="ptx-toc-group-linear-algebra-exam" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-introduction.html" class="internal"><span class="codenumber">5.1</span> <span class="title">About This Exam</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a1.html" class="internal"><span class="codenumber">5.2</span> <span class="title">A1</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a2.html" class="internal"><span class="codenumber">5.3</span> <span class="title">A2</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a3.html" class="internal"><span class="codenumber">5.4</span> <span class="title">A3</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-product-rule.html" class="internal"><span class="codenumber">5.5</span> <span class="title">The Product Rule</span></a></div>
+<ul id="ptx-toc-group-section-product-rule" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-product-rule.html#section-product-rule-9" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions.html" class="internal"><span class="codenumber">B.</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">C.</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="book-index.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="basics">
+<h1 class="heading">
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Basic Sage Commands</span>
 </h1>
-<a href="basics.html" class="permalink">¶</a></header><section class="introduction" id="introduction-2"><p id="p-32">Here you will find a hotch potch of some basic SageMath concepts</p></section><nav class="summary-links"><a href="section-3.html"><span class="codenumber">2.1</span><span class="title">Executing Sage Commands</span></a><a href="section-4.html"><span class="codenumber">2.2</span><span class="title">How to define functions</span></a><a href="section-5.html"><span class="codenumber">2.3</span><span class="title">Symbolic Manipulation</span></a><a href="section-6.html"><span class="codenumber">2.4</span><span class="title">Declaring Variables and Plotting</span></a><a href="section-7.html"><span class="codenumber">2.5</span><span class="title">Sage and Python</span></a></nav></section></div></main>
+<nav class="summary-links"><ul>
+<li><a href="basics-introduction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">What’s in This Chapter</span></a></li>
+<li><a href="sage-executing-commands.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Executing Sage Commands</span></a></li>
+<li><a href="sage-defining-functions.html" class="internal"><span class="codenumber">2.3</span> <span class="title">How to define functions</span></a></li>
+<li><a href="sage-symbolic-manipulation.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Symbolic Manipulation</span></a></li>
+<li><a href="sage-variables-plotting.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Declaring Variables and Plotting</span></a></li>
+<li><a href="sage-and-python.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Sage and Python</span></a></li>
+</ul></nav><div class="autopermalink" aria-hidden="true" data-description="Chapter 2: Basic Sage Commands"><a tabindex="-1" href="#basics" title="Copy heading and permalink for Chapter 2: Basic Sage Commands" aria-label="Copy heading and permalink for Chapter 2: Basic Sage Commands">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sage-from-source.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="basics-introduction.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>

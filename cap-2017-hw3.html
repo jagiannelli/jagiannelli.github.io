@@ -1,49 +1,141 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2026-08-08T13:37:44+01:00    *-->
-<!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
-<!--*                                    *-->
-<!--**************************************-->
-<html lang="en-US">
-<head>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JAG CAP 2017, HW 4 due February 14</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']],
-    },
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
+<title>JAG CAP 2017, HW 3 due February 7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends upper-alpha; prefix: ''; suffix: '. '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
-<link href="jagbook.css" rel="stylesheet" type="text/css">
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:image" content="https://jagiannelli.github.io/external/images/jg.jpeg">
+<meta property="og:image" content="https://jagiannelli.github.io/external/images/jg.jpeg">
+<meta name="twitter:image:alt" content="Document Logo">
+<meta property="og:image:alt" content="Document Logo">
+<meta name="twitter:title" content="John Giannelli">
+<meta property="og:title" content="John Giannelli">
+<meta property="book:title" content="John Giannelli">
+<meta name="twitter:description" content="Musings on Sage Math">
+<meta property="og:description" content="Musings on Sage Math">
+<meta name="twitter:card" content="summary_large_image">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.2.13';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.a45d14e8fc8c534a.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.538acb8e671a3b5d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.1bda041f5a098305.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\Z}{\mathbb{Z}}
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://github.com/jagiannelli"><img src="external/images/jg.jpeg" alt="Logo image"></a><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="jagbook.html"><span class="title">John Giannelli</span> <span class="subtitle">Musings on Sage Math</span></a></div>
+<p class="byline">John A Giannelli</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="book-index.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="cap-2017-hw2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="integers.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="cap-2017-hw4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\reals}{\mathbb{R}}
 \newcommand{\real}[1]{\mathbb{R}^{#1}}
 \newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
@@ -70,83 +162,717 @@ MathJax.Hub.Config({
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://github.com/giannelli" target="_blank"><img src="images/jg.jpeg" alt="Logo image for document"></a><div class="title-container">
-<h1 class="heading"><a href="index.html"><span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span></a></h1>
-<p class="byline"></p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar" style=""><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-38.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="cap-2017-hw3.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="references-2.html" title="Next" alt="Next">Next</a></span>
-</div>
-<button class="sidebar-right-toggle-button button active">Annotations</button>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="cap-2017-hw3.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="integers.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="references-2.html" title="Next" alt="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></h2>
-<ul>
-<li><a href="biography-1.html" data-scroll="biography-1">About John A Giannelli</a></li>
-<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="about-the-author.html" class="internal"><span class="title">About John A Giannelli</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="dedication.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgements.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
-<h2 class="link"><a href="sets.html" data-scroll="sets"><span class="codenumber">1</span><span class="title">Quick Guide to Using SageMath</span></a></h2>
-<ul>
-<li><a href="sage-online.html" data-scroll="sage-online">SageMath Online</a></li>
-<li><a href="section-2.html" data-scroll="section-2">Running From Source</a></li>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Quick Guide to Using SageMath</span></a></div>
+<ul id="ptx-toc-group-sets" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-introduction.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What Is SageMath?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-online.html" class="internal"><span class="codenumber">1.2</span> <span class="title">SageMath Online</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-from-source.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Running From Source</span></a></div>
+<ul id="ptx-toc-group-sage-from-source" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-from-source.html#sage-from-source-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Building SageMath</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-from-source.html#sage-from-source-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Running SageMath Notebook from the command line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-from-source.html#sage-from-source-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Running SageMath From the command line</span></a></div></li>
 </ul>
-<h2 class="link"><a href="basics.html" data-scroll="basics"><span class="codenumber">2</span><span class="title">Basic Sage Commands</span></a></h2>
-<ul>
-<li><a href="section-3.html" data-scroll="section-3">Executing Sage Commands</a></li>
-<li><a href="section-4.html" data-scroll="section-4">How to define functions</a></li>
-<li><a href="section-5.html" data-scroll="section-5">Symbolic Manipulation</a></li>
-<li><a href="section-6.html" data-scroll="section-6">Declaring Variables and Plotting</a></li>
-<li><a href="section-7.html" data-scroll="section-7">Sage and Python</a></li>
+</li>
 </ul>
-<h2 class="link active"><a href="integers.html" data-scroll="integers"><span class="codenumber">3</span><span class="title">Calculus</span></a></h2>
-<ul>
-<li><a href="calculus-limits.html" data-scroll="calculus-limits">Calculating Limits</a></li>
-<li><a href="calculus-derivatives.html" data-scroll="calculus-derivatives">Derivatives</a></li>
-<li><a href="calculus-integration.html" data-scroll="calculus-integration">Integration</a></li>
-<li><a href="integers-sage.html" data-scroll="integers-sage">Sage</a></li>
-<li><a href="cap-2017-hw2.html" data-scroll="cap-2017-hw2">CAP 2017, HW 2 due January 31</a></li>
-<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3">CAP 2017, HW 3 due February 7</a></li>
-<li><a href="cap-2017-hw3.html" data-scroll="cap-2017-hw3" class="active">CAP 2017, HW 4 due February 14</a></li>
-<li><a href="references-2.html" data-scroll="references-2">References</a></li>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="basics.html" class="internal"><span class="codenumber">2</span> <span class="title">Basic Sage Commands</span></a></div>
+<ul id="ptx-toc-group-basics" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="basics-introduction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">What’s in This Chapter</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-executing-commands.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Executing Sage Commands</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-defining-functions.html" class="internal"><span class="codenumber">2.3</span> <span class="title">How to define functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-symbolic-manipulation.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Symbolic Manipulation</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-variables-plotting.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Declaring Variables and Plotting</span></a></div>
+<ul id="ptx-toc-group-sage-variables-plotting" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-variables-plotting.html#sage-variables-plotting-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Use SageMath to solve differential equations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-and-python.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Sage and Python</span></a></div>
+<ul id="ptx-toc-group-sage-and-python" class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Lists, Tuples, and Dictionaries</span></a></div>
+<ul id="ptx-toc-group-sage-and-python-3" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3-3" class="internal"><span class="codenumber">2.6.1.1</span> <span class="title">Lists</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3-4" class="internal"><span class="codenumber">2.6.1.2</span> <span class="title">Tuples </span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3-5" class="internal"><span class="codenumber">2.6.1.3</span> <span class="title">Dictionaries (Associative Arrays) </span></a></div></li>
 </ul>
-<h2 class="link"><a href="differential.html" data-scroll="differential"><span class="codenumber">4</span><span class="title">Differential Equations</span></a></h2>
-<ul>
-<li><a href="first-order-de.html" data-scroll="first-order-de">First Order Differential Equations</a></li>
-<li><a href="second-order-de.html" data-scroll="second-order-de">Second Order Differential Equations</a></li>
-<li><a href="system-of-de.html" data-scroll="system-of-de">Systems Of Equations</a></li>
-<li><a href="exercises-de.html" data-scroll="exercises-de">Exercises</a></li>
-<li><a href="references-3.html" data-scroll="references-3">References (places I plagiarized)</a></li>
+</li></ul>
+</li>
 </ul>
-<h2 class="link"><a href="linear-algebra-exam.html" data-scroll="linear-algebra-exam"><span class="codenumber">5</span><span class="title">Linear Algebra</span></a></h2>
-<ul>
-<li><a href="section-18.html" data-scroll="section-18">A1</a></li>
-<li><a href="section-19.html" data-scroll="section-19">A2</a></li>
-<li><a href="section-20.html" data-scroll="section-20">A3</a></li>
-<li><a href="section-product-rule.html" data-scroll="section-product-rule">The Product Rule</a></li>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="integers.html" class="internal"><span class="codenumber">3</span> <span class="title">Calculus</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-integers">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-introduction.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Calculus in SageMath</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-limits.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Calculating Limits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="calculus-derivatives.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Derivatives</span></a></div>
+<ul id="ptx-toc-group-calculus-derivatives" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Examples From Chapter 2</span></a></div>
+<ul id="ptx-toc-group-calculus-derivatives-3" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-2" class="internal"><span class="codenumber">3.3.1.1</span> <span class="title">Section 2.1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-3" class="internal"><span class="codenumber">3.3.1.2</span> <span class="title">Section 2.2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-4" class="internal"><span class="codenumber">3.3.1.3</span> <span class="title">Section 2.3</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-5" class="internal"><span class="codenumber">3.3.1.4</span> <span class="title">Section 2.4</span></a></div></li>
 </ul>
-<h2 class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></h2>
-<ul>
-<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
-<li><a href="appendix-2.html" data-scroll="appendix-2">Hints and Solutions to Selected Exercises</a></li>
-<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
-<li><a href="index-38.html" data-scroll="index-38">Index</a></li>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="cap-2017-hw3"><header title="Section 3.7 CAP 2017, HW 4 due February 14"><h2 class="heading hide-type" alt="Section 3.7 CAP 2017, HW 4 due February 14">
-<span class="type">Section</span><span class="codenumber">3.7</span><span class="title">CAP 2017, HW 4 due February 14</span>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Section 2.6 Implicit Differentiation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-integration.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Integration</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="integers-sage.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cap-2017-hw2.html" class="internal"><span class="codenumber">3.6</span> <span class="title">CAP 2017, HW 2 due January 31</span></a></div>
+<ul id="ptx-toc-group-cap-2017-hw2" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw2.html#cap-2017-hw2-5" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="cap-2017-hw3.html" class="internal"><span class="codenumber">3.7</span> <span class="title">CAP 2017, HW 3 due February 7</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-cap-2017-hw3">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-rumour" class="internal"><span class="codenumber">3.7.1</span> <span class="title">Rumour Spread and the Logistic Function</span></a></div>
+<ul id="ptx-toc-group-hw3-rumour" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-rumour-6" class="internal"><span class="codenumber">3.7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-decay" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Radioactive Decay: Bismuth-210</span></a></div>
+<ul id="ptx-toc-group-hw3-decay" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-decay-3" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-taylor" class="internal"><span class="codenumber">3.7.3</span> <span class="title">Second Derivatives and Taylor Series</span></a></div>
+<ul id="ptx-toc-group-hw3-taylor" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-taylor-4" class="internal"><span class="codenumber">3.7.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-mvt" class="internal"><span class="codenumber">3.7.4</span> <span class="title">The Mean Value Theorem</span></a></div>
+<ul id="ptx-toc-group-hw3-mvt" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-mvt-3" class="internal"><span class="codenumber">3.7.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="cap-2017-hw3.html#cap-2017-hw3-7" class="internal"><span class="codenumber">3.7.5</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cap-2017-hw4.html" class="internal"><span class="codenumber">3.8</span> <span class="title">CAP 2017, HW 4 due February 14</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="calculus-references.html" class="internal"><span class="codenumber">3.9</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="differential.html" class="internal"><span class="codenumber">4</span> <span class="title">Differential Equations</span></a></div>
+<ul id="ptx-toc-group-differential" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="first-order-de.html" class="internal"><span class="codenumber">4.1</span> <span class="title">First Order Differential Equations</span></a></div>
+<ul id="ptx-toc-group-first-order-de" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="first-order-de.html#first-order-de-2" class="internal"><span class="codenumber">4.1.1</span> <span class="title">First Example</span></a></div>
+<ul id="ptx-toc-group-first-order-de-2" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-3" class="internal"><span class="codenumber">4.1.1.1</span> <span class="title">The General Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-4" class="internal"><span class="codenumber">4.1.1.2</span> <span class="title">Initial Conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-5" class="internal"><span class="codenumber">4.1.1.3</span> <span class="title">Plotting the Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-6" class="internal"><span class="codenumber">4.1.1.4</span> <span class="title">Numerical Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-7" class="internal"><span class="codenumber">4.1.1.5</span> <span class="title">Plotting the Vector Field</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-3" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Second Example</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="second-order-de.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Second Order Differential Equations</span></a></div>
+<ul id="ptx-toc-group-second-order-de" class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="second-order-de.html#second-order-de-2" class="internal"><span class="codenumber">4.2.1</span> <span class="title">First Example</span></a></div>
+<ul id="ptx-toc-group-second-order-de-2" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-3" class="internal"><span class="codenumber">4.2.1.1</span> <span class="title">The General Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-4" class="internal"><span class="codenumber">4.2.1.2</span> <span class="title">Initial Conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-5" class="internal"><span class="codenumber">4.2.1.3</span> <span class="title">Symbolic Differential Equations</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="system-of-de.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Systems Of Equations</span></a></div>
+<ul id="ptx-toc-group-system-of-de" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="system-of-de.html#system-of-de-2" class="internal"><span class="codenumber">4.3.1</span> <span class="title">First Example</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-de.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="differential-references.html" class="internal"><span class="codenumber">4.5</span> <span class="title">References (places I plagiarized)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="linear-algebra-exam.html" class="internal"><span class="codenumber">5</span> <span class="title">Linear Algebra</span></a></div>
+<ul id="ptx-toc-group-linear-algebra-exam" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-introduction.html" class="internal"><span class="codenumber">5.1</span> <span class="title">About This Exam</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a1.html" class="internal"><span class="codenumber">5.2</span> <span class="title">A1</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a2.html" class="internal"><span class="codenumber">5.3</span> <span class="title">A2</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a3.html" class="internal"><span class="codenumber">5.4</span> <span class="title">A3</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-product-rule.html" class="internal"><span class="codenumber">5.5</span> <span class="title">The Product Rule</span></a></div>
+<ul id="ptx-toc-group-section-product-rule" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-product-rule.html#section-product-rule-9" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions.html" class="internal"><span class="codenumber">B.</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">C.</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="book-index.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="cap-2017-hw3">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">CAP 2017, HW 3 due February 7</span>
+</h1>
+<section class="introduction" id="cap-2017-hw3-2">
+<div class="para" id="cap-2017-hw3-2-1">Give complete explanations of what you are doing, written in full sentences. Solutions that have all the correct calculations and computations, but lack explanations, will not get full marks!<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cap-2017-hw3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="hw3-rumour">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rumour Spread and the Logistic Function</span>
 </h2>
-<a href="cap-2017-hw3.html" class="permalink">¶</a></header><p id="p-201">Give complete explanations of what you are doing, written in full sentences. Solutions that have all the correct calculations and computations, but lack explanations, will not get full marks!</p></section></div></main>
+<div class="para logical" id="hw3-rumour-2">
+<div class="para">Under certain circumstances a rumour spreads according to the equation</div>
+<div class="displaymath process-math" id="hw3-rumour-2-1">
+\begin{equation*}
+\fe{p}{t} = \frac{1}{1+ a e^{-kt}}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\fe{p}{t} \)</span> is the proportion of the population that knows the rumor at time <span class="process-math">\(t\)</span> (in days) and <span class="process-math">\(a\)</span> and <span class="process-math">\(k\)</span> are positive constants.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-rumour-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="hw3-rumour-3">Note that this is an example of the <em class="emphasis">Logistic Function</em>.  When you get to differential equations this equation is quite important. <a class="external" href="https://ocw.mit.edu/resources/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/differential-equations-and-linear-algebra/first-order-equations/the-logistic-equation/" target="_blank">Gilbert Strang</a> gives a good presentation on this subject.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-rumour-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="hw3-rumour-4">It is a very important equation and comes up often. See <a class="external" href="https://en.wikipedia.org/wiki/Logistic_function" target="_blank">Logistic function (wiki)</a><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-rumour-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="hw3-rumour-5">The inverse function is an example of a <a class="external" href="https://en.wikipedia.org/wiki/Logit" target="_blank">Logit function (wiki)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-rumour-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="exercises" id="hw3-rumour-6">
+<h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="hw3-rumour-6-1"><h4 class="heading"><span class="codenumber">a)<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>Find <span class="process-math">\(\lim_{t \to \infty} p(t)\text{.}\)</span> What does this mean for the rumor?<div class="solutions">
+<details id="hw3-rumour-6-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<span class="process-math">\(p(\infty) = 1\)</span>
+<div class="para" id="hw3-rumour-6-1-2-2">After a long period of time everyone knows the rumour!<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-rumour-6-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.7.1.a).1"><a tabindex="-1" href="#hw3-rumour-6-1-2" title="Copy heading and permalink for Answer 3.7.1.a).1" aria-label="Copy heading and permalink for Answer 3.7.1.a).1">🔗</a></div>
+</div></details>
+<details id="hw3-rumour-6-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="hw3-rumour-6-1-3-1">
+<div class="displaymath process-math" id="hw3-rumour-6-1-3-1-1">
+\begin{align*}
+lim_{t \to \infty}\fe{p}{t}&amp;=\frac{1}{1+ a e^{-k\infty}}\\
+\text{Since }e^{-k\infty} = 0, \{ k \in \mathbb{R} | k &gt; 0 \}\\
+\therefore lim_{t \to \infty} p(t)&amp;= \frac{1}{1+0}\\
+&amp;=1
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-rumour-6-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.7.1.a).1"><a tabindex="-1" href="#hw3-rumour-6-1-3" title="Copy heading and permalink for Solution 3.7.1.a).1" aria-label="Copy heading and permalink for Solution 3.7.1.a).1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.1.a)"><a tabindex="-1" href="#hw3-rumour-6-1" title="Copy heading and permalink for Exercise 3.7.1.a)" aria-label="Copy heading and permalink for Exercise 3.7.1.a)">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="hw3-rumour-6-2"><h4 class="heading"><span class="codenumber">b)<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>Find the rate of spread of the rumor.<div class="solutions">
+<details id="hw3-rumour-6-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<span class="process-math">\(\frac{dp}{dt}=\frac{ak e^{-kt}}{(1+a e^{-kt})^2}\)</span><div class="autopermalink" aria-hidden="true" data-description="Answer 3.7.1.b).1"><a tabindex="-1" href="#hw3-rumour-6-2-2" title="Copy heading and permalink for Answer 3.7.1.b).1" aria-label="Copy heading and permalink for Answer 3.7.1.b).1">🔗</a></div>
+</div></details>
+<details id="hw3-rumour-6-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="hw3-rumour-6-2-3-1">
+<div class="displaymath process-math" id="hw3-rumour-6-2-3-1-1">
+\begin{align*}
+u&amp;= 1 + a e^{-kt}\\
+\frac{dp}{dt}&amp;=\frac{dp}{du}\frac{du}{dt}&amp;\text{(Chain Rule)}\\
+&amp;=\frac{-1}{u^2}\left(-ak e^{-kt}\right)\\
+&amp;=\frac{ak e^{-kt}}{(1+a e^{-kt})^2}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-rumour-6-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.7.1.b).1"><a tabindex="-1" href="#hw3-rumour-6-2-3" title="Copy heading and permalink for Solution 3.7.1.b).1" aria-label="Copy heading and permalink for Solution 3.7.1.b).1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.1.b)"><a tabindex="-1" href="#hw3-rumour-6-2" title="Copy heading and permalink for Exercise 3.7.1.b)" aria-label="Copy heading and permalink for Exercise 3.7.1.b)">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="hw3-rumour-6-3"><h4 class="heading"><span class="codenumber">c)<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>Find the inverse function of <span class="process-math">\(p(t)\)</span> and give an interpretation of the meaning.<div class="solutions">
+<details id="hw3-rumour-6-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<span class="process-math">\(\frac{1}{k}\ln\left(\frac{at}{1-t}\right)\)</span><div class="autopermalink" aria-hidden="true" data-description="Answer 3.7.1.c).1"><a tabindex="-1" href="#hw3-rumour-6-3-2" title="Copy heading and permalink for Answer 3.7.1.c).1" aria-label="Copy heading and permalink for Answer 3.7.1.c).1">🔗</a></div>
+</div></details>
+<details id="hw3-rumour-6-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="hw3-rumour-6-3-3-1">
+<div class="displaymath process-math" id="hw3-rumour-6-3-3-1-1">
+\begin{align*}
+p&amp;= \frac{1}{1+ a e^{-kt}}\\
+\text{Substitute p's for t's, and vice versa:}\\
+t&amp;= \frac{1}{1+ a e^{-kp}}\\
+\text{Solve for p:}\\
+1 + a e^{-kp}&amp;=\frac{1}{t}\\
+a e^{-kp}&amp;=\frac{1}{t} - 1\\
+e^{-kp}&amp;=\frac{1}{at} - \frac{1}{a}\\
+-kp&amp;=\ln \left(\frac{1}{at} - \frac{1}{a}\right)\\
+p&amp;=-\frac{1}{k}\ln \left(\frac{1-t}{at}\right)\\
+p&amp;=\frac{1}{k}\ln \left(\frac{at}{1-t}\right)\\
+\text{In other words the inverse is:}\\
+p^{-1}&amp;=\frac{1}{k}\ln \left(\frac{at}{1-t}\right)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-rumour-6-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.7.1.c).1"><a tabindex="-1" href="#hw3-rumour-6-3-3" title="Copy heading and permalink for Solution 3.7.1.c).1" aria-label="Copy heading and permalink for Solution 3.7.1.c).1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.1.c)"><a tabindex="-1" href="#hw3-rumour-6-3" title="Copy heading and permalink for Exercise 3.7.1.c)" aria-label="Copy heading and permalink for Exercise 3.7.1.c)">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="hw3-rumour-6-4"><h4 class="heading"><span class="codenumber">d)<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>Graph <span class="process-math">\(p\)</span> for the case <span class="process-math">\(a=10,k=0.5\)</span> and use your graph to estimate how long it will take for 80% of the population to hear the rumor. Can you also calculate this time?<div class="solutions">
+<details id="hw3-rumour-6-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="hw3-rumour-6-4-2-1">
+<span class="process-math">\(7.38\)</span> days.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-rumour-6-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="hw3-rumour-6-4-2-2">See <a href="cap-2017-hw3.html#hm3_1d_pt1" class="xref" data-knowl="./knowl/xref/hm3_1d_pt1.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Sage plot</a> of <span class="process-math">\(p(t)\)</span> below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-rumour-6-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.7.1.d).1"><a tabindex="-1" href="#hw3-rumour-6-4-2" title="Copy heading and permalink for Answer 3.7.1.d).1" aria-label="Copy heading and permalink for Answer 3.7.1.d).1">🔗</a></div>
+</div></details>
+<details id="hw3-rumour-6-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="hw3-rumour-6-4-3-1">
+<div class="para">Use the inverse function with a value of <span class="process-math">\(0.8\)</span>
+</div>
+<div class="displaymath process-math" id="hw3-rumour-6-4-3-1-2">
+\begin{align*}
+p^{-1}&amp;=\frac{1}{k}\ln \left(\frac{at}{1-t}\right)\\
+p^{-1}(0.8)&amp;=7.378
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-rumour-6-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="hw3-rumour-6-4-3-2">See <a href="cap-2017-hw3.html#hm3_1d_pt2" class="xref" data-knowl="./knowl/xref/hm3_1d_pt2.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Sage plot</a> of inverse <span class="process-math">\(p(t)\)</span> below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-rumour-6-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.7.1.d).1"><a tabindex="-1" href="#hw3-rumour-6-4-3" title="Copy heading and permalink for Solution 3.7.1.d).1" aria-label="Copy heading and permalink for Solution 3.7.1.d).1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.1.d)"><a tabindex="-1" href="#hw3-rumour-6-4" title="Copy heading and permalink for Exercise 3.7.1.d)" aria-label="Copy heading and permalink for Exercise 3.7.1.d)">🔗</a></div>
+</article>
+<section class="conclusion" id="hw3-rumour-6-5">
+<div class="para" id="hm3_1d_pt1">Plot of <span class="process-math">\(p(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hm3_1d_pt1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="hw3-rumour-6-5-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">p = 1/(1+10*e^(-0.5*x))
+dpdx=p.diff(x)
+
+Plt=plot(p,(x,-5,20), ymin=0, ymax=1, legend_label='$p(t)=\\frac{1}{1+10e^{-0.5t}}$',detect_poles='show')
+Plt += plot(dpdx,(x,-5,20), ymin=0, ymax=1, color='green',legend_label='$p\'(t)$',linestyle='--',detect_poles='show')
+
+Plt
+</script></div>
+<div class="para" id="hw3-rumour-6-5-3">From the sage plot we can see that the time to get to 80% is about <span class="process-math">\(7.5\)</span> days.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-rumour-6-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="hm3_1d_pt2">Plot of <span class="process-math">\(p^{-1}(t)\)</span> (the inverse of <span class="process-math">\(p(t)\)</span>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hm3_1d_pt2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="hw3-rumour-6-5-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">p = 2*log(10*x/(1-x))
+
+show(p(x=0.8))
+
+dpdx=p.diff(x)
+
+Plt=plot(p,(x,0,1), ymin=-10, ymax=20, legend_label='$p^{-1}(t)=2log(10t/(1-t))$', detect_poles='show', exclude=[1])
+Plt += plot(dpdx,(x,0,1), ymin=-10, ymax=20, color='green',legend_label='$p^{-1}\'(t)$',linestyle='--',detect_poles='show')
+
+Plt
+</script></div>
+<div class="para" id="hw3-rumour-6-5-6">From the sage calculation we can see that the time to get to 80% is <span class="process-math">\(7.37775890822787\)</span> days.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-rumour-6-5-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" aria-hidden="true" data-description="Exercises 3.7.1"><a tabindex="-1" href="#hw3-rumour-6" title="Copy heading and permalink for Exercises 3.7.1" aria-label="Copy heading and permalink for Exercises 3.7.1">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.7.1: Rumour Spread and the Logistic Function"><a tabindex="-1" href="#hw3-rumour" title="Copy heading and permalink for Subsection 3.7.1: Rumour Spread and the Logistic Function" aria-label="Copy heading and permalink for Subsection 3.7.1: Rumour Spread and the Logistic Function">🔗</a></div>
+</section>
+<section class="subsection" id="hw3-decay">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Radioactive Decay: Bismuth-210</span>
+</h2>
+<div class="para" id="hw3-decay-2">Bismuth-210 has a half-life of 5.0 days.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-decay-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="exercises" id="hw3-decay-3">
+<h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="hw3-decay-3-1"><h4 class="heading"><span class="codenumber">a)<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>A sample originally has a mass of <span class="process-math">\(800 mg\text{.}\)</span> Find a formula for the mass remaining after <span class="process-math">\(t\)</span> days.<div class="solutions">
+<details id="hw3-decay-3-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical" id="hw3-decay-3-1-2-1">
+<div class="para">The mass (in <span class="process-math">\(mg\)</span>) after time <span class="process-math">\(t\)</span> (in days) is:</div>
+<div class="displaymath process-math" id="hw3-decay-3-1-2-1-3">
+\begin{equation*}
+M_t=800 e^{-0.1386t}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-decay-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.7.2.a).1"><a tabindex="-1" href="#hw3-decay-3-1-2" title="Copy heading and permalink for Answer 3.7.2.a).1" aria-label="Copy heading and permalink for Answer 3.7.2.a).1">🔗</a></div>
+</div></details>
+<details id="hw3-decay-3-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="hw3-decay-3-1-3-1">
+<div class="para">The rate of change of mass is proportional to the current mass:</div>
+<div class="displaymath process-math" id="hw3-decay-3-1-3-1-1">
+\begin{equation*}
+\frac{dM}{dt} \propto M
+\end{equation*}
+</div>
+<div class="para">Lets call the constant of proportionality <span class="process-math">\(\lambda\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="hw3-decay-3-1-3-1-3">
+\begin{equation*}
+\frac{dM}{dt} = -\lambda M
+\end{equation*}
+</div>
+<div class="para">The negative is because this is a decay.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-decay-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="hw3-decay-3-1-3-2">
+<div class="para">The solution of this equation is:</div>
+<div class="displaymath process-math" id="hw3-decay-3-1-3-2-1">
+\begin{equation*}
+M_t = M_0 e^{-\lambda t}
+\end{equation*}
+</div>
+<div class="para">(where <span class="process-math">\(M_0\)</span> is the mass at <span class="process-math">\(t=0\text{.}\)</span>)</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-decay-3-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="hw3-decay-3-1-3-3">
+<div class="para">At the half-life <span class="process-math">\(t=T_{\frac{1}{2}}\)</span> and <span class="process-math">\(M_t = \frac{M_0}{2}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="hw3-decay-3-1-3-3-3">
+\begin{equation*}
+\frac{M_0}{2} = M_0 \exp\left({-\lambda T_{\frac{1}{2}}}\right)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="hw3-decay-3-1-3-3-4">
+\begin{equation*}
+2 = \exp\left({\lambda T_{\frac{1}{2}}}\right)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="hw3-decay-3-1-3-3-5">
+\begin{equation*}
+\log{2} = \lambda T_{\frac{1}{2}}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="hw3-decay-3-1-3-3-6">
+\begin{equation*}
+\lambda = \frac{log2}{T_{\frac{1}{2}}}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-decay-3-1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="hw3-decay-3-1-3-4">
+<div class="para">We are told that the half-life is <span class="process-math">\(5\)</span> days.</div>
+<div class="displaymath process-math" id="hw3-decay-3-1-3-4-2">
+\begin{equation*}
+\lambda \approx 0.1386
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-decay-3-1-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="hw3-decay-3-1-3-5">
+<div class="para">Substituting with the original mass gives us:</div>
+<div class="displaymath process-math" id="hw3-decay-3-1-3-5-1">
+\begin{equation*}
+M_t = 800 e^{-0.1386t}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(M_t\)</span> is the mass in <span class="process-math">\(mg\)</span> and <span class="process-math">\(t\)</span> is the time in days.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-decay-3-1-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.7.2.a).1"><a tabindex="-1" href="#hw3-decay-3-1-3" title="Copy heading and permalink for Solution 3.7.2.a).1" aria-label="Copy heading and permalink for Solution 3.7.2.a).1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.2.a)"><a tabindex="-1" href="#hw3-decay-3-1" title="Copy heading and permalink for Exercise 3.7.2.a)" aria-label="Copy heading and permalink for Exercise 3.7.2.a)">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="hw3-decay-3-2"><h4 class="heading"><span class="codenumber">b)<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>Find the mass remaining after <span class="process-math">\(30\)</span> days.<div class="solutions">
+<details id="hw3-decay-3-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="hw3-decay-3-2-2-1">
+<span class="process-math">\(N(30) = 12.5 mg\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-decay-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.7.2.b).1"><a tabindex="-1" href="#hw3-decay-3-2-2" title="Copy heading and permalink for Answer 3.7.2.b).1" aria-label="Copy heading and permalink for Answer 3.7.2.b).1">🔗</a></div>
+</div></details>
+<details id="hw3-decay-3-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="hw3-decay-3-2-3-1">
+<div class="displaymath process-math" id="hw3-decay-3-2-3-1-1">
+\begin{equation*}
+N(30) = 800 e^{-0.1386 \times 30} = 800 e^{-4.1589} = 800 \times 0.015625 = 12.5 
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-decay-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.7.2.b).1"><a tabindex="-1" href="#hw3-decay-3-2-3" title="Copy heading and permalink for Solution 3.7.2.b).1" aria-label="Copy heading and permalink for Solution 3.7.2.b).1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.2.b)"><a tabindex="-1" href="#hw3-decay-3-2" title="Copy heading and permalink for Exercise 3.7.2.b)" aria-label="Copy heading and permalink for Exercise 3.7.2.b)">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="hw3-decay-3-3"><h4 class="heading"><span class="codenumber">c)<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>When is the mass reduced to <span class="process-math">\(1mg\text{?}\)</span><div class="solutions">
+<details id="hw3-decay-3-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="hw3-decay-3-3-2-1">
+<span class="process-math">\(48.2\)</span> days.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-decay-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.7.2.c).1"><a tabindex="-1" href="#hw3-decay-3-3-2" title="Copy heading and permalink for Answer 3.7.2.c).1" aria-label="Copy heading and permalink for Answer 3.7.2.c).1">🔗</a></div>
+</div></details>
+<details id="hw3-decay-3-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="hw3-decay-3-3-3-1">
+<div class="displaymath process-math" id="hw3-decay-3-3-3-1-1">
+\begin{align*}
+M_t&amp;=M_0 e^{-\lambda t}\\
+1&amp;=800e^{-\lambda t}\\
+\frac{1}{800}&amp;=e^{-\lambda t}\\
+800&amp;=e^{\lambda t}\\
+log{800}&amp;=\lambda t\\
+t&amp;=\frac{log{800}}{\lambda}\\
+&amp;=\frac{log{800}}{0.1386}\\
+&amp; \approx 48.2
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-decay-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.7.2.c).1"><a tabindex="-1" href="#hw3-decay-3-3-3" title="Copy heading and permalink for Solution 3.7.2.c).1" aria-label="Copy heading and permalink for Solution 3.7.2.c).1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.2.c)"><a tabindex="-1" href="#hw3-decay-3-3" title="Copy heading and permalink for Exercise 3.7.2.c)" aria-label="Copy heading and permalink for Exercise 3.7.2.c)">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="hw3-decay-3-4"><h4 class="heading"><span class="codenumber">d)<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>Sketch a graph of the mass function.<div class="solutions">
+<details id="hw3-decay-3-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="hw3-decay-3-4-2-1">
+<div class="para" id="hw3-decay-3-4-2-1-1">See <a href="cap-2017-hw3.html#hm3_2d" class="xref" data-knowl="./knowl/xref/hm3_2d.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">Sage plot</a> of mass function below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-decay-3-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-decay-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.7.2.d).1"><a tabindex="-1" href="#hw3-decay-3-4-2" title="Copy heading and permalink for Answer 3.7.2.d).1" aria-label="Copy heading and permalink for Answer 3.7.2.d).1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.2.d)"><a tabindex="-1" href="#hw3-decay-3-4" title="Copy heading and permalink for Exercise 3.7.2.d)" aria-label="Copy heading and permalink for Exercise 3.7.2.d)">🔗</a></div>
+</article>
+<section class="conclusion" id="hw3-decay-3-5">
+<div class="para" id="hm3_2d">Sketch of the mass function. (Note <span class="process-math">\(x,y\)</span> are easier for plots)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hm3_2d" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="hw3-decay-3-5-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def point_with_coords(pt, xrange, yrange, color='black', pointsize=30):
+    plt=point(pt,rgbcolor=color, pointsize=pointsize)
+    pt_shifted=(pt[0]+(xrange[2]-xrange[1])/10,pt[1]+(yrange[2]-yrange[1])/10)
+    plt +=text('({0:.2f},{1:.2f})'.format(float(pt[0]),float(pt[1])), pt_shifted, color=color)
+    return plt
+
+def cross_hair(pt, xrange, yrange):
+    plt=point_with_coords(pt,xrange,yrange)
+    pt1=(xrange[1],pt[1])
+    pt2=(xrange[2],pt[1])
+    plt += line([pt1, pt2], linestyle='--')
+    pt1=(pt[0], yrange[1])
+    pt2=(pt[0],yrange[2])
+    plt += line([pt1, pt2], linestyle='--')
+    return plt
+
+y=800*exp(-0.1386*x)
+
+xrange = (x,0,50)
+yrange = (y,0,800)
+
+halflife=(5,y(x=5))
+thirtydays=(30,y(x=30))
+
+P= plot(y,(x,0,50))
+P += point_with_coords(halflife, xrange, yrange, color='red', pointsize=60)
+P += cross_hair(halflife, xrange, yrange)
+P += point_with_coords(thirtydays, xrange, yrange, color='red', pointsize=60)
+P += cross_hair(thirtydays, xrange, yrange)
+P
+</script></div></section><div class="autopermalink" aria-hidden="true" data-description="Exercises 3.7.2"><a tabindex="-1" href="#hw3-decay-3" title="Copy heading and permalink for Exercises 3.7.2" aria-label="Copy heading and permalink for Exercises 3.7.2">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.7.2: Radioactive Decay: Bismuth-210"><a tabindex="-1" href="#hw3-decay" title="Copy heading and permalink for Subsection 3.7.2: Radioactive Decay: Bismuth-210" aria-label="Copy heading and permalink for Subsection 3.7.2: Radioactive Decay: Bismuth-210">🔗</a></div>
+</section>
+<section class="subsection" id="hw3-taylor">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Second Derivatives and Taylor Series</span>
+</h2>
+<div class="para logical" id="hw3-taylor-2">
+<div class="para">If <span class="process-math">\(f''\)</span> is continuous, show that:</div>
+<div class="displaymath process-math" id="hw3-taylor-2-2">
+\begin{equation*}
+\lim_{h \to 0}\frac{\fe{f}{x+h} - 2\fe{f}{x} + \fe{f}{x-h}}{h^2} = \fe{f''}{x}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-taylor-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="definition-taylor-series"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Definition of Taylor Series.</span>
+</h3>
+<div class="para logical" id="definition-taylor-series-2-1">
+<div class="para">Given a smooth function <span class="process-math">\(f\text{,}\)</span> we can always write down a Taylor series; there is no guarantee that the series converges to anything, let alone to the function.  Given a smooth function <span class="process-math">\(f : \mathbb{R} \to \mathbb{R}\text{,}\)</span> its Taylor series (around <span class="process-math">\(0\)</span>) is</div>
+<div class="displaymath process-math" id="definition-taylor-series-2-1-4">
+\begin{equation*}
+\sum_{n=0}^\infty \frac{f^{(n)}(0) \, x^n}{n!}
+\end{equation*}
+</div>
+<div class="para">A common mistake is to use <span class="process-math">\(f^{(n)}(x)\)</span> instead of <span class="process-math">\(f^{(n)}(0)\text{.}\)</span> Given a smooth function <span class="process-math">\(f : \mathbb{R} \to \mathbb{R}\text{,}\)</span> its Taylor series expanded around <span class="process-math">\(a\)</span> is</div>
+<div class="displaymath process-math" id="definition-taylor-series-2-1-9">
+\begin{equation*}
+\sum_{n=0}^\infty \frac{f^{(n)}(a) \, (x-a)^n}{n!}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-taylor-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="definition-taylor-series-2-2">
+<div class="para">The first few entries are</div>
+<div class="displaymath process-math" id="definition-taylor-series-2-2-1">
+\begin{equation*}
+f(a)+\frac {f'(a)}{1!} (x-a)+ \frac{f''(a)}{2!} (x-a)^2+\frac{f^{(3)}(a)}{3!}(x-a)^3+ \cdots
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-taylor-series-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.7.1: The Definition of Taylor Series"><a tabindex="-1" href="#definition-taylor-series" title="Copy heading and permalink for Definition 3.7.1: The Definition of Taylor Series" aria-label="Copy heading and permalink for Definition 3.7.1: The Definition of Taylor Series">🔗</a></div>
+</article>
+<section class="exercises" id="hw3-taylor-4">
+<h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="hw3-taylor-4-1"><h4 class="heading"><span class="codenumber">a)<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>From first principles.<div class="solutions">
+<details id="hw3-taylor-4-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="hw3-taylor-4-1-2-1">
+<div class="para">The first derivative is given by:</div>
+<div class="displaymath process-math" id="hw3-taylor-4-1-2-1-1">
+\begin{equation*}
+\frac{\Delta f(x)}{\Delta x} = \lim_{h \to 0}\frac{f(x+h)-f(x)}{(x+h)-(x)} = \lim_{h \to 0}\frac{f(x+h)-f(x)}{h}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-taylor-4-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="hw3-taylor-4-1-2-2">The solution is to apply this twice. The trick here is to start with the correct increments (see <a href="cap-2017-hw3.html#second-diff-math-stack" class="xref" data-knowl="./knowl/xref/second-diff-math-stack.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 3.7.5.1: Second derivative “formula derivation”">[Math Stack Q&amp;A]</a>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-taylor-4-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="hw3-taylor-4-1-2-3">
+<div class="displaymath process-math" id="hw3-taylor-4-1-2-3-1">
+\begin{align*}
+\fe{f''}{x}&amp;=\lim_{h \to 0} \frac{\fe{f'}{x} - \fe{f'}{x-h}}{h}\\
+&amp;=\lim_{h \to 0}\frac{\frac{f(x+h)-f(x)}{h}-\frac{f(x)-f(x-h)}{h}}{h}\\
+&amp;=\lim_{h \to 0}\frac{f(x+h)-2f(x)+f(x-h)}{h^2}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-taylor-4-1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.7.3.a).1"><a tabindex="-1" href="#hw3-taylor-4-1-2" title="Copy heading and permalink for Solution 3.7.3.a).1" aria-label="Copy heading and permalink for Solution 3.7.3.a).1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.3.a)"><a tabindex="-1" href="#hw3-taylor-4-1" title="Copy heading and permalink for Exercise 3.7.3.a)" aria-label="Copy heading and permalink for Exercise 3.7.3.a)">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="hw3-taylor-4-2"><h4 class="heading"><span class="codenumber">b)<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="hw3-taylor-4-2-1-1">Using <a href="cap-2017-hw3.html#taylor-series-wiki" class="xref" data-knowl="./knowl/xref/taylor-series-wiki.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 3.7.5.2: Taylor Series.https://en.wikipedia.org/wiki/Taylor_series">[Taylor Series]</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-taylor-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="hw3-taylor-4-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="hw3-taylor-4-2-2-1">
+<div class="para">First set <span class="process-math">\(a=x+h\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="hw3-taylor-4-2-2-1-2">
+\begin{equation*}
+f(x)f(a)+\frac {f'(a)}{1!} (x-a)+ \frac{f''(a)}{2!} (x-a)^2+\frac{f^{(3)}(a)}{3!}(x-a)^3+ \cdots
+\end{equation*}
+</div>
+<div class="para">TBD</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-taylor-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.7.3.b).1"><a tabindex="-1" href="#hw3-taylor-4-2-2" title="Copy heading and permalink for Solution 3.7.3.b).1" aria-label="Copy heading and permalink for Solution 3.7.3.b).1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.3.b)"><a tabindex="-1" href="#hw3-taylor-4-2" title="Copy heading and permalink for Exercise 3.7.3.b)" aria-label="Copy heading and permalink for Exercise 3.7.3.b)">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercises 3.7.3"><a tabindex="-1" href="#hw3-taylor-4" title="Copy heading and permalink for Exercises 3.7.3" aria-label="Copy heading and permalink for Exercises 3.7.3">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.7.3: Second Derivatives and Taylor Series"><a tabindex="-1" href="#hw3-taylor" title="Copy heading and permalink for Subsection 3.7.3: Second Derivatives and Taylor Series" aria-label="Copy heading and permalink for Subsection 3.7.3: Second Derivatives and Taylor Series">🔗</a></div>
+</section>
+<section class="subsection" id="hw3-mvt">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Mean Value Theorem</span>
+</h2>
+<div class="para logical" id="hw3-mvt-2">
+<div class="para">Suppose that <span class="process-math">\(3 \leq \fe{f'}{x} \leq 5\)</span> for all values of <span class="process-math">\(x\text{,}\)</span> where <span class="process-math">\(f\)</span> is a function defined on all of the real numbers and differentiable everywhere. Show that</div>
+<div class="displaymath process-math" id="hw3-mvt-2-4">
+\begin{equation*}
+18 \leq \fe{f}{8} - \fe{f}{2} \leq 30
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-mvt-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="exercises" id="hw3-mvt-3">
+<h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="hw3-mvt-3-1"><h4 class="heading"><span class="codenumber">a)<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>The <em class="emphasis">Mean Value Theorem</em> states that if <span class="process-math">\(f(x)\)</span> is defined and continuous on the interval <span class="process-math">\([a,b]\)</span> and differentiable on <span class="process-math">\((a,b)\text{,}\)</span> then there is <em class="emphasis">at least</em> one number <span class="process-math">\(c\)</span> in the interval <span class="process-math">\((a,b)\)</span> (that is <span class="process-math">\(a &lt; c &lt; b\)</span>) such that<div class="displaymath process-math" id="hw3-mvt-3-1-1-9">
+\begin{equation*}
+f'(c)=\frac{f(b) - f(a)}{b-a}
+\end{equation*}
+</div>
+<div class="solutions">
+<details id="hw3-mvt-3-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="hw3-mvt-3-1-2-1">
+<div class="displaymath process-math" id="hw3-mvt-3-1-2-1-1">
+\begin{align*}
+\text{Apply the mean value theorem}\\
+&amp;f'(c)=\frac{f(8) - f(2)}{8-2}\\
+\text{Since we know}\\
+&amp;3 \leq \fe{f'}{x} \leq 5\\
+\text{We get}\\
+&amp;3 \leq \frac{f(8) - f(2)}{6} \leq 5\\
+&amp;18 \leq f(8) - f(2) \leq 30
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#hw3-mvt-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.7.4.a).1"><a tabindex="-1" href="#hw3-mvt-3-1-2" title="Copy heading and permalink for Solution 3.7.4.a).1" aria-label="Copy heading and permalink for Solution 3.7.4.a).1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.4.a)"><a tabindex="-1" href="#hw3-mvt-3-1" title="Copy heading and permalink for Exercise 3.7.4.a)" aria-label="Copy heading and permalink for Exercise 3.7.4.a)">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercises 3.7.4"><a tabindex="-1" href="#hw3-mvt-3" title="Copy heading and permalink for Exercises 3.7.4" aria-label="Copy heading and permalink for Exercises 3.7.4">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.7.4: The Mean Value Theorem"><a tabindex="-1" href="#hw3-mvt" title="Copy heading and permalink for Subsection 3.7.4: The Mean Value Theorem" aria-label="Copy heading and permalink for Subsection 3.7.4: The Mean Value Theorem">🔗</a></div>
+</section>
+<section class="references" id="cap-2017-hw3-7">
+<h2 class="heading hide-type">
+<span class="type">References</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">References</span>
+</h2>
+<article class="bib" id="second-diff-math-stack"><div class="bibitem">[1]</div>
+<div class="bibentry">Brian M. Scott <i>Second derivative “formula derivation”</i>. <a class="external" href="http://math.stackexchange.com/questions/210264/second-derivative-formula-derivation" target="_blank">Math StackExchange</a>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Bibliographic Entry 3.7.5.1: Second derivative “formula derivation”"><a tabindex="-1" href="#second-diff-math-stack" title="Copy heading and permalink for Bibliographic Entry 3.7.5.1: Second derivative “formula derivation”" aria-label="Copy heading and permalink for Bibliographic Entry 3.7.5.1: Second derivative “formula derivation”">🔗</a></div>
+</article>
+<article class="bib" id="taylor-series-wiki"><div class="bibitem">[2]</div>
+<div class="bibentry">Wiki <i>Taylor Series.<code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Taylor_series</code></i>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Bibliographic Entry 3.7.5.2: Taylor Series.https://en.wikipedia.org/wiki/Taylor_series"><a tabindex="-1" href="#taylor-series-wiki" title="Copy heading and permalink for Bibliographic Entry 3.7.5.2: Taylor Series.https://en.wikipedia.org/wiki/Taylor_series" aria-label="Copy heading and permalink for Bibliographic Entry 3.7.5.2: Taylor Series.https://en.wikipedia.org/wiki/Taylor_series">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="References 3.7.5"><a tabindex="-1" href="#cap-2017-hw3-7" title="Copy heading and permalink for References 3.7.5" aria-label="Copy heading and permalink for References 3.7.5">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 3.7: CAP 2017, HW 3 due February 7"><a tabindex="-1" href="#cap-2017-hw3" title="Copy heading and permalink for Section 3.7: CAP 2017, HW 3 due February 7" aria-label="Copy heading and permalink for Section 3.7: CAP 2017, HW 3 due February 7">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="cap-2017-hw2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="cap-2017-hw4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>
