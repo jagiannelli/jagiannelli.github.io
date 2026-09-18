@@ -43,7 +43,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "What Is SageMath?",
-  "body": " What Is SageMath?  Sage is a powerful OpenSource system with the goal of being a viable alternative to Magma, Mathematica, Maple, and Matlab. In this initial chapter we will consider how to get up and running with SageMath.  There are several approaches to using Sage Math:    Using SageMath online.    Downloading the source and running locally.    using SageMath Cells embedded in your own web documents    Installing Android or iOS Apps on your phone or tablet.    We will now look at some of these methods.  It would be pointless here to try and replicate the extensive guides and tutorials from the SageMath Help site. My aim here is rather limited. It is to provide a dumping ground and practice area for things I have encountered whilst working my way through several on line training materials. It also enables me to practice using Mathbook XML .  "
+  "body": " What Is SageMath?  Sage is a powerful open-source mathematics system, built with the goal of being a viable alternative to Magma, Mathematica, Maple, and Matlab. Rather than reinventing everything, it binds together close to a hundred established open-source packages among them NumPy, SciPy, matplotlib, SymPy, Maxima, GAP, PARI\/GP and Singular behind a single Python-based language. In this opening chapter we look at how to get up and running with it.  There are three approaches worth knowing about:    Running Sage online, with nothing installed.    Installing Sage locally, which this chapter does with conda-forge.    Embedding Sage cells in your own web documents which is exactly what the rest of this book does.    It would be pointless here to try to replicate the extensive guides and tutorials on the SageMath documentation site. My aim is more limited. This is a dumping ground and practice area for things I have encountered while working my way through several online training materials. It also lets me practice using PreTeXt .  "
 },
 {
   "id": "sage-online",
@@ -52,52 +52,34 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "SageMath Online",
-  "body": " SageMath Online  Probably the easiest way to familiarise yourself with SageMath is to use the Sage Math Cloud Server. From the main SageMath page select the Sage Online link. You will have to set up an account but these are free for basic usage.  Once you have set up an account you can then create a project and a SageMath Worksheet. There are full instructions here Logging On .    A Typical Sage Cloud Session   Notice the line %typeset_mode True just before the coeff.column_space() command. As you can see from the output below this line, this has the effect of displaying results in a much prettier (typeset) format.  "
+  "body": " SageMath Online  The quickest way to try Sage is not to install it at all.   SageMathCell is a public evaluation server: you type Sage into a box on a web page, press Evaluate , and the computation runs on the Sage project's own machines. There is nothing to install and no account to create. It is also the mechanism behind every executable cell in this book when you press Evaluate on a later page, that is where the work happens. Because it is a shared public service, a cell can take ten or twenty seconds to answer, particularly one that draws a plot. That is latency, not failure.  For anything longer-lived than a single cell there is CoCalc , the successor to what was once called the SageMath Cloud. It gives you persistent projects, Jupyter notebooks, a terminal and collaborative editing in the browser. A free account is enough to follow this book, though free projects have no internet access from inside them and are given modest resources.  A useful habit in either environment: putting %display latex at the top of a cell renders results as typeset mathematics rather than plain text, which makes matrix and symbolic output very much easier to read.  It is worth knowing how far that setting reaches. The Sage cells on a single page of this book share one session which is why a later cell can use a function an earlier one defined. %display latex lives in that session rather than in the cell you typed it into, so setting it once, in the first cell you evaluate on a page, governs every evaluation that follows on that page. Reloading the page starts a fresh session and the setting is gone. If output that was typeset a moment ago comes back as plain text, a reload is usually the reason.  "
 },
 {
-  "id": "sage-online-4",
-  "level": "2",
-  "url": "sage-online.html#sage-online-4",
-  "type": "Figure",
-  "number": "1.2.1",
-  "title": "",
-  "body": "  A Typical Sage Cloud Session  "
-},
-{
-  "id": "sage-from-source",
+  "id": "sage-install",
   "level": "1",
-  "url": "sage-from-source.html",
+  "url": "sage-install.html",
   "type": "Section",
   "number": "1.3",
-  "title": "Running From Source",
-  "body": " Running From Source   The SageMath source is hosted here SageMath GitHub . To download and build the source you will need the appropriate development environment set up. This is not detailed here and assumes some familiarity with git and make. Full details can be found here . At a minimum you will need a POSIX compliant shell with GCC, make, perl, and python.    Building SageMath  Once you have a build environment setup then grab the source from the git repository. This may take a few minutes depending on your network speed.   git clone git:\/\/github.com\/sagemath\/sage.git  Cloning into 'sage'... remote: Counting objects: 448266, done. remote: Compressing objects: 100% (268\/268), done. remote: Total 448266 (delta 157), reused 0 (delta 0), pack-reused 447997 Receiving objects: 100% (448266\/448266), 152.82 MiB | 11.21 MiB\/s, done. Resolving deltas: 100% (341065\/341065), done.  cd sage  git checkout develop  Branch develop set up to track remote branch develop from origin. Switched to a new branch 'develop'  make  make build\/make\/Makefile make[1]: Entering directory `\/home\/dev\/sage' make[1]: `build\/make\/Makefile' is up to date. make[1]: Leaving directory `\/home\/dev\/sage' build\/bin\/sage-logger \\ \"cd build\/make && .\/install 'all'\" logs\/install.log *** ALL ENVIRONMENT VARIABLES BEFORE BUILD: *** ... <and so on, and so forth, for quite some time ...> ... Testing that Sage starts... [2016-12-01 14:31:59] SageMath version 7.5.beta4, Release Date: 2016-11-24 Forcing Sage-location, probably because a new package was installed. Updating various hardcoded paths... (Please wait at most a few minutes.) DO NOT INTERRUPT THIS. Done updating paths. Yes, Sage starts. make[2]: Leaving directory `\/home\/dev\/sage\/build\/make' make[1]: Leaving directory `\/home\/dev\/sage\/build\/make' real 29m58.528s user 32m33.566s sys 7m0.240s Sage build\/upgrade complete! To install small scripts to directly run Sage's versions of GAP, the PARI\/GP interpreter, Maxima, or Singular etc. (by typing e.g. just 'gap' or 'gp') into a standard 'bin' directory, start Sage by typing 'sage' (or '.\/sage') and enter something like install_scripts('\/usr\/local\/bin') at the Sage command prompt ('sage:').      Running SageMath Notebook from the command line   .\/sage --notebook     Starting Sage notebook from the command line.     The Notebook session at localhost:8080.   You can now start using this local session equivalently to SageMathCloud sessions with the benefit of gaining the full resources of your local machine and being able to work offline.    Running SageMath From the command line  You can also run SageMath directly from the command line. You may want to do this for quick tests or as part of your development cycle.    A sample Sage command line session.    "
+  "title": "Installing SageMath Locally",
+  "body": " Installing SageMath Locally   Sooner or later you will want Sage on your own machine to work offline, to use your own files, or simply to have the full resources of the computer in front of you.  Historically this meant building Sage from source, a compile measured in hours whose instructions filled the rest of this chapter. That is no longer the recommended path and is no longer described here. Sage is now packaged for conda-forge , which ships pre-built binaries; installation is a download rather than a build.  The instructions below are for Linux and macOS. On Windows, install the Windows Subsystem for Linux and follow the Linux instructions inside it. The authoritative and up-to-date version of all of this is the SageMath installation guide ; what follows is the short path that works.    Installing with conda-forge  You need a conda distribution first. Miniforge is the natural choice, because it is configured to use conda-forge and nothing else; Miniconda works too, provided you are deliberate about the channel. Install one of those, then create an environment that holds Sage and nothing else:   conda create -n sage -c conda-forge sage   Keeping Sage in its own environment matters more than it might appear. Sage pins a great many packages to versions it has been tested against, so installing it beside an existing scientific Python stack is a reliable way to spend an afternoon reading solver output. Give it its own environment and the question never arises.  Expect a sizeable install: the environment is around 390 packages, about 1.4 GB to download and roughly 8 GB of disk once unpacked, because Sage brings its whole ecosystem GAP, PARI, Singular, Maxima, R and more along with it. The time this takes is dominated by your connection rather than your processor; on a fast link the whole thing finished in under three minutes, where the old source build was measured in hours. Activate the environment when it finishes:   conda activate sage  sage --version   That prints the bare version number, 10.9 or whatever is current when you read this. If it does, you are done. Starting Sage itself gives you rather more the banner names the Sage version, its release date and the Python underneath it, which is the quickest way to confirm what you are actually running.    Running Sage from the command line  With the environment active, sage on its own starts the interactive REPL. This is the quickest way in for a one-off calculation or a quick test.   sage     A sample Sage command line session.   Note the sage: prompt. The Sage REPL is IPython with Sage's own preparser in front of it, which is why 2**10 and 2^10 both mean exponentiation here, and why f(x) = x**2 defines a symbolic function. Those are Sage conventions, not Python ones, and they will not work in a plain Python interpreter.  To run a script rather than work interactively, hand the file to Sage:   sage myscript.sage   One difference will catch you out. The interactive prompt defines the symbolic variable x for you before you type anything; a script file does not. A script whose first line is integrate(sin(x)*x, x) fails with NameError: name 'x' is not defined , even though the identical line works in the REPL. Declare what you intend to use and the difference goes away:   x = var('x') integrate(sin(x)*x, x) f(x) = x**2   This is a good habit in any case: a script that declares its variables says what it means, and will still say it when the defaults change again.    Running Sage in a Jupyter notebook  The old Sage Notebook the sagenb server that once ran at localhost:8080  has been retired. Sage now uses Jupyter, and ships a kernel for it:   sage --notebook=jupyterlab   That opens JupyterLab in your browser. Its Launcher offers a tile per available kernel; choose SageMath rather than Python 3 , or you will get a plain Python notebook in which none of Sage's syntax works.    The JupyterLab Launcher, offering a SageMath kernel alongside Python 3.   The shorter sage -n jupyter also works, but it opens the older, plainer Notebook interface rather than JupyterLab  -n is an abbreviation for --notebook=default , and the default is not Lab. Either is fine; they run the same kernel. What you get is an online session's convenience with the whole of your own machine behind it, and your own files to hand.   "
 },
 {
-  "id": "sage-from-source-4-3",
+  "id": "sage-command-line-4",
   "level": "2",
-  "url": "sage-from-source.html#sage-from-source-4-3",
+  "url": "sage-install.html#sage-command-line-4",
   "type": "Figure",
   "number": "1.3.1",
   "title": "",
-  "body": "  Starting Sage notebook from the command line.  "
+  "body": "  A sample Sage command line session.  "
 },
 {
-  "id": "sage-from-source-4-4",
+  "id": "sage-jupyter-5",
   "level": "2",
-  "url": "sage-from-source.html#sage-from-source-4-4",
+  "url": "sage-install.html#sage-jupyter-5",
   "type": "Figure",
   "number": "1.3.2",
   "title": "",
-  "body": "  The Notebook session at localhost:8080.  "
-},
-{
-  "id": "sage-from-source-5-3",
-  "level": "2",
-  "url": "sage-from-source.html#sage-from-source-5-3",
-  "type": "Figure",
-  "number": "1.3.3",
-  "title": "",
-  "body": "  A sample Sage command line session.  "
+  "body": "  The JupyterLab Launcher, offering a SageMath kernel alongside Python 3.  "
 },
 {
   "id": "basics-introduction",

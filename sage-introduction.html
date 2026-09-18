@@ -74,7 +74,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.a45d14e8fc8c534a.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.538acb8e671a3b5d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.1bda041f5a098305.css">
-<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -170,11 +170,11 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sage-introduction.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What Is SageMath?</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-online.html" class="internal"><span class="codenumber">1.2</span> <span class="title">SageMath Online</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sage-from-source.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Running From Source</span></a></div>
-<ul id="ptx-toc-group-sage-from-source" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-from-source.html#sage-from-source-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Building SageMath</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-from-source.html#sage-from-source-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Running SageMath Notebook from the command line</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-from-source.html#sage-from-source-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Running SageMath From the command line</span></a></div></li>
+<div class="toc-title-box"><a href="sage-install.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Installing SageMath Locally</span></a></div>
+<ul id="ptx-toc-group-sage-install" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-install.html#sage-install-conda" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Installing with conda-forge</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-install.html#sage-command-line" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Running Sage from the command line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-install.html#sage-jupyter" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Running Sage in a Jupyter notebook</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -322,35 +322,28 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">What Is SageMath?</span>
 </h1>
-<div class="para" id="sage-introduction-2">Sage is a powerful OpenSource system with the goal of being a viable alternative to Magma, Mathematica, Maple, and Matlab. In this initial chapter we will consider how to get up and running with SageMath.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-introduction-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sage-introduction-2">Sage is a powerful open-source mathematics system, built with the goal of being a viable alternative to Magma, Mathematica, Maple, and Matlab. Rather than reinventing everything, it binds together close to a hundred established open-source packages — among them NumPy, SciPy, matplotlib, SymPy, Maxima, GAP, PARI/GP and Singular — behind a single Python-based language. In this opening chapter we look at how to get up and running with it.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-introduction-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sage-introduction-3">There are several approaches to using Sage Math:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-introduction-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sage-introduction-3">There are three approaches worth knowing about:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-introduction-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <ul class="disc" id="sage-introduction-4">
 <li id="sage-introduction-4-1">
-<div class="para" id="sage-introduction-4-1-1">Using SageMath online.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-introduction-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sage-introduction-4-1-1">Running Sage online, with nothing installed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-introduction-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sage-introduction-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="sage-introduction-4-2">
-<div class="para" id="sage-introduction-4-2-1">Downloading the source and running locally.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-introduction-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sage-introduction-4-2-1">Installing Sage locally, which this chapter does with conda-forge.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-introduction-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sage-introduction-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="sage-introduction-4-3">
-<div class="para" id="sage-introduction-4-3-1">using SageMath Cells embedded in your own web documents<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-introduction-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sage-introduction-4-3-1">Embedding Sage cells in your own web documents — which is exactly what the rest of this book does.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-introduction-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sage-introduction-4-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sage-introduction-4-4">
-<div class="para" id="sage-introduction-4-4-1">Installing Android or iOS Apps on your phone or tablet.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-introduction-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sage-introduction-4-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
 </ul>
-<div class="para" id="sage-introduction-5">We will now look at some of these methods.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-introduction-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="sage-introduction-6">It would be pointless here to try and replicate the extensive guides and tutorials from the <a class="external" href="http://www.sagemath.org/help.html" target="_blank">SageMath Help</a> site. My aim here is rather limited. It is to provide a dumping ground and practice area for things I have encountered whilst working my way through several on line training materials. It also enables me to practice using <a class="external" href="https://mathbook.pugetsound.edu/" target="_blank">Mathbook XML</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-introduction-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sage-introduction-5">It would be pointless here to try to replicate the extensive guides and tutorials on the <a class="external" href="https://doc.sagemath.org/" target="_blank">SageMath documentation</a> site. My aim is more limited. This is a dumping ground and practice area for things I have encountered while working my way through several online training materials. It also lets me practice using <a class="external" href="https://pretextbook.org/" target="_blank">PreTeXt</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-introduction-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Section 1.1: What Is SageMath?"><a tabindex="-1" href="#sage-introduction" title="Copy heading and permalink for Section 1.1: What Is SageMath?" aria-label="Copy heading and permalink for Section 1.1: What Is SageMath?">🔗</a></div>
 </section>
