@@ -65,15 +65,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.2.13';
+eBookConfig.runestone_version = '8.3.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.a45d14e8fc8c534a.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.538acb8e671a3b5d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.1bda041f5a098305.css">
+<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
@@ -373,7 +373,7 @@ sagecell.makeSagecell({
 <div class="para" id="linear-algebra-a2-9">(We could have taken the cross product of any of these three vectors since they are all in the same plane.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="linear-algebra-a2-10">
-<div class="para">We know that the dot product of the normal <span class="process-math">\(\vec{n}\)</span> with any of our three vectors should be zero. This enables us to use implicit_plot3d() passing in an equation for any point on the plane. We have defined <span class="process-math">\(f(x,y,z)\)</span> as the function to represent any point on this plane. In the sage cell this is achieved by the following technique:<pre class="code-block tex2jax_ignore clipboardable">p = vector([x, y, z])
+<div class="para">We know that the dot product of the normal <span class="process-math">\(\vec{n}\)</span> with any of our three vectors should be zero. This enables us to use <code class="code-inline tex2jax_ignore">implicit_plot3d()</code> passing in an equation for any point on the plane. We have defined <span class="process-math">\(f(x,y,z)\)</span> as the function to represent any point on this plane. In the sage cell this is achieved by the following technique:<pre class="code-block tex2jax_ignore clipboardable">p = vector([x, y, z])
 pA = a - p
 f(x,y,z) = n.dot_product(pA)
 </pre>The resultant function is:</div>
@@ -385,7 +385,7 @@ f(x,y,z) = n.dot_product(pA)
 <div class="para">This confirms our initial equation above.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="linear-algebra-a2-11">Now we have all we need to plot the plane. There are several ways of plotting this plane in SageMath. The one adopted here is to use implicit_plot3d().  We pass into this method the above function <span class="process-math">\(f\)</span> set equal to zero and the <span class="process-math">\(x,y,z\)</span> ranges. The next Sage Cell brings this together. Our vector <span class="process-math">\(\vec{a}\)</span> is the yellow arrow,  the origin is shown as the black dot in the centre, the plane is drawn in blue.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="linear-algebra-a2-11">Now we have all we need to plot the plane. There are several ways of plotting this plane in SageMath. The one adopted here is to use <code class="code-inline tex2jax_ignore">implicit_plot3d()</code>.  We pass into this method the above function <span class="process-math">\(f\)</span> set equal to zero and the <span class="process-math">\(x,y,z\)</span> ranges. The next Sage Cell brings this together. Our vector <span class="process-math">\(\vec{a}\)</span> is the yellow arrow,  the origin is shown as the black dot in the centre, the plane is drawn in blue.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="linear-algebra-a2-12">
 <div class="para">Now add another vector <span class="process-math">\(\vec{b}\)</span> which is also on the same plane. This shown as the green arrow. To do this we introduce another point <span class="process-math">\(S=(-1,2,5)\text{.}\)</span>  You might wonder how we know that this point lies on our plane.  It was found using the following trick.<pre class="code-block tex2jax_ignore clipboardable">f=n[0]*x+n[1]*y+n[2]*z==0
