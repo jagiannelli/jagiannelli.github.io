@@ -389,62 +389,68 @@ T \left(\begin{array}{r}
 <div class="para">The other piece of information we require is that <span class="process-math">\(\vec{e}\)</span> is perpendicular to <span class="process-math">\(\vec{p}\text{.}\)</span> In other words, the dot product of these two vectors is zero. Recall that the dot product of two vectors is the same as the <em class="emphasis">transpose</em> of one with the other.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="linear-algebra-a1-9">Combining the above gives us:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_projection_matrix.html" id="linear-algebra-a1-10">
+<div class="para logical" id="linear-algebra-a1-9">
+<div class="para">Combining the above gives us:</div>
+<div class="displaymath process-math" id="linear-algebra-a1-9-1">
 \begin{equation*}
 \vec{a}^T (\vec{b} - x \vec{a}) = 0
 \end{equation*}
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_projection_matrix.html" id="linear-algebra-a1-11">
+<div class="displaymath process-math" id="linear-algebra-a1-9-2">
 \begin{equation*}
 \implies x = \frac{\vec{a}^T \vec{b}}{\vec{a}^T \vec{a}}
 \end{equation*}
 </div>
-<div class="para" id="linear-algebra-a1-12">Since <span class="process-math">\(\vec{p} = x \vec{a}\)</span> then:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_projection_matrix.html" id="linear-algebra-a1-13">
+<div class="para logical" id="linear-algebra-a1-10">
+<div class="para">Since <span class="process-math">\(\vec{p} = x \vec{a}\)</span> then:</div>
+<div class="displaymath process-math" id="linear-algebra-a1-10-2">
 \begin{equation}
 \vec{p} = \frac{\vec{a} \vec{a}^T}{\vec{a}^T \vec{a}} \vec{b}\tag{5.2.1}
 \end{equation}
 </div>
-<div class="para" id="linear-algebra-a1-14">From this we can see that the Projection Matrix, <span class="process-math">\(\textbf{P}\text{,}\)</span> is given by:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_projection_matrix.html" id="linear-algebra-a1-15">
+<div class="para logical" id="linear-algebra-a1-11">
+<div class="para">From this we can see that the Projection Matrix, <span class="process-math">\(\textbf{P}\text{,}\)</span> is given by:</div>
+<div class="displaymath process-math" id="linear-algebra-a1-11-2">
 \begin{equation}
 \textbf{P} = \frac{\vec{a} \vec{a}^T}{\vec{a}^T \vec{a}}\tag{5.2.2}
 \end{equation}
 </div>
-<div class="para" id="linear-algebra-a1-16">This matches the formula in the screenshot shown in <a href="linear-algebra-a1.html#fig_projection_matrix" class="xref" data-knowl="./knowl/xref/fig_projection_matrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.2.4">figure 5.2.4</a> above. In our exercise <span class="process-math">\(\textbf{P}\)</span> becomes <span class="process-math">\(\textbf{T}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="linear-algebra-a1-17">Now lets see how we can solve this example using SageMath.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="linear-algebra-a1-12">This matches the formula in the screenshot shown in <a href="linear-algebra-a1.html#fig_projection_matrix" class="xref" data-knowl="./knowl/xref/fig_projection_matrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.2.4">figure 5.2.4</a> above. In our exercise <span class="process-math">\(\textbf{P}\)</span> becomes <span class="process-math">\(\textbf{T}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="linear-algebra-a1-18">One of the most annoying points is that vectors are represented as rows. Usually, we prefer to write them in column form.  However, we can switch the view by using the <code class="code-inline tex2jax_ignore">column()</code> method on the vector.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="linear-algebra-a1-13">Now lets see how we can solve this example using SageMath.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div id="linear-algebra-a1-19" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">a=vector([1,2])
+<div class="para" id="linear-algebra-a1-14">One of the most annoying points is that vectors are represented as rows. Usually, we prefer to write them in column form.  However, we can switch the view by using the <code class="code-inline tex2jax_ignore">column()</code> method on the vector.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="linear-algebra-a1-15" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">a=vector([1,2])
 b=vector([3,1])
 show(a)
 show("a = ", a.column())
 show(b)
 show("b = ", b.column())
 </script></div>
-<div class="para" id="linear-algebra-a1-20">The vector <span class="process-math">\(\vec{a}\)</span> times the transpose of itself can be found by taking the <code class="code-inline tex2jax_ignore">outer_product()</code>:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="linear-algebra-a1-16">The vector <span class="process-math">\(\vec{a}\)</span> times the transpose of itself can be found by taking the <code class="code-inline tex2jax_ignore">outer_product()</code>:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div id="linear-algebra-a1-21" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">show(a.outer_product(a))
+<div id="linear-algebra-a1-17" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">show(a.outer_product(a))
 </script></div>
-<div class="para" id="linear-algebra-a1-22">The dot product (inner product) given by <span class="process-math">\(\vec{a}^T \vec{a}\)</span> is easily found by either of these two steps:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="linear-algebra-a1-18">The dot product (inner product) given by <span class="process-math">\(\vec{a}^T \vec{a}\)</span> is easily found by either of these two steps:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div id="linear-algebra-a1-23" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">show(a*a)
+<div id="linear-algebra-a1-19" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">show(a*a)
 show(a.inner_product(a))
 </script></div>
-<div class="para" id="linear-algebra-a1-24">Combining these we get the complete solution for <span class="process-math">\(\textbf{T}\text{,}\)</span> what Strang calls <span class="process-math">\(\textbf{P}\)</span> as:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="linear-algebra-a1-20">Combining these we get the complete solution for <span class="process-math">\(\textbf{T}\text{,}\)</span> what Strang calls <span class="process-math">\(\textbf{P}\)</span> as:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div id="linear-algebra-a1-25" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">T=a.outer_product(a)/(a*a)
+<div id="linear-algebra-a1-21" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">T=a.outer_product(a)/(a*a)
 show("Projection Matrix, T = ",T)
 </script></div>
-<div class="para" id="linear-algebra-a1-26">These concepts are combined with some fancy plotting methods to give us a nice visualisation of the problem:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="linear-algebra-a1-22">These concepts are combined with some fancy plotting methods to give us a nice visualisation of the problem:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div id="linear-algebra-a1-27" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def plot2d_vector(v,name,color='blue'):
+<div id="linear-algebra-a1-23" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def plot2d_vector(v,name,color='blue'):
     p=plot(v,color=color)
     delta=v*v/40
     midpoint=(v[0]/2+delta,v[1]/2+delta)
@@ -472,11 +478,11 @@ plt=plot2d_vector(a, "a")+plot2d_vector(b, "b")+ plot2d_vector(p,"p",color='red'
 plt += text("e", e_midpoint,fontweight='extra bold',fontsize=14,color='black')
 plt
 </script></div>
-<div class="para" id="linear-algebra-a1-28">Notice that the diagram is <em class="emphasis">upside down</em> compared with Strang’s and that we multiplied <span class="process-math">\(\vec{a}\)</span> by a factor of 2 so that we could more clearly see that <span class="process-math">\(\vec{p}\)</span> lies on the same line as <span class="process-math">\(\vec{a}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="linear-algebra-a1-24">Notice that the diagram is <em class="emphasis">upside down</em> compared with Strang’s and that we multiplied <span class="process-math">\(\vec{a}\)</span> by a factor of 2 so that we could more clearly see that <span class="process-math">\(\vec{p}\)</span> lies on the same line as <span class="process-math">\(\vec{a}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="linear-algebra-a1-29">Let us now check some other properties of the projection matrix <span class="process-math">\(\textbf{T}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="linear-algebra-a1-25">Let us now check some other properties of the projection matrix <span class="process-math">\(\textbf{T}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a1-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div id="linear-algebra-a1-30" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">show("Is invertible = ", T.is_invertible())
+<div id="linear-algebra-a1-26" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">show("Is invertible = ", T.is_invertible())
 show("Is symmetric = ", T.is_symmetric())
 show("Is the same as its transpose = ", T.transpose() == T)
 show("Is the same as its square = ", T*T == T)

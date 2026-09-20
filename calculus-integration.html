@@ -354,16 +354,18 @@ show("function:",f,", Indefinite Integral = ",f.integral(x))
 f=sqrt(x^2-25)/x
 show("function:",f,", Indefinite Integral = ",f.integral(x))
 </script></div>
-<div class="para" id="calculus-integration-4">Now for some Definite Integrals. For example:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#calculus-integration-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math" id="calculus-integration-5">
+<div class="para logical" id="calculus-integration-4">
+<div class="para">Now for some Definite Integrals. For example:</div>
+<div class="displaymath process-math" id="calculus-integration-4-1">
 \begin{equation*}
 \int_{-1}^{1} \frac{1}{x^{2} + 1} dx = \frac{1}{2} \, \pi
 \end{equation*}
 </div>
-<div class="para" id="calculus-integration-6">This can be confirmed in SageMath quite simply:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#calculus-integration-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#calculus-integration-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div id="calculus-integration-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f(x)=1/(1+x^2)
+<div class="para" id="calculus-integration-5">This can be confirmed in SageMath quite simply:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#calculus-integration-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="calculus-integration-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f(x)=1/(1+x^2)
 show(f)
 f.integral(x, -1, 1).show()
 </script></div>

@@ -363,49 +363,51 @@ sagecell.makeSagecell({
 </div>
 <div class="para" id="linear-algebra-a2-6">Consider the case where our vector <span class="process-math">\(\vec{a}\)</span> is the direction vector starting at position <span class="process-math">\((2,2,2)\)</span> and extending to <span class="process-math">\((3,4,5)\text{.}\)</span> This lies on the plane going through the origin and is our subspace <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="linear-algebra-a2-7">Let the point <span class="process-math">\(P\)</span>  be the start of <span class="process-math">\(\vec{a}\)</span> and the point <span class="process-math">\(Q\)</span> be the endpoint. These points are also the position vectors <span class="process-math">\(\vec{OP}\)</span> and <span class="process-math">\(\vec{OQ}\)</span> and also lie on the plane (since the origin is on the plane).  Hence, a normal to the plane is given by the cross-product:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/a2_solution.html" id="linear-algebra-a2-8">
+<div class="para logical" id="linear-algebra-a2-7">
+<div class="para">Let the point <span class="process-math">\(P\)</span>  be the start of <span class="process-math">\(\vec{a}\)</span> and the point <span class="process-math">\(Q\)</span> be the endpoint. These points are also the position vectors <span class="process-math">\(\vec{OP}\)</span> and <span class="process-math">\(\vec{OQ}\)</span> and also lie on the plane (since the origin is on the plane).  Hence, a normal to the plane is given by the cross-product:</div>
+<div class="displaymath process-math" id="linear-algebra-a2-7-6">
 \begin{equation*}
 \vec{n} = \vec{OP} \times \vec{a}
 \end{equation*}
 </div>
-<div class="para" id="linear-algebra-a2-9">(We could have taken the cross product of any of these three vectors since they are all in the same plane.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="linear-algebra-a2-10">
+<div class="para" id="linear-algebra-a2-8">(We could have taken the cross product of any of these three vectors since they are all in the same plane.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="linear-algebra-a2-9">
 <div class="para">We know that the dot product of the normal <span class="process-math">\(\vec{n}\)</span> with any of our three vectors should be zero. This enables us to use <code class="code-inline tex2jax_ignore">implicit_plot3d()</code> passing in an equation for any point on the plane. We have defined <span class="process-math">\(f(x,y,z)\)</span> as the function to represent any point on this plane. In the sage cell this is achieved by the following technique:<pre class="code-block tex2jax_ignore clipboardable">p = vector([x, y, z])
 pA = a - p
 f(x,y,z) = n.dot_product(pA)
 </pre>The resultant function is:</div>
-<div class="displaymath process-math" id="linear-algebra-a2-10-5">
+<div class="displaymath process-math" id="linear-algebra-a2-9-5">
 \begin{equation*}
 2 x - 4 y + 2 z = 0
 \end{equation*}
 </div>
 <div class="para">This confirms our initial equation above.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="linear-algebra-a2-11">Now we have all we need to plot the plane. There are several ways of plotting this plane in SageMath. The one adopted here is to use <code class="code-inline tex2jax_ignore">implicit_plot3d()</code>.  We pass into this method the above function <span class="process-math">\(f\)</span> set equal to zero and the <span class="process-math">\(x,y,z\)</span> ranges. The next Sage Cell brings this together. Our vector <span class="process-math">\(\vec{a}\)</span> is the yellow arrow,  the origin is shown as the black dot in the centre, the plane is drawn in blue.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="linear-algebra-a2-10">Now we have all we need to plot the plane. There are several ways of plotting this plane in SageMath. The one adopted here is to use <code class="code-inline tex2jax_ignore">implicit_plot3d()</code>.  We pass into this method the above function <span class="process-math">\(f\)</span> set equal to zero and the <span class="process-math">\(x,y,z\)</span> ranges. The next Sage Cell brings this together. Our vector <span class="process-math">\(\vec{a}\)</span> is the yellow arrow,  the origin is shown as the black dot in the centre, the plane is drawn in blue.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="linear-algebra-a2-12">
+<div class="para logical" id="linear-algebra-a2-11">
 <div class="para">Now add another vector <span class="process-math">\(\vec{b}\)</span> which is also on the same plane. This shown as the green arrow. To do this we introduce another point <span class="process-math">\(S=(-1,2,5)\text{.}\)</span>  You might wonder how we know that this point lies on our plane.  It was found using the following trick.<pre class="code-block tex2jax_ignore clipboardable">f=n[0]*x+n[1]*y+n[2]*z==0
 show(f(x=-1,y=2))
 </pre>Here <span class="process-math">\(n[0]\)</span> is the <span class="process-math">\(x\)</span>-coordinate of the normal, <span class="process-math">\(n[1]\)</span> is the <span class="process-math">\(y\)</span>-coordinate, and so on. They are the coefficients of the standard equation of a plane (<span class="process-math">\(a x + b y + c z = d\)</span>). With <span class="process-math">\(d = 0\)</span> is the plane case when the plane passes through the origin.  The results are:</div>
-<div class="displaymath process-math" id="linear-algebra-a2-12-10">
+<div class="displaymath process-math" id="linear-algebra-a2-11-10">
 \begin{equation*}
 2 z - 10 = 0
 \end{equation*}
 </div>
 <div class="para">From this, we can find the <span class="process-math">\(z\)</span>-coordinate of <span class="process-math">\(S\)</span> which ensure that the point fits onto our plane.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="linear-algebra-a2-13">Now for the full picture.  Lets find another vector <span class="process-math">\(\vec{c}\)</span> that does not lie on our plane. Lets also form another plane which contains this new vector and vector <span class="process-math">\(\vec{a}\)</span> (the yellow arrow).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="linear-algebra-a2-12">Now for the full picture.  Lets find another vector <span class="process-math">\(\vec{c}\)</span> that does not lie on our plane. Lets also form another plane which contains this new vector and vector <span class="process-math">\(\vec{a}\)</span> (the yellow arrow).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="linear-algebra-a2-14">Try the point <span class="process-math">\(R=(5,0,3)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="linear-algebra-a2-13">Try the point <span class="process-math">\(R=(5,0,3)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="linear-algebra-a2-15">Evaluating the following SageCell and playing with the resultant plot (zooming in and out and rotating) should convince you of the official Edinburgh University <a href="linear-algebra-a2.html#a2_solution" class="xref" data-knowl="./knowl/xref/a2_solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Solution 5.3.1">solution 5.3.1</a> to the problem.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="linear-algebra-a2-14">Evaluating the following SageCell and playing with the resultant plot (zooming in and out and rotating) should convince you of the official Edinburgh University <a href="linear-algebra-a2.html#a2_solution" class="xref" data-knowl="./knowl/xref/a2_solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Solution 5.3.1">solution 5.3.1</a> to the problem.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#linear-algebra-a2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div id="linear-algebra-a2-16" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">var ('x,y,z')
+<div id="linear-algebra-a2-15" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">var ('x,y,z')
 ptP=(2,2,2)
 ptQ=(3,4,5)
 

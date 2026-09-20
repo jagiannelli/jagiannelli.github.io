@@ -879,32 +879,36 @@ de = diff(y,t) == a*y + e^(s*t)
 sol=desolve(de,y, ivar=t, ics=[0,y0])
 show(sol)
 </pre>
-<div class="para">This results in:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-de-2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/hospital.html">
+<div class="para logical">
+<div class="para">This results in:</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \frac{{\left(a - s\right)} y_{0} e^{\left(a t\right)} + e^{\left(a t\right)} - e^{\left(s t\right)}}{a - s}
 \end{equation*}
 </div>
-<div class="para">This is not quite the same format as Strang but it is easy to see that it is equivalent.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-de-2-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-de-2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">As mentioned above this solution can be taken further by using L’Hopital’s Rule.<a href="first-order-de.html#hospital" class="xref" data-knowl="./knowl/xref/hospital.html" data-reveal-label="Reveal" data-close-label="Close" title="Principle 4.1.2: L’Hôpital’s Rule">Principle 4.1.2</a> We can circumvent the <span class="process-math">\(0/0\)</span> catastrophe by differentiating the numerator and denominator.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-de-2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">This is not quite the same format as Strang but it is easy to see that it is equivalent.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-de-2-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Sage Commands:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-de-2-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">As mentioned above this solution can be taken further by using L’Hopital’s Rule.<a href="first-order-de.html#hospital" class="xref" data-knowl="./knowl/xref/hospital.html" data-reveal-label="Reveal" data-close-label="Close" title="Principle 4.1.2: L’Hôpital’s Rule">Principle 4.1.2</a> We can circumvent the <span class="process-math">\(0/0\)</span> catastrophe by differentiating the numerator and denominator.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-de-2-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Sage Commands:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-de-2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <pre class="code-block tex2jax_ignore clipboardable">numerator = e^(s*t) - e^(a*t)
 numerator.diff(s)
 denominator= s - a
 denominator.diff(s)
 </pre>
-<div class="para">This results in <span class="process-math">\(\frac{f'(x)}{g'(x)}=\frac{t e^{s t}}{1}=t e^{s t}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-de-2-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">This results in <span class="process-math">\(\frac{f'(x)}{g'(x)}=\frac{t e^{s t}}{1}=t e^{s t}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-de-2-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Hence the full solution using L’Hopital now matches Strang’s final solution:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-de-2-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/hospital.html">
+<div class="para logical">
+<div class="para">Hence the full solution using L’Hopital now matches Strang’s final solution:</div>
+<div class="displaymath process-math">
 \begin{equation*}
 y(t)=y_{0} e^{a t} + t e^{s t}
 \end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-de-2-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Solution 4.4.1.1"><a tabindex="-1" href="#exercises-de-2-3" title="Copy heading and permalink for Solution 4.4.1.1" aria-label="Copy heading and permalink for Solution 4.4.1.1">🔗</a></div>
 </div></details>
@@ -921,12 +925,14 @@ de = diff(y,t) == a*y + cos(omega*t)
 sol=desolve(de,y, ivar=t, ics=[0,y0])
 show(sol)
 </pre>
-<div class="para">This results in:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-de-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
+<div class="para logical">
+<div class="para">This results in:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{{\left(a^{2} + \omega^{2}\right)} y_{0} e^{\left(a t\right)} - a \cos\left(\omega t\right) + a e^{\left(a t\right)} + \omega \sin\left(\omega t\right)}{a^{2} + \omega^{2}}
 \end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-de-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Solution 4.4.2.1"><a tabindex="-1" href="#exercises-de-3-2" title="Copy heading and permalink for Solution 4.4.2.1" aria-label="Copy heading and permalink for Solution 4.4.2.1">🔗</a></div>
 </div></details>
