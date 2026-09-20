@@ -313,7 +313,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.7",
   "title": "CAP 2017, HW 3 due February 7",
-  "body": " CAP 2017, HW 3 due February 7   Give complete explanations of what you are doing, written in full sentences. Solutions that have all the correct calculations and computations, but lack explanations, will not get full marks!    Rumour Spread and the Logistic Function  Under certain circumstances a rumour spreads according to the equation where is the proportion of the population that knows the rumor at time (in days) and and are positive constants.  Note that this is an example of the Logistic Function . When you get to differential equations this equation is quite important. Gilbert Strang gives a good presentation on this subject.  It is a very important equation and comes up often. See Logistic function (wiki)  The inverse function is an example of a Logit function (wiki) .    Find . What does this mean for the rumor?    After a long period of time everyone knows the rumour!          Find the rate of spread of the rumor.            Find the inverse function of and give an interpretation of the meaning.            Graph for the case and use your graph to estimate how long it will take for 80% of the population to hear the rumor. Can you also calculate this time?    days.  See Sage plot of below.    Use the inverse function with a value of    See Sage plot of inverse below.     Plot of .   From the sage plot we can see that the time to get to 80% is about days.  Plot of (the inverse of ).   From the sage calculation we can see that the time to get to 80% is days.      Radioactive Decay: Bismuth-210  Bismuth-210 has a half-life of 5.0 days.    A sample originally has a mass of . Find a formula for the mass remaining after days.   The mass (in ) after time (in days) is:     The rate of change of mass is proportional to the current mass: Lets call the constant of proportionality . The negative is because this is a decay.  The solution of this equation is: (where is the mass at .)  At the half-life and :      We are told that the half-life is days.   Substituting with the original mass gives us: where is the mass in and is the time in days.     Find the mass remaining after days.              When is the mass reduced to ?    days.          Sketch a graph of the mass function.    See Sage plot of mass function below.      Sketch of the mass function. (Note are easier for plots)       Second Derivatives and Taylor Series  If is continuous, show that:    The Definition of Taylor Series   Given a smooth function , we can always write down a Taylor series; there is no guarantee that the series converges to anything, let alone to the function. Given a smooth function , its Taylor series (around ) is A common mistake is to use instead of . Given a smooth function , its Taylor series expanded around is   The first few entries are       From first principles.   The first derivative is given by:   The solution is to apply this twice. The trick here is to start with the correct increments (see Math Stack Q&A ).         Using Taylor Series .    First set : TBD       The Mean Value Theorem  Suppose that for all values of , where is a function defined on all of the real numbers and differentiable everywhere. Show that     The Mean Value Theorem states that if is defined and continuous on the interval and differentiable on , then there is at least one number in the interval (that is ) such that            Brian M. Scott Second derivative “formula derivation” . Math StackExchange   Wiki Taylor Series.     "
+  "body": " CAP 2017, HW 3 due February 7   Give complete explanations of what you are doing, written in full sentences. Solutions that have all the correct calculations and computations, but lack explanations, will not get full marks!    Rumour Spread and the Logistic Function  Under certain circumstances a rumour spreads according to the equation where is the proportion of the population that knows the rumor at time (in days) and and are positive constants.  Note that this is an example of the Logistic Function . When you get to differential equations this equation is quite important. Gilbert Strang gives a good presentation on this subject.  It is a very important equation and comes up often. See Logistic function (wiki)  The inverse function is an example of a Logit function (wiki) .     Find . What does this mean for the rumor?    After a long period of time everyone knows the rumour!           Find the rate of spread of the rumor.              Find the inverse function of and give an interpretation of the meaning.              Graph for the case and use your graph to estimate how long it will take for 80% of the population to hear the rumor. Can you also calculate this time?     days.  See Sage plot of below.    Use the inverse function with a value of    See Sage plot of inverse below.     Plot of .   From the sage plot we can see that the time to get to 80% is about days.  Plot of (the inverse of ).   From the sage calculation we can see that the time to get to 80% is days.      Radioactive Decay: Bismuth-210  Bismuth-210 has a half-life of 5.0 days.     A sample originally has a mass of . Find a formula for the mass remaining after days.    The mass (in ) after time (in days) is:     The rate of change of mass is proportional to the current mass: Lets call the constant of proportionality . The negative is because this is a decay.  The solution of this equation is: (where is the mass at .)  At the half-life and :      We are told that the half-life is days.   Substituting with the original mass gives us: where is the mass in and is the time in days.      Find the mass remaining after days.                When is the mass reduced to ?     days.           Sketch a graph of the mass function.     See Sage plot of mass function below.      Sketch of the mass function. (Note are easier for plots)       Second Derivatives and Taylor Series  If is continuous, show that:    The Definition of Taylor Series   Given a smooth function , we can always write down a Taylor series; there is no guarantee that the series converges to anything, let alone to the function. Given a smooth function , its Taylor series (around ) is A common mistake is to use instead of . Given a smooth function , its Taylor series expanded around is   The first few entries are        From first principles.    The first derivative is given by:   The solution is to apply this twice. The trick here is to start with the correct increments (see Math Stack Q&A ).         Using Taylor Series .    First set : TBD       The Mean Value Theorem  Suppose that for all values of , where is a function defined on all of the real numbers and differentiable everywhere. Show that      The Mean Value Theorem states that if is defined and continuous on the interval and differentiable on , then there is at least one number in the interval (that is ) such that            Brian M. Scott Second derivative “formula derivation” . Math StackExchange   Wiki Taylor Series.     "
 },
 {
   "id": "hw3-rumour-6-1",
@@ -322,7 +322,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.1.a)",
   "title": "",
-  "body": " Find . What does this mean for the rumor?    After a long period of time everyone knows the rumour!        "
+  "body": "  Find . What does this mean for the rumor?    After a long period of time everyone knows the rumour!        "
 },
 {
   "id": "hw3-rumour-6-2",
@@ -331,7 +331,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.1.b)",
   "title": "",
-  "body": " Find the rate of spread of the rumor.          "
+  "body": "  Find the rate of spread of the rumor.           "
 },
 {
   "id": "hw3-rumour-6-3",
@@ -340,7 +340,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.1.c)",
   "title": "",
-  "body": " Find the inverse function of and give an interpretation of the meaning.          "
+  "body": "  Find the inverse function of and give an interpretation of the meaning.           "
 },
 {
   "id": "hw3-rumour-6-4",
@@ -349,7 +349,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.1.d)",
   "title": "",
-  "body": " Graph for the case and use your graph to estimate how long it will take for 80% of the population to hear the rumor. Can you also calculate this time?    days.  See Sage plot of below.    Use the inverse function with a value of    See Sage plot of inverse below.   "
+  "body": "  Graph for the case and use your graph to estimate how long it will take for 80% of the population to hear the rumor. Can you also calculate this time?     days.  See Sage plot of below.    Use the inverse function with a value of    See Sage plot of inverse below.   "
 },
 {
   "id": "hw3-decay-3-1",
@@ -358,7 +358,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.2.a)",
   "title": "",
-  "body": " A sample originally has a mass of . Find a formula for the mass remaining after days.   The mass (in ) after time (in days) is:     The rate of change of mass is proportional to the current mass: Lets call the constant of proportionality . The negative is because this is a decay.  The solution of this equation is: (where is the mass at .)  At the half-life and :      We are told that the half-life is days.   Substituting with the original mass gives us: where is the mass in and is the time in days.   "
+  "body": "  A sample originally has a mass of . Find a formula for the mass remaining after days.    The mass (in ) after time (in days) is:     The rate of change of mass is proportional to the current mass: Lets call the constant of proportionality . The negative is because this is a decay.  The solution of this equation is: (where is the mass at .)  At the half-life and :      We are told that the half-life is days.   Substituting with the original mass gives us: where is the mass in and is the time in days.   "
 },
 {
   "id": "hw3-decay-3-2",
@@ -367,7 +367,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.2.b)",
   "title": "",
-  "body": " Find the mass remaining after days.            "
+  "body": "  Find the mass remaining after days.             "
 },
 {
   "id": "hw3-decay-3-3",
@@ -376,7 +376,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.2.c)",
   "title": "",
-  "body": " When is the mass reduced to ?    days.        "
+  "body": "  When is the mass reduced to ?     days.        "
 },
 {
   "id": "hw3-decay-3-4",
@@ -385,7 +385,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.2.d)",
   "title": "",
-  "body": " Sketch a graph of the mass function.    See Sage plot of mass function below.    "
+  "body": "  Sketch a graph of the mass function.     See Sage plot of mass function below.    "
 },
 {
   "id": "definition-taylor-series",
@@ -403,7 +403,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.3.a)",
   "title": "",
-  "body": " From first principles.   The first derivative is given by:   The solution is to apply this twice. The trick here is to start with the correct increments (see Math Stack Q&A ).      "
+  "body": "  From first principles.    The first derivative is given by:   The solution is to apply this twice. The trick here is to start with the correct increments (see Math Stack Q&A ).      "
 },
 {
   "id": "hw3-taylor-4-2",
@@ -421,7 +421,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.4.a)",
   "title": "",
-  "body": " The Mean Value Theorem states that if is defined and continuous on the interval and differentiable on , then there is at least one number in the interval (that is ) such that        "
+  "body": "  The Mean Value Theorem states that if is defined and continuous on the interval and differentiable on , then there is at least one number in the interval (that is ) such that        "
 },
 {
   "id": "cap-2017-hw4",
