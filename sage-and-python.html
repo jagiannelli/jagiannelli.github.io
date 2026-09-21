@@ -205,11 +205,11 @@ sagecell.makeSagecell({
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sage-and-python.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Sage and Python</span></a></div>
 <ul class="structural toc-item-list active" id="ptx-toc-group-sage-and-python"><li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Lists, Tuples, and Dictionaries</span></a></div>
-<ul id="ptx-toc-group-sage-and-python-3" class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3-3" class="internal"><span class="codenumber">2.6.1.1</span> <span class="title">Lists</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3-4" class="internal"><span class="codenumber">2.6.1.2</span> <span class="title">Tuples </span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-3-5" class="internal"><span class="codenumber">2.6.1.3</span> <span class="title">Dictionaries (Associative Arrays) </span></a></div></li>
+<div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Lists, Tuples, and Dictionaries</span></a></div>
+<ul id="ptx-toc-group-sage-and-python-4" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4-3" class="internal"><span class="codenumber">2.6.1.1</span> <span class="title">Lists</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4-4" class="internal"><span class="codenumber">2.6.1.2</span> <span class="title">Tuples</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4-5" class="internal"><span class="codenumber">2.6.1.3</span> <span class="title">Dictionaries (Associative Arrays)</span></a></div></li>
 </ul>
 </li></ul>
 </li>
@@ -334,52 +334,53 @@ sagecell.makeSagecell({
 <h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sage and Python</span>
 </h1>
-<section class="introduction" id="sage-and-python-2">
-<div class="para" id="sage-and-python-2-1">Sage is built on top of <a class="external" href="https://www.python.org/" target="_blank">Python</a>. It will do no harm to find out a little about this programming language and will aid your understanding of some of the examples used in this manual.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="sage-and-python-3">
+<div class="para" id="sage-and-python-3-1">Sage is built on top of <a class="external" href="https://www.python.org/" target="_blank">Python</a>. It will do no harm to find out a little about this programming language and will aid your understanding of some of the examples used in this manual.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="subsection" id="sage-and-python-3">
+<section class="subsection" id="sage-and-python-4">
 <h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lists, Tuples, and Dictionaries</span>
 </h2>
-<section class="introduction" id="sage-and-python-3-2">
-<div class="para" id="sage-and-python-3-2-1">Python has a number of built in data types. We will look at three that will come up again and again in this manual.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="sage-and-python-4-2">
+<div class="para" id="sage-and-python-4-2-1">Python has a number of built in data types. We will look at three that will come up again and again in this manual.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<section class="subsubsection" id="sage-and-python-3-3">
+<section class="subsubsection" id="sage-and-python-4-3">
 <h3 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lists</span>
 </h3>
-<div class="para" id="sage-and-python-3-3-2">Creating Lists<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sage-and-python-4-3-3">Creating Lists<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ol class="decimal" id="sage-and-python-3-3-3">
-<li id="sage-and-python-3-3-3-1">
-<div class="para" id="sage-and-python-3-3-3-1-1">To create a list of items then use the <code class="code-inline tex2jax_ignore">[]</code> operator filled with the items:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-3-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sage-and-python-4-3-4">
+<ol class="decimal" id="sage-and-python-4-3-4-1">
+<li id="sage-and-python-4-3-4-1-1">
+<div class="para" id="sage-and-python-4-3-4-1-1-1">To create a list of items then use the <code class="code-inline tex2jax_ignore">[]</code> operator filled with the items:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-4-3-4-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div id="sage-and-python-3-3-3-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage"># Creating lists with Python
+<div id="sage-and-python-4-3-4-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage"># Creating lists with Python
 listTransport = ['car', 'bus', 'train', 'plane', 'ship']
 print("A list of vehicles: " + str(listTransport))
 
 listNumbers = [5, 7, 9, 11, 13]
 print("Some odd numbers: " + str(listNumbers))
 </script></div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#sage-and-python-3-3-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#sage-and-python-4-3-4-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="sage-and-python-3-3-3-2">
-<div class="para" id="sage-and-python-3-3-3-2-1">Creating an empty list and then adding items.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-3-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sage-and-python-4-3-4-1-2">
+<div class="para" id="sage-and-python-4-3-4-1-2-1">Creating an empty list and then adding items.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-4-3-4-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div id="sage-and-python-3-3-3-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">myList = []
+<div id="sage-and-python-4-3-4-1-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">myList = []
 print("Empty list: " + str(myList))
 myList.append('Car')
 myList.append(100)
 print("After appending some items: " + str(myList))
 </script></div>
-<div class="para" id="sage-and-python-3-3-3-2-3">Notice that the items inside the list can be different <em class="emphasis">types</em>. In this cas a <em class="emphasis">sting</em> and a <em class="emphasis">number</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-3-3-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sage-and-python-4-3-4-1-2-3">Notice that the items inside the list can be different <em class="emphasis">types</em>. In this cas a <em class="emphasis">sting</em> and a <em class="emphasis">number</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-4-3-4-1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#sage-and-python-3-3-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#sage-and-python-4-3-4-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="sage-and-python-3-3-3-3">
-<div class="para" id="sage-and-python-3-3-3-3-1">Creating lists using python methods.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-3-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sage-and-python-4-3-4-1-3">
+<div class="para" id="sage-and-python-4-3-4-1-3-1">Creating lists using python methods.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-4-3-4-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div id="sage-and-python-3-3-3-3-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">myBigList = list()
+<div id="sage-and-python-4-3-4-1-3-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">myBigList = list()
 myBigList.extend(myList)
 print("List after extending: " + str(myBigList))
 myBigList.append(listTransport)
@@ -388,17 +389,19 @@ print("List after appending another list:" + str(myBigList))
 listNumbers = range(1, 31, 5)
 print("A list of integers: " + str(listNumbers))
 </script></div>
-<div class="para" id="sage-and-python-3-3-3-3-3">This is not a python tutorial so have a look <a class="external" href="https://docs.python.org/3/library/functions.html" target="_blank">here</a> for more information on <code class="code-inline tex2jax_ignore">range()</code> and <code class="code-inline tex2jax_ignore">append()</code>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-3-3-3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sage-and-python-4-3-4-1-3-3">This is not a python tutorial so have a look <a class="external" href="https://docs.python.org/3/library/functions.html" target="_blank">here</a> for more information on <code class="code-inline tex2jax_ignore">range()</code> and <code class="code-inline tex2jax_ignore">append()</code>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-4-3-4-1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#sage-and-python-3-3-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#sage-and-python-4-3-4-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 </ol>
-<div class="para" id="sage-and-python-3-3-4">Accessing items in a list <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-4-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sage-and-python-3-3-5">
-<a class="external" href="https://docs.python.org/3/tutorial/datastructures.html" target="_blank">Indexing and slicing lists</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sage-and-python-4-3-5">Accessing items in a list <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-4-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div id="sage-and-python-3-3-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">myList = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+<div class="para" id="sage-and-python-4-3-6">
+<a class="external" href="https://docs.python.org/3/tutorial/datastructures.html" target="_blank">Indexing and slicing lists</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-4-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="sage-and-python-4-3-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">myList = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
 print("A list of words: " + str(myList))
 
 print("\nIndices start at '0'")
@@ -420,17 +423,17 @@ print("myList[-1] = " + str(myList[-1]))
 print("\nThe last three items")
 print("myList[-3:] = " + str(myList[-3:]))
 </script></div>
-<div class="autopermalink" aria-hidden="true" data-description="Subsubsection 2.6.1.1: Lists"><a tabindex="-1" href="#sage-and-python-3-3" title="Copy heading and permalink for Subsubsection 2.6.1.1: Lists" aria-label="Copy heading and permalink for Subsubsection 2.6.1.1: Lists">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsubsection 2.6.1.1: Lists"><a tabindex="-1" href="#sage-and-python-4-3" title="Copy heading and permalink for Subsubsection 2.6.1.1: Lists" aria-label="Copy heading and permalink for Subsubsection 2.6.1.1: Lists">🔗</a></div>
 </section>
-<section class="subsubsection" id="sage-and-python-3-4">
+<section class="subsubsection" id="sage-and-python-4-4">
 <h3 class="heading hide-type">
-<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tuples </span>
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tuples</span>
 </h3>
-<div class="para" id="sage-and-python-3-4-2">A tuple is an immutable list. A tuple can not be changed in once it is created.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sage-and-python-4-4-3">A tuple is an immutable list. A tuple can not be changed in once it is created.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-4-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sage-and-python-3-4-3">Tuples are defined exactly like lists except by using <code class="code-inline tex2jax_ignore">()</code> brackets rather than <code class="code-inline tex2jax_ignore">[]</code> brackets.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-3-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sage-and-python-4-4-4">Tuples are defined exactly like lists except by using <code class="code-inline tex2jax_ignore">()</code> brackets rather than <code class="code-inline tex2jax_ignore">[]</code> brackets.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-4-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div id="sage-and-python-3-4-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">t = ("First", "Second", "anna", "paula", "john")
+<div id="sage-and-python-4-4-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">t = ("First", "Second", "anna", "paula", "john")
 print("A tuple: " + str(t))
 
 print("\nFirst item")
@@ -445,19 +448,19 @@ print("t[2:5] = " + str(t[2:5]))
 print("\nThird to last items (alternate)")
 print("t[2:] = " + str(t[2:]))
 </script></div>
-<div class="para" id="sage-and-python-3-4-5">Tuples are handy structures for thing like <span class="process-math">\((x,y,z)\)</span> coordinates and are used extensively in the examples and exercises in this manual.  For example, as co-ordinate ranges for plots. See for example <a href="calculus-derivatives.html#plot_tangentline" class="xref" data-knowl="./knowl/xref/plot_tangentline.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.3.1: Utility method plot_tangentline()">the utility method <code class="code-inline tex2jax_ignore">plot_tangentline()</code> 3.3.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-3-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sage-and-python-4-4-6">Tuples are handy structures for thing like <span class="process-math">\((x,y,z)\)</span> coordinates and are used extensively in the examples and exercises in this manual.  For example, as co-ordinate ranges for plots. See for example <a href="calculus-derivatives.html#plot_tangentline" class="xref" data-knowl="./knowl/xref/plot_tangentline.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.3.1: Utility method plot_tangentline()">the utility method <code class="code-inline tex2jax_ignore">plot_tangentline()</code> 3.3.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-4-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Subsubsection 2.6.1.2: Tuples "><a tabindex="-1" href="#sage-and-python-3-4" title="Copy heading and permalink for Subsubsection 2.6.1.2: Tuples " aria-label="Copy heading and permalink for Subsubsection 2.6.1.2: Tuples ">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsubsection 2.6.1.2: Tuples"><a tabindex="-1" href="#sage-and-python-4-4" title="Copy heading and permalink for Subsubsection 2.6.1.2: Tuples" aria-label="Copy heading and permalink for Subsubsection 2.6.1.2: Tuples">🔗</a></div>
 </section>
-<section class="subsubsection" id="sage-and-python-3-5">
+<section class="subsubsection" id="sage-and-python-4-5">
 <h3 class="heading hide-type">
-<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dictionaries (Associative Arrays) </span>
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dictionaries (Associative Arrays)</span>
 </h3>
-<div class="para" id="sage-and-python-3-5-2">Unlike lists, which are indexed by a numbers, dictionaries are indexed by keys, which can be any immutable type.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-3-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sage-and-python-4-5-3">Unlike lists, which are indexed by a numbers, dictionaries are indexed by keys, which can be any immutable type.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-4-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sage-and-python-3-5-3">A dictionary is an <em class="emphasis">unordered</em> set of key : value pairs, with the requirement that the keys are unique (within the dictionary). A pair of braces creates an empty dictionary: <code class="code-inline tex2jax_ignore">{}</code>. Placing a comma-separated list of key:value pairs within the braces adds initial key:value pairs to the dictionary.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-3-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sage-and-python-4-5-4">A dictionary is an <em class="emphasis">unordered</em> set of key : value pairs, with the requirement that the keys are unique (within the dictionary). A pair of braces creates an empty dictionary: <code class="code-inline tex2jax_ignore">{}</code>. Placing a comma-separated list of key:value pairs within the braces adds initial key:value pairs to the dictionary.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sage-and-python-4-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div id="sage-and-python-3-5-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print("Creating a dictionary")
+<div id="sage-and-python-4-5-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print("Creating a dictionary")
 ids = {'jack': 123, 'john': 345}
 ids['gill'] = 456
 print("ids = " + str(ids))
@@ -478,8 +481,8 @@ print('john' in ids)
 print("\nList all the keys")
 print(ids.keys())
 </script></div>
-<div class="autopermalink" aria-hidden="true" data-description="Subsubsection 2.6.1.3: Dictionaries (Associative Arrays) "><a tabindex="-1" href="#sage-and-python-3-5" title="Copy heading and permalink for Subsubsection 2.6.1.3: Dictionaries (Associative Arrays) " aria-label="Copy heading and permalink for Subsubsection 2.6.1.3: Dictionaries (Associative Arrays) ">🔗</a></div>
-</section><div class="autopermalink" aria-hidden="true" data-description="Subsection 2.6.1: Lists, Tuples, and Dictionaries"><a tabindex="-1" href="#sage-and-python-3" title="Copy heading and permalink for Subsection 2.6.1: Lists, Tuples, and Dictionaries" aria-label="Copy heading and permalink for Subsection 2.6.1: Lists, Tuples, and Dictionaries">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsubsection 2.6.1.3: Dictionaries (Associative Arrays)"><a tabindex="-1" href="#sage-and-python-4-5" title="Copy heading and permalink for Subsubsection 2.6.1.3: Dictionaries (Associative Arrays)" aria-label="Copy heading and permalink for Subsubsection 2.6.1.3: Dictionaries (Associative Arrays)">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Subsection 2.6.1: Lists, Tuples, and Dictionaries"><a tabindex="-1" href="#sage-and-python-4" title="Copy heading and permalink for Subsection 2.6.1: Lists, Tuples, and Dictionaries" aria-label="Copy heading and permalink for Subsection 2.6.1: Lists, Tuples, and Dictionaries">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 2.6: Sage and Python"><a tabindex="-1" href="#sage-and-python" title="Copy heading and permalink for Section 2.6: Sage and Python" aria-label="Copy heading and permalink for Section 2.6: Sage and Python">🔗</a></div>
 </section>
 </div>
