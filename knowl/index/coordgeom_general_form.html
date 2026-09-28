@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="definition definition-like"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Utility methods <code class="code-inline tex2jax_ignore">general_form()</code> and <code class="code-inline tex2jax_ignore">general_equation()</code>.</span>
+</h2>
+<div class="para">The form <span class="process-math">\(ax + by + c = 0\)</span> with whole numbers, no common factor, and <span class="process-math">\(a\)</span> positive (or <span class="process-math">\(b\)</span> positive when there is no <span class="process-math">\(x\)</span> term). <code class="code-inline tex2jax_ignore">general_form()</code> returns the three numbers and <code class="code-inline tex2jax_ignore">general_equation()</code> the equation itself.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom_general_form-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="coordgeom_general_form-3-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def general_form(line):
+    expr = (line.lhs() - line.rhs()).expand()
+    a, b, c = QQ(expr.coefficient(x)), QQ(expr.coefficient(y)), QQ(expr.subs(x=0, y=0))
+    scale = lcm([a.denominator(), b.denominator(), c.denominator()])
+    a, b, c = ZZ(scale*a), ZZ(scale*b), ZZ(scale*c)
+    common = gcd([a, b, c])
+    if a < 0 or (a == 0 and b < 0):
+        common = -common
+    return a/common, b/common, c/common
+
+def general_equation(line):
+    a, b, c = general_form(line)
+    return a*x + b*y + c == 0
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.2: Utility methods general_form() and general_equation()"><a tabindex="-1" href="#coordgeom_general_form" title="Copy heading and permalink for Definition 3.1.2: Utility methods general_form() and general_equation()" aria-label="Copy heading and permalink for Definition 3.1.2: Utility methods general_form() and general_equation()">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="coordgeom-lines.html#coordgeom_general_form">In Context</a></span>
+</body>
+</html>

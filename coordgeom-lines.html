@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JAG Straight Lines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/css/theme-default-modern.min.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from 'https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:image" content="https://jagiannelli.github.io/external/images/jg.jpeg">
+<meta property="og:image" content="https://jagiannelli.github.io/external/images/jg.jpeg">
+<meta name="twitter:image:alt" content="Document Logo">
+<meta property="og:image:alt" content="Document Logo">
+<meta name="twitter:title" content="John Giannelli">
+<meta property="og:title" content="John Giannelli">
+<meta property="book:title" content="John Giannelli">
+<meta name="twitter:description" content="Musings on Sage Math">
+<meta property="og:description" content="Musings on Sage Math">
+<meta name="twitter:card" content="summary_large_image">
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-runtime.6ad113829064d43a.bundle.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-runestone.02090e9f6a81e70e.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://github.com/jagiannelli"><img src="external/images/jg.jpeg" alt="Logo image"></a><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="jagbook.html"><span class="title">John Giannelli</span> <span class="subtitle">Musings on Sage Math</span></a></div>
+<p class="byline">John A Giannelli</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="book-index.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="coordgeom.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="coordgeom.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="coordgeom-circles.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+\newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+\newcommand{\fd}[1]{#1'}
+\newcommand{\sd}[1]{#1''}
+\newcommand{\td}[1]{#1'''}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand \dd[1]  { \,\textrm d{#1}                       }   
+\newcommand \de[2]  { \frac{\mathrm d{#1}}{\mathrm d{#2}}   }   
+\newcommand \intl[4]{ \int\limits_{#1}^{#2}{#3}\dd{#4}      }   
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="about-the-author.html" class="internal"><span class="title">About John A Giannelli</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="dedication.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgements.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Quick Guide to Using SageMath</span></a></div>
+<ul id="ptx-toc-group-sets" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-introduction.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What Is SageMath?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-online.html" class="internal"><span class="codenumber">1.2</span> <span class="title">SageMath Online</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-install.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Installing SageMath Locally</span></a></div>
+<ul id="ptx-toc-group-sage-install" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-install.html#sage-install-conda" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Installing with conda-forge</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-install.html#sage-command-line" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Running Sage from the command line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-install.html#sage-jupyter" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Running Sage in a Jupyter notebook</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="basics.html" class="internal"><span class="codenumber">2</span> <span class="title">Basic Sage Commands</span></a></div>
+<ul id="ptx-toc-group-basics" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="basics-introduction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">What’s in This Chapter</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-executing-commands.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Executing Sage Commands</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-defining-functions.html" class="internal"><span class="codenumber">2.3</span> <span class="title">How to define functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-symbolic-manipulation.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Symbolic Manipulation</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-variables-plotting.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Declaring Variables and Plotting</span></a></div>
+<ul id="ptx-toc-group-sage-variables-plotting" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-variables-plotting.html#sage-variables-plotting-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Use SageMath to solve differential equations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-and-python.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Sage and Python</span></a></div>
+<ul id="ptx-toc-group-sage-and-python" class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Lists, Tuples, and Dictionaries</span></a></div>
+<ul id="ptx-toc-group-sage-and-python-4" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4-3" class="internal"><span class="codenumber">2.6.1.1</span> <span class="title">Lists</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4-4" class="internal"><span class="codenumber">2.6.1.2</span> <span class="title">Tuples</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4-5" class="internal"><span class="codenumber">2.6.1.3</span> <span class="title">Dictionaries (Associative Arrays)</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="coordgeom.html" class="internal"><span class="codenumber">3</span> <span class="title">Coordinate Geometry</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-coordgeom">
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="coordgeom-lines.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Straight Lines</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-coordgeom-lines">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-tools" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Some helper functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-perpendicular" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Perpendicular gradients multiply to <span class="process-math">\(-1\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-forms" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Three forms of a line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-meeting" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Parallel, perpendicular, and where lines meet</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-areas" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Areas of triangles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-angle" class="internal"><span class="codenumber">3.1.6</span> <span class="title">The angle between two lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-model" class="internal"><span class="codenumber">3.1.7</span> <span class="title">A straight line as a model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-ratio" class="internal"><span class="codenumber">3.1.8</span> <span class="title">The ratio in which a line divides a segment</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-practice" class="internal"><span class="codenumber">3.1.9</span> <span class="title">Practice with random questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="coordgeom-circles.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Circles</span></a></div>
+<ul id="ptx-toc-group-coordgeom-circles" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-tools" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Some helper functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-line" class="internal"><span class="codenumber">3.2.2</span> <span class="title">A line and a circle meet twice, once or never</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-centre" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Centre and radius</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-properties" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Three circle properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-touching" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Two circles touching</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-three" class="internal"><span class="codenumber">3.2.6</span> <span class="title">A circle through three points</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-outside" class="internal"><span class="codenumber">3.2.7</span> <span class="title">Tangents from a point outside the circle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-practice" class="internal"><span class="codenumber">3.2.8</span> <span class="title">Practice with random questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="integers.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus</span></a></div>
+<ul id="ptx-toc-group-integers" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-introduction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Calculus in SageMath</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-limits.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Calculating Limits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="calculus-derivatives.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Derivatives</span></a></div>
+<ul id="ptx-toc-group-calculus-derivatives" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Examples From Chapter 2</span></a></div>
+<ul id="ptx-toc-group-calculus-derivatives-3" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-2" class="internal"><span class="codenumber">4.3.1.1</span> <span class="title">Section 2.1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-3" class="internal"><span class="codenumber">4.3.1.2</span> <span class="title">Section 2.2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-4" class="internal"><span class="codenumber">4.3.1.3</span> <span class="title">Section 2.3</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-5" class="internal"><span class="codenumber">4.3.1.4</span> <span class="title">Section 2.4</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-4" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Section 2.6 Implicit Differentiation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-integration.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Integration</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cap-2017-hw2.html" class="internal"><span class="codenumber">4.5</span> <span class="title">CAP 2017, HW 2 due January 31</span></a></div>
+<ul id="ptx-toc-group-cap-2017-hw2" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw2.html#cap-2017-hw2-6" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cap-2017-hw3.html" class="internal"><span class="codenumber">4.6</span> <span class="title">CAP 2017, HW 3 due February 7</span></a></div>
+<ul id="ptx-toc-group-cap-2017-hw3" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-rumour" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Rumour Spread and the Logistic Function</span></a></div>
+<ul id="ptx-toc-group-hw3-rumour" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-rumour-6" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-decay" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Radioactive Decay: Bismuth-210</span></a></div>
+<ul id="ptx-toc-group-hw3-decay" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-decay-3" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-taylor" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Second Derivatives and Taylor Series</span></a></div>
+<ul id="ptx-toc-group-hw3-taylor" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-taylor-4" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-mvt" class="internal"><span class="codenumber">4.6.4</span> <span class="title">The Mean Value Theorem</span></a></div>
+<ul id="ptx-toc-group-hw3-mvt" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-mvt-3" class="internal"><span class="codenumber">4.6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="cap-2017-hw3.html#cap-2017-hw3-7" class="internal"><span class="codenumber">4.6.5</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="calculus-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="differential.html" class="internal"><span class="codenumber">5</span> <span class="title">Differential Equations</span></a></div>
+<ul id="ptx-toc-group-differential" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="first-order-de.html" class="internal"><span class="codenumber">5.1</span> <span class="title">First Order Differential Equations</span></a></div>
+<ul id="ptx-toc-group-first-order-de" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="first-order-de.html#first-order-de-2" class="internal"><span class="codenumber">5.1.1</span> <span class="title">First Example</span></a></div>
+<ul id="ptx-toc-group-first-order-de-2" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-3" class="internal"><span class="codenumber">5.1.1.1</span> <span class="title">The General Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-4" class="internal"><span class="codenumber">5.1.1.2</span> <span class="title">Initial Conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-5" class="internal"><span class="codenumber">5.1.1.3</span> <span class="title">Plotting the Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-6" class="internal"><span class="codenumber">5.1.1.4</span> <span class="title">Numerical Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-7" class="internal"><span class="codenumber">5.1.1.5</span> <span class="title">Plotting the Vector Field</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-3" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Second Example</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="second-order-de.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Second Order Differential Equations</span></a></div>
+<ul id="ptx-toc-group-second-order-de" class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="second-order-de.html#second-order-de-2" class="internal"><span class="codenumber">5.2.1</span> <span class="title">First Example</span></a></div>
+<ul id="ptx-toc-group-second-order-de-2" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-3" class="internal"><span class="codenumber">5.2.1.1</span> <span class="title">The General Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-4" class="internal"><span class="codenumber">5.2.1.2</span> <span class="title">Initial Conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-5" class="internal"><span class="codenumber">5.2.1.3</span> <span class="title">Symbolic Differential Equations</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="system-of-de.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Systems Of Equations</span></a></div>
+<ul id="ptx-toc-group-system-of-de" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="system-of-de.html#system-of-de-2" class="internal"><span class="codenumber">5.3.1</span> <span class="title">First Example</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-de.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="differential-references.html" class="internal"><span class="codenumber">5.5</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="linear-algebra-exam.html" class="internal"><span class="codenumber">6</span> <span class="title">Linear Algebra</span></a></div>
+<ul id="ptx-toc-group-linear-algebra-exam" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-introduction.html" class="internal"><span class="codenumber">6.1</span> <span class="title">About This Exam</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a1.html" class="internal"><span class="codenumber">6.2</span> <span class="title">A1</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a2.html" class="internal"><span class="codenumber">6.3</span> <span class="title">A2</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a3.html" class="internal"><span class="codenumber">6.4</span> <span class="title">A3</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions.html" class="internal"><span class="codenumber">B.</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="book-index.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="coordgeom-lines">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Straight Lines</span>
+</h1>
+<section class="introduction" id="coordgeom-lines-2">
+<div class="para logical" id="coordgeom-lines-2-1">
+<div class="para">A straight line is fixed by one point and a gradient. The <dfn class="terminology">gradient</dfn> of the line through <span class="process-math">\((x_1, y_1)\)</span> and <span class="process-math">\((x_2, y_2)\)</span> is the increase in <span class="process-math">\(y\)</span> over the increase in <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="coordgeom-lines-2-1-6">
+\begin{equation*}
+m = \frac{y_2 - y_1}{x_2 - x_1}.
+\end{equation*}
+</div>
+<div class="para">Nearly everything else on this page (equations of lines, where lines meet, lengths, areas and angles) is built from that one number and some simultaneous equations. Sage keeps every answer exact and draws the picture.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="coordgeom-lines-2-2">The cells on this page share their variables, so run them in order from the top. The helper functions in the first subsection are used all the way down.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="coordgeom-lines-tools">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Some helper functions</span>
+</h2>
+<div class="para" id="coordgeom-lines-tools-2">We work with <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> throughout, so declare them first. The <code class="code-inline tex2jax_ignore">%display latex</code> line makes Sage typeset every answer from here on.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-tools-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-tools-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display latex
+x, y = var('x y')
+</script></div>
+<article class="definition definition-like" id="coordgeom_lines_basic"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Utility methods for points and lines.</span>
+</h3>
+<div class="para" id="coordgeom_lines_basic-4-1">The gradient, length and midpoint of <span class="process-math">\(PQ\text{;}\)</span> the line through <span class="process-math">\(P\)</span> with gradient <span class="process-math">\(m\text{,}\)</span> written as <span class="process-math">\(y - y_1 = m(x - x_1)\text{;}\)</span> the same line rearranged as <span class="process-math">\(y = mx + c\text{;}\)</span> and the point where two lines meet, found by solving them as simultaneous equations.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom_lines_basic-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="coordgeom_lines_basic-4-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def gradient(P, Q):
+    return (Q[1] - P[1]) / (Q[0] - P[0])
+
+def length(P, Q):
+    return sqrt((Q[0] - P[0])**2 + (Q[1] - P[1])**2)
+
+def midpoint(P, Q):
+    return ((P[0] + Q[0])/2, (P[1] + Q[1])/2)
+
+def line_through(P, m):
+    return y - P[1] == m*(x - P[0])
+
+def y_form(line):
+    return solve(line, y)[0]
+
+def meet(line1, line2):
+    solution = solve([line1, line2], x, y)[0]
+    return (solution[0].rhs(), solution[1].rhs())
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.1: Utility methods for points and lines"><a tabindex="-1" href="#coordgeom_lines_basic" title="Copy heading and permalink for Definition 3.1.1: Utility methods for points and lines" aria-label="Copy heading and permalink for Definition 3.1.1: Utility methods for points and lines">🔗</a></div>
+</article>
+<article class="definition definition-like" id="coordgeom_general_form"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Utility methods <code class="code-inline tex2jax_ignore">general_form()</code> and <code class="code-inline tex2jax_ignore">general_equation()</code>.</span>
+</h3>
+<div class="para" id="coordgeom_general_form-3-1">The form <span class="process-math">\(ax + by + c = 0\)</span> with whole numbers, no common factor, and <span class="process-math">\(a\)</span> positive (or <span class="process-math">\(b\)</span> positive when there is no <span class="process-math">\(x\)</span> term). <code class="code-inline tex2jax_ignore">general_form()</code> returns the three numbers and <code class="code-inline tex2jax_ignore">general_equation()</code> the equation itself.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom_general_form-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="coordgeom_general_form-3-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def general_form(line):
+    expr = (line.lhs() - line.rhs()).expand()
+    a, b, c = QQ(expr.coefficient(x)), QQ(expr.coefficient(y)), QQ(expr.subs(x=0, y=0))
+    scale = lcm([a.denominator(), b.denominator(), c.denominator()])
+    a, b, c = ZZ(scale*a), ZZ(scale*b), ZZ(scale*c)
+    common = gcd([a, b, c])
+    if a < 0 or (a == 0 and b < 0):
+        common = -common
+    return a/common, b/common, c/common
+
+def general_equation(line):
+    a, b, c = general_form(line)
+    return a*x + b*y + c == 0
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.2: Utility methods general_form() and general_equation()"><a tabindex="-1" href="#coordgeom_general_form" title="Copy heading and permalink for Definition 3.1.2: Utility methods general_form() and general_equation()" aria-label="Copy heading and permalink for Definition 3.1.2: Utility methods general_form() and general_equation()">🔗</a></div>
+</article>
+<article class="definition definition-like" id="coordgeom_line_text"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Utility methods <code class="code-inline tex2jax_ignore">signed_term()</code>, <code class="code-inline tex2jax_ignore">line_text()</code> and <code class="code-inline tex2jax_ignore">surd_text()</code>.</span>
+</h3>
+<div class="para" id="coordgeom_line_text-3-1">Text versions for printing: one term of an equation with its sign, a line as <code class="code-inline tex2jax_ignore">x + 2y - 7 = 0</code>, and the square root of a whole number in its simplest surd form, so that <code class="code-inline tex2jax_ignore">surd_text(45)</code> gives <code class="code-inline tex2jax_ignore">3√5</code>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom_line_text-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="coordgeom_line_text-3-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def signed_term(coefficient, letter, first=False):
+    if coefficient == 0:
+        return ""
+    size = abs(coefficient)
+    if size == 1 and letter:
+        body = letter
+    elif size in ZZ or not letter:
+        body = f"{size}{letter}"
+    else:
+        body = f"({size}){letter}"
+    if first:
+        return body if coefficient > 0 else f"-{body}"
+    return f" + {body}" if coefficient > 0 else f" - {body}"
+
+def line_text(line):
+    a, b, c = general_form(line)
+    text = signed_term(a, "x", first=True) + signed_term(b, "y", first=(a == 0))
+    return text + signed_term(c, "") + " = 0"
+
+def surd_text(n):
+    outside, inside = 1, ZZ(n)
+    for k in range(2, 100):
+        while inside % (k*k) == 0:
+            outside, inside = outside*k, inside/(k*k)
+    if inside == 1:
+        return f"{outside}"
+    return f"√{inside}" if outside == 1 else f"{outside}√{inside}"
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.3: Utility methods signed_term(), line_text() and surd_text()"><a tabindex="-1" href="#coordgeom_line_text" title="Copy heading and permalink for Definition 3.1.3: Utility methods signed_term(), line_text() and surd_text()" aria-label="Copy heading and permalink for Definition 3.1.3: Utility methods signed_term(), line_text() and surd_text()">🔗</a></div>
+</article>
+<article class="definition definition-like" id="coordgeom_lines_diagram"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Utility methods <code class="code-inline tex2jax_ignore">diagram()</code> and <code class="code-inline tex2jax_ignore">area_check()</code>.</span>
+</h3>
+<div class="para" id="coordgeom_lines_diagram-3-1">A picture drawn to scale: lines given as equations (a vertical line is drawn on its own, since it has no <span class="process-math">\(y = \dots\)</span> form), dashed segments between points, and named points labelled with their coordinates. Then the area of any triangle from its three corners, which is for checking answers rather than for working them out.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom_lines_diagram-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="coordgeom_lines_diagram-3-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def diagram(points, lines=[], segments=[], left=-6, right=10, low=-6, high=10):
+    picture = Graphics()
+    colours = ['blue', 'red', 'green', 'purple']
+    for i, equation in enumerate(lines):
+        a, b, c = general_form(equation)
+        if b == 0:
+            picture += line([(-c/a, low), (-c/a, high)], color=colours[i % 4])
+        else:
+            picture += plot(-(a*x + c)/b, (x, left, right), color=colours[i % 4])
+    for P, Q in segments:
+        picture += line([P, Q], color='grey', linestyle='--')
+    for name, (p, q) in points.items():
+        picture += point((p, q), size=40, color='black', zorder=5)
+        picture += text(f" {name}({p}, {q})", (p, q),
+                        horizontal_alignment='left',
+                        vertical_alignment='bottom', color='black')
+    picture.set_axes_range(xmin=left, xmax=right, ymin=low, ymax=high)
+    picture.set_aspect_ratio(1)
+    return picture
+
+def area_check(P, Q, R):
+    return abs((Q[0] - P[0])*(R[1] - P[1]) - (R[0] - P[0])*(Q[1] - P[1])) / 2
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.4: Utility methods diagram() and area_check()"><a tabindex="-1" href="#coordgeom_lines_diagram" title="Copy heading and permalink for Definition 3.1.4: Utility methods diagram() and area_check()" aria-label="Copy heading and permalink for Definition 3.1.4: Utility methods diagram() and area_check()">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.1: Some helper functions"><a tabindex="-1" href="#coordgeom-lines-tools" title="Copy heading and permalink for Subsection 3.1.1: Some helper functions" aria-label="Copy heading and permalink for Subsection 3.1.1: Some helper functions">🔗</a></div>
+</section>
+<section class="subsection" id="coordgeom-lines-perpendicular">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Perpendicular gradients multiply to <span class="process-math">\(-1\)</span></span>
+</h2>
+<div class="para" id="coordgeom-lines-perpendicular-2">Turn a line through a right angle and the step "across <span class="process-math">\(p\text{,}\)</span> up <span class="process-math">\(q\)</span>" becomes "across <span class="process-math">\(-q\text{,}\)</span> up <span class="process-math">\(p\)</span>". The gradient goes from <span class="process-math">\(q/p\)</span> to <span class="process-math">\(-p/q\text{,}\)</span> and the product of the two is <span class="process-math">\(-1\text{.}\)</span> That is the test for perpendicular lines, and it is how to find the gradient of a perpendicular: take <span class="process-math">\(-1\)</span> over the gradient you have.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-perpendicular-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="coordgeom-lines-perpendicular-3">Move <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> The blue line is <span class="process-math">\(AB\text{,}\)</span> the red line is perpendicular to it through <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(M\)</span> is the midpoint of <span class="process-math">\(AB\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-perpendicular-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-perpendicular-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">@interact
+def line_demo(ax=slider(-4, 6, 1, default=-3, label='A: x'), ay=slider(-4, 6, 1, default=1, label='A: y'),
+              bx=slider(-4, 6, 1, default=3, label='B: x'), by=slider(-4, 6, 1, default=4, label='B: y')):
+    A, B = (ax, ay), (bx, by)
+    if A == B:
+        print("A and B are the same point: move one of them.")
+        return
+    across, up = bx - ax, by - ay
+    M = midpoint(A, B)
+    print(f"midpoint M = ({M[0]}, {M[1]})", flush=True)
+    across_text = f"{across}" if across >= 0 else f"({across})"
+    up_text = f"{up}" if up >= 0 else f"({up})"
+    root = f"√{across**2 + up**2}"
+    simplest = surd_text(across**2 + up**2)
+    print(f"length AB = √({across_text}² + {up_text}²) = {root}" + (f" = {simplest}" if simplest != root else ""), flush=True)
+    if across == 0:
+        print("AB is vertical (no gradient), so the perpendicular is horizontal.", flush=True)
+        AB, perpendicular = x == ax, y == by
+    else:
+        m = gradient(A, B)
+        fraction = f"{up}/{across}"
+        print(f"gradient of AB = {fraction}" + (f" = {m}" if str(m) != fraction else ""), flush=True)
+        AB = line_through(A, m)
+        if m == 0:
+            print("AB is horizontal, so the perpendicular is vertical.", flush=True)
+            perpendicular = x == bx
+        else:
+            print(f"perpendicular gradient = -1/({m}) = {-1/m};  check: {m} × {-1/m} = {m*(-1/m)}", flush=True)
+            perpendicular = line_through(B, -1/m)
+    print(f"AB:            {line_text(AB)}", flush=True)
+    print(f"perpendicular: {line_text(perpendicular)}", flush=True)
+    show(diagram({'A': A, 'B': B, 'M': M}, lines=[AB, perpendicular],
+                 left=-6, right=10, low=-6, high=10))
+</script></div>
+<div class="para" id="coordgeom-lines-perpendicular-5">Things to try. Make <span class="process-math">\(AB\)</span> steeper and watch the red line get flatter: the gradients multiply to <span class="process-math">\(-1\)</span> every time. Put <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> at the same height and the red line turns vertical. That is the one case where the product test can’t be used, because a vertical line has no gradient. Swap <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{:}\)</span> the gradient of <span class="process-math">\(AB\)</span> stays the same.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-perpendicular-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.2: Perpendicular gradients multiply to -1"><a tabindex="-1" href="#coordgeom-lines-perpendicular" title="Copy heading and permalink for Subsection 3.1.2: Perpendicular gradients multiply to -1" aria-label="Copy heading and permalink for Subsection 3.1.2: Perpendicular gradients multiply to -1">🔗</a></div>
+</section>
+<section class="subsection" id="coordgeom-lines-forms">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Three forms of a line</span>
+</h2>
+<div class="para" id="coordgeom-lines-forms-2">Take <span class="process-math">\(P(-1, 4)\)</span> and <span class="process-math">\(Q(9, -1)\text{.}\)</span> The gradient first:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-forms-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-forms-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P, Q = (-1, 4), (9, -1)
+m = gradient(P, Q)
+m
+</script></div>
+<div class="para" id="coordgeom-lines-forms-4">Then <span class="process-math">\(y - y_1 = m(x - x_1)\)</span> with either point. This is the quickest form to write down, and it is already a complete answer. Sage multiplies out the right-hand side as soon as it sees it, so the first equation below is <span class="process-math">\(y - 4 = -\frac12(x + 1)\)</span> with the bracket opened. After it come the other two forms, <span class="process-math">\(y = mx + c\)</span> and <span class="process-math">\(ax + by + c = 0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-forms-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-forms-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">PQ = line_through(P, m)
+PQ, y_form(PQ), general_equation(PQ)
+</script></div>
+<div class="para" id="coordgeom-lines-forms-6">Using <span class="process-math">\(Q\)</span> instead of <span class="process-math">\(P\)</span> gives the same line:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-forms-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-forms-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">y_form(line_through(Q, m))
+</script></div>
+<div class="para" id="coordgeom-lines-forms-8">A line is often given as <span class="process-math">\(ax + by + c = 0\text{.}\)</span> To read off its gradient, rearrange it to <span class="process-math">\(y = \dots\)</span> first. For <span class="process-math">\(3x + 4y - 12 = 0\)</span> the gradient is <span class="process-math">\(-\frac34\text{,}\)</span> not <span class="process-math">\(3\text{:}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-forms-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-forms-9" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">y_form(3*x + 4*y - 12 == 0)
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.3: Three forms of a line"><a tabindex="-1" href="#coordgeom-lines-forms" title="Copy heading and permalink for Subsection 3.1.3: Three forms of a line" aria-label="Copy heading and permalink for Subsection 3.1.3: Three forms of a line">🔗</a></div>
+</section>
+<section class="subsection" id="coordgeom-lines-meeting">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Parallel, perpendicular, and where lines meet</span>
+</h2>
+<div class="para" id="coordgeom-lines-meeting-2">A line parallel to <span class="process-math">\(PQ\)</span> uses the same gradient. A perpendicular one uses <span class="process-math">\(-1/m\text{.}\)</span> Here are both, through <span class="process-math">\(R(5, 6)\text{,}\)</span> and the product of the two gradients:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-meeting-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-meeting-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">R = (5, 6)
+parallel = line_through(R, m)
+perpendicular = line_through(R, -1/m)
+y_form(parallel), y_form(perpendicular), m * (-1/m)
+</script></div>
+<div class="para" id="coordgeom-lines-meeting-4">Two lines meet where both equations hold, so solve them together. A line crosses the <span class="process-math">\(x\)</span>-axis where <span class="process-math">\(y = 0\)</span> and the <span class="process-math">\(y\)</span>-axis where <span class="process-math">\(x = 0\text{.}\)</span> It is easy to swap those two by mistake. Here <span class="process-math">\(F\)</span> is where <span class="process-math">\(PQ\)</span> meets the perpendicular through <span class="process-math">\(R\)</span> (the <dfn class="terminology">foot of the perpendicular</dfn>), then come the two places where <span class="process-math">\(PQ\)</span> crosses the axes:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-meeting-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-meeting-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">F = meet(PQ, perpendicular)
+F, meet(PQ, y == 0), meet(PQ, x == 0)
+</script></div>
+<div class="para" id="coordgeom-lines-meeting-6">Sage keeps lengths exact. Here are <span class="process-math">\(PQ\text{,}\)</span> its midpoint, and <span class="process-math">\(RF\text{,}\)</span> the shortest distance from <span class="process-math">\(R\)</span> to the line <span class="process-math">\(PQ\text{:}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-meeting-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-meeting-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">length(P, Q), midpoint(P, Q), length(R, F)
+</script></div>
+<div class="para" id="coordgeom-lines-meeting-8">Draw it. The picture shows at a glance what the numbers mean:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-meeting-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-meeting-9" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">diagram({'P': P, 'Q': Q, 'R': R, 'F': F}, lines=[PQ, perpendicular],
+        segments=[(R, F)], left=-3, right=11, low=-3, high=9)
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.4: Parallel, perpendicular, and where lines meet"><a tabindex="-1" href="#coordgeom-lines-meeting" title="Copy heading and permalink for Subsection 3.1.4: Parallel, perpendicular, and where lines meet" aria-label="Copy heading and permalink for Subsection 3.1.4: Parallel, perpendicular, and where lines meet">🔗</a></div>
+</section>
+<section class="subsection" id="coordgeom-lines-areas">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Areas of triangles</span>
+</h2>
+<div class="para" id="coordgeom-lines-areas-2">With a diagram in front of you, look for one of two things before doing any long working:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-areas-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="coordgeom-lines-areas-3">
+<ul class="disc" id="coordgeom-lines-areas-3-1">
+<li id="coordgeom-lines-areas-3-1-1">
+<div class="para" id="coordgeom-lines-areas-3-1-1-1">
+<em class="alert">A right angle</em>, from perpendicular lines. The two sides that meet at it are a base and a height, so the area is half their product.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-areas-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#coordgeom-lines-areas-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="coordgeom-lines-areas-3-1-2">
+<div class="para" id="coordgeom-lines-areas-3-1-2-1">
+<em class="alert">A side on an axis</em> (or parallel to one). That side is the base, and the height is just a coordinate.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-areas-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#coordgeom-lines-areas-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-areas-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="coordgeom-lines-areas-4">Triangle <span class="process-math">\(PRF\)</span> has a right angle at <span class="process-math">\(F\text{.}\)</span> The last number is <code class="code-inline tex2jax_ignore">area_check()</code>, working from the corners:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-areas-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-areas-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">PF, RF = length(P, F), length(R, F)
+PF, RF, 1/2 * PF * RF, area_check(P, R, F)
+</script></div>
+<div class="para" id="coordgeom-lines-areas-6">Now let <span class="process-math">\(D\)</span> and <span class="process-math">\(E\)</span> be where <span class="process-math">\(PQ\)</span> and the perpendicular cross the <span class="process-math">\(x\)</span>-axis. Triangle <span class="process-math">\(DEF\)</span> has <span class="process-math">\(DE\)</span> on the axis, so its height is the <span class="process-math">\(y\)</span>-coordinate of <span class="process-math">\(F\text{.}\)</span> It also has the right angle at <span class="process-math">\(F\text{,}\)</span> so both quick methods work, and they agree:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-areas-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-areas-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D, E = meet(PQ, y == 0), meet(perpendicular, y == 0)
+print(f"D = {D}, E = {E}", flush=True)
+1/2 * (D[0] - E[0]) * F[1], 1/2 * length(F, D) * length(F, E), area_check(D, E, F)
+</script></div>
+<div id="coordgeom-lines-areas-8" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">diagram({'D': D, 'E': E, 'F': F, 'R': R}, lines=[PQ, perpendicular],
+        left=-1, right=9, low=-2, high=7)
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.5: Areas of triangles"><a tabindex="-1" href="#coordgeom-lines-areas" title="Copy heading and permalink for Subsection 3.1.5: Areas of triangles" aria-label="Copy heading and permalink for Subsection 3.1.5: Areas of triangles">🔗</a></div>
+</section>
+<section class="subsection" id="coordgeom-lines-angle">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The angle between two lines</span>
+</h2>
+<div class="para" id="coordgeom-lines-angle-2">A line with gradient <span class="process-math">\(m\)</span> makes the angle <span class="process-math">\(\tan^{-1} m\)</span> with the <span class="process-math">\(x\)</span>-axis. The angle between two lines is the difference between their two angles. Here are <span class="process-math">\(PQ\)</span> (gradient <span class="process-math">\(-\frac12\)</span>) and the line <span class="process-math">\(y = \frac13 x + 1\text{,}\)</span> in degrees:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-angle-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-angle-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">angle_PQ = arctan(m) * 180/pi
+angle_other = arctan(1/3) * 180/pi
+float(angle_PQ), float(angle_other), float(angle_other - angle_PQ)
+</script></div>
+<div class="para logical" id="coordgeom-lines-angle-4">
+<div class="para">The difference is exactly <span class="process-math">\(45^\circ\text{.}\)</span> Two lines that cross make two angles, which add up to <span class="process-math">\(180^\circ\text{,}\)</span> so the other one is <span class="process-math">\(135^\circ\text{.}\)</span> The difference of the <span class="process-math">\(\tan^{-1}\)</span> values gives one of them, and the diagram shows which one you want. The exact answer comes from the tangent of a difference:</div>
+<div class="displaymath process-math" id="coordgeom-lines-angle-4-5">
+\begin{equation*}
+\tan(\alpha - \beta) = \frac{m_1 - m_2}{1 + m_1 m_2}.
+\end{equation*}
+</div>
+<div class="para">This formula also shows why perpendicular lines have <span class="process-math">\(m_1 m_2 = -1\text{:}\)</span> the bottom is zero there, and <span class="process-math">\(\tan 90^\circ\)</span> is undefined.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-angle-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-angle-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">(1/3 - m) / (1 + (1/3) * m)
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.6: The angle between two lines"><a tabindex="-1" href="#coordgeom-lines-angle" title="Copy heading and permalink for Subsection 3.1.6: The angle between two lines" aria-label="Copy heading and permalink for Subsection 3.1.6: The angle between two lines">🔗</a></div>
+</section>
+<section class="subsection" id="coordgeom-lines-model">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A straight line as a model</span>
+</h2>
+<div class="para" id="coordgeom-lines-model-2">A candle is 21 cm tall after burning for 1 hour, and 12 cm tall after 4 hours. If it burns at a steady rate, its height <span class="process-math">\(h\)</span> after <span class="process-math">\(t\)</span> hours lies on the line through <span class="process-math">\((1, 21)\)</span> and <span class="process-math">\((4, 12)\text{.}\)</span> The cell shows the rate, the model, and when the candle burns down to nothing:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-model-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-model-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">t = var('t')
+rate = gradient((1, 21), (4, 12))
+model = 21 + rate*(t - 1)
+rate, model, solve(model == 0, t)
+</script></div>
+<div class="para" id="coordgeom-lines-model-4">The gradient <span class="process-math">\(-3\)</span> is the rate of burning, in cm per hour. The intercept <span class="process-math">\(24\)</span> is the height before it was lit, which neither reading gave directly. The model says the candle is gone after 8 hours. A model like this is only good over a range. In practice the wick and the stub at the bottom stop it before zero, and the line would carry on to negative heights if we let it.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-model-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.7: A straight line as a model"><a tabindex="-1" href="#coordgeom-lines-model" title="Copy heading and permalink for Subsection 3.1.7: A straight line as a model" aria-label="Copy heading and permalink for Subsection 3.1.7: A straight line as a model">🔗</a></div>
+</section>
+<section class="subsection" id="coordgeom-lines-ratio">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The ratio in which a line divides a segment</span>
+</h2>
+<div class="para" id="coordgeom-lines-ratio-2">The line <span class="process-math">\(L: 3x + y - 1 = 0\)</span> crosses the segment from <span class="process-math">\(A(-4, -1)\)</span> to <span class="process-math">\(B(8, 5)\)</span> at a point <span class="process-math">\(C\text{.}\)</span> Moving along a straight line, the <span class="process-math">\(x\)</span>- and <span class="process-math">\(y\)</span>-coordinates change in proportion. So the ratio <span class="process-math">\(AC : CB\)</span> can be read from the <span class="process-math">\(x\)</span>-steps, or from the <span class="process-math">\(y\)</span>-steps, without working out any lengths:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-ratio-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-ratio-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A, B = (-4, -1), (8, 5)
+AB = line_through(A, gradient(A, B))
+L = 3*x + y - 1 == 0
+C = meet(AB, L)
+print(f"AB: {line_text(AB)},  C = {C}", flush=True)
+(C[0] - A[0], B[0] - C[0]), (C[1] - A[1], B[1] - C[1]), length(A, C) / length(C, B)
+</script></div>
+<div class="para" id="coordgeom-lines-ratio-4">The <span class="process-math">\(x\)</span>-steps are <span class="process-math">\(4\)</span> and <span class="process-math">\(8\text{,}\)</span> the <span class="process-math">\(y\)</span>-steps are <span class="process-math">\(2\)</span> and <span class="process-math">\(4\text{,}\)</span> and the lengths are in the same ratio: <span class="process-math">\(AC : CB = 1 : 2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-ratio-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-ratio-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">diagram({'A': A, 'B': B, 'C': C}, lines=[AB, L], left=-6, right=10, low=-4, high=8)
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.8: The ratio in which a line divides a segment"><a tabindex="-1" href="#coordgeom-lines-ratio" title="Copy heading and permalink for Subsection 3.1.8: The ratio in which a line divides a segment" aria-label="Copy heading and permalink for Subsection 3.1.8: The ratio in which a line divides a segment">🔗</a></div>
+</section>
+<section class="subsection" id="coordgeom-lines-practice">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Practice with random questions</span>
+</h2>
+<div class="para" id="coordgeom-lines-practice-2">Each <code class="code-inline tex2jax_ignore">seed</code> gives a question. A line <span class="process-math">\(L_1\)</span> goes through <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> A second line <span class="process-math">\(L_2\)</span> is perpendicular to it at <span class="process-math">\(B\)</span> and crosses the <span class="process-math">\(x\)</span>-axis at <span class="process-math">\(C\text{.}\)</span> The task is to find the equation of <span class="process-math">\(L_1\text{,}\)</span> the point <span class="process-math">\(C\text{,}\)</span> and the area of triangle <span class="process-math">\(ABC\text{.}\)</span> The same seed always gives the same question. The first cell makes the questions and the second checks an answer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-practice-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-practice-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def random_question(seed):
+    set_random_seed(seed)
+    while True:
+        A = (ZZ(choice(range(-5, 5))), ZZ(choice(range(-4, 4))))
+        m = QQ(choice([1, -1, 2, -2, 3, -3, 1/2, -1/2, 1/3, -1/3, 3/2, -2/3, 1/4, -4]))
+        step = choice([1, 2]) * m.denominator()
+        B = (A[0] + step, A[1] + m*step)
+        C = (B[0] + m*B[1], 0)
+        if B[1] != 0 and abs(B[1]) <= 8 and C[0] in ZZ:
+            return A, B, C
+</script></div>
+<div id="coordgeom-lines-practice-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def check_answers(my_L1, my_C, my_area, question):
+    A, B, C = question
+    right = True
+    expr = my_L1.lhs() - my_L1.rhs()
+    at_A, at_B = expr.subs(x=A[0], y=A[1]), expr.subs(x=B[0], y=B[1])
+    if at_A != 0 or at_B != 0:
+        print(f"L1 must pass through A and B: at A it gives {at_A}, at B {at_B} (both should be 0).")
+        right = False
+    elif expr.polynomial(QQ).degree() != 1:
+        print("L1 passes through A and B, but it is not a straight line.")
+        right = False
+    if (QQ(my_C[0]), QQ(my_C[1])) != C:
+        print(f"C is not ({my_C[0]}, {my_C[1]}): C is on the x-axis, so put y = 0 in L2.")
+        right = False
+    if QQ(my_area) != area_check(A, B, C):
+        print(f"The area is not {my_area}: the right angle is at B, so it is half of AB × BC.")
+        right = False
+    if right:
+        print("Correct.")
+</script></div>
+<div class="para" id="coordgeom-lines-practice-5">Change the seed for a new question:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-practice-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-practice-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">seed = 1
+question = random_question(seed)
+A, B, C = question
+print(f"The line L1 passes through A({A[0]}, {A[1]}) and B({B[0]}, {B[1]}).")
+print("The line L2 is perpendicular to L1, passes through B, and crosses the x-axis at C.")
+print("(a) Find the equation of L1.")
+print("(b) Find the coordinates of C.")
+print("(c) Find the area of triangle ABC.")
+</script></div>
+<div class="para" id="coordgeom-lines-practice-7">Work it out on paper, then type your answers here and run the cell. The line can be in any form, written with <code class="code-inline tex2jax_ignore">==</code>, for example <code class="code-inline tex2jax_ignore">y == 2*x + 1</code>. Fractions such as <code class="code-inline tex2jax_ignore">7/2</code> are fine.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-practice-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-practice-8" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">my_L1 = y == x
+my_C = (0, 0)
+my_area = 0
+check_answers(my_L1, my_C, my_area, question)
+</script></div>
+<div class="para" id="coordgeom-lines-practice-9">The worked answer:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-lines-practice-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-lines-practice-10" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">m1 = gradient(A, B)
+L1, L2 = line_through(A, m1), line_through(B, -1/m1)
+print(f"gradient of L1 = {m1};  L1: {line_text(L1)}")
+print(f"L2 has gradient {-1/m1}: {line_text(L2)};  y = 0 gives C = ({C[0]}, {C[1]})")
+print(f"right angle at B: area = 1/2 × AB × BC = 1/2 × {surd_text(length(A, B)**2)} × "
+      f"{surd_text(length(B, C)**2)} = {area_check(A, B, C)}", flush=True)
+diagram({'A': A, 'B': B, 'C': C}, lines=[L1, L2],
+        left=min(A[0], C[0]) - 2, right=max(B[0], C[0]) + 3,
+        low=min(A[1], B[1], 0) - 2, high=max(A[1], B[1], 0) + 3)
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.9: Practice with random questions"><a tabindex="-1" href="#coordgeom-lines-practice" title="Copy heading and permalink for Subsection 3.1.9: Practice with random questions" aria-label="Copy heading and permalink for Subsection 3.1.9: Practice with random questions">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 3.1: Straight Lines"><a tabindex="-1" href="#coordgeom-lines" title="Copy heading and permalink for Section 3.1: Straight Lines" aria-label="Copy heading and permalink for Section 3.1: Straight Lines">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="coordgeom.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="coordgeom-circles.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

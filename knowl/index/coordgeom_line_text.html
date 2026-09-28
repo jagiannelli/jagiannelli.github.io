@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="definition definition-like"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Utility methods <code class="code-inline tex2jax_ignore">signed_term()</code>, <code class="code-inline tex2jax_ignore">line_text()</code> and <code class="code-inline tex2jax_ignore">surd_text()</code>.</span>
+</h2>
+<div class="para">Text versions for printing: one term of an equation with its sign, a line as <code class="code-inline tex2jax_ignore">x + 2y - 7 = 0</code>, and the square root of a whole number in its simplest surd form, so that <code class="code-inline tex2jax_ignore">surd_text(45)</code> gives <code class="code-inline tex2jax_ignore">3√5</code>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom_line_text-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="coordgeom_line_text-3-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def signed_term(coefficient, letter, first=False):
+    if coefficient == 0:
+        return ""
+    size = abs(coefficient)
+    if size == 1 and letter:
+        body = letter
+    elif size in ZZ or not letter:
+        body = f"{size}{letter}"
+    else:
+        body = f"({size}){letter}"
+    if first:
+        return body if coefficient > 0 else f"-{body}"
+    return f" + {body}" if coefficient > 0 else f" - {body}"
+
+def line_text(line):
+    a, b, c = general_form(line)
+    text = signed_term(a, "x", first=True) + signed_term(b, "y", first=(a == 0))
+    return text + signed_term(c, "") + " = 0"
+
+def surd_text(n):
+    outside, inside = 1, ZZ(n)
+    for k in range(2, 100):
+        while inside % (k*k) == 0:
+            outside, inside = outside*k, inside/(k*k)
+    if inside == 1:
+        return f"{outside}"
+    return f"√{inside}" if outside == 1 else f"{outside}√{inside}"
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.3: Utility methods signed_term(), line_text() and surd_text()"><a tabindex="-1" href="#coordgeom_line_text" title="Copy heading and permalink for Definition 3.1.3: Utility methods signed_term(), line_text() and surd_text()" aria-label="Copy heading and permalink for Definition 3.1.3: Utility methods signed_term(), line_text() and surd_text()">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="coordgeom-lines.html#coordgeom_line_text">In Context</a></span>
+</body>
+</html>
