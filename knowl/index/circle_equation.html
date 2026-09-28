@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="definition definition-like"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Utility methods <code class="code-inline tex2jax_ignore">circle_equation()</code> and <code class="code-inline tex2jax_ignore">centre_and_radius()</code>.</span>
+</h2>
+<div class="para">The first builds the equation of a circle from its centre and radius. The second goes the other way: it divides through so the <span class="process-math">\(x^2\)</span> term has coefficient 1, reads off <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(f\)</span> and <span class="process-math">\(c\)</span> from <span class="process-math">\(x^2 + y^2 + 2gx + 2fy + c = 0\text{,}\)</span> and returns the centre <span class="process-math">\((-g, -f)\)</span> and the radius <span class="process-math">\(\sqrt{g^2 + f^2 - c}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#circle_equation-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="circle_equation-4-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def circle_equation(centre, r):
+    return (x - centre[0])**2 + (y - centre[1])**2 == r**2
+
+def centre_and_radius(equation):
+    expr = (equation.lhs() - equation.rhs()).expand()
+    expr = expr / expr.coefficient(x, 2)
+    g, f = expr.coefficient(x, 1) / 2, expr.coefficient(y, 1) / 2
+    c = expr.subs(x=0, y=0)
+    return (-g, -f), sqrt(g**2 + f**2 - c)
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.1: Utility methods circle_equation() and centre_and_radius()"><a tabindex="-1" href="#circle_equation" title="Copy heading and permalink for Definition 3.1.1: Utility methods circle_equation() and centre_and_radius()" aria-label="Copy heading and permalink for Definition 3.1.1: Utility methods circle_equation() and centre_and_radius()">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="coordgeom-circles.html#circle_equation">In Context</a></span>
+</body>
+</html>

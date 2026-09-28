@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="definition definition-like"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Utility method <code class="code-inline tex2jax_ignore">diagram()</code>.</span>
+</h2>
+<div class="para">A picture drawn to scale: circles given as (centre, radius), lines given as equations, dashed segments between points, and named points labelled with their coordinates. <code class="code-inline tex2jax_ignore">set_aspect_ratio(1)</code> is what keeps circles round and right angles looking like right angles.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom_diagram-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="coordgeom_diagram-3-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def diagram(points, circles=[], lines=[], segments=[],
+            left=-6, right=6, low=-6, high=6):
+    picture = Graphics()
+    colours = ['blue', 'red', 'green', 'purple']
+    for centre, r in circles:
+        picture += circle(centre, r, color='black')
+    for i, equation in enumerate(lines):
+        expr = (equation.lhs() - equation.rhs()).expand()
+        if expr.coefficient(y) == 0:
+            spot = solve(equation, x)[0].rhs()
+            picture += line([(spot, low), (spot, high)], color=colours[i % 4])
+        else:
+            picture += plot(solve(equation, y)[0].rhs(), (x, left, right),
+                            color=colours[i % 4])
+    for P, Q in segments:
+        picture += line([P, Q], color='grey', linestyle='--')
+    for name, (p, q) in points.items():
+        picture += point((p, q), size=40, color='black', zorder=5)
+        picture += text(f" {name}({p}, {q})", (p, q),
+                        horizontal_alignment='left',
+                        vertical_alignment='bottom', color='black')
+    picture.set_axes_range(xmin=left, xmax=right, ymin=low, ymax=high)
+    picture.set_aspect_ratio(1)
+    return picture
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.5: Utility method diagram()"><a tabindex="-1" href="#coordgeom_diagram" title="Copy heading and permalink for Definition 3.1.5: Utility method diagram()" aria-label="Copy heading and permalink for Definition 3.1.5: Utility method diagram()">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="coordgeom-circles.html#coordgeom_diagram">In Context</a></span>
+</body>
+</html>

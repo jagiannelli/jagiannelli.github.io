@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JAG Circles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/css/theme-default-modern.min.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from 'https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:image" content="https://jagiannelli.github.io/external/images/jg.jpeg">
+<meta property="og:image" content="https://jagiannelli.github.io/external/images/jg.jpeg">
+<meta name="twitter:image:alt" content="Document Logo">
+<meta property="og:image:alt" content="Document Logo">
+<meta name="twitter:title" content="John Giannelli">
+<meta property="og:title" content="John Giannelli">
+<meta property="book:title" content="John Giannelli">
+<meta name="twitter:description" content="Musings on Sage Math">
+<meta property="og:description" content="Musings on Sage Math">
+<meta name="twitter:card" content="summary_large_image">
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-runtime.6ad113829064d43a.bundle.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-runestone.02090e9f6a81e70e.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://github.com/jagiannelli"><img src="external/images/jg.jpeg" alt="Logo image"></a><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="jagbook.html"><span class="title">John Giannelli</span> <span class="subtitle">Musings on Sage Math</span></a></div>
+<p class="byline">John A Giannelli</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="book-index.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="coordgeom.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="coordgeom.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="integers.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+\newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+\newcommand{\fd}[1]{#1'}
+\newcommand{\sd}[1]{#1''}
+\newcommand{\td}[1]{#1'''}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand \dd[1]  { \,\textrm d{#1}                       }   
+\newcommand \de[2]  { \frac{\mathrm d{#1}}{\mathrm d{#2}}   }   
+\newcommand \intl[4]{ \int\limits_{#1}^{#2}{#3}\dd{#4}      }   
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="about-the-author.html" class="internal"><span class="title">About John A Giannelli</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="dedication.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgements.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Quick Guide to Using SageMath</span></a></div>
+<ul id="ptx-toc-group-sets" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-introduction.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What Is SageMath?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-online.html" class="internal"><span class="codenumber">1.2</span> <span class="title">SageMath Online</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-install.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Installing SageMath Locally</span></a></div>
+<ul id="ptx-toc-group-sage-install" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-install.html#sage-install-conda" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Installing with conda-forge</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-install.html#sage-command-line" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Running Sage from the command line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-install.html#sage-jupyter" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Running Sage in a Jupyter notebook</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="basics.html" class="internal"><span class="codenumber">2</span> <span class="title">Basic Sage Commands</span></a></div>
+<ul id="ptx-toc-group-basics" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="basics-introduction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">What’s in This Chapter</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-executing-commands.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Executing Sage Commands</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-defining-functions.html" class="internal"><span class="codenumber">2.3</span> <span class="title">How to define functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-symbolic-manipulation.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Symbolic Manipulation</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-variables-plotting.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Declaring Variables and Plotting</span></a></div>
+<ul id="ptx-toc-group-sage-variables-plotting" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-variables-plotting.html#sage-variables-plotting-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Use SageMath to solve differential equations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-and-python.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Sage and Python</span></a></div>
+<ul id="ptx-toc-group-sage-and-python" class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Lists, Tuples, and Dictionaries</span></a></div>
+<ul id="ptx-toc-group-sage-and-python-4" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4-3" class="internal"><span class="codenumber">2.6.1.1</span> <span class="title">Lists</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4-4" class="internal"><span class="codenumber">2.6.1.2</span> <span class="title">Tuples</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4-5" class="internal"><span class="codenumber">2.6.1.3</span> <span class="title">Dictionaries (Associative Arrays)</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="coordgeom.html" class="internal"><span class="codenumber">3</span> <span class="title">Coordinate Geometry</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-coordgeom"><li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="coordgeom-circles.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Circles</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-coordgeom-circles">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-tools" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Some helper functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-line" class="internal"><span class="codenumber">3.1.2</span> <span class="title">A line and a circle meet twice, once or never</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-centre" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Centre and radius</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-properties" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Three circle properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-touching" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Two circles touching</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-three" class="internal"><span class="codenumber">3.1.6</span> <span class="title">A circle through three points</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-outside" class="internal"><span class="codenumber">3.1.7</span> <span class="title">Tangents from a point outside the circle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-practice" class="internal"><span class="codenumber">3.1.8</span> <span class="title">Practice with random questions</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="integers.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus</span></a></div>
+<ul id="ptx-toc-group-integers" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-introduction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Calculus in SageMath</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-limits.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Calculating Limits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="calculus-derivatives.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Derivatives</span></a></div>
+<ul id="ptx-toc-group-calculus-derivatives" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Examples From Chapter 2</span></a></div>
+<ul id="ptx-toc-group-calculus-derivatives-3" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-2" class="internal"><span class="codenumber">4.3.1.1</span> <span class="title">Section 2.1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-3" class="internal"><span class="codenumber">4.3.1.2</span> <span class="title">Section 2.2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-4" class="internal"><span class="codenumber">4.3.1.3</span> <span class="title">Section 2.3</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-5" class="internal"><span class="codenumber">4.3.1.4</span> <span class="title">Section 2.4</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-4" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Section 2.6 Implicit Differentiation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-integration.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Integration</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cap-2017-hw2.html" class="internal"><span class="codenumber">4.5</span> <span class="title">CAP 2017, HW 2 due January 31</span></a></div>
+<ul id="ptx-toc-group-cap-2017-hw2" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw2.html#cap-2017-hw2-6" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cap-2017-hw3.html" class="internal"><span class="codenumber">4.6</span> <span class="title">CAP 2017, HW 3 due February 7</span></a></div>
+<ul id="ptx-toc-group-cap-2017-hw3" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-rumour" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Rumour Spread and the Logistic Function</span></a></div>
+<ul id="ptx-toc-group-hw3-rumour" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-rumour-6" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-decay" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Radioactive Decay: Bismuth-210</span></a></div>
+<ul id="ptx-toc-group-hw3-decay" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-decay-3" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-taylor" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Second Derivatives and Taylor Series</span></a></div>
+<ul id="ptx-toc-group-hw3-taylor" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-taylor-4" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-mvt" class="internal"><span class="codenumber">4.6.4</span> <span class="title">The Mean Value Theorem</span></a></div>
+<ul id="ptx-toc-group-hw3-mvt" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-mvt-3" class="internal"><span class="codenumber">4.6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="cap-2017-hw3.html#cap-2017-hw3-7" class="internal"><span class="codenumber">4.6.5</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="calculus-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="differential.html" class="internal"><span class="codenumber">5</span> <span class="title">Differential Equations</span></a></div>
+<ul id="ptx-toc-group-differential" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="first-order-de.html" class="internal"><span class="codenumber">5.1</span> <span class="title">First Order Differential Equations</span></a></div>
+<ul id="ptx-toc-group-first-order-de" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="first-order-de.html#first-order-de-2" class="internal"><span class="codenumber">5.1.1</span> <span class="title">First Example</span></a></div>
+<ul id="ptx-toc-group-first-order-de-2" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-3" class="internal"><span class="codenumber">5.1.1.1</span> <span class="title">The General Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-4" class="internal"><span class="codenumber">5.1.1.2</span> <span class="title">Initial Conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-5" class="internal"><span class="codenumber">5.1.1.3</span> <span class="title">Plotting the Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-6" class="internal"><span class="codenumber">5.1.1.4</span> <span class="title">Numerical Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-7" class="internal"><span class="codenumber">5.1.1.5</span> <span class="title">Plotting the Vector Field</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-3" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Second Example</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="second-order-de.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Second Order Differential Equations</span></a></div>
+<ul id="ptx-toc-group-second-order-de" class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="second-order-de.html#second-order-de-2" class="internal"><span class="codenumber">5.2.1</span> <span class="title">First Example</span></a></div>
+<ul id="ptx-toc-group-second-order-de-2" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-3" class="internal"><span class="codenumber">5.2.1.1</span> <span class="title">The General Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-4" class="internal"><span class="codenumber">5.2.1.2</span> <span class="title">Initial Conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-5" class="internal"><span class="codenumber">5.2.1.3</span> <span class="title">Symbolic Differential Equations</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="system-of-de.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Systems Of Equations</span></a></div>
+<ul id="ptx-toc-group-system-of-de" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="system-of-de.html#system-of-de-2" class="internal"><span class="codenumber">5.3.1</span> <span class="title">First Example</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-de.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="differential-references.html" class="internal"><span class="codenumber">5.5</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="linear-algebra-exam.html" class="internal"><span class="codenumber">6</span> <span class="title">Linear Algebra</span></a></div>
+<ul id="ptx-toc-group-linear-algebra-exam" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-introduction.html" class="internal"><span class="codenumber">6.1</span> <span class="title">About This Exam</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a1.html" class="internal"><span class="codenumber">6.2</span> <span class="title">A1</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a2.html" class="internal"><span class="codenumber">6.3</span> <span class="title">A2</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a3.html" class="internal"><span class="codenumber">6.4</span> <span class="title">A3</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions.html" class="internal"><span class="codenumber">B.</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="book-index.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="coordgeom-circles">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Circles</span>
+</h1>
+<section class="introduction" id="coordgeom-circles-2">
+<div class="para logical" id="coordgeom-circles-2-1">
+<div class="para">The circle with centre <span class="process-math">\((a, b)\)</span> and radius <span class="process-math">\(r\)</span> is every point <span class="process-math">\((x, y)\)</span> at distance <span class="process-math">\(r\)</span> from the centre. By Pythagoras:</div>
+<div class="displaymath process-math" id="coordgeom-circles-2-1-5">
+\begin{equation*}
+(x - a)^2 + (y - b)^2 = r^2.
+\end{equation*}
+</div>
+<div class="para">Almost every question about a circle and a line comes down to two things: completing the square to find the centre and radius, and solving a quadratic. Sage does both, and draws the picture, which is often the fastest way to see what is going on.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="coordgeom-circles-2-2">The cells on this page share their variables, so run them in order from the top. The helper functions in the first subsection are used all the way down.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="coordgeom-circles-tools">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Some helper functions</span>
+</h2>
+<div class="para" id="coordgeom-circles-tools-2">We work with <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> throughout, so declare them first.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-tools-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-tools-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x, y = var('x y')
+</script></div>
+<article class="definition definition-like" id="circle_equation"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Utility methods <code class="code-inline tex2jax_ignore">circle_equation()</code> and <code class="code-inline tex2jax_ignore">centre_and_radius()</code>.</span>
+</h3>
+<div class="para" id="circle_equation-4-1">The first builds the equation of a circle from its centre and radius. The second goes the other way: it divides through so the <span class="process-math">\(x^2\)</span> term has coefficient 1, reads off <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(f\)</span> and <span class="process-math">\(c\)</span> from <span class="process-math">\(x^2 + y^2 + 2gx + 2fy + c = 0\text{,}\)</span> and returns the centre <span class="process-math">\((-g, -f)\)</span> and the radius <span class="process-math">\(\sqrt{g^2 + f^2 - c}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#circle_equation-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="circle_equation-4-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def circle_equation(centre, r):
+    return (x - centre[0])**2 + (y - centre[1])**2 == r**2
+
+def centre_and_radius(equation):
+    expr = (equation.lhs() - equation.rhs()).expand()
+    expr = expr / expr.coefficient(x, 2)
+    g, f = expr.coefficient(x, 1) / 2, expr.coefficient(y, 1) / 2
+    c = expr.subs(x=0, y=0)
+    return (-g, -f), sqrt(g**2 + f**2 - c)
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.1: Utility methods circle_equation() and centre_and_radius()"><a tabindex="-1" href="#circle_equation" title="Copy heading and permalink for Definition 3.1.1: Utility methods circle_equation() and centre_and_radius()" aria-label="Copy heading and permalink for Definition 3.1.1: Utility methods circle_equation() and centre_and_radius()">🔗</a></div>
+</article>
+<article class="definition definition-like" id="meet_circle"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Utility method <code class="code-inline tex2jax_ignore">meet_circle()</code>.</span>
+</h3>
+<div class="para" id="meet_circle-3-1">The real points where a circle and a line meet: solve the two equations together and throw away any complex solutions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#meet_circle-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="meet_circle-3-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def meet_circle(circle_eq, line_eq):
+    points = []
+    for s in solve([circle_eq, line_eq], x, y):
+        p, q = s[0].rhs(), s[1].rhs()
+        if p.imag() == 0 and q.imag() == 0:
+            points.append((p, q))
+    return points
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.2: Utility method meet_circle()"><a tabindex="-1" href="#meet_circle" title="Copy heading and permalink for Definition 3.1.2: Utility method meet_circle()" aria-label="Copy heading and permalink for Definition 3.1.2: Utility method meet_circle()">🔗</a></div>
+</article>
+<article class="definition definition-like" id="coordgeom_lines"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Utility methods for points and lines.</span>
+</h3>
+<div class="para" id="coordgeom_lines-4-1">The gradient, length and midpoint of <span class="process-math">\(PQ\text{;}\)</span> the line through <span class="process-math">\(P\)</span> with gradient <span class="process-math">\(m\text{,}\)</span> and the same line rearranged as <span class="process-math">\(y = mx + c\text{.}\)</span> Last, the tangent at a point <span class="process-math">\(P\)</span> on a circle: it is perpendicular to the radius at <span class="process-math">\(P\text{,}\)</span> so its gradient is <span class="process-math">\(-1\)</span> divided by the radius’s gradient. When the radius is horizontal the tangent is vertical, and that case is handled on its own.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom_lines-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="coordgeom_lines-4-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def gradient(P, Q):
+    return (Q[1] - P[1]) / (Q[0] - P[0])
+
+def length(P, Q):
+    return sqrt((Q[0] - P[0])**2 + (Q[1] - P[1])**2)
+
+def midpoint(P, Q):
+    return ((P[0] + Q[0])/2, (P[1] + Q[1])/2)
+
+def line_through(P, m):
+    return y - P[1] == m*(x - P[0])
+
+def y_form(line):
+    return solve(line, y)[0]
+
+def tangent_at(centre, P):
+    if P[1] == centre[1]:
+        return x == P[0]
+    return line_through(P, -(P[0] - centre[0]) / (P[1] - centre[1]))
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.3: Utility methods for points and lines"><a tabindex="-1" href="#coordgeom_lines" title="Copy heading and permalink for Definition 3.1.3: Utility methods for points and lines" aria-label="Copy heading and permalink for Definition 3.1.3: Utility methods for points and lines">🔗</a></div>
+</article>
+<article class="definition definition-like" id="circle_text"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Utility methods <code class="code-inline tex2jax_ignore">signed_term()</code> and <code class="code-inline tex2jax_ignore">circle_text()</code>.</span>
+</h3>
+<div class="para" id="circle_text-3-1">Sage prints <code class="code-inline tex2jax_ignore">(x - 3)^2 + (y + 2)^2 == 25</code>, which is fine for checking but not how we would write it. These two build the text of a circle’s equation in both of its usual forms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#circle_text-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="circle_text-3-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def signed_term(coefficient, letter, first=False):
+    if coefficient == 0:
+        return ""
+    size = abs(coefficient)
+    if size == 1 and letter:
+        body = letter
+    elif size in ZZ or not letter:
+        body = f"{size}{letter}"
+    else:
+        body = f"({size}){letter}"
+    if first:
+        return body if coefficient > 0 else f"-{body}"
+    return f" + {body}" if coefficient > 0 else f" - {body}"
+
+def circle_text(centre, r2):
+    a, b = centre
+    bracket_x = "x²" if a == 0 else f"(x{signed_term(-a, '')})²"
+    bracket_y = "y²" if b == 0 else f"(y{signed_term(-b, '')})²"
+    expanded = ("x² + y²" + signed_term(-2*a, "x") + signed_term(-2*b, "y")
+                + signed_term(a**2 + b**2 - r2, ""))
+    return f"{bracket_x} + {bracket_y} = {r2}", expanded + " = 0"
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.4: Utility methods signed_term() and circle_text()"><a tabindex="-1" href="#circle_text" title="Copy heading and permalink for Definition 3.1.4: Utility methods signed_term() and circle_text()" aria-label="Copy heading and permalink for Definition 3.1.4: Utility methods signed_term() and circle_text()">🔗</a></div>
+</article>
+<article class="definition definition-like" id="coordgeom_diagram"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Utility method <code class="code-inline tex2jax_ignore">diagram()</code>.</span>
+</h3>
+<div class="para" id="coordgeom_diagram-3-1">A picture drawn to scale: circles given as (centre, radius), lines given as equations, dashed segments between points, and named points labelled with their coordinates. <code class="code-inline tex2jax_ignore">set_aspect_ratio(1)</code> is what keeps circles round and right angles looking like right angles.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom_diagram-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div id="coordgeom_diagram-3-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def diagram(points, circles=[], lines=[], segments=[],
+            left=-6, right=6, low=-6, high=6):
+    picture = Graphics()
+    colours = ['blue', 'red', 'green', 'purple']
+    for centre, r in circles:
+        picture += circle(centre, r, color='black')
+    for i, equation in enumerate(lines):
+        expr = (equation.lhs() - equation.rhs()).expand()
+        if expr.coefficient(y) == 0:
+            spot = solve(equation, x)[0].rhs()
+            picture += line([(spot, low), (spot, high)], color=colours[i % 4])
+        else:
+            picture += plot(solve(equation, y)[0].rhs(), (x, left, right),
+                            color=colours[i % 4])
+    for P, Q in segments:
+        picture += line([P, Q], color='grey', linestyle='--')
+    for name, (p, q) in points.items():
+        picture += point((p, q), size=40, color='black', zorder=5)
+        picture += text(f" {name}({p}, {q})", (p, q),
+                        horizontal_alignment='left',
+                        vertical_alignment='bottom', color='black')
+    picture.set_axes_range(xmin=left, xmax=right, ymin=low, ymax=high)
+    picture.set_aspect_ratio(1)
+    return picture
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.1.5: Utility method diagram()"><a tabindex="-1" href="#coordgeom_diagram" title="Copy heading and permalink for Definition 3.1.5: Utility method diagram()" aria-label="Copy heading and permalink for Definition 3.1.5: Utility method diagram()">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.1: Some helper functions"><a tabindex="-1" href="#coordgeom-circles-tools" title="Copy heading and permalink for Subsection 3.1.1: Some helper functions" aria-label="Copy heading and permalink for Subsection 3.1.1: Some helper functions">🔗</a></div>
+</section>
+<section class="subsection" id="coordgeom-circles-line">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A line and a circle meet twice, once or never</span>
+</h2>
+<div class="para" id="coordgeom-circles-line-2">To find where the line <span class="process-math">\(y = mx + c\)</span> meets a circle, put <span class="process-math">\(mx + c\)</span> in for <span class="process-math">\(y\text{.}\)</span> That leaves a quadratic in <span class="process-math">\(x\text{,}\)</span> and its discriminant says how many answers there are:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-line-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="coordgeom-circles-line-3">
+<ul class="disc" id="coordgeom-circles-line-3-1">
+<li id="coordgeom-circles-line-3-1-1">
+<div class="para" id="coordgeom-circles-line-3-1-1-1">positive: two points (the line cuts the circle, and the part between the points is a <dfn class="terminology">chord</dfn>);<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-line-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#coordgeom-circles-line-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="coordgeom-circles-line-3-1-2">
+<div class="para" id="coordgeom-circles-line-3-1-2-1">zero: one point (the line is a <dfn class="terminology">tangent</dfn>);<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-line-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#coordgeom-circles-line-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="coordgeom-circles-line-3-1-3">
+<div class="para" id="coordgeom-circles-line-3-1-3-1">negative: none (the line misses).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-line-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#coordgeom-circles-line-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-line-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="coordgeom-circles-line-4">Move the line. The circle is <span class="process-math">\(x^2 + y^2 - 6x + 4y = 12\)</span> (centre <span class="process-math">\((3, -2)\text{,}\)</span> radius <span class="process-math">\(5\)</span>), and the sliders start on the line <span class="process-math">\(y = x - 6\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-line-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-line-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">@interact
+def line_and_circle(m=slider(-3, 3, 1/2, default=1, label='gradient m'),
+                    c=slider(-14, 6, 1/2, default=-6, label='intercept c')):
+    ring = x**2 + y**2 - 6*x + 4*y == 12
+    m, c = QQ(m), QQ(c)
+    quadratic = ((ring.lhs() - ring.rhs()).subs(y=m*x + c)).expand()
+    qa, qb, qc = quadratic.coefficient(x, 2), quadratic.coefficient(x, 1), quadratic.subs(x=0)
+    if m == 0:
+        line_label = signed_term(c, "", first=True) or "0"
+    else:
+        line_label = signed_term(m, "x", first=True) + signed_term(c, "")
+    print(f"Put y = {line_label} into the circle:")
+    print(f"{signed_term(qa, 'x²', first=True)}{signed_term(qb, 'x')}{signed_term(qc, '')} = 0")
+    discriminant = qb**2 - 4*qa*qc
+    print(f"discriminant = ({qb})² - 4 × {qa} × ({qc}) = {discriminant}")
+    where = meet_circle(ring, y == m*x + c)
+    if discriminant > 0:
+        print("positive: the line cuts the circle twice, at")
+        print("  " + " and ".join(f"({float(p):.3g}, {float(q):.3g})" for p, q in where))
+    elif discriminant == 0:
+        print(f"zero: the line is a tangent, touching at ({where[0][0]}, {where[0][1]})")
+    else:
+        print("negative: the line misses the circle")
+    show(diagram({'A': (3, -2)}, circles=[((3, -2), 5)], lines=[y == m*x + c],
+                 left=-4, right=10, low=-9, high=5))
+</script></div>
+<div class="para" id="coordgeom-circles-line-6">Things to try. Set <span class="process-math">\(m = 0\)</span> with <span class="process-math">\(c = 3\)</span> or <span class="process-math">\(c = -7\text{:}\)</span> the horizontal tangents at the top and bottom of the circle, where the discriminant is exactly zero. With <span class="process-math">\(m = 1\)</span> the two tangents are at <span class="process-math">\(c = -5 \pm 5\sqrt2\text{,}\)</span> which are not on the slider’s grid: move <span class="process-math">\(c\)</span> from <span class="process-math">\(2\)</span> to <span class="process-math">\(2.5\text{,}\)</span> or from <span class="process-math">\(-12\)</span> to <span class="process-math">\(-12.5\text{,}\)</span> and watch the discriminant change sign.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-line-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.2: A line and a circle meet twice, once or never"><a tabindex="-1" href="#coordgeom-circles-line" title="Copy heading and permalink for Subsection 3.1.2: A line and a circle meet twice, once or never" aria-label="Copy heading and permalink for Subsection 3.1.2: A line and a circle meet twice, once or never">🔗</a></div>
+</section>
+<section class="subsection" id="coordgeom-circles-centre">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Centre and radius</span>
+</h2>
+<div class="para logical" id="coordgeom-circles-centre-2">
+<div class="para">A circle’s equation is usually given multiplied out, as in <span class="process-math">\(x^2 + y^2 - 6x + 4y = 12\text{.}\)</span> Complete the square in <span class="process-math">\(x\)</span> and in <span class="process-math">\(y\)</span> separately:</div>
+<div class="displaymath process-math" id="coordgeom-circles-centre-2-4">
+\begin{equation*}
+x^2 - 6x = (x - 3)^2 - 9, \qquad y^2 + 4y = (y + 2)^2 - 4,
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\((x - 3)^2 - 9 + (y + 2)^2 - 4 = 12\text{,}\)</span> that is <span class="process-math">\((x - 3)^2 + (y + 2)^2 = 25\text{:}\)</span> centre <span class="process-math">\((3, -2)\text{,}\)</span> radius <span class="process-math">\(5\text{.}\)</span> Note that the signs flip: <span class="process-math">\(-6x\)</span> gives an <span class="process-math">\(x\)</span>-coordinate of <span class="process-math">\(+3\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-centre-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="coordgeom-circles-centre-3">Sage’s version, and a check that expanding the completed square gives the same equation back (Sage leaves <span class="process-math">\(13 = 25\)</span> where we moved it across to make <span class="process-math">\(12\)</span>):<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-centre-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-centre-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">ring = x**2 + y**2 - 6*x + 4*y == 12
+centre_and_radius(ring), circle_equation((3, -2), 5).expand()
+</script></div>
+<div class="para" id="coordgeom-circles-centre-5">Both forms as text:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-centre-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-centre-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">circle_text((3, -2), 25)
+</script></div>
+<div class="para" id="coordgeom-circles-centre-7">Two traps. If the <span class="process-math">\(x^2\)</span> and <span class="process-math">\(y^2\)</span> terms have a number in front, divide through by it first (<code class="code-inline tex2jax_ignore">centre_and_radius</code> does). And if <span class="process-math">\(g^2 + f^2 - c\)</span> comes out zero or negative there is no circle at all: Sage shows that as an imaginary radius.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-centre-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-centre-8" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">centre_and_radius(3*x**2 + 3*y**2 + 12*y == 15), centre_and_radius(x**2 + y**2 - 4*x == -8)
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.3: Centre and radius"><a tabindex="-1" href="#coordgeom-circles-centre" title="Copy heading and permalink for Subsection 3.1.3: Centre and radius" aria-label="Copy heading and permalink for Subsection 3.1.3: Centre and radius">🔗</a></div>
+</section>
+<section class="subsection" id="coordgeom-circles-properties">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Three circle properties</span>
+</h2>
+<div class="para" id="coordgeom-circles-properties-2">Each of these turns a circle question into a straight-line question about gradients.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-properties-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="coordgeom-circles-properties-3">
+<em class="alert">The angle in a semicircle is a right angle.</em> If <span class="process-math">\(PQ\)</span> is a diameter and <span class="process-math">\(R\)</span> is any other point on the circle, then <span class="process-math">\(PR\)</span> and <span class="process-math">\(QR\)</span> are perpendicular: the product of their gradients is <span class="process-math">\(-1\text{.}\)</span> Here <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are the ends of the horizontal diameter of our circle.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-properties-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-properties-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P, Q, R = (-2, -2), (8, -2), (0, 2)
+[bool(ring.subs(x=p, y=q)) for p, q in (P, Q, R)], gradient(P, R) * gradient(Q, R)
+</script></div>
+<div class="para" id="coordgeom-circles-properties-5">
+<em class="alert">The perpendicular from the centre to a chord bisects the chord.</em> So the foot of that perpendicular is simply the midpoint of the chord. Here the chord is where <span class="process-math">\(y = x - 6\)</span> cuts the circle; the gradient from the centre to the midpoint <span class="process-math">\(M\text{,}\)</span> times the chord’s gradient <span class="process-math">\(1\text{,}\)</span> is <span class="process-math">\(-1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-properties-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-properties-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">ends = meet_circle(ring, y == x - 6)
+M = midpoint(ends[0], ends[1])
+ends, M, gradient((3, -2), M) * 1
+</script></div>
+<div class="para" id="coordgeom-circles-properties-7">
+<em class="alert">The tangent is perpendicular to the radius.</em> So the gradient of the tangent at <span class="process-math">\(P\)</span> is <span class="process-math">\(-1\)</span> divided by the gradient of the radius. The tangents at the two ends of the chord:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-properties-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-properties-8" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">[y_form(tangent_at((3, -2), P)) for P in ends]
+</script></div>
+<div class="para" id="coordgeom-circles-properties-9">A picture makes all three visible at once. The chord is blue, the two tangents red and green, and the radii to the ends of the chord are dashed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-properties-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-properties-10" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P, Q = ends
+diagram({'A': (3, -2), 'P': P, 'Q': Q, 'M': M}, circles=[((3, -2), 5)],
+        lines=[y == x - 6, tangent_at((3, -2), P), tangent_at((3, -2), Q)],
+        segments=[((3, -2), P), ((3, -2), Q), ((3, -2), M)],
+        left=-4, right=11, low=-9, high=5)
+</script></div>
+<div class="para" id="coordgeom-circles-properties-11">A radius that is vertical gives a horizontal tangent, with gradient <span class="process-math">\(0\text{,}\)</span> and the formula “minus one over the gradient” cannot be used. It is easy to miss without a sketch. The line <span class="process-math">\(y = 3\)</span> touches the top of our circle; substituting it leaves a perfect square, which is what a repeated root, and so a tangent, looks like.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-properties-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-properties-12" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">quadratic = ((ring.lhs() - ring.rhs()).subs(y=3)).expand()
+quadratic, quadratic.factor(), meet_circle(ring, y == 3)
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.4: Three circle properties"><a tabindex="-1" href="#coordgeom-circles-properties" title="Copy heading and permalink for Subsection 3.1.4: Three circle properties" aria-label="Copy heading and permalink for Subsection 3.1.4: Three circle properties">🔗</a></div>
+</section>
+<section class="subsection" id="coordgeom-circles-touching">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Two circles touching</span>
+</h2>
+<div class="para" id="coordgeom-circles-touching-2">Two circles touch when the distance between their centres is<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-touching-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="coordgeom-circles-touching-3">
+<ul class="disc" id="coordgeom-circles-touching-3-1">
+<li id="coordgeom-circles-touching-3-1-1">
+<div class="para" id="coordgeom-circles-touching-3-1-1-1">the <em class="emphasis">sum</em> of the radii: they touch <dfn class="terminology">externally</dfn>, side by side;<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-touching-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#coordgeom-circles-touching-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="coordgeom-circles-touching-3-1-2">
+<div class="para" id="coordgeom-circles-touching-3-1-2-1">the <em class="emphasis">difference</em> of the radii: they touch <dfn class="terminology">internally</dfn>, one inside the other.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-touching-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#coordgeom-circles-touching-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-touching-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="coordgeom-circles-touching-4">Our circle, centre <span class="process-math">\((3, -2)\)</span> and radius <span class="process-math">\(5\text{,}\)</span> against a circle with centre <span class="process-math">\((9, 6)\)</span> and radius <span class="process-math">\(5\text{:}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-touching-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-touching-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">d = length((3, -2), (9, 6))
+d, 5 + 5, 5 - 5
+</script></div>
+<div id="coordgeom-circles-touching-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">diagram({'A': (3, -2), 'B': (9, 6)}, circles=[((3, -2), 5), ((9, 6), 5)],
+        segments=[((3, -2), (9, 6))], left=-3, right=15, low=-8, high=12)
+</script></div>
+<div class="para" id="coordgeom-circles-touching-7">
+<span class="process-math">\(AB = 10 = 5 + 5\text{,}\)</span> so they touch externally, halfway along <span class="process-math">\(AB\)</span> at <span class="process-math">\((6, 2)\text{.}\)</span> A circle with the same centre <span class="process-math">\((9, 6)\)</span> and radius <span class="process-math">\(15\)</span> would touch ours internally, since <span class="process-math">\(15 - 5 = 10\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-touching-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.5: Two circles touching"><a tabindex="-1" href="#coordgeom-circles-touching" title="Copy heading and permalink for Subsection 3.1.5: Two circles touching" aria-label="Copy heading and permalink for Subsection 3.1.5: Two circles touching">🔗</a></div>
+</section>
+<section class="subsection" id="coordgeom-circles-three">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A circle through three points</span>
+</h2>
+<div class="para" id="coordgeom-circles-three-2">Take <span class="process-math">\(A(1, 1)\text{,}\)</span> <span class="process-math">\(B(5, 3)\)</span> and <span class="process-math">\(C(3, -3)\text{.}\)</span> Look for a right angle first: if there is one, the angle in a semicircle makes the side opposite it a diameter, and the centre is that side’s midpoint.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-three-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-three-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A, B, C = (1, 1), (5, 3), (3, -3)
+gradient(A, B) * gradient(A, C)
+</script></div>
+<div class="para" id="coordgeom-circles-three-4">The right angle is at <span class="process-math">\(A\text{,}\)</span> so <span class="process-math">\(BC\)</span> is the diameter:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-three-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-three-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">centre = midpoint(B, C)
+r = length(B, C) / 2
+centre, r, circle_text(centre, r**2)
+</script></div>
+<div id="coordgeom-circles-three-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">diagram({'A': A, 'B': B, 'C': C, 'M': centre}, circles=[(centre, r)],
+        segments=[(A, B), (A, C), (B, C)], left=-1, right=9, low=-4, high=5)
+</script></div>
+<div class="para" id="coordgeom-circles-three-7">Taking <span class="process-math">\(AB\)</span> or <span class="process-math">\(AC\)</span> as the diameter is the easy mistake; neither is opposite the right angle. Without a right angle, there is a method that always works: put all three points into <span class="process-math">\(x^2 + y^2 + ax + by + c = 0\)</span> and solve the three linear equations for <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> and <span class="process-math">\(c\text{.}\)</span> Sage does that directly.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-three-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-three-8" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">a, b, c = var('a b c')
+general = x**2 + y**2 + a*x + b*y + c
+solve([general.subs(x=p, y=q) == 0 for p, q in (A, B, C)], a, b, c)
+</script></div>
+<div class="para" id="coordgeom-circles-three-9">That is <span class="process-math">\(x^2 + y^2 - 8x + 6 = 0\text{,}\)</span> the same circle multiplied out.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-three-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.6: A circle through three points"><a tabindex="-1" href="#coordgeom-circles-three" title="Copy heading and permalink for Subsection 3.1.6: A circle through three points" aria-label="Copy heading and permalink for Subsection 3.1.6: A circle through three points">🔗</a></div>
+</section>
+<section class="subsection" id="coordgeom-circles-outside">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tangents from a point outside the circle</span>
+</h2>
+<div class="para" id="coordgeom-circles-outside-2">From a point outside a circle there are two tangents. Take the circle <span class="process-math">\(x^2 + y^2 - 10x + 20 = 0\)</span> (centre <span class="process-math">\((5, 0)\text{,}\)</span> radius <span class="process-math">\(\sqrt5\)</span>) and the tangents through the origin. Every line through the origin is <span class="process-math">\(y = mx\text{,}\)</span> with no constant term, and a tangent meets the circle exactly once, so the discriminant of the quadratic is zero. That gives an equation for <span class="process-math">\(m\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-outside-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-outside-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">m = var('m')
+quadratic = (x**2 + y**2 - 10*x + 20).subs(y=m*x).expand()
+qa, qb, qc = quadratic.coefficient(x, 2), quadratic.coefficient(x, 1), quadratic.subs(x=0)
+qa, qb, qc
+</script></div>
+<div id="coordgeom-circles-outside-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">discriminant = (qb**2 - 4*qa*qc).expand()
+discriminant, discriminant.factor(), solve(discriminant == 0, m)
+</script></div>
+<div class="para" id="coordgeom-circles-outside-5">For each gradient the quadratic is a perfect square, and its repeated root is the point of contact:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-outside-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-outside-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">outside = x**2 + y**2 - 10*x + 20 == 0
+([quadratic.subs(m=k).factor() for k in (1/2, -1/2)],
+ [meet_circle(outside, y == k*x) for k in (1/2, -1/2)])
+</script></div>
+<div id="coordgeom-circles-outside-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">diagram({'O': (0, 0), 'A': (5, 0), 'T': (4, 2), 'S': (4, -2)},
+        circles=[((5, 0), sqrt(5))], lines=[y == x/2, y == -x/2],
+        segments=[((5, 0), (4, 2)), ((5, 0), (4, -2)), ((5, 0), (0, 0))],
+        left=-1, right=9, low=-4, high=4)
+</script></div>
+<div class="para" id="coordgeom-circles-outside-8">The picture shows a second method. Each radius to a point of contact is perpendicular to its tangent, so <span class="process-math">\(OTA\)</span> is a right-angled triangle. <span class="process-math">\(OA = 5\)</span> and the radius is <span class="process-math">\(\sqrt5\text{,}\)</span> so by Pythagoras each tangent has length <span class="process-math">\(\sqrt{25 - 5} = 2\sqrt5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-outside-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.7: Tangents from a point outside the circle"><a tabindex="-1" href="#coordgeom-circles-outside" title="Copy heading and permalink for Subsection 3.1.7: Tangents from a point outside the circle" aria-label="Copy heading and permalink for Subsection 3.1.7: Tangents from a point outside the circle">🔗</a></div>
+</section>
+<section class="subsection" id="coordgeom-circles-practice">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Practice with random questions</span>
+</h2>
+<div class="para" id="coordgeom-circles-practice-2">Each <code class="code-inline tex2jax_ignore">seed</code> gives a question: a circle, a line cutting it at <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{,}\)</span> and the tangent at <span class="process-math">\(P\)</span> (the point further left). The same seed always gives the same question. The first cell makes the questions, the second writes the line as <span class="process-math">\(ax + by + c = 0\)</span> with whole numbers, and the third checks an answer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-practice-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-practice-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def random_question(seed):
+    set_random_seed(seed)
+    while True:
+        A = (ZZ(choice(range(-4, 5))), ZZ(choice(range(-3, 4))))
+        r2 = ZZ(choice([5, 10, 13, 17, 25]))
+        steps = [(u, v) for u in range(-5, 6) for v in range(-5, 6) if u**2 + v**2 == r2]
+        one, two = choice(steps), choice(steps)
+        P, Q = sorted([(A[0] + one[0], A[1] + one[1]), (A[0] + two[0], A[1] + two[1])])
+        if P[0] != Q[0] and P[1] != A[1]:
+            return A, r2, P, Q
+</script></div>
+<div id="coordgeom-circles-practice-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def chord_text(P, Q):
+    a, b, c = Q[1] - P[1], P[0] - Q[0], Q[0]*P[1] - P[0]*Q[1]
+    if a < 0 or (a == 0 and b < 0):
+        a, b, c = -a, -b, -c
+    common = gcd([a, b, c])
+    a, b, c = a/common, b/common, c/common
+    return (signed_term(a, "x", first=True) + signed_term(b, "y", first=(a == 0))
+            + signed_term(c, "") + " = 0")
+</script></div>
+<div id="coordgeom-circles-practice-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def check_answers(my_centre, my_radius, my_points, my_gradient, question):
+    A, r2, P, Q = question
+    right = True
+    if (QQ(my_centre[0]), QQ(my_centre[1])) != A:
+        print(f"The centre is not {my_centre}: (x - a)² goes with x-coordinate a, so check the signs.")
+        right = False
+    if not bool(SR(my_radius) > 0 and SR(my_radius)**2 == r2):
+        print(f"The radius is not {my_radius}: after completing the square the "
+              "right-hand side is r², so take its square root.")
+        right = False
+    if sorted([(QQ(p), QQ(q)) for p, q in my_points]) != [P, Q]:
+        print(f"The points are not {my_points}: substitute the line into the circle and solve.")
+        right = False
+    if QQ(my_gradient) != -(P[0] - A[0]) / (P[1] - A[1]):
+        print(f"The tangent at P does not have gradient {my_gradient}: it is "
+              "perpendicular to the radius AP, not to the chord.")
+        right = False
+    if right:
+        print("Correct.")
+</script></div>
+<div class="para" id="coordgeom-circles-practice-6">Change the seed for a new question:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-practice-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-practice-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">seed = 1
+question = random_question(seed)
+A, r2, P, Q = question
+print(f"A circle C has centre A and equation {circle_text(A, r2)[1]}.")
+print("(a) Find the coordinates of A and the radius of C.")
+print(f"(b) The line {chord_text(P, Q)} cuts C at P and Q, where P is the one on the left.")
+print("    Find P and Q, and the gradient of the tangent to C at P.")
+</script></div>
+<div class="para" id="coordgeom-circles-practice-8">Work it out on paper, then type your answers here and run the cell. Use <code class="code-inline tex2jax_ignore">sqrt(10)</code> for <span class="process-math">\(\sqrt{10}\text{;}\)</span> fractions such as <code class="code-inline tex2jax_ignore">7/5</code> are fine.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-practice-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-practice-9" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">my_centre = (0, 0)
+my_radius = 0
+my_points = [(0, 0), (0, 0)]
+my_gradient = 0
+check_answers(my_centre, my_radius, my_points, my_gradient, question)
+</script></div>
+<div class="para" id="coordgeom-circles-practice-10">The worked answer:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#coordgeom-circles-practice-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="coordgeom-circles-practice-11" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">radius_text = f"{sqrt(r2)}" if r2.is_square() else f"√{r2}"
+print(f"{circle_text(A, r2)[0]}: centre A{A}, radius {radius_text}")
+print(f"P = {P}, Q = {Q};  radius AP has gradient {gradient(A, P)}, so the tangent "
+      f"at P has gradient {-(P[0] - A[0]) / (P[1] - A[1])}")
+diagram({'A': A, 'P': P, 'Q': Q}, circles=[(A, sqrt(r2))],
+        lines=[line_through(P, gradient(P, Q)), tangent_at(A, P)],
+        segments=[(A, P)], left=A[0] - 7, right=A[0] + 7, low=A[1] - 6, high=A[1] + 6)
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.8: Practice with random questions"><a tabindex="-1" href="#coordgeom-circles-practice" title="Copy heading and permalink for Subsection 3.1.8: Practice with random questions" aria-label="Copy heading and permalink for Subsection 3.1.8: Practice with random questions">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 3.1: Circles"><a tabindex="-1" href="#coordgeom-circles" title="Copy heading and permalink for Section 3.1: Circles" aria-label="Copy heading and permalink for Section 3.1: Circles">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="coordgeom.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="integers.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
