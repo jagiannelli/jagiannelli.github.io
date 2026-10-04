@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JAG Basic Sage Commands</title>
+<title>JAG Growth, Decay and Doubling</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -131,7 +131,7 @@ sagecell.makeSagecell({
 <legend>Assistive technologies</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sage-install.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="jagbook.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="basics-introduction.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="exponential.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="exponential.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="exponential-logs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\reals}{\mathbb{R}}
 \newcommand{\real}[1]{\mathbb{R}^{#1}}
@@ -189,9 +189,9 @@ sagecell.makeSagecell({
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="basics.html" class="internal"><span class="codenumber">2</span> <span class="title">Basic Sage Commands</span></a></div>
-<ul class="structural toc-item-list active" id="ptx-toc-group-basics">
+<ul id="ptx-toc-group-basics" class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="basics-introduction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">What’s in This Chapter</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-executing-commands.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Executing Sage Commands</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-defining-functions.html" class="internal"><span class="codenumber">2.3</span> <span class="title">How to define functions</span></a></div></li>
@@ -259,12 +259,12 @@ sagecell.makeSagecell({
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="exponential.html" class="internal"><span class="codenumber">5</span> <span class="title">Exponential Models</span></a></div>
-<ul id="ptx-toc-group-exponential" class="structural toc-item-list">
-<li class="toc-item toc-section">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-exponential">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="exponential-growth.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Growth, Decay and Doubling</span></a></div>
-<ul id="ptx-toc-group-exponential-growth" class="structural toc-item-list">
+<ul class="structural toc-item-list active" id="ptx-toc-group-exponential-growth">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-growth.html#exponential-model" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Why the model is exponential</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-growth.html#exponential-slider" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Growth and decay: a slider</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-growth.html#exponential-readings" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Finding A and k from two readings</span></a></div></li>
@@ -393,20 +393,255 @@ sagecell.makeSagecell({
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="basics">
-<h1 class="heading">
-<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Basic Sage Commands</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="exponential-growth">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Growth, Decay and Doubling</span>
 </h1>
-<nav class="summary-links"><ul>
-<li><a href="basics-introduction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">What’s in This Chapter</span></a></li>
-<li><a href="sage-executing-commands.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Executing Sage Commands</span></a></li>
-<li><a href="sage-defining-functions.html" class="internal"><span class="codenumber">2.3</span> <span class="title">How to define functions</span></a></li>
-<li><a href="sage-symbolic-manipulation.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Symbolic Manipulation</span></a></li>
-<li><a href="sage-variables-plotting.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Declaring Variables and Plotting</span></a></li>
-<li><a href="sage-and-python.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Sage and Python</span></a></li>
-</ul></nav><div class="autopermalink" aria-hidden="true" data-description="Chapter 2: Basic Sage Commands"><a tabindex="-1" href="#basics" title="Copy heading and permalink for Chapter 2: Basic Sage Commands" aria-label="Copy heading and permalink for Chapter 2: Basic Sage Commands">🔗</a></div></section></div>
+<section class="introduction" id="exponential-growth-2">
+<div class="para logical" id="exponential-growth-2-1">
+<div class="para">Some quantities change at a rate proportional to their own size. A radioactive sample decays faster when there is more of it, and a savings account earns interest on its own interest. If <span class="process-math">\(y\)</span> is such a quantity at time <span class="process-math">\(t\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="exponential-growth-2-1-3">
+\begin{equation*}
+\frac{dy}{dt} = ky
+\end{equation*}
+</div>
+<div class="para">for a constant <span class="process-math">\(k\text{,}\)</span> and the solution is <span class="process-math">\(y = Ae^{kt}\text{.}\)</span> At <span class="process-math">\(t = 0\)</span> this is <span class="process-math">\(Ae^0 = A\text{,}\)</span> so <span class="process-math">\(A\)</span> is the starting value. If <span class="process-math">\(k &gt; 0\)</span> the quantity grows, and if <span class="process-math">\(k &lt; 0\)</span> it decays.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-growth-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exponential-growth-2-2">Every such curve has a fixed <dfn class="terminology">doubling time</dfn> (growth) or <dfn class="terminology">half-life</dfn> (decay), however large or small the quantity has become: <span class="process-math">\(e^{kT} = 2\)</span> gives <span class="process-math">\(T = \dfrac{\ln 2}{k}\text{.}\)</span> This page shows where the model comes from, how to find <span class="process-math">\(A\)</span> and <span class="process-math">\(k\)</span> from two readings, how a percentage rate turns into a power, and how to solve for a time. The cells share their variables, so run them in order from the top.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-growth-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="exponential-model">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Why the model is exponential</span>
+</h2>
+<div class="para" id="exponential-model-2">Declare the letters first. The <code class="code-inline tex2jax_ignore">%display latex</code> line makes Sage typeset every answer from here on. Cells that mix words with formulas typeset them too, with <code class="code-inline tex2jax_ignore">show(LatexExpr(...))</code>. Sage writes the natural logarithm <span class="process-math">\(\ln\)</span> as <span class="process-math">\(\log\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-model-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-model-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display latex
+import math
+t, k, A = var('t k A')
+</script></div>
+<div class="para" id="exponential-model-4">The equation <span class="process-math">\(dy/dt = ky\)</span> is a first-order differential equation, and the <a href="first-order-de.html" class="internal" title="Section 7.1: First Order Differential Equations">First Order Differential Equations</a> section shows how <code class="code-inline tex2jax_ignore">desolve()</code> works. Here it only needs to confirm that the answer is exponential. The arbitrary constant <code class="code-inline tex2jax_ignore">_C</code> in the general solution is the starting value, which the second call fixes by saying that <span class="process-math">\(y = A\)</span> when <span class="process-math">\(t = 0\text{:}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-model-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-model-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">y = function('y')(t)
+ode = diff(y, t) == k*y
+general = desolve(ode, y, ivar=t)
+growth = desolve(ode, y, ivar=t, ics=[0, A])
+show(LatexExpr(rf"\text{{general solution: }} y = {latex(general)}"))
+show(LatexExpr(rf"\text{{with }} y = A \text{{ when }} t = 0\text{{: }} y = {latex(growth)}"))
+</script></div>
+<div class="para" id="exponential-model-6">Now check the claim about doubling. Start the clock at any moment <span class="process-math">\(s\)</span> and wait <span class="process-math">\(\ln 2 / k\text{.}\)</span> The ratio of the new value to the old one should be <span class="process-math">\(2\text{,}\)</span> whatever <span class="process-math">\(s\)</span> is:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-model-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-model-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">s = var('s')
+ratio = growth.subs(t=s + log(2)/k) / growth.subs(t=s)
+show(LatexExpr(rf"\frac{{y\left(s + \frac{{\ln 2}}{{k}}\right)}}{{y(s)}} = {latex(ratio.simplify_full())}"))
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 5.1.1: Why the model is exponential"><a tabindex="-1" href="#exponential-model" title="Copy heading and permalink for Subsection 5.1.1: Why the model is exponential" aria-label="Copy heading and permalink for Subsection 5.1.1: Why the model is exponential">🔗</a></div>
+</section>
+<section class="subsection" id="exponential-slider">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Growth and decay: a slider</span>
+</h2>
+<div class="para" id="exponential-slider-2">Move the sliders and watch <span class="process-math">\(y = Ae^{kt}\)</span> for <span class="process-math">\(t\)</span> from 0 to 10. Click on a slider handle, then use the left and right arrow keys to move one step at a time. The red points mark each doubling time, or each halving time when <span class="process-math">\(k\)</span> is negative. They are equally spaced along the <span class="process-math">\(t\)</span> axis, and each is twice (or half) the one before. The cell uses plain decimal numbers rather than exact ones, which keeps a slider quick.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-slider-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-slider-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">@interact
+def growth_live(A=slider(10, 100, 10, default=40, label='start A'),
+                k=slider([float(j/20) for j in range(-20, 21)], default=0.25, label='rate k')):
+    A, k = float(A), float(k)
+    if k == 0:
+        show(LatexExpr(rf"k = 0\text{{: }} y = {A:g} \text{{ for all }} t\text{{, which is not an exponential model.}}"))
+        marks = []
+    else:
+        step = math.log(2) / abs(k)
+        kind = "doubles" if k > 0 else "halves"
+        show(LatexExpr(rf"y = {A:g}e^{{{k:g}t}}\text{{, so }} y = {A:g} \text{{ at }} t = 0"))
+        show(LatexExpr(rf"\text{{It {kind} every }} \frac{{\ln 2}}{{{abs(k):g}}} = {step:.3g} \text{{ time units.}}"))
+        marks = [(j*step, A*math.exp(k*j*step)) for j in range(12) if j*step <= 10]
+    picture = plot(lambda s: A*math.exp(k*s), (0, 10), color='blue', axes_labels=['$t$', '$y$'])
+    if marks:
+        picture += points(marks, color='red', size=30)
+    show(picture, xmin=0, xmax=10, ymin=0, ymax=1000, figsize=[6, 4])
+</script></div>
+<div class="para" id="exponential-slider-4">Things to try. A bigger <span class="process-math">\(|k|\)</span> packs the red points closer together: <span class="process-math">\(k = 0.7\)</span> doubles about once per time unit, because <span class="process-math">\(\ln 2 \approx 0.693\text{.}\)</span> Make <span class="process-math">\(k\)</span> negative for decay, where the curve flattens towards the axis but never touches it. At <span class="process-math">\(k = 0\)</span> the quantity never changes, so the model has nothing to say.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-slider-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 5.1.2: Growth and decay: a slider"><a tabindex="-1" href="#exponential-slider" title="Copy heading and permalink for Subsection 5.1.2: Growth and decay: a slider" aria-label="Copy heading and permalink for Subsection 5.1.2: Growth and decay: a slider">🔗</a></div>
+</section>
+<section class="subsection" id="exponential-readings">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding A and k from two readings</span>
+</h2>
+<div class="para logical" id="exponential-readings-2">
+<div class="para">A sample of an isotope weighs <span class="process-math">\(750\)</span> mg at the start and <span class="process-math">\(450\)</span> mg after 6 days. The first reading is at <span class="process-math">\(t = 0\text{,}\)</span> so <span class="process-math">\(A = 750\text{.}\)</span> The second gives an equation for <span class="process-math">\(k\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exponential-readings-2-6">
+\begin{equation*}
+750e^{6k} = 450.
+\end{equation*}
+</div>
+<div class="para">Sage’s <code class="code-inline tex2jax_ignore">solve</code> is no help here. It takes a sixth root and offers all six of them, most of them complex numbers:</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-readings-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-readings-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">reading = 750*e**(6*k) == 450
+solve(reading, k)
+</script></div>
+<div class="para" id="exponential-readings-4">Take the logarithm yourself instead. Divide by <span class="process-math">\(750\)</span> to get <span class="process-math">\(e^{6k} = \frac35\text{,}\)</span> then take <span class="process-math">\(\ln\)</span> of both sides, which gives <span class="process-math">\(6k = \ln\frac35\text{.}\)</span> That is a linear equation, and Sage is happy with it. The half-life is <span class="process-math">\(\ln 2 / (-k)\text{:}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-readings-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-readings-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">k_sample = solve(6*k == log(3/5), k)[0].rhs()
+half_life = log(2) / -k_sample
+show(LatexExpr(rf"k = {latex(k_sample)} \approx {k_sample.n(digits=6)}"))
+show(LatexExpr(rf"\text{{half-life}} = {latex(half_life)} \approx {half_life.n(digits=6)} \text{{ days}}"))
+</script></div>
+<div class="para" id="exponential-readings-6">The mass at 10 days is <span class="process-math">\(750e^{10k}\text{.}\)</span> There is also a shortcut that never finds <span class="process-math">\(k\)</span> at all. Since <span class="process-math">\(e^{6k} = \frac35\text{,}\)</span> we have <span class="process-math">\(e^{10k} = \left(e^{6k}\right)^{10/6} = \left(\frac35\right)^{5/3}\text{.}\)</span> The two routes must agree:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-readings-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-readings-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">with_k = 750 * e**(10*k_sample)
+without_k = 750 * (3/5)**(10/6)
+show(LatexExpr(rf"\text{{with }} k\text{{: }} 750e^{{10k}} = {with_k.n(digits=6)} \text{{ mg}}"))
+show(LatexExpr(rf"\text{{without }} k\text{{: }} 750\left(\tfrac35\right)^{{5/3}} = {without_k.n(digits=6)} \text{{ mg}}"))
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 5.1.3: Finding A and k from two readings"><a tabindex="-1" href="#exponential-readings" title="Copy heading and permalink for Subsection 5.1.3: Finding A and k from two readings" aria-label="Copy heading and permalink for Subsection 5.1.3: Finding A and k from two readings">🔗</a></div>
+</section>
+<section class="subsection" id="exponential-percent">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A percentage per step is the same thing</span>
+</h2>
+<div class="para" id="exponential-percent-2">A savings account pays <span class="process-math">\(5\%\)</span> a year on a deposit of <span class="process-math">\(2500\text{.}\)</span> Each year multiplies the balance by <span class="process-math">\(1.05\text{,}\)</span> so after <span class="process-math">\(t\)</span> years it is <span class="process-math">\(2500 \times 1.05^t\text{.}\)</span> Nothing forces <span class="process-math">\(t\)</span> to be a whole number, so one line handles 7.5 years. That is an exponential too, with <span class="process-math">\(k = \ln 1.05\text{,}\)</span> because <span class="process-math">\(1.05 = e^{\ln 1.05}\text{.}\)</span> The two forms give the same answer:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-percent-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-percent-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">by_power = 2500 * 1.05**7.5
+by_exponential = float(2500 * e**(7.5 * log(1.05)))
+show(LatexExpr(rf"2500 \times 1.05^{{7.5}} = {float(by_power):.2f}"))
+show(LatexExpr(rf"2500\,e^{{7.5 \ln 1.05}} = {by_exponential:.2f}"))
+</script></div>
+<div class="para" id="exponential-percent-4">So <span class="process-math">\(5\%\)</span> a year is <span class="process-math">\(k = \ln 1.05 \approx 0.0488\text{,}\)</span> not <span class="process-math">\(0.05\text{.}\)</span> A rate of exactly <span class="process-math">\(k = 0.05\)</span> is <em class="emphasis">continuous compounding</em> at <span class="process-math">\(5\%\text{,}\)</span> which multiplies the balance by <span class="process-math">\(e^{0.05}\)</span> each year, a little more than <span class="process-math">\(1.05\text{.}\)</span> Interest paid <span class="process-math">\(n\)</span> times a year multiplies the balance by <span class="process-math">\(\left(1 + \frac{0.05}{n}\right)^n\)</span> each year. That creeps up towards the limit as <span class="process-math">\(n\)</span> grows, but never passes it:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-percent-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-percent-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">rate = 5/100
+rows = [rf"{periods} & {N((1 + rate/periods)**periods, digits=9)}" for periods in [1, 2, 4, 12, 365]]
+rows.append(rf"\text{{continuously}} & e^{{0.05}} = {N(e**rate, digits=9)}")
+show(LatexExpr(r"\begin{array}{rl} \text{payments a year, } n & \text{yearly factor } \left(1 + \frac{0.05}{n}\right)^n \\ \hline "
+               + r" \\ ".join(rows) + r" \end{array}"))
+</script></div>
+<div class="para" id="exponential-percent-6">Sage can take the limit symbolically. This is the definition of <span class="process-math">\(e^r\)</span> that continuous compounding rests on:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-percent-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-percent-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">periods, r = var('periods r')
+compound = (1 + r/periods)**periods
+show(LatexExpr(rf"\lim_{{n \to \infty}} \left(1 + \frac{{r}}{{n}}\right)^n = {latex(limit(compound, periods=oo))}"))
+</script></div>
+<div class="para" id="exponential-percent-8">The doubling time at <span class="process-math">\(5\%\)</span> a year is <span class="process-math">\(\ln 2 / \ln 1.05\text{:}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-percent-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-percent-9" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">years_to_double = N(log(2) / log(1.05), digits=6)
+show(LatexExpr(rf"\frac{{\ln 2}}{{\ln 1.05}} \approx {years_to_double} \text{{ years}}"))
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 5.1.4: A percentage per step is the same thing"><a tabindex="-1" href="#exponential-percent" title="Copy heading and permalink for Subsection 5.1.4: A percentage per step is the same thing" aria-label="Copy heading and permalink for Subsection 5.1.4: A percentage per step is the same thing">🔗</a></div>
+</section>
+<section class="subsection" id="exponential-time">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving for a time</span>
+</h2>
+<div class="para" id="exponential-time-2">When does the isotope sample fall to <span class="process-math">\(100\)</span> mg? Put the value in: <span class="process-math">\(750\left(\frac35\right)^{t/6} = 100\text{.}\)</span> Divide by <span class="process-math">\(750\)</span> to get <span class="process-math">\(\left(\frac35\right)^{t/6} = \frac{2}{15}\text{,}\)</span> then take <span class="process-math">\(\ln\)</span> of both sides. The power comes down in front, giving <span class="process-math">\(\frac{t}{6}\ln\frac35 = \ln\frac{2}{15}\text{.}\)</span> Again that is a linear equation for <span class="process-math">\(t\text{:}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-time-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-time-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">level_equation = t/6 * log(3/5) == log(2/15)
+t_level = solve(level_equation, t)[0].rhs()
+check = 750 * (3/5)**(t_level/6)
+show(LatexExpr(rf"t = {latex(t_level)} \approx {t_level.n(digits=6)} \text{{ days}}"))
+show(LatexExpr(rf"\text{{put it back in: }} 750\left(\tfrac35\right)^{{t/6}} = {check.n(digits=6)} \text{{ mg}}"))
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 5.1.5: Solving for a time"><a tabindex="-1" href="#exponential-time" title="Copy heading and permalink for Subsection 5.1.5: Solving for a time" aria-label="Copy heading and permalink for Subsection 5.1.5: Solving for a time">🔗</a></div>
+</section>
+<section class="subsection" id="exponential-practice">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Practice with random questions</span>
+</h2>
+<div class="para" id="exponential-practice-2">Each <code class="code-inline tex2jax_ignore">seed</code> gives one of two questions about <span class="process-math">\(y = Ae^{kt}\text{:}\)</span> given a starting value and a second reading, either find <span class="process-math">\(y\)</span> at a later time or find the time when <span class="process-math">\(y\)</span> reaches a level. The same seed always gives the same question. Answers are to 3 significant figures. The first cell makes the questions and the second checks an answer. Questions and answers are lists of lines, and <code class="code-inline tex2jax_ignore">show_lines</code> typesets them one under another.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-practice-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-practice-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def three_sf(v):
+    v = float(v)
+    places = 2 - math.floor(math.log10(abs(v)))
+    return f"{round(v, places):.{max(places, 0)}f}"
+
+def six_sf(v, brackets=False):
+    v = float(v)
+    text = f"{v:.6g}"
+    return f"({text})" if brackets and v < 0 else text
+
+def show_lines(lines):
+    show(LatexExpr(r"\begin{aligned} " + r" \\ ".join("&" + line for line in lines) + r" \end{aligned}"))
+
+def random_question(seed):
+    set_random_seed(seed)
+    start = ZZ(choice([60, 120, 180, 300, 360, 420, 480]))
+    ratio = QQ(choice([1/2, 2/3, 3/4, 4/5, 5/4, 3/2, 2]))
+    gap = ZZ(choice([2, 3, 4, 5, 6]))
+    later = start * ratio
+    k_value = float(log(ratio) / gap)
+    given = [r"\text{A quantity follows } y = Ae^{kt}.",
+             rf"\text{{At }} t = 0,\ y = {start}\text{{, and at }} t = {gap},\ y = {later}."]
+    working = [r"\text{the model: } y = Ae^{kt}",
+               rf"\text{{put }} t = 0,\ y = {start}\text{{: }} {start} = Ae^{{k \times 0}} = Ae^0 = A \times 1\text{{, so }} A = {start}",
+               rf"\text{{put }} t = {gap},\ y = {later}\text{{: }} {later} = {start}e^{{{gap}k}}",
+               rf"\text{{divide both sides by }} {start}\text{{: }} e^{{{gap}k}} = \frac{{{later}}}{{{start}}} = {latex(ratio)}",
+               rf"\text{{take }} \ln \text{{ of both sides: }} {gap}k = \ln {latex(ratio)}\text{{, so }} k = \frac{{1}}{{{gap}}}\ln {latex(ratio)} \approx {six_sf(k_value)}"]
+    if choice(['value', 'time']) == 'value':
+        far = gap + ZZ(choice([1, 2, 3, 4, 5, 7]))
+        answer = float(start * ratio**(QQ(far)/gap))
+        text = given + [rf"\text{{Find }} y \text{{ when }} t = {far}."]
+        base = latex(ratio) if ratio in ZZ else rf"\left({latex(ratio)}\right)"
+        working += [rf"\text{{put }} t = {far}\text{{: }} y = {start}e^{{{far}k}} \approx {start}e^{{{far} \times {six_sf(k_value, True)}}} = {start}e^{{{six_sf(far*k_value)}}}",
+                    rf"\text{{evaluate: }} y \approx {start} \times {six_sf(math.exp(far*k_value))} \approx {six_sf(answer)}",
+                    rf"\text{{check without }} k\text{{: }} y = {start}\left(e^{{{gap}k}}\right)^{{{far}/{gap}}} = {start} \times {base}^{{{far}/{gap}}} \approx {six_sf(answer)}",
+                    rf"\text{{to 3 s.f.: }} y = {three_sf(answer)}"]
+        slips = [(float(start * ratio**far),
+                  rf"\text{{The power counts steps of }} {gap} \text{{ time units: it is }} {far}/{gap}\text{{, not }} {far}.")]
+    else:
+        if ratio < 1:
+            fraction = QQ(choice([1/2, 1/3, 1/4, 1/5, 2/5]))
+        else:
+            fraction = QQ(choice([2, 3, 4, 5, 5/2]))
+        if fraction == ratio:
+            fraction = fraction * ratio
+        target = start * fraction
+        answer = float(gap * log(fraction) / log(ratio))
+        text = given + [rf"\text{{At what time does }} y \text{{ reach }} {target}?"]
+        working += [rf"\text{{put }} y = {target}\text{{: }} {target} = {start}e^{{kt}}",
+                    rf"\text{{divide both sides by }} {start}\text{{: }} e^{{kt}} = \frac{{{target}}}{{{start}}} = {latex(fraction)}",
+                    rf"\text{{take }} \ln \text{{ of both sides: }} kt = \ln {latex(fraction)}",
+                    rf"\text{{divide by }} k\text{{: }} t = \frac{{\ln {latex(fraction)}}}{{k}} = \frac{{\ln {latex(fraction)}}}{{\frac{{1}}{{{gap}}}\ln {latex(ratio)}}} = \frac{{{gap}\ln {latex(fraction)}}}{{\ln {latex(ratio)}}}",
+                    rf"\text{{evaluate: }} t \approx \frac{{{gap} \times {six_sf(log(fraction), True)}}}{{{six_sf(log(ratio))}}} \approx {six_sf(answer)}",
+                    rf"\text{{to 3 s.f.: }} t = {three_sf(answer)}"]
+        slips = [(float(log(fraction) / log(ratio)),
+                  rf"\text{{That counts steps of }} {gap} \text{{ time units. Multiply by }} {gap} \text{{ to get the time.}}")]
+    return {'text': text, 'answer': answer, 'slips': slips, 'working': working}
+</script></div>
+<div id="exponential-practice-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def check_answer(mine, question):
+    right = question['answer']
+    if abs(mine - right) <= 0.005 * abs(right):
+        show(LatexExpr(rf"\text{{Correct: }} {three_sf(right)}."))
+        return
+    for value, message in question['slips']:
+        if abs(mine - value) <= 0.005 * abs(value):
+            show_lines([r"\text{Not yet.}", message])
+            return
+    show(LatexExpr(r"\text{Not yet. Check each step, and round only at the end.}"))
+</script></div>
+<div class="para" id="exponential-practice-5">Change the seed for a new question:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-practice-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-practice-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">seed = 1
+question = random_question(seed)
+show_lines(question['text'])
+</script></div>
+<div class="para" id="exponential-practice-7">Work it out on paper, then type your answer here and run the cell.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-practice-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-practice-8" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">my_answer = 0
+check_answer(my_answer, question)
+</script></div>
+<div class="para" id="exponential-practice-9">The worked answer:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exponential-practice-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exponential-practice-10" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">show_lines(question['working'])
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 5.1.6: Practice with random questions"><a tabindex="-1" href="#exponential-practice" title="Copy heading and permalink for Subsection 5.1.6: Practice with random questions" aria-label="Copy heading and permalink for Subsection 5.1.6: Practice with random questions">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 5.1: Growth, Decay and Doubling"><a tabindex="-1" href="#exponential-growth" title="Copy heading and permalink for Section 5.1: Growth, Decay and Doubling" aria-label="Copy heading and permalink for Section 5.1: Growth, Decay and Doubling">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sage-install.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="basics-introduction.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="exponential.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="exponential-logs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

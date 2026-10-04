@@ -334,11 +334,47 @@ var ptx_lunr_docs = [
   "body": "externally internally "
 },
 {
+  "id": "exponential-growth",
+  "level": "1",
+  "url": "exponential-growth.html",
+  "type": "Section",
+  "number": "5.1",
+  "title": "Growth, Decay and Doubling",
+  "body": " Growth, Decay and Doubling   Some quantities change at a rate proportional to their own size. A radioactive sample decays faster when there is more of it, and a savings account earns interest on its own interest. If is such a quantity at time , then for a constant , and the solution is . At this is , so is the starting value. If the quantity grows, and if it decays.  Every such curve has a fixed doubling time (growth) or half-life (decay), however large or small the quantity has become: gives . This page shows where the model comes from, how to find and from two readings, how a percentage rate turns into a power, and how to solve for a time. The cells share their variables, so run them in order from the top.    Why the model is exponential  Declare the letters first. The %display latex line makes Sage typeset every answer from here on. Cells that mix words with formulas typeset them too, with show(LatexExpr(...)) . Sage writes the natural logarithm as .   The equation is a first-order differential equation, and the section shows how desolve() works. Here it only needs to confirm that the answer is exponential. The arbitrary constant _C in the general solution is the starting value, which the second call fixes by saying that when :   Now check the claim about doubling. Start the clock at any moment and wait . The ratio of the new value to the old one should be , whatever is:     Growth and decay: a slider  Move the sliders and watch for from 0 to 10. Click on a slider handle, then use the left and right arrow keys to move one step at a time. The red points mark each doubling time, or each halving time when is negative. They are equally spaced along the axis, and each is twice (or half) the one before. The cell uses plain decimal numbers rather than exact ones, which keeps a slider quick.   Things to try. A bigger packs the red points closer together: doubles about once per time unit, because . Make negative for decay, where the curve flattens towards the axis but never touches it. At the quantity never changes, so the model has nothing to say.    Finding A and k from two readings  A sample of an isotope weighs mg at the start and mg after 6 days. The first reading is at , so . The second gives an equation for : Sage's solve is no help here. It takes a sixth root and offers all six of them, most of them complex numbers:   Take the logarithm yourself instead. Divide by to get , then take of both sides, which gives . That is a linear equation, and Sage is happy with it. The half-life is :   The mass at 10 days is . There is also a shortcut that never finds at all. Since , we have . The two routes must agree:     A percentage per step is the same thing  A savings account pays a year on a deposit of . Each year multiplies the balance by , so after years it is . Nothing forces to be a whole number, so one line handles 7.5 years. That is an exponential too, with , because . The two forms give the same answer:   So a year is , not . A rate of exactly is continuous compounding at , which multiplies the balance by each year, a little more than . Interest paid times a year multiplies the balance by each year. That creeps up towards the limit as grows, but never passes it:   Sage can take the limit symbolically. This is the definition of that continuous compounding rests on:   The doubling time at a year is :     Solving for a time  When does the isotope sample fall to mg? Put the value in: . Divide by to get , then take of both sides. The power comes down in front, giving . Again that is a linear equation for :     Practice with random questions  Each seed gives one of two questions about : given a starting value and a second reading, either find at a later time or find the time when reaches a level. The same seed always gives the same question. Answers are to 3 significant figures. The first cell makes the questions and the second checks an answer. Questions and answers are lists of lines, and show_lines typesets them one under another.    Change the seed for a new question:   Work it out on paper, then type your answer here and run the cell.   The worked answer:    "
+},
+{
+  "id": "exponential-growth-2-2",
+  "level": "2",
+  "url": "exponential-growth.html#exponential-growth-2-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "doubling time half-life "
+},
+{
+  "id": "exponential-logs",
+  "level": "1",
+  "url": "exponential-logs.html",
+  "type": "Section",
+  "number": "5.2",
+  "title": "Log Graphs and Fitting Data",
+  "body": " Log Graphs and Fitting Data   A curve is hard to read a formula from, but a straight line is easy. Taking logarithms turns two common kinds of relationship into straight lines. A power law  becomes which is with and : a straight line of gradient and intercept . An exponential  becomes a straight line when is plotted against itself, with gradient and intercept .  Any base of logarithm works, as long as the same one is used all the way through. Sage's log is the natural logarithm, and log(v, 10) gives base 10, which this page uses for the numbers. The cells share their variables, so run them in order from the top.    Taking logs with Sage  Declare the letters as positive, since a logarithm needs a positive input. Then expand_log() applies the laws of logarithms for us:   Both are straight lines in the right variables. To see it with numbers, take and look at the gradient between successive points of the graph of against . For do the same against . The gradients should all be the same number:     The curve and its log graph: two sliders  In each picture the blue curve is on the left and its log graph is on the right in red. Click on a slider handle, then use the arrow keys to move one step at a time. First the power law , plotted as against . It starts at . The line always has gradient , and only moves it up or down. Try : the curve is already a straight line, and its log graph has gradient 1.   Now the exponential , plotted as against . It starts at . Setting gives a flat line, since , and below 1 is decay, which gives a negative gradient.     Estimating a and n from data  Real measurements never lie exactly on a line, so the work goes the other way: plot the logs of the data, fit a line, and read the constants off it. The numbers below are invented , loosely imitating the pattern biologists find between an animal's body mass (kg) and the power it uses at rest (watts). They suggest .   It is a curve. Plot against . If the points lie close to a line, the power law fits, and the line gives (its gradient) and (its intercept). By hand you would draw the best line by eye and read two points off it. find_fit finds the best line for us:   The gradient is , and is ten to the power of the intercept, since the intercept is . The fitted law can then predict a mass that was not measured:   The same idea works for , but now plot against . Then is ten to the power of the gradient and is ten to the power of the intercept. Here are invented counts of yeast cells in one cubic millimetre of a culture, taken every hour:     Which graph is straight?  With data in hand you may not know whether to plot against or against . Try both and see which is straighter. The correlation coefficient measures it: it is or for a perfect line and nearer for a scatter. (The yeast count at hour 0 has no , so that point is left out of the second graph.)   The masses and rates are much straighter against , and the yeast counts against , which agrees with the models we chose. A high alone proves nothing, though. The yeast counts also score highly against , so look at the picture as well as the number.    Where an exponential model stops working  A model describes the range of the data it was fitted to, and no further. Growth cannot go on for ever. Run the fitted yeast model to 48 hours:   That is over a billion cells in one cubic millimetre, more than could physically fit. Food and space run out first, and a refinement would level the growth off.  Decay has a floor in real life. A cup of tea at degrees Celsius in a room at degrees does not cool towards . Newton's law of cooling says the rate of cooling is proportional to the difference from the room, so it is that difference which decays exponentially. Sage solves it, and the comes out as a floor:   Compare it with a plain exponential from , using per minute. The dashed curve heads for , which the tea cannot reach. The red curve levels off at :     Practice with random models  Each seed gives a power law or an exponential. Find the gradient and the intercept of its log graph, using logs to base 10, to 3 significant figures. The same seed always gives the same question.    Change the seed for a new question:   Work it out on paper, then type your gradient and intercept here and run the cell.   The worked answer:    "
+},
+{
+  "id": "exponential-logs-2-1",
+  "level": "2",
+  "url": "exponential-logs.html#exponential-logs-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "power law exponential "
+},
+{
   "id": "calculus-introduction",
   "level": "1",
   "url": "calculus-introduction.html",
   "type": "Section",
-  "number": "5.1",
+  "number": "6.1",
   "title": "Calculus in SageMath",
   "body": " Calculus in SageMath  SageMath has excellent functionality for Calculus. We will cover some of the basics here to give you some indication of what is possible.  "
 },
@@ -347,7 +383,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "calculus-limits.html",
   "type": "Section",
-  "number": "5.2",
+  "number": "6.2",
   "title": "Calculating Limits",
   "body": " Calculating Limits  The concept of the limit is often used to define the integral and the derivative of functions.  Here is an easy example to demonstrate Sage syntax for limits:   The following examples are taken from Essential Calculus - James Stewart .  See also the Sage Tutorial on Limits .  Example 2, page 26   Plotting this function will give us a better picture of what is happening:    Example 2, page 26  Graph of (x-1)\/(x^2-1) for x from -2 to 2, with a vertical asymptote and an open circle marking the missing point.   Sage Worked Examples Stewart : Section 1.3, Exercise 12, page 33 Stewart : Section 1.3, Exercise 12, page 33   Approaching from the right the values fall towards ; from the left they rise towards . The two one-sided limits differ, so the limit at does not exist. (Ask Sage for ex12.limit(x=-1) without a direction and it answers Infinity , meaning unsigned infinity, which hides this.)  From a plot or simplification of the equation you can visually see that there is an explosion at .   Note that we have used an exclude list (square brackets is a list) with one entry, namely . See what happens if you take this out. Also note that we have explicitly determined the upper and lower values. Again, experiment by taking these away or changing them.  Sage Worked Examples Stewart : Section 1.4, Exercise 14, page 44 Stewart : Section 1.4, Exercise 14, page 44    L'Hôpital's Rule  L'Hôpital's Rule   L'Hôpital's rule states that for functions and which are differentiable on an open interval except possibly at a point contained in , if   The differentiation of the numerator and denominator often simplifies the quotient or converts it to a limit that can be evaluated directly.    Example 2 above is a form at . Differentiating top and bottom gives which agrees with Sage.  "
 },
@@ -356,7 +392,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "calculus-limits.html#calculus-limits-11",
   "type": "Figure",
-  "number": "5.2.1",
+  "number": "6.2.1",
   "title": "",
   "body": " Example 2, page 26  Graph of (x-1)\/(x^2-1) for x from -2 to 2, with a vertical asymptote and an open circle marking the missing point.  "
 },
@@ -365,7 +401,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "calculus-limits.html#hospital",
   "type": "Principle",
-  "number": "5.2.2",
+  "number": "6.2.2",
   "title": "L’Hôpital’s Rule.",
   "body": " L'Hôpital's Rule  L'Hôpital's Rule   L'Hôpital's rule states that for functions and which are differentiable on an open interval except possibly at a point contained in , if   The differentiation of the numerator and denominator often simplifies the quotient or converts it to a limit that can be evaluated directly.   "
 },
@@ -374,7 +410,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "calculus-derivatives.html",
   "type": "Section",
-  "number": "5.3",
+  "number": "6.3",
   "title": "Derivatives",
   "body": " Derivatives   Here are some basic examples to give a quick overview (without explanation) of how SageMath can be helpful for calculating derivatives:   The following examples are taken from Essential Calculus - James Stewart, Chapter 2 .    Examples From Chapter 2   Section 2.1  Sage Worked Examples Stewart : Section 2.1, Exercise 25 - 30, Page 82 Section 2.1, Exercise 25 - 30, Page 82   Sage Worked Examples Stewart : Section 2.1, Exercise 34, Page 82 Section 2.1, Exercise 34, Page 82   Sage Worked Examples Stewart : Section 2.1, Exercise 49, Page 83 Section 2.1, Exercise 49, Page 83   Sage's ind means the expression stays bounded but has no limit. Taking , the difference quotient at is , which also has no limit, so is continuous at but not differentiable there.  Sage Worked Examples Stewart : Section 2.1, Exercise 50, Page 83 Section 2.1, Exercise 50, Page 83   Here the difference quotient is , which tends to . So exists even though has no limit as : is differentiable at , but its derivative is not continuous there.    Section 2.2  Sage Worked Examples Stewart : Section 2.2, Exercise 44, Page 94 Section 2.2, Exercise 44, Page 94     Section 2.3  Sage Worked Examples Stewart : Section 2.3, Exercises 29, Page 105 Section 2.3, Exercises 29, Page 105   Sage Worked Examples Stewart : Section 2.3, Exercises 30, Page 105 Section 2.3, Exercises 30, Page 105     Section 2.4  Sage Worked Examples Stewart : Section 2.4, Exercises 27, Page 112 Section 2.4, Exercises 27, Page 112   We have performed the same action - plot a graph and its tangent line - several times now. Time to encapsulate it in our own function! Run the next sage cell example to define the function plot_tangentline .  This is a Python function that takes three arguments:  f the function we want to plot.  pt the point on the function for which we want to draw the tangent line.  xrange the range of coordinates that we want the graph to span.    Running the next Sage cell will not produce any visible results but will just store this user defined function in memory for use in other cells. The next few examples make use of this user defined function to save a bit of typing.  Remember to run this before running any other Sage Cell that makes use of it.   Utility method plot_tangentline()  User Defined Functions plot_tangentline      Redo the previous example using our method:   Now wasn't that a lot easier! Now for the rest.  Sage Worked Examples Stewart : Section 2.4, Exercises 28 - 31, Page 112 Section 2.4, Exercises 28 - 31, Page 112   Sage Worked Examples Stewart : Section 2.4, Exercise 36, Page 113 Section 2.4, Exercise 36, Page 113, Nth Derivative of a function  The second argument to the diff method is the derivative order: 1 for 1st derivative, 2 for second derivative, etc.   Sage Worked Examples Stewart : Section 2.4, Exercise 52, Page 114 Section 2.4, Exercise 52, Page 114  This demonstrates the use of some predefined names: theta and mu . These will get formatted to and when you use show() . Find out about LaTex to see what the other possibilities are, for example, xi for and Xi for uppercase , and so on.      Section 2.6 Implicit Differentiation  Sage Worked Examples Stewart : Section 2.6, Example 2 Section 2.6, Example 2 - The Folium Of Descartes   To plot this function we use the SageMath implicit_plot method.   Let's explore this function a bit more with SageMath. Some of this may not make any sense just now but will become clearer as the course proceeds.   Now that we have familiarised ourselves with the shape of this curve, let's use Sage to find the equation of the tangent line at . Implicit differentiation is required here to compute so that we can find the gradient at this point.  Next find the points where the tangent is horizontal, by using solve() on our expression together with .  The solutions are printed using a for loop (learn some Python!) and an if statement that prints results only if and are real - in the 'ring' RR . There are two solutions, and the plot shows why. At the tangent is horizontal. At the curve crosses itself and is : one branch passes through horizontally, the other vertically. Take some time to understand the code used to do the plotting.   Utility method point_with_coords()  User Defined Functions point_with_coords       Utility method cross_hair()  User Defined Functions cross_hair       Sage Worked Examples Stewart : Section 2.6, Exercise 3, Page 127 Section 2.6, Exercise 3, Page 127   Summary  Differentiate the full equation with respect to . Use the chain rule for variable results in: Rearranging gives:  The remaining equations in this section will be solved without explanation.  The following examples make use of this predefined function. It is not very robust and assumes that the expr argument is a Sage expression in the variables and .  Make sure you run this before running the other examples. There will be no output but the function will be stored in memory available for use in other cells.   Utility method my_implicit_derivative()  User Defined Functions my_implicit_derivative      Sage Worked Examples Stewart : Section 2.6, Exercise 4, Page 127 Section 2.6, Exercise 4, Page 127   Sage Worked Examples Stewart : Section 2.6, Exercise 5, Page 127 Section 2.6, Exercise 5, Page 127   Sage Worked Examples Stewart : Section 2.6, Exercise 6, Page 127 Section 2.6, Exercise 6, Page 127   Sage Worked Examples Stewart : Section 2.6, Exercise 7-16, Page 127 Section 2.6, Exercise 7 - 16, Page 127   Sage Worked Examples Stewart : Section 2.6, Exercise 19, Page 127 Section 2.6, Exercise 19, Page 127   Sage Worked Examples Stewart : Section 2.6, Exercise 20, Page 127 Section 2.6, Exercise 20, Page 127   Sage Worked Examples Stewart : Section 2.6, Exercise 21, Page 127 Section 2.6, Exercise 21 - Cardioid, Page 127   Sage Worked Examples Stewart : Section 2.6, Exercise 23, Page 127 Section 2.6, Exercise 23 - Lemniscate, Page 127    "
 },
@@ -383,7 +419,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "calculus-derivatives.html#plot_tangentline",
   "type": "Definition",
-  "number": "5.3.1",
+  "number": "6.3.1",
   "title": "Utility method <code class=\"code-inline tex2jax_ignore\">plot_tangentline()<\/code>.",
   "body": " Utility method plot_tangentline()  User Defined Functions plot_tangentline     "
 },
@@ -392,7 +428,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "calculus-derivatives.html#point_with_coords",
   "type": "Definition",
-  "number": "5.3.2",
+  "number": "6.3.2",
   "title": "Utility method <code class=\"code-inline tex2jax_ignore\">point_with_coords()<\/code>.",
   "body": " Utility method point_with_coords()  User Defined Functions point_with_coords     "
 },
@@ -401,7 +437,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "calculus-derivatives.html#cross_hair",
   "type": "Definition",
-  "number": "5.3.3",
+  "number": "6.3.3",
   "title": "Utility method <code class=\"code-inline tex2jax_ignore\">cross_hair()<\/code>.",
   "body": " Utility method cross_hair()  User Defined Functions cross_hair     "
 },
@@ -410,7 +446,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "calculus-derivatives.html#my_implicit_derivative",
   "type": "Definition",
-  "number": "5.3.4",
+  "number": "6.3.4",
   "title": "Utility method <code class=\"code-inline tex2jax_ignore\">my_implicit_derivative()<\/code>.",
   "body": " Utility method my_implicit_derivative()  User Defined Functions my_implicit_derivative     "
 },
@@ -419,7 +455,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "calculus-integration.html",
   "type": "Section",
-  "number": "5.4",
+  "number": "6.4",
   "title": "Integration",
   "body": " Integration  Here are some examples of indefinite integrals to demonstrate the power of SageMath:   Now for some Definite Integrals. For example:   This can be confirmed in SageMath quite simply:   "
 },
@@ -428,7 +464,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "cap-2017-hw2.html",
   "type": "Section",
-  "number": "5.5",
+  "number": "6.5",
   "title": "CAP 2017, HW 2 due January 31",
   "body": " CAP 2017, HW 2 due January 31  Homework from the University of Edinburgh's first-year course Calculus and its Applications (MATH08058) , known as CAP, which my daughter took in spring 2017. The answers are my own worked solutions.   The Definition of a Derivative   The computation of the slope of a tangent line, the instantaneous rate of change of a function, at can be found from the following limit:   With a small adjustment in notation this limit can be rephrased.  The derivative of with respect to is the function and is defined as:      The Power Rule   If is a function such that , and is differentiable at , then      Linear Approximation   Given a twice continuously differentiable function of one real number variable, Taylor's theorem for the case states that: where is the remainder term. The linear approximation is obtained by dropping the remainder: . This is a good approximation for when it is close enough to ; since a curve, when closely observed, will begin to resemble a straight line. Therefore, the expression on the right-hand side is just the equation for the tangent line to the graph of at . For this reason, this process is also called the tangent line approximation .       From first principles find the derivative of    Both methods yield .    First Method:     Second Method:         Differentiate showing each step and stating which rules are used.                Use Linear Approximation to calculate .                Implicit Differentiation                 Implicit Differentiation           Implicit:   Explicit:   As you can see the results are the same for each method.  The problem that implicit differentiation solves is that it is often difficult or impossible to rearrange to have on the left by its own.     Implicit Differentiation of   Implicit Differentiation of   Exercise 2.1   Exercise 2.2   Exercise 2.3   Exercise 2.4   Exercise 2.5   Exercise 3.1   Exercise 3.2     "
 },
@@ -437,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw2.html#definition-derivative",
   "type": "Definition",
-  "number": "5.5.1",
+  "number": "6.5.1",
   "title": "The Definition of a Derivative.",
   "body": " The Definition of a Derivative   The computation of the slope of a tangent line, the instantaneous rate of change of a function, at can be found from the following limit:   With a small adjustment in notation this limit can be rephrased.  The derivative of with respect to is the function and is defined as:    "
 },
@@ -446,7 +482,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw2.html#definition-derivative-power",
   "type": "Definition",
-  "number": "5.5.2",
+  "number": "6.5.2",
   "title": "The Power Rule.",
   "body": " The Power Rule   If is a function such that , and is differentiable at , then    "
 },
@@ -455,7 +491,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw2.html#definition-linear-approx",
   "type": "Definition",
-  "number": "5.5.3",
+  "number": "6.5.3",
   "title": "Linear Approximation.",
   "body": " Linear Approximation   Given a twice continuously differentiable function of one real number variable, Taylor's theorem for the case states that: where is the remainder term. The linear approximation is obtained by dropping the remainder: . This is a good approximation for when it is close enough to ; since a curve, when closely observed, will begin to resemble a straight line. Therefore, the expression on the right-hand side is just the equation for the tangent line to the graph of at . For this reason, this process is also called the tangent line approximation .   "
 },
@@ -464,7 +500,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw2.html#cap-2017-hw2-6-1",
   "type": "Exercise",
-  "number": "5.5.1",
+  "number": "6.5.1",
   "title": "",
   "body": "  From first principles find the derivative of    Both methods yield .    First Method:     Second Method:      "
 },
@@ -473,7 +509,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw2.html#cap-2017-hw2-6-2",
   "type": "Exercise",
-  "number": "5.5.2",
+  "number": "6.5.2",
   "title": "",
   "body": "  Differentiate showing each step and stating which rules are used.             "
 },
@@ -482,7 +518,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw2.html#cap-2017-hw2-6-3",
   "type": "Exercise",
-  "number": "5.5.3",
+  "number": "6.5.3",
   "title": "",
   "body": "  Use Linear Approximation to calculate .             "
 },
@@ -491,7 +527,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw2.html#cap-2017-hw2-6-4",
   "type": "Exercise",
-  "number": "5.5.4",
+  "number": "6.5.4",
   "title": "",
   "body": "  Implicit Differentiation              "
 },
@@ -500,7 +536,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw2.html#cap-2017-hw2-6-5",
   "type": "Exercise",
-  "number": "5.5.5",
+  "number": "6.5.5",
   "title": "",
   "body": "  Implicit Differentiation           Implicit:   Explicit:   As you can see the results are the same for each method.  The problem that implicit differentiation solves is that it is often difficult or impossible to rearrange to have on the left by its own.   "
 },
@@ -509,7 +545,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "cap-2017-hw3.html",
   "type": "Section",
-  "number": "5.6",
+  "number": "6.6",
   "title": "CAP 2017, HW 3 due February 7",
   "body": " CAP 2017, HW 3 due February 7   Another homework from the University of Edinburgh's first-year course Calculus and its Applications (MATH08058) , known as CAP, which my daughter took in spring 2017. The answers are my own worked solutions.  Give complete explanations of what you are doing, written in full sentences. Solutions that have all the correct calculations and computations, but lack explanations, will not get full marks!    Rumour Spread and the Logistic Function  Under certain circumstances a rumour spreads according to the equation where is the proportion of the population that knows the rumor at time (in days) and and are positive constants.  Note that this is an example of the Logistic Function . When you get to differential equations this equation is quite important. Gilbert Strang gives a good presentation on this subject.  It is a very important equation and comes up often. See Logistic function (wiki)  The inverse function is an example of a Logit function (wiki) .     Find . What does this mean for the rumor?    After a long period of time everyone knows the rumour!           Find the rate of spread of the rumor.              Find the inverse function of and give an interpretation of the meaning.              Graph for the case and use your graph to estimate how long it will take for 80% of the population to hear the rumor. Can you also calculate this time?     days.  See Sage plot of below.    Use the inverse function with a value of    See Sage plot of inverse below.     Plot of .   From the sage plot we can see that the time to get to 80% is about days.  Plot of (the inverse of ).   From the sage calculation we can see that the time to get to 80% is days.      Radioactive Decay: Bismuth-210  Bismuth-210 has a half-life of 5.0 days.     A sample originally has a mass of . Find a formula for the mass remaining after days.    The mass (in ) after time (in days) is:     The rate of change of mass is proportional to the current mass: Lets call the constant of proportionality . The negative is because this is a decay.  The solution of this equation is: (where is the mass at .)  At the half-life and :      We are told that the half-life is days.   Substituting with the original mass gives us: where is the mass in and is the time in days.      Find the mass remaining after days.                When is the mass reduced to ?     days.           Sketch a graph of the mass function.    See Sage plot of mass function below.     Sketch of the mass function. (Note are easier for plots)       Second Derivatives and Taylor Series  If is continuous, show that:    The Definition of Taylor Series   Given a smooth function , we can always write down a Taylor series; there is no guarantee that the series converges to anything, let alone to the function. Given a smooth function , its Taylor series (around ) is A common mistake is to use instead of . Given a smooth function , its Taylor series expanded around is   The first few entries are        From first principles.    The first derivative is given by:   Applying this definition twice, with the same in each step, suggests the result (see Math Stack Q&A ), but it is not a proof: it replaces two separate limits with one. L'Hôpital's rule gives one.  As the numerator and the denominator both tend to , so differentiate each with respect to : Each quotient is a difference quotient for , so each tends to .      Using Taylor Series .    Expand about to second order, with the remainder in Lagrange form: where lies between and , and between and . Adding, the terms cancel: As both and tend to , and is continuous, so the right-hand side tends to .       The Mean Value Theorem  Suppose that for all values of , where is a function defined on all of the real numbers and differentiable everywhere. Show that      The Mean Value Theorem states that if is defined and continuous on the interval and differentiable on , then there is at least one number in the interval (that is ) such that            Brian M. Scott Second derivative formula derivation . Math StackExchange   Wiki Taylor Series.     "
 },
@@ -518,7 +554,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw3.html#hw3-rumour-6-1",
   "type": "Exercise",
-  "number": "5.6.1.a)",
+  "number": "6.6.1.a)",
   "title": "",
   "body": "  Find . What does this mean for the rumor?    After a long period of time everyone knows the rumour!        "
 },
@@ -527,7 +563,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw3.html#hw3-rumour-6-2",
   "type": "Exercise",
-  "number": "5.6.1.b)",
+  "number": "6.6.1.b)",
   "title": "",
   "body": "  Find the rate of spread of the rumor.           "
 },
@@ -536,7 +572,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw3.html#hw3-rumour-6-3",
   "type": "Exercise",
-  "number": "5.6.1.c)",
+  "number": "6.6.1.c)",
   "title": "",
   "body": "  Find the inverse function of and give an interpretation of the meaning.           "
 },
@@ -545,7 +581,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw3.html#hw3-rumour-6-4",
   "type": "Exercise",
-  "number": "5.6.1.d)",
+  "number": "6.6.1.d)",
   "title": "",
   "body": "  Graph for the case and use your graph to estimate how long it will take for 80% of the population to hear the rumor. Can you also calculate this time?     days.  See Sage plot of below.    Use the inverse function with a value of    See Sage plot of inverse below.   "
 },
@@ -554,7 +590,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw3.html#hw3-decay-3-1",
   "type": "Exercise",
-  "number": "5.6.2.a)",
+  "number": "6.6.2.a)",
   "title": "",
   "body": "  A sample originally has a mass of . Find a formula for the mass remaining after days.    The mass (in ) after time (in days) is:     The rate of change of mass is proportional to the current mass: Lets call the constant of proportionality . The negative is because this is a decay.  The solution of this equation is: (where is the mass at .)  At the half-life and :      We are told that the half-life is days.   Substituting with the original mass gives us: where is the mass in and is the time in days.   "
 },
@@ -563,7 +599,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw3.html#hw3-decay-3-2",
   "type": "Exercise",
-  "number": "5.6.2.b)",
+  "number": "6.6.2.b)",
   "title": "",
   "body": "  Find the mass remaining after days.             "
 },
@@ -572,7 +608,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw3.html#hw3-decay-3-3",
   "type": "Exercise",
-  "number": "5.6.2.c)",
+  "number": "6.6.2.c)",
   "title": "",
   "body": "  When is the mass reduced to ?     days.        "
 },
@@ -581,7 +617,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw3.html#hw3-decay-3-4",
   "type": "Exercise",
-  "number": "5.6.2.d)",
+  "number": "6.6.2.d)",
   "title": "",
   "body": "  Sketch a graph of the mass function.    See Sage plot of mass function below.   "
 },
@@ -590,7 +626,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw3.html#definition-taylor-series",
   "type": "Definition",
-  "number": "5.6.1",
+  "number": "6.6.1",
   "title": "The Definition of Taylor Series.",
   "body": " The Definition of Taylor Series   Given a smooth function , we can always write down a Taylor series; there is no guarantee that the series converges to anything, let alone to the function. Given a smooth function , its Taylor series (around ) is A common mistake is to use instead of . Given a smooth function , its Taylor series expanded around is   The first few entries are    "
 },
@@ -599,7 +635,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw3.html#hw3-taylor-4-1",
   "type": "Exercise",
-  "number": "5.6.3.a)",
+  "number": "6.6.3.a)",
   "title": "",
   "body": "  From first principles.    The first derivative is given by:   Applying this definition twice, with the same in each step, suggests the result (see Math Stack Q&A ), but it is not a proof: it replaces two separate limits with one. L'Hôpital's rule gives one.  As the numerator and the denominator both tend to , so differentiate each with respect to : Each quotient is a difference quotient for , so each tends to .   "
 },
@@ -608,7 +644,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw3.html#hw3-taylor-4-2",
   "type": "Exercise",
-  "number": "5.6.3.b)",
+  "number": "6.6.3.b)",
   "title": "",
   "body": "  Using Taylor Series .    Expand about to second order, with the remainder in Lagrange form: where lies between and , and between and . Adding, the terms cancel: As both and tend to , and is continuous, so the right-hand side tends to .   "
 },
@@ -617,7 +653,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "cap-2017-hw3.html#hw3-mvt-3-1",
   "type": "Exercise",
-  "number": "5.6.4.a)",
+  "number": "6.6.4.a)",
   "title": "",
   "body": "  The Mean Value Theorem states that if is defined and continuous on the interval and differentiable on , then there is at least one number in the interval (that is ) such that        "
 },
@@ -626,7 +662,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "calculus-references.html",
   "type": "References",
-  "number": "5.7",
+  "number": "6.7",
   "title": "References",
   "body": " References  Stewart, James Essential Calculus: Early Transcendentals . Second Edition, 2013. ISBN-13: 978-1133112280, ISBN-10: 1133112285 Amazon UK    Sage Calculus Tutorial - Limits    Sage Calculus Tutorial - Continuity    Sage Calculus Tutorial - One Sided Limits    Sage Calculus Tutorial - Limits At Infinity    Sage Calculus Tutorial - Slant Asymptotes   "
 },
@@ -635,7 +671,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "first-order-de.html",
   "type": "Section",
-  "number": "6.1",
+  "number": "7.1",
   "title": "First Order Differential Equations",
   "body": " First Order Differential Equations   First Example   For this first example, we'll look at a simple problem so that we can concentrate on the SageMath commands without having to deal with the mathematical details.        The General Solution  First define as a function of    Next define our DE. Notice the ' == ' rather than the ' = ' when setting the RHS to zero. We are defining a Sage variable ' ' to hold the differential equation. The first ' = ' is to set the variable equal to our DE.   The derivative(y,x) is a Sage method that is passed a function , in this case . Of course, this has been defined above as . The derivative() method also takes one or more additional arguments for the equation variable, in this case .  This is a good point to talk about the Sage help facility.  Try the following:   This is a typical Docstring output detailing the signature (the required arguments) and details on how to use the method.  Notice that an alias for this method is diff . In other words an alias for derivative(y,x) would be diff(y,x) .  Now for the general solution. For this we use the desolve() method - d ifferential e quation solve . Try help(desolve) to read the built-in documentation.   This is the general solution as can be seen by the constant.  Let us now do two things: store the solution into a variable, and display the solution in a prettier format:        Initial Conditions  The initial condition for this equation is . That is, at .  From the Docstring for desolve() you can see :  \"ics\" - (optional) the initial or boundary conditions  for a first-order equation, specify the initial \"x\" and \"y\"    So let us try it. Notice the [0,1] for the [x,y] initial conditions.      Here we have again stored the solution to a variable sol_initial_con and used show() to pretty-print the output.    Plotting the Solution  Have a look at the documentation for plot() with help(plot) .  From this you can see how to graph from and set the minimum y using :   Spend some time studying the other options.    Numerical Solution  In practice most differential equations cannot be solved analytically, and we have to resort to numerical methods. Sage has several, and this is a good moment to meet the Tab key, which is the quickest way to find them.  Tab completion does not work in the Sage cells on this page. It needs a notebook, such as the CoCalc notebook described in . In a notebook cell, type desol and press Tab . A drop-down list shows every name that completes what you have typed, including the family of desolve solvers.   Tab completion in a CoCalc notebook.  Notebook cell containing desol, with a drop-down of desolve functions; desolve_rk4 is highlighted.   Choose desolve_rk4 , the fourth-order Runge Kutta solver. To read its documentation, call help() on it, as in the cell below. It works here as well as in a notebook.    These two solutions can be plotted together. As can be expected the operator acting on two plots will display them together.     Plotting the Vector Field  Let us re-write our original equation as:   There is a nice function plot_slope_field() that can be used to plot this equation over a range of and .  Previously we defined as a function. Here we have to redefine it as a variable.   If you plot this together with exact plot from above you can see that slope plot gives us a view of all the whole equation and not just a particular solution for a single set of initial conditions.      Second Example  This second example takes the RC circuit of and drives it with a sine wave, a model for any system pushed by a periodic input. The differential equation is:   We give no initial value, because we are after the long-run response to the drive, whatever state the system started in. Here is the process for solving it:      This is correct, but it is not in the more recognizable form, because it mixes two parts. Without an initial value, desolve() returns the general solution, with an arbitrary constant ( _C in the raw Sage response). Note that this is not the capacitance .  Multiply out and the inside the bracket cancels the outside it, except on the term. So the solution is a transient  , which depends on the starting state and dies away, plus the steady-state response to the drive. To keep only the steady state, set to zero:       "
 },
@@ -644,7 +680,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "first-order-de.html#fig-cocalc-tab-completion",
   "type": "Figure",
-  "number": "6.1.1",
+  "number": "7.1.1",
   "title": "",
   "body": " Tab completion in a CoCalc notebook.  Notebook cell containing desol, with a drop-down of desolve functions; desolve_rk4 is highlighted.  "
 },
@@ -653,7 +689,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "second-order-de.html",
   "type": "Section",
-  "number": "6.2",
+  "number": "7.2",
   "title": "Second Order Differential Equations",
   "body": " Second Order Differential Equations   First Example   For this first example, we'll look at a harmonic oscillator problem with unit constants.   Initial conditions:      The General Solution  As before, we define and our DE. Notice the as the third argument to the diff() method. This tells the method to differentiate twice. We could have used diff(y,x,x) instead. Notice also we are using the alias diff for derivative .   Now obtain the general solution:   This is the general solution as can be seen by the constants.       Initial Conditions  From the Docstring for desolve we find that should be so let us try it.      Here we have again stored the solution to a variable sol_initial_con and used show() to pretty-print the output.  Try using some other initial conditions, for example,       As you can see these two particular solutions are instances of the general solution given above.    Symbolic Differential Equations  Let us now try and solve the same equation this time with a mass and spring constant .   Now we have to define additional variables for the two constants. It is also useful to add some constraints onto these variables. We do this using the assume() method:      Notice that we had to specify which of the variables is the independent variable using the ivar=x argument.    "
 },
@@ -662,7 +698,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "system-of-de.html",
   "type": "Section",
-  "number": "6.3",
+  "number": "7.3",
   "title": "Systems Of Equations",
   "body": " Systems Of Equations   First Example  Let us look at the following pair of coupled first order differential equations:    Initial conditions:    You should now be comfortable with defining the variables, the functions, and the initial conditions. The only difference is the use of the desolve_system() method. Its ics list is the starting time followed by the starting values, in the same order as the functions: here [0,1,2] means , , . So let us jump straight in:   Try this for fun:    A controlled explosion!   "
 },
@@ -671,7 +707,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "exercises-de.html",
   "type": "Exercises",
-  "number": "6.4",
+  "number": "7.4",
   "title": "Exercises",
   "body": " Exercises    Response to Exponential Input  Consider the following differential equation:    This is the standard growth equation with an exponential forcing term .  We look for a particular solution of the form:   where is a constant.  Substituting we get:   Rearranging gives:   Full solution is the particular solution plus null (or homogeneous ) solution:   From the initial conditions we get:   Substituting in gives:   Rearranging we can see the effect of the forcing in addition to the homogeneous term:   In Strang's terminology:   That is, the solution is a combination of the standard homogeneous term - the standard growth factor - plus an extra term coming from the forcing factor. Notice that this extra term has a singularity (division by zero) at . This is Resonance .  This singularity can be handled using L'Hopital's Rule   Gilbert Strang In Action  Professor Strang at Blackboard   The full solution, using L'Hopital, should match the final solution in Strang's Lecture .   Now try and solve this using SageMath.    Remind yourself how to obtain the homogeneous (null) solution:  t,a = var('t,a') y = function('y')(t) de1 = diff(y,t) == a*y sol1 = desolve(de1,y, ivar=t) show(sol1)  and is the general solution to .  Also have a look at the screenshot above!    Sage Commands:  t, s, a, y0 = var ('t, s, a, y0') y = function('y')(t) de = diff(y,t) == a*y + e^(s*t) sol=desolve(de,y, ivar=t, ics=[0,y0]) show(sol)  This results in:   This is not quite the same format as Strang but it is easy to see that it is equivalent.  As mentioned above this solution can be taken further by using L'Hopital's Rule. We can circumvent the catastrophe by differentiating the numerator and denominator.  Sage Commands:  numerator = e^(s*t) - e^(a*t) numerator.diff(s) denominator= s - a denominator.diff(s)  This results in  Hence the full solution using L'Hopital now matches Strang's final solution:       Response to Oscillating Input  Consider the following differential equation:    This is the standard growth equation with a sinusoidal input term .  We look for a particular solution of the form:   where and are constants.  Now try and solve this using SageMath.    Sage Commands:  t, omega, a, y0 = var ('t, omega, a, y0') y = function('y')(t) de = diff(y,t) == a*y + cos(omega*t) sol=desolve(de,y, ivar=t, ics=[0,y0]) show(sol)  This results in:     "
 },
@@ -680,7 +716,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-de.html#exercises-de-2",
   "type": "Exercise",
-  "number": "6.4.1",
+  "number": "7.4.1",
   "title": "",
   "body": "  Response to Exponential Input  Consider the following differential equation:    This is the standard growth equation with an exponential forcing term .  We look for a particular solution of the form:   where is a constant.  Substituting we get:   Rearranging gives:   Full solution is the particular solution plus null (or homogeneous ) solution:   From the initial conditions we get:   Substituting in gives:   Rearranging we can see the effect of the forcing in addition to the homogeneous term:   In Strang's terminology:   That is, the solution is a combination of the standard homogeneous term - the standard growth factor - plus an extra term coming from the forcing factor. Notice that this extra term has a singularity (division by zero) at . This is Resonance .  This singularity can be handled using L'Hopital's Rule   Gilbert Strang In Action  Professor Strang at Blackboard   The full solution, using L'Hopital, should match the final solution in Strang's Lecture .   Now try and solve this using SageMath.    Remind yourself how to obtain the homogeneous (null) solution:  t,a = var('t,a') y = function('y')(t) de1 = diff(y,t) == a*y sol1 = desolve(de1,y, ivar=t) show(sol1)  and is the general solution to .  Also have a look at the screenshot above!    Sage Commands:  t, s, a, y0 = var ('t, s, a, y0') y = function('y')(t) de = diff(y,t) == a*y + e^(s*t) sol=desolve(de,y, ivar=t, ics=[0,y0]) show(sol)  This results in:   This is not quite the same format as Strang but it is easy to see that it is equivalent.  As mentioned above this solution can be taken further by using L'Hopital's Rule. We can circumvent the catastrophe by differentiating the numerator and denominator.  Sage Commands:  numerator = e^(s*t) - e^(a*t) numerator.diff(s) denominator= s - a denominator.diff(s)  This results in  Hence the full solution using L'Hopital now matches Strang's final solution:    "
 },
@@ -689,7 +725,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-de.html#exercises-de-3",
   "type": "Exercise",
-  "number": "6.4.2",
+  "number": "7.4.2",
   "title": "",
   "body": "  Response to Oscillating Input  Consider the following differential equation:    This is the standard growth equation with a sinusoidal input term .  We look for a particular solution of the form:   where and are constants.  Now try and solve this using SageMath.    Sage Commands:  t, omega, a, y0 = var ('t, omega, a, y0') y = function('y')(t) de = diff(y,t) == a*y + cos(omega*t) sol=desolve(de,y, ivar=t, ics=[0,y0]) show(sol)  This results in:    "
 },
@@ -698,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "differential-references.html",
   "type": "References",
-  "number": "6.5",
+  "number": "7.5",
   "title": "References",
   "body": " References  Strang, Gilbert and Moler, Cleve Learn Differential Equations: Up Close with Gilbert Strang and Cleve Moler . RES.18-009 Fall 2015. Massachusetts Institute of Technology: MIT OpenCourseWare   Lutus, Paul Applying Sage To Physics - Differential Equations . Arachnoid - Mathematics - Sage    Dr Underwood's Physics YouTube page . Differential Equations in Sage - Part 1    Dr Underwood's Physics YouTube page . Differential Equations in Sage - Part 2   "
 },
@@ -707,7 +743,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "linear-algebra-introduction.html",
   "type": "Section",
-  "number": "7.1",
+  "number": "8.1",
   "title": "About This Exam",
   "body": " About This Exam  A1 to A3 are questions from the University of Edinburgh's December 2016 exam for Introduction to Linear Algebra (MATH08057) , a first-year course my daughter was taking. The solutions are my own.  "
 },
@@ -716,7 +752,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "linear-algebra-a1.html",
   "type": "Section",
-  "number": "7.2",
+  "number": "8.2",
   "title": "A1",
   "body": " A1   Linear Algebra Exam A1  Let be a linear transformation from which is a projection and suppose that Find the standard matrix of (The Projection Matrix).  [6 marks]   We will use the techniques detailed by Professor Strang in the lecture series 18.06 Linear Algebra Lecture 15: Projections onto subspaces    Diagram Of The Problem  Blackboard diagram: vector b projected onto the line through a.    Professor Strang In Action  Professor Strang at Blackboard    Projection Matrix Formula  Blackboard: p = a (a^T b)\/(a^T a); the projection is p = Pb with projection matrix P = a a^T \/ (a^T a).   In these screenshots we can see that vector is the projection of vector onto .   is a multiple, , of : The error vector is given by: The other piece of information we require is that is perpendicular to . In other words, the dot product of these two vectors is zero. Recall that the dot product of two vectors is the same as the transpose of one with the other.  Combining the above gives us:    Since then:   From this we can see that the Projection Matrix, , is given by:   This matches the formula in the screenshot shown in figure above. In our exercise becomes .  Now lets see how we can solve this example using SageMath.  One of the most annoying points is that vectors are represented as rows. Usually, we prefer to write them in column form. However, we can switch the view by using the column() method on the vector.   The vector times the transpose of itself can be found by taking the outer_product() :   The dot product (inner product) given by is easily found by either of these two steps:   Combining these we get the complete solution for , what Strang calls as:   These concepts are combined with some fancy plotting methods to give us a nice visualisation of the problem:   Notice that the diagram is upside down compared with Strang's and that we multiplied by a factor of 2 so that we could more clearly see that lies on the same line as .  Let us now check some other properties of the projection matrix   "
 },
@@ -725,7 +761,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "linear-algebra-a1.html#exam_a1",
   "type": "Example",
-  "number": "7.2.1",
+  "number": "8.2.1",
   "title": "",
   "body": " Linear Algebra Exam A1  Let be a linear transformation from which is a projection and suppose that Find the standard matrix of (The Projection Matrix).  [6 marks]  "
 },
@@ -734,7 +770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "linear-algebra-a1.html#linear-algebra-a1-4",
   "type": "Figure",
-  "number": "7.2.2",
+  "number": "8.2.2",
   "title": "",
   "body": " Diagram Of The Problem  Blackboard diagram: vector b projected onto the line through a.  "
 },
@@ -743,7 +779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "linear-algebra-a1.html#linear-algebra-a1-5",
   "type": "Figure",
-  "number": "7.2.3",
+  "number": "8.2.3",
   "title": "",
   "body": " Professor Strang In Action  Professor Strang at Blackboard  "
 },
@@ -752,7 +788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "linear-algebra-a1.html#fig_projection_matrix",
   "type": "Figure",
-  "number": "7.2.4",
+  "number": "8.2.4",
   "title": "",
   "body": " Projection Matrix Formula  Blackboard: p = a (a^T b)\/(a^T a); the projection is p = Pb with projection matrix P = a a^T \/ (a^T a).  "
 },
@@ -761,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "linear-algebra-a2.html",
   "type": "Section",
-  "number": "7.3",
+  "number": "8.3",
   "title": "A2",
   "body": " A2   Linear Algebra Exam A2  Let be a subspace of of dimension 2 and let be a fixed non-zero vector in .  Let denote the subset of consisting of all vectors of the form where is in the subspace .  For which vectors is also a subspace? Justify your answer.  [7 marks]   Before grappling this problem it helps to get a picture. I believe this is the best way to approach any problem. (Maybe this is just the old physicist in me). Sometimes it is not possible but not very often.  So lets first look at how SageMath can help us here. Since is a subspace of then it must be a plane passing through the origin; subspaces must contain the vector and pass through the origin.  Take, for example, the plane passing through the origin given by:   Consider the case where our vector is the direction vector starting at position and extending to . This lies on the plane going through the origin and is our subspace .  Let the point be the start of and the point be the endpoint. These points are also the position vectors and and also lie on the plane (since the origin is on the plane). Hence, a normal to the plane is given by the cross-product:   (We could have taken the cross product of any of these three vectors since they are all in the same plane.)  We know that the dot product of the normal with any of our three vectors should be zero. This enables us to use implicit_plot3d() passing in an equation for any point on the plane. We have defined as the function to represent any point on this plane. In the sage cell this is achieved by the following technique:  p = vector([x, y, z]) pA = p - a f(x,y,z) = n.dot_product(pA)  The resultant function is: This confirms our initial equation above.  Now we have all we need to plot the plane. There are several ways of plotting this plane in SageMath. The one adopted here is to use implicit_plot3d() . We pass into this method the above function set equal to zero and the ranges. The next Sage Cell brings this together. Our vector is the yellow arrow, the origin is shown as the black dot in the centre, the plane is drawn in blue.  Now add another vector which is also on the same plane. This is shown as the green arrow. To do this we introduce another point . You might wonder how we know that this point lies on our plane. It was found using the following trick.  f=n[0]*x+n[1]*y+n[2]*z==0 show(f(x=-1,y=2))  Here is the -coordinate of the normal, is the -coordinate, and so on. They are the coefficients of the standard equation of a plane ( ). With is the plane case when the plane passes through the origin. The results are: From this, we can find the -coordinate of which ensure that the point fits onto our plane.  Now for the full picture. Let's find a vector that does not lie in , and shift the whole of by it. The result, , is the red plane: parallel to , but it does not pass through the origin, so it is not a subspace. (Shifting by , which is in , just gives back.)  Try with the point . The green and black arrows show and drawn from .  Evaluating the following SageCell and playing with the resultant plot (zooming in and out and rotating) should convince you of the solution to the problem.     is a subspace if and only if .    If is a subspace of dimension 2 then it is a plane through the origin. If then for direction vectors .  If and then and so is    Hence is also a plane through the origin.  If then which is a plane not through the origin, and so is not a subspace.  (This is hopefully illustrated with the Sage Cell simulation.)    "
 },
@@ -770,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "linear-algebra-a2.html#exam_a2",
   "type": "Example",
-  "number": "7.3.1",
+  "number": "8.3.1",
   "title": "",
   "body": " Linear Algebra Exam A2  Let be a subspace of of dimension 2 and let be a fixed non-zero vector in .  Let denote the subset of consisting of all vectors of the form where is in the subspace .  For which vectors is also a subspace? Justify your answer.  [7 marks]  "
 },
@@ -779,7 +815,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "linear-algebra-a2.html#a2_solution",
   "type": "Proposition",
-  "number": "7.3.2",
+  "number": "8.3.2",
   "title": "",
   "body": "  is a subspace if and only if .    If is a subspace of dimension 2 then it is a plane through the origin. If then for direction vectors .  If and then and so is    Hence is also a plane through the origin.  If then which is a plane not through the origin, and so is not a subspace.  (This is hopefully illustrated with the Sage Cell simulation.)   "
 },
@@ -788,7 +824,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "linear-algebra-a3.html",
   "type": "Section",
-  "number": "7.4",
+  "number": "8.4",
   "title": "A3",
   "body": " A3   Linear Algebra Exam A3  Suppose that the non-zero vector is in . Show that is in or is in . Is the condition that necessary?  [7 marks]     If and , then or .    Since there are scalars with If this gives , which we have ruled out, so at least one of is non-zero.  If , divide by it: so .  Otherwise and , and in the same way so .    The condition is necessary. The zero vector lies in every span, so without it we can take , and . Then is the -axis, which does not contain , and is the -axis, which does not contain . Both conclusions fail.  "
 },
@@ -797,7 +833,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "linear-algebra-a3.html#exam_a3",
   "type": "Example",
-  "number": "7.4.1",
+  "number": "8.4.1",
   "title": "",
   "body": " Linear Algebra Exam A3  Suppose that the non-zero vector is in . Show that is in or is in . Is the condition that necessary?  [7 marks]  "
 },
@@ -806,7 +842,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "linear-algebra-a3.html#a3_solution",
   "type": "Proposition",
-  "number": "7.4.2",
+  "number": "8.4.2",
   "title": "",
   "body": "  If and , then or .    Since there are scalars with If this gives , which we have ruled out, so at least one of is non-zero.  If , divide by it: so .  Otherwise and , and in the same way so .   "
 },
