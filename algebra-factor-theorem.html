@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JAG Front Matter</title>
+<title>JAG Polynomials and the Factor Theorem</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -72,6 +72,18 @@ eBookConfig.enable_chatcodes =  false;
 <script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-runtime.6ad113829064d43a.bundle.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-runestone.02090e9f6a81e70e.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-926.229729d09512acc9.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-runestone.347e2ecdeacfed99.css">
 <script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -119,7 +131,7 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Assistive technologies</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="jagbook.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="jagbook.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="front-colophon.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="algebra.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="algebra.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="coordgeom.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\reals}{\mathbb{R}}
 \newcommand{\real}[1]{\mathbb{R}^{#1}}
@@ -152,9 +164,9 @@ eBookConfig.enable_chatcodes =  false;
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-frontmatter contains-active">
+<li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural toc-item-list active" id="ptx-toc-group-frontmatter">
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
 <li class="toc-item toc-biography"><div class="toc-title-box"><a href="about-the-author.html" class="internal"><span class="title">About John A Giannelli</span></a></div></li>
 <li class="toc-item toc-dedication"><div class="toc-title-box"><a href="dedication.html" class="internal"><span class="title">Dedication</span></a></div></li>
@@ -201,11 +213,11 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="algebra.html" class="internal"><span class="codenumber">3</span> <span class="title">Algebra</span></a></div>
-<ul id="ptx-toc-group-algebra" class="structural toc-item-list"><li class="toc-item toc-section">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-algebra"><li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="algebra-factor-theorem.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Polynomials and the Factor Theorem</span></a></div>
-<ul id="ptx-toc-group-algebra-factor-theorem" class="structural toc-item-list">
+<ul class="structural toc-item-list active" id="ptx-toc-group-algebra-factor-theorem">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algebra-factor-theorem.html#algebra-polynomials" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Polynomials as Sage objects</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algebra-factor-theorem.html#algebra-remainder" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The remainder theorem</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algebra-factor-theorem.html#algebra-unknowns" class="internal"><span class="codenumber">3.1.3</span> <span class="title">The factor theorem with unknown coefficients</span></a></div></li>
@@ -354,30 +366,225 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="frontmatter" id="frontmatter"><h1 class="heading">
-<span class="title">John Giannelli</span><span class="subtitle">Musings on Sage Math</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="algebra-factor-theorem">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Polynomials and the Factor Theorem</span>
 </h1>
-<div class="author">
-<div class="author-name">John A Giannelli</div>
-<div class="author-info">Director<br>Giannelli Limited</div>
+<section class="introduction" id="algebra-factor-theorem-2">
+<div class="para" id="algebra-factor-theorem-2-1">A <dfn class="terminology">polynomial</dfn> is a sum of powers of <span class="process-math">\(x\text{,}\)</span> such as <span class="process-math">\(2x^3 - 5x^2 + x + 7\text{.}\)</span> Dividing one polynomial by another leaves a quotient and a remainder, just as <span class="process-math">\(17 \div 5\)</span> leaves <span class="process-math">\(3\)</span> remainder <span class="process-math">\(2\text{.}\)</span> The <dfn class="terminology">remainder theorem</dfn> says that dividing <span class="process-math">\(f(x)\)</span> by <span class="process-math">\(x - k\)</span> leaves the remainder <span class="process-math">\(f(k)\text{.}\)</span> The <dfn class="terminology">factor theorem</dfn> is the special case where that remainder is zero: <span class="process-math">\(x - k\)</span> is a factor of <span class="process-math">\(f(x)\)</span> exactly when <span class="process-math">\(f(k) = 0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-factor-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="credit">
-<div class="title">Collaborator</div>
-<div class="author">
-<div class="author-name">Anna J Giannelli</div>
-<div class="author-info">BSc (Hons) Mathematics and Biology, First Class, University of Edinburgh, awarded 7 July 2020<br>MSc Sustainability and Environmental Studies, University of Strathclyde, 2021</div>
+<div class="para" id="algebra-factor-theorem-2-2">This page uses both to find unknown coefficients, to solve cubic equations, and to count how many times a cubic meets a horizontal line. Sage keeps every answer exact. The cells share their variables, so run them in order from the top.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-factor-theorem-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="algebra-polynomials">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Polynomials as Sage objects</span>
+</h2>
+<div class="para" id="algebra-polynomials-2">Declare <span class="process-math">\(x\)</span> first. The <code class="code-inline tex2jax_ignore">%display latex</code> line makes Sage typeset every answer from here on.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-polynomials-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div id="algebra-polynomials-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display latex
+x = var('x')
+</script></div>
+<div class="para" id="algebra-polynomials-4">An expression such as <code class="code-inline tex2jax_ignore">2*x**3 - 5*x**2 + x + 7</code> is <em class="emphasis">symbolic</em>: Sage can substitute into it and rearrange it, but it does not know that it is a polynomial. The method <code class="code-inline tex2jax_ignore">.polynomial(QQ)</code> turns it into an element of the ring of polynomials in <span class="process-math">\(x\)</span> with rational coefficients. A polynomial in a ring has a degree, a list of coefficients, exact division with remainder, and it can be factored.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-polynomials-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="date">October 4, 2026</div>
-<nav class="summary-links"><ul>
-<li><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></li>
-<li><a href="about-the-author.html" class="internal"><span class="title">About John A Giannelli</span></a></li>
-<li><a href="dedication.html" class="internal"><span class="title">Dedication</span></a></li>
-<li><a href="acknowledgements.html" class="internal"><span class="title">Acknowledgements</span></a></li>
-<li><a href="preface.html" class="internal"><span class="title">Preface</span></a></li>
-</ul></nav><div class="autopermalink" aria-hidden="true" data-description="Front Matter"><a tabindex="-1" href="#frontmatter" title="Copy heading and permalink for Front Matter" aria-label="Copy heading and permalink for Front Matter">🔗</a></div></section></div>
+<div id="algebra-polynomials-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">expression = 2*x**3 - 5*x**2 + x + 7
+f = expression.polynomial(QQ)
+print(f"degree {f.degree()}, coefficients (lowest power first) {f.list()}", flush=True)
+f.parent()
+</script></div>
+<div class="para" id="algebra-polynomials-6">Its variable is written <span class="process-math">\(x\)</span> too, but it is a different object from the symbolic <span class="process-math">\(x\text{.}\)</span> You can see the difference by asking each one for its parent. Here <code class="code-inline tex2jax_ignore">f.parent().gen()</code> is the polynomial <span class="process-math">\(x\)</span> that lives in the ring.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-polynomials-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-polynomials-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">X = f.parent().gen()
+print(f"symbolic x lives in {x.parent()}", flush=True)
+print(f"ring X lives in {X.parent()}", flush=True)
+X**2 - 1
+</script></div>
+<div class="para" id="algebra-polynomials-8">Use the ring version for division and factoring, and the symbolic version for solving equations and plotting. A ring polynomial can be evaluated at a number, which gives a number, or at the symbolic <span class="process-math">\(x\text{,}\)</span> which gives an expression:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-polynomials-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-polynomials-9" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f(x), f(3)
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.1: Polynomials as Sage objects"><a tabindex="-1" href="#algebra-polynomials" title="Copy heading and permalink for Subsection 3.1.1: Polynomials as Sage objects" aria-label="Copy heading and permalink for Subsection 3.1.1: Polynomials as Sage objects">🔗</a></div>
+</section>
+<section class="subsection" id="algebra-remainder">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The remainder theorem</span>
+</h2>
+<div class="para" id="algebra-remainder-2">The method <code class="code-inline tex2jax_ignore">quo_rem</code> divides and returns the quotient and the remainder together, so that <span class="process-math">\(f(x) = (x - 2)\,q(x) + r\text{:}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-remainder-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-remainder-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">q, r = f.quo_rem(X - 2)
+show(LatexExpr(rf"{latex(f)} = (x - 2)\left({latex(q)}\right) + {latex(r)}"))
+f(2)
+</script></div>
+<div class="para" id="algebra-remainder-4">The remainder is a number, and it equals <span class="process-math">\(f(2)\text{.}\)</span> That is the remainder theorem, and it holds for every <span class="process-math">\(k\text{.}\)</span> Try a run of values, and compare the remainder with <span class="process-math">\(f(k)\)</span> each time. You never need to do the division to know the remainder:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-remainder-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-remainder-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">for k in range(-2, 4):
+    q, r = f.quo_rem(X - k)
+    print(f"k = {k:2}:  remainder {r},  f(k) = {f(k)},  match: {r == f(k)}")
+</script></div>
+<div class="para" id="algebra-remainder-6">None of those remainders is zero, so none of <span class="process-math">\(x + 2\)</span> up to <span class="process-math">\(x - 3\)</span> is a factor of <span class="process-math">\(f(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-remainder-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.2: The remainder theorem"><a tabindex="-1" href="#algebra-remainder" title="Copy heading and permalink for Subsection 3.1.2: The remainder theorem" aria-label="Copy heading and permalink for Subsection 3.1.2: The remainder theorem">🔗</a></div>
+</section>
+<section class="subsection" id="algebra-unknowns">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The factor theorem with unknown coefficients</span>
+</h2>
+<div class="para" id="algebra-unknowns-2">Suppose <span class="process-math">\(g(x) = 2x^3 + px^2 + qx - 20\)</span> has <span class="process-math">\(x - 4\)</span> and <span class="process-math">\(x + 1\)</span> as factors. The factor theorem says <span class="process-math">\(g(4) = 0\)</span> and <span class="process-math">\(g(-1) = 0\text{.}\)</span> Each is an equation in <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{,}\)</span> and together they are a pair of simultaneous equations:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-unknowns-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-unknowns-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">p, q = var('p q')
+g = 2*x**3 + p*x**2 + q*x - 20
+equations = [g.subs(x=4) == 0, g.subs(x=-1) == 0]
+print("g(4) = 0 and g(-1) = 0 give", flush=True)
+show(equations)
+solution = solve(equations, p, q)[0]
+solution
+</script></div>
+<div class="para" id="algebra-unknowns-4">Put the values back in. A cubic with two known linear factors has a third linear factor, found by dividing out the other two:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-unknowns-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-unknowns-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">g = g.subs(p=solution[0].rhs(), q=solution[1].rhs()).polynomial(QQ)
+G = g.parent().gen()
+third, remainder = g.quo_rem((G - 4)*(G + 1))
+show(LatexExpr(rf"{latex(g)} = (x - 4)(x + 1)\left({latex(third)}\right) {"" if remainder == 0 else " + " + latex(remainder)}"))
+print(f"the two sides are equal: {(G - 4)*(G + 1)*third + remainder == g}")
+</script></div>
+<div class="para" id="algebra-unknowns-6">The third factor is <span class="process-math">\(2x + 5\text{,}\)</span> so <span class="process-math">\(g(x) = (x - 4)(x + 1)(2x + 5)\text{.}\)</span> A quick check with <code class="code-inline tex2jax_ignore">factor()</code>:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-unknowns-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-unknowns-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">g.factor()
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.3: The factor theorem with unknown coefficients"><a tabindex="-1" href="#algebra-unknowns" title="Copy heading and permalink for Subsection 3.1.3: The factor theorem with unknown coefficients" aria-label="Copy heading and permalink for Subsection 3.1.3: The factor theorem with unknown coefficients">🔗</a></div>
+</section>
+<section class="subsection" id="algebra-solving">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving a cubic by testing roots</span>
+</h2>
+<div class="para" id="algebra-solving-2">To solve <span class="process-math">\(3x^3 - 10x^2 - 27x + 10 = 0\)</span> we need a first root. If the cubic has a rational root <span class="process-math">\(p/q\)</span> in lowest terms, then <span class="process-math">\(p\)</span> divides the constant term and <span class="process-math">\(q\)</span> divides the leading coefficient. Here that means <span class="process-math">\(p\)</span> divides <span class="process-math">\(10\)</span> and <span class="process-math">\(q\)</span> divides <span class="process-math">\(3\text{.}\)</span> The method <code class="code-inline tex2jax_ignore">divisors()</code> lists them, and we test every possible root:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-solving-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-solving-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">h = (3*x**3 - 10*x**2 - 27*x + 10).polynomial(QQ)
+possible = sorted({sign*QQ(a)/b for a in divisors(10) for b in divisors(3) for sign in (1, -1)})
+print(f"{len(possible)} possible roots:", flush=True)
+show(possible)
+print("the ones that are roots:", flush=True)
+[c for c in possible if h(c) == 0]
+</script></div>
+<div class="para" id="algebra-solving-4">Three of the possible roots are real roots, and a cubic has no more than three. The usual hand method needs only the first one. Divide it out and the rest is a quadratic:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-solving-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-solving-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">H = h.parent().gen()
+quadratic, remainder = h.quo_rem(H - 5)
+show(LatexExpr(rf"{latex(h)} = (x - 5)\left({latex(quadratic)}\right) {"" if remainder == 0 else " + " + latex(remainder)}"))
+quadratic.factor()
+</script></div>
+<div class="para" id="algebra-solving-6">So <span class="process-math">\(h(x) = (x - 5)(x + 2)(3x - 1)\text{.}\)</span> Sage can do the whole job in one step, and the results should agree with the hand method. Each root comes with its multiplicity:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-solving-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-solving-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print("h.factor() gives:", flush=True)
+show(h.factor())
+print("h.roots() gives (root, multiplicity):", flush=True)
+h.roots()
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.4: Solving a cubic by testing roots"><a tabindex="-1" href="#algebra-solving" title="Copy heading and permalink for Subsection 3.1.4: Solving a cubic by testing roots" aria-label="Copy heading and permalink for Subsection 3.1.4: Solving a cubic by testing roots">🔗</a></div>
+</section>
+<section class="subsection" id="algebra-real-roots">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">How many real roots? A slider</span>
+</h2>
+<div class="para" id="algebra-real-roots-2">Take <span class="process-math">\(f(x) = x^3 - 3x^2 - 9x + 5\)</span> and ask how many solutions the equation <span class="process-math">\(f(x) = k\)</span> has, as <span class="process-math">\(k\)</span> changes. Each solution is a place where the curve <span class="process-math">\(y = f(x)\)</span> meets the horizontal line <span class="process-math">\(y = k\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-real-roots-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="algebra-real-roots-3">The count can change only where the line passes through a turning point of the curve. The derivative is <span class="process-math">\(f'(x) = 3x^2 - 6x - 9 = 3(x + 1)(x - 3)\text{,}\)</span> so the turning points are at <span class="process-math">\(x = -1\)</span> and <span class="process-math">\(x = 3\text{:}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-real-roots-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-real-roots-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">cubic = (x**3 - 3*x**2 - 9*x + 5).polynomial(QQ)
+print("f'(x) factors as:", flush=True)
+show(cubic.derivative().factor())
+print("turning points (x, f(x)):", flush=True)
+turning = [(r, cubic(r)) for r in cubic.derivative().roots(multiplicities=False)]
+turning
+</script></div>
+<div class="para" id="algebra-real-roots-5">The turning values are <span class="process-math">\(f(-1) = 10\)</span> and <span class="process-math">\(f(3) = -22\text{.}\)</span> Move the slider and watch the count. Click on the slider handle, then use the left and right arrow keys to move one step at a time. The line <span class="process-math">\(y = k\)</span> reaches the top turning point at <span class="process-math">\(k = 10\)</span> and the bottom one at <span class="process-math">\(k = -22\text{.}\)</span> The cell also prints the <dfn class="terminology">discriminant</dfn> of <span class="process-math">\(f(x) - k\text{.}\)</span> It is zero when the cubic has a repeated root, positive when there are three different real roots, and negative when there is only one.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-real-roots-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-real-roots-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">@interact
+def how_many_roots(k=slider(-30, 20, 1, default=0, label='k')):
+    k = QQ(k)
+    g = cubic - k
+    count = g.number_of_real_roots()
+    print(f"f(x) = {k} has {count} different real root" + ("" if count == 1 else "s"), flush=True)
+    print(f"discriminant of f(x) - ({k}) = {g.discriminant()}", flush=True)
+    picture = plot(cubic(x), (x, -5, 7), ymin=-35, ymax=30, color='blue')
+    picture += line([(-5, k), (7, k)], color='red')
+    picture += point(turning, size=40, color='black', zorder=5)
+    picture += point([(r, k) for r in g.change_ring(RR).roots(multiplicities=False)],
+                     size=40, color='red', zorder=5)
+    show(picture, figsize=5)
+</script></div>
+<div class="para" id="algebra-real-roots-7">At <span class="process-math">\(k = 10\)</span> the line touches the curve at the top turning point, where <span class="process-math">\(x = -1\)</span> is a double root, and the curve also crosses it once further right. That is 2 different real roots. One step up, at <span class="process-math">\(k = 11\text{,}\)</span> the line is above the top turning point and meets the curve once. The same happens at <span class="process-math">\(k = -22\)</span> and <span class="process-math">\(k = -23\)</span> at the bottom. Between the two turning values there are three. You can see the double root directly:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-real-roots-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-real-roots-8" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">for k in (10, -22):
+    print(f"f(x) - ({k}) =", flush=True)
+    show((cubic - k).factor())
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.5: How many real roots? A slider"><a tabindex="-1" href="#algebra-real-roots" title="Copy heading and permalink for Subsection 3.1.5: How many real roots? A slider" aria-label="Copy heading and permalink for Subsection 3.1.5: How many real roots? A slider">🔗</a></div>
+</section>
+<section class="subsection" id="algebra-practice">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Practice with random questions</span>
+</h2>
+<div class="para" id="algebra-practice-2">Each <code class="code-inline tex2jax_ignore">seed</code> gives a cubic that factors into three different linear factors over the rationals, with at least one integer root among <span class="process-math">\(\pm 1\)</span> and <span class="process-math">\(\pm 2\text{.}\)</span> Every coefficient is at most 30 in size. The task is to solve <span class="process-math">\(f(x) = 0\text{.}\)</span> The same seed always gives the same question. The first cell makes the questions and the second checks an answer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-practice-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-practice-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def random_question(seed):
+    set_random_seed(seed)
+    T = QQ['x'].gen()
+    while True:
+        r1 = choice([1, -1, 2, -2])
+        r2 = ZZ(choice(range(-6, 7)))
+        lead = choice([1, 2, 3])
+        top = ZZ(choice(range(-6, 7)))
+        if r2 == 0 or top == 0 or gcd(lead, top) != 1:
+            continue
+        if len({QQ(r1), QQ(r2), QQ(top)/lead}) < 3:
+            continue
+        f = (T - r1)*(T - r2)*(lead*T - top)
+        if max(abs(c) for c in f.list()) <= 30:
+            return f
+</script></div>
+<div id="algebra-practice-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def check_answers(my_roots, question):
+    right = True
+    mine = {QQ(r) for r in my_roots}
+    actual = {r for r, _ in question.roots()}
+    for r in sorted(mine - actual):
+        print(f"{r} is not a root: f({r}) = {question(r)}, and it should be 0.")
+        right = False
+    if len(actual - mine) > 0:
+        print(f"You have {len(mine & actual)} of the {len(actual)} roots. "
+              "Test the possible roots, divide out a root, then solve the quadratic.")
+        right = False
+    if right:
+        print("Correct.")
+</script></div>
+<div class="para" id="algebra-practice-5">Change the seed for a new question:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-practice-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-practice-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">seed = 1
+question = random_question(seed)
+print("Solve f(x) = 0, where f(x) is", flush=True)
+show(question(x))
+</script></div>
+<div class="para" id="algebra-practice-7">Work it out on paper, then type your roots here and run the cell. Fractions such as <code class="code-inline tex2jax_ignore">-3/2</code> are fine.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-practice-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-practice-8" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">my_roots = [0, 0, 0]
+check_answers(my_roots, question)
+</script></div>
+<div class="para" id="algebra-practice-9">The worked answer:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#algebra-practice-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="algebra-practice-10" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">first = [r for r, _ in question.roots() if r in (1, -1, 2, -2)][0]
+linear = question.parent().gen() - first
+quadratic, remainder = question.quo_rem(linear)
+print(f"f({first}) = {question(first)}, so ({linear}) is a factor.", flush=True)
+show(LatexExpr(rf"{latex(question)} = ({latex(linear)})\left({latex(quadratic)}\right) {"" if remainder == 0 else " + " + latex(remainder)}"
+               rf" = {latex(question.factor())}"))
+print("roots:", sorted(r for r, _ in question.roots()))
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.1.6: Practice with random questions"><a tabindex="-1" href="#algebra-practice" title="Copy heading and permalink for Subsection 3.1.6: Practice with random questions" aria-label="Copy heading and permalink for Subsection 3.1.6: Practice with random questions">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 3.1: Polynomials and the Factor Theorem"><a tabindex="-1" href="#algebra-factor-theorem" title="Copy heading and permalink for Section 3.1: Polynomials and the Factor Theorem" aria-label="Copy heading and permalink for Section 3.1: Polynomials and the Factor Theorem">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="jagbook.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="front-colophon.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="algebra.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="coordgeom.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
