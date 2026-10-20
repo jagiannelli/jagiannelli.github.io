@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MSM Derivatives, Gradients and Tangents</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/css/theme-default-modern.min.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from 'https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:image" content="https://jagiannelli.github.io/external/images/jg.jpeg">
+<meta property="og:image" content="https://jagiannelli.github.io/external/images/jg.jpeg">
+<meta name="twitter:image:alt" content="Document Logo">
+<meta property="og:image:alt" content="Document Logo">
+<meta name="twitter:title" content="Musings on SageMath">
+<meta property="og:title" content="Musings on SageMath">
+<meta property="book:title" content="Musings on SageMath">
+<meta name="twitter:card" content="summary_large_image">
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-runtime.6ad113829064d43a.bundle.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-runestone.02090e9f6a81e70e.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://github.com/jagiannelli"><img src="external/images/jg.jpeg" alt="Logo image"></a><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="jagbook.html"><span class="title">Musings on SageMath</span></a></div>
+<p class="byline">John A Giannelli</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="book-index.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="differentiation-first-principles.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="differentiation.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="differentiation-stationary.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+\newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+\newcommand{\fd}[1]{#1'}
+\newcommand{\sd}[1]{#1''}
+\newcommand{\td}[1]{#1'''}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand \dd[1]  { \,\textrm d{#1}                       }   
+\newcommand \de[2]  { \frac{\mathrm d{#1}}{\mathrm d{#2}}   }   
+\newcommand \intl[4]{ \int\limits_{#1}^{#2}{#3}\dd{#4}      }   
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="about-the-author.html" class="internal"><span class="title">About John A Giannelli</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="dedication.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgements.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Quick Guide to Using SageMath</span></a></div>
+<ul id="ptx-toc-group-sets" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-introduction.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What Is SageMath?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-online.html" class="internal"><span class="codenumber">1.2</span> <span class="title">SageMath Online</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-install.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Installing SageMath Locally</span></a></div>
+<ul id="ptx-toc-group-sage-install" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-install.html#sage-install-conda" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Installing with conda-forge</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-install.html#sage-command-line" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Running Sage from the command line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-install.html#sage-jupyter" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Running Sage in a Jupyter notebook</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="basics.html" class="internal"><span class="codenumber">2</span> <span class="title">Basic Sage Commands</span></a></div>
+<ul id="ptx-toc-group-basics" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="basics-introduction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">What’s in This Chapter</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-executing-commands.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Executing Sage Commands</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-defining-functions.html" class="internal"><span class="codenumber">2.3</span> <span class="title">How to define functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-symbolic-manipulation.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Symbolic Manipulation</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-variables-plotting.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Declaring Variables and Plotting</span></a></div>
+<ul id="ptx-toc-group-sage-variables-plotting" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-variables-plotting.html#sage-variables-plotting-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Use SageMath to solve differential equations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-and-python.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Sage and Python</span></a></div>
+<ul id="ptx-toc-group-sage-and-python" class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Lists, Tuples, and Dictionaries</span></a></div>
+<ul id="ptx-toc-group-sage-and-python-4" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4-3" class="internal"><span class="codenumber">2.6.1.1</span> <span class="title">Lists</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4-4" class="internal"><span class="codenumber">2.6.1.2</span> <span class="title">Tuples</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4-5" class="internal"><span class="codenumber">2.6.1.3</span> <span class="title">Dictionaries (Associative Arrays)</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="algebra.html" class="internal"><span class="codenumber">3</span> <span class="title">Algebra</span></a></div>
+<ul id="ptx-toc-group-algebra" class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="algebra-factor-theorem.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Polynomials and the Factor Theorem</span></a></div>
+<ul id="ptx-toc-group-algebra-factor-theorem" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algebra-factor-theorem.html#algebra-polynomials" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Polynomials as Sage objects</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algebra-factor-theorem.html#algebra-remainder" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The remainder theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algebra-factor-theorem.html#algebra-unknowns" class="internal"><span class="codenumber">3.1.3</span> <span class="title">The factor theorem with unknown coefficients</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algebra-factor-theorem.html#algebra-solving" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Solving a cubic by testing roots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algebra-factor-theorem.html#algebra-real-roots" class="internal"><span class="codenumber">3.1.5</span> <span class="title">How many real roots? A slider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algebra-factor-theorem.html#algebra-practice" class="internal"><span class="codenumber">3.1.6</span> <span class="title">Practice with random questions</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="binomial.html" class="internal"><span class="codenumber">4</span> <span class="title">The Binomial Theorem</span></a></div>
+<ul id="ptx-toc-group-binomial" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="binomial-expansion.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The Binomial Expansion for Positive Integers</span></a></div>
+<ul id="ptx-toc-group-binomial-expansion" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-expansion.html#binomial-expansion-pascal" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Combinations and Pascal’s Triangle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-expansion.html#binomial-expansion-terms" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Expanding and Extracting Terms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-expansion.html#binomial-expansion-slider" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Interactive Expansion: A Slider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-expansion.html#binomial-expansion-techniques" class="internal"><span class="codenumber">4.1.4</span> <span class="title">Key Techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-expansion.html#binomial-expansion-practice" class="internal"><span class="codenumber">4.1.5</span> <span class="title">Practice with Random Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="binomial-series.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Rational Powers and Series</span></a></div>
+<ul id="ptx-toc-group-binomial-series" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-series.html#binomial-greatest-coeff" class="internal"><span class="codenumber">4.2.1</span> <span class="title">The Greatest Coefficient in an Expansion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-series.html#binomial-infinite-series" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Infinite Binomial Series for Rational Powers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-series.html#binomial-surd-approx" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Surd Approximations via Binomial Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-series.html#binomial-series-practice" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Practice with Rational Powers</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sequences.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Series</span></a></div>
+<ul id="ptx-toc-group-sequences" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sequences-arithmetic.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Arithmetic Sequences</span></a></div>
+<ul id="ptx-toc-group-sequences-arithmetic" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-arithmetic.html#sequences-arithmetic-terms" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Generating Terms and Sums</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-arithmetic.html#sequences-arithmetic-sigma" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Sigma Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-arithmetic.html#sequences-arithmetic-slider" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Interactive Sum: A Slider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-arithmetic.html#sequences-arithmetic-practice" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Practice with Random Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sequences-geometric.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Geometric Sequences and Series</span></a></div>
+<ul id="ptx-toc-group-sequences-geometric" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-geometric.html#sequences-geometric-terms" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Generating Terms and Sums</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-geometric.html#sequences-geometric-convergence" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Convergence and the Sum to Infinity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-geometric.html#sequences-geometric-slider" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Interactive Geometric Series: A Slider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-geometric.html#sequences-geometric-practice" class="internal"><span class="codenumber">5.2.4</span> <span class="title">Practice with Random Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="coordgeom.html" class="internal"><span class="codenumber">6</span> <span class="title">Coordinate Geometry</span></a></div>
+<ul id="ptx-toc-group-coordgeom" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="coordgeom-lines.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Straight Lines</span></a></div>
+<ul id="ptx-toc-group-coordgeom-lines" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-tools" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Some helper functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-perpendicular" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Perpendicular gradients multiply to <span class="process-math">\(-1\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-forms" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Three forms of a line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-meeting" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Parallel, perpendicular, and where lines meet</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-areas" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Areas of triangles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-angle" class="internal"><span class="codenumber">6.1.6</span> <span class="title">The angle between two lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-model" class="internal"><span class="codenumber">6.1.7</span> <span class="title">A straight line as a model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-ratio" class="internal"><span class="codenumber">6.1.8</span> <span class="title">The ratio in which a line divides a segment</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-practice" class="internal"><span class="codenumber">6.1.9</span> <span class="title">Practice with random questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="coordgeom-circles.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Circles</span></a></div>
+<ul id="ptx-toc-group-coordgeom-circles" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-tools" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Some helper functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-line" class="internal"><span class="codenumber">6.2.2</span> <span class="title">A line and a circle meet twice, once or never</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-centre" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Centre and radius</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-properties" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Three circle properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-touching" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Two circles touching</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-three" class="internal"><span class="codenumber">6.2.6</span> <span class="title">A circle through three points</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-outside" class="internal"><span class="codenumber">6.2.7</span> <span class="title">Tangents from a point outside the circle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-practice" class="internal"><span class="codenumber">6.2.8</span> <span class="title">Practice with random questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="exponential.html" class="internal"><span class="codenumber">7</span> <span class="title">Exponential Models</span></a></div>
+<ul id="ptx-toc-group-exponential" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exponential-growth.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Growth, Decay and Doubling</span></a></div>
+<ul id="ptx-toc-group-exponential-growth" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-growth.html#exponential-model" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Why the model is exponential</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-growth.html#exponential-slider" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Growth and decay: a slider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-growth.html#exponential-readings" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Finding A and k from two readings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-growth.html#exponential-percent" class="internal"><span class="codenumber">7.1.4</span> <span class="title">A percentage per step is the same thing</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-growth.html#exponential-time" class="internal"><span class="codenumber">7.1.5</span> <span class="title">Solving for a time</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-growth.html#exponential-practice" class="internal"><span class="codenumber">7.1.6</span> <span class="title">Practice with random questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exponential-logs.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Log Graphs and Fitting Data</span></a></div>
+<ul id="ptx-toc-group-exponential-logs" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-logs.html#exponential-logs-laws" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Taking logs with Sage</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-logs.html#exponential-logs-slider" class="internal"><span class="codenumber">7.2.2</span> <span class="title">The curve and its log graph: two sliders</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-logs.html#exponential-logs-data" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Estimating a and n from data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-logs.html#exponential-logs-straight" class="internal"><span class="codenumber">7.2.4</span> <span class="title">Which graph is straight?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-logs.html#exponential-logs-limits" class="internal"><span class="codenumber">7.2.5</span> <span class="title">Where an exponential model stops working</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-logs.html#exponential-logs-practice" class="internal"><span class="codenumber">7.2.6</span> <span class="title">Practice with random models</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="differentiation.html" class="internal"><span class="codenumber">8</span> <span class="title">Differentiation</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-differentiation">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="differentiation-first-principles.html" class="internal"><span class="codenumber">8.1</span> <span class="title">First Principles</span></a></div>
+<ul id="ptx-toc-group-differentiation-first-principles" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-first-principles.html#differentiation-chord" class="internal"><span class="codenumber">8.1.1</span> <span class="title">A chord becomes a tangent</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-first-principles.html#differentiation-four-steps" class="internal"><span class="codenumber">8.1.2</span> <span class="title">The method, one step at a time</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-first-principles.html#differentiation-setting-out" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Setting out the working</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-first-principles.html#differentiation-practice" class="internal"><span class="codenumber">8.1.4</span> <span class="title">Practice with random questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-first-principles.html#differentiation-trig" class="internal"><span class="codenumber">8.1.5</span> <span class="title">Stretch: sin x and cos x</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="differentiation-derivatives.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Derivatives, Gradients and Tangents</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-differentiation-derivatives">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-derivatives.html#differentiation-tangent-slider" class="internal"><span class="codenumber">8.2.1</span> <span class="title">The tangent at a point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-derivatives.html#differentiation-powers" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Powers of x</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-derivatives.html#differentiation-tangent-equation" class="internal"><span class="codenumber">8.2.3</span> <span class="title">The equation of a tangent</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-derivatives.html#differentiation-rates" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Rates of change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-derivatives.html#differentiation-normals" class="internal"><span class="codenumber">8.2.5</span> <span class="title">Normals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-derivatives.html#differentiation-given-tangent" class="internal"><span class="codenumber">8.2.6</span> <span class="title">A tangent that is given</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-derivatives.html#differentiation-tangent-practice" class="internal"><span class="codenumber">8.2.7</span> <span class="title">Practice with random tangent questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="differentiation-stationary.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Stationary Points and Curve Sketching</span></a></div>
+<ul id="ptx-toc-group-differentiation-stationary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-stationary.html#differentiation-stationary-find" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Finding the stationary points</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-stationary.html#differentiation-stationary-nature" class="internal"><span class="codenumber">8.3.2</span> <span class="title">f, f′ and f″ side by side</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-stationary.html#differentiation-stationary-zero" class="internal"><span class="codenumber">8.3.3</span> <span class="title">When f″ is zero</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-stationary.html#differentiation-stationary-sketch" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Sketching a cubic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-stationary.html#differentiation-stationary-surds" class="internal"><span class="codenumber">8.3.5</span> <span class="title">When the roots are surds</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-stationary.html#differentiation-stationary-optimise" class="internal"><span class="codenumber">8.3.6</span> <span class="title">Largest and smallest values</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-stationary.html#differentiation-stationary-practice" class="internal"><span class="codenumber">8.3.7</span> <span class="title">Practice with random questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="differentiation-increasing.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Increasing and Decreasing Functions</span></a></div>
+<ul id="ptx-toc-group-differentiation-increasing" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-increasing.html#differentiation-increasing-always" class="internal"><span class="codenumber">8.4.1</span> <span class="title">Increasing for every x</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-increasing.html#differentiation-increasing-range" class="internal"><span class="codenumber">8.4.2</span> <span class="title">Where increasing, where decreasing</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-increasing.html#differentiation-increasing-pictures" class="internal"><span class="codenumber">8.4.3</span> <span class="title">f and f′ side by side</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-increasing.html#differentiation-increasing-realset" class="internal"><span class="codenumber">8.4.4</span> <span class="title">Checking a range with RealSet</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-increasing.html#differentiation-increasing-surds" class="internal"><span class="codenumber">8.4.5</span> <span class="title">Critical values that are surds</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-increasing.html#differentiation-increasing-practice" class="internal"><span class="codenumber">8.4.6</span> <span class="title">Practice with random questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="integration.html" class="internal"><span class="codenumber">9</span> <span class="title">Integration</span></a></div>
+<ul id="ptx-toc-group-integration" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="integration-powers.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Integrating Powers of x</span></a></div>
+<ul id="ptx-toc-group-integration-powers" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integration-powers.html#integration-powers-rule" class="internal"><span class="codenumber">9.1.1</span> <span class="title">One term at a time</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integration-powers.html#integration-powers-family" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Why not n = -1, and what the + C means</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integration-powers.html#integration-powers-definite" class="internal"><span class="codenumber">9.1.3</span> <span class="title">A definite integral</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integration-powers.html#integration-powers-point" class="internal"><span class="codenumber">9.1.4</span> <span class="title">Finding the curve from its gradient</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integration-powers.html#integration-powers-practice" class="internal"><span class="codenumber">9.1.5</span> <span class="title">Practice with random questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="integration-area.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Area Under a Curve</span></a></div>
+<ul id="ptx-toc-group-integration-area" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integration-area.html#integration-area-split" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Roots, regions, one integral each</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integration-area.html#integration-area-whole" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Why one integral across the axis is wrong</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integration-area.html#integration-area-practice" class="internal"><span class="codenumber">9.2.3</span> <span class="title">Practice with random questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integration-area.html#integration-area-zero" class="internal"><span class="codenumber">9.2.4</span> <span class="title">Stretch: an integral of zero, but not an area of zero</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="integration-between.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Area Between a Line and a Curve</span></a></div>
+<ul id="ptx-toc-group-integration-between" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integration-between.html#integration-between-limits" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Crossings, top and bottom, one integral</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integration-between.html#integration-between-trapezium" class="internal"><span class="codenumber">9.3.2</span> <span class="title">The other way, and two slips</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integration-between.html#integration-between-practice" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Practice with random questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integration-between.html#integration-between-boundary" class="internal"><span class="codenumber">9.3.4</span> <span class="title">Stretch: where the top boundary changes</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="integers.html" class="internal"><span class="codenumber">10</span> <span class="title">Calculus</span></a></div>
+<ul id="ptx-toc-group-integers" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-introduction.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Calculus in SageMath</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-limits.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Calculating Limits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="calculus-derivatives.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Derivatives</span></a></div>
+<ul id="ptx-toc-group-calculus-derivatives" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3" class="internal"><span class="codenumber">10.3.1</span> <span class="title">Examples From Chapter 2</span></a></div>
+<ul id="ptx-toc-group-calculus-derivatives-3" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-2" class="internal"><span class="codenumber">10.3.1.1</span> <span class="title">Section 2.1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-3" class="internal"><span class="codenumber">10.3.1.2</span> <span class="title">Section 2.2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-4" class="internal"><span class="codenumber">10.3.1.3</span> <span class="title">Section 2.3</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-5" class="internal"><span class="codenumber">10.3.1.4</span> <span class="title">Section 2.4</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-4" class="internal"><span class="codenumber">10.3.2</span> <span class="title">Section 2.6 Implicit Differentiation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-integration.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Integration</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cap-2017-hw2.html" class="internal"><span class="codenumber">10.5</span> <span class="title">CAP 2017, HW 2 due January 31</span></a></div>
+<ul id="ptx-toc-group-cap-2017-hw2" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw2.html#cap-2017-hw2-6" class="internal"><span class="codenumber">10.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cap-2017-hw3.html" class="internal"><span class="codenumber">10.6</span> <span class="title">CAP 2017, HW 3 due February 7</span></a></div>
+<ul id="ptx-toc-group-cap-2017-hw3" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-rumour" class="internal"><span class="codenumber">10.6.1</span> <span class="title">Rumour Spread and the Logistic Function</span></a></div>
+<ul id="ptx-toc-group-hw3-rumour" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-rumour-6" class="internal"><span class="codenumber">10.6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-decay" class="internal"><span class="codenumber">10.6.2</span> <span class="title">Radioactive Decay: Bismuth-210</span></a></div>
+<ul id="ptx-toc-group-hw3-decay" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-decay-3" class="internal"><span class="codenumber">10.6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-taylor" class="internal"><span class="codenumber">10.6.3</span> <span class="title">Second Derivatives and Taylor Series</span></a></div>
+<ul id="ptx-toc-group-hw3-taylor" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-taylor-4" class="internal"><span class="codenumber">10.6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-mvt" class="internal"><span class="codenumber">10.6.4</span> <span class="title">The Mean Value Theorem</span></a></div>
+<ul id="ptx-toc-group-hw3-mvt" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-mvt-3" class="internal"><span class="codenumber">10.6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="cap-2017-hw3.html#cap-2017-hw3-7" class="internal"><span class="codenumber">10.6.5</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="calculus-references.html" class="internal"><span class="codenumber">10.7</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="differential.html" class="internal"><span class="codenumber">11</span> <span class="title">Differential Equations</span></a></div>
+<ul id="ptx-toc-group-differential" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="first-order-de.html" class="internal"><span class="codenumber">11.1</span> <span class="title">First Order Differential Equations</span></a></div>
+<ul id="ptx-toc-group-first-order-de" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="first-order-de.html#first-order-de-2" class="internal"><span class="codenumber">11.1.1</span> <span class="title">First Example</span></a></div>
+<ul id="ptx-toc-group-first-order-de-2" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-3" class="internal"><span class="codenumber">11.1.1.1</span> <span class="title">The General Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-4" class="internal"><span class="codenumber">11.1.1.2</span> <span class="title">Initial Conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-5" class="internal"><span class="codenumber">11.1.1.3</span> <span class="title">Plotting the Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-6" class="internal"><span class="codenumber">11.1.1.4</span> <span class="title">Numerical Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-7" class="internal"><span class="codenumber">11.1.1.5</span> <span class="title">Plotting the Vector Field</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-3" class="internal"><span class="codenumber">11.1.2</span> <span class="title">Second Example</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="second-order-de.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Second Order Differential Equations</span></a></div>
+<ul id="ptx-toc-group-second-order-de" class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="second-order-de.html#second-order-de-2" class="internal"><span class="codenumber">11.2.1</span> <span class="title">First Example</span></a></div>
+<ul id="ptx-toc-group-second-order-de-2" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-3" class="internal"><span class="codenumber">11.2.1.1</span> <span class="title">The General Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-4" class="internal"><span class="codenumber">11.2.1.2</span> <span class="title">Initial Conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-5" class="internal"><span class="codenumber">11.2.1.3</span> <span class="title">Symbolic Differential Equations</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="system-of-de.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Systems Of Equations</span></a></div>
+<ul id="ptx-toc-group-system-of-de" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="system-of-de.html#system-of-de-2" class="internal"><span class="codenumber">11.3.1</span> <span class="title">First Example</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-de.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="differential-references.html" class="internal"><span class="codenumber">11.5</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="linear-algebra-exam.html" class="internal"><span class="codenumber">12</span> <span class="title">Linear Algebra</span></a></div>
+<ul id="ptx-toc-group-linear-algebra-exam" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-introduction.html" class="internal"><span class="codenumber">12.1</span> <span class="title">About This Exam</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a1.html" class="internal"><span class="codenumber">12.2</span> <span class="title">A1</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a2.html" class="internal"><span class="codenumber">12.3</span> <span class="title">A2</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a3.html" class="internal"><span class="codenumber">12.4</span> <span class="title">A3</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions.html" class="internal"><span class="codenumber">B.</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="book-index.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="differentiation-derivatives">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives, Gradients and Tangents</span>
+</h1>
+<section class="introduction" id="differentiation-derivatives-2">
+<div class="para" id="differentiation-derivatives-2-1">First principles shows what a derivative is. In practice nobody works it out that way: the rule <span class="process-math">\(\dfrac{d}{dx}\left(ax^n\right) = nax^{n-1}\)</span> does the job in one line, for whole-number, negative and fractional powers alike. This page uses the rule to find gradients, to build the equations of tangents and normals, to find points from a gradient, and to read a derivative as a rate of change. It ends with random tangent questions that Sage marks. The cells share their variables, so run them in order from the top.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-derivatives-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="differentiation-tangent-slider">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The tangent at a point</span>
+</h2>
+<div class="para logical" id="differentiation-tangent-slider-2">
+<div class="para">At the point <span class="process-math">\((a, f(a))\)</span> the tangent has gradient <span class="process-math">\(f'(a)\)</span> and passes through the point, so its equation is</div>
+<div class="displaymath process-math" id="differentiation-tangent-slider-2-3">
+\begin{equation*}
+y - f(a) = f'(a)\,(x - a).
+\end{equation*}
+</div>
+<div class="para">The slider moves the point along <span class="process-math">\(y = x^3 - 6x^2 + 9x + 2\text{,}\)</span> whose derivative is <span class="process-math">\(3x^2 - 12x + 9\text{.}\)</span> First the setup:</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-tangent-slider-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-tangent-slider-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display latex
+x, y = var('x y')
+
+# Plain functions of a number, so the slider stays quick
+curve = lambda p: p**3 - 6*p**2 + 9*p + 2
+gradient_at = lambda p: 3*p**2 - 12*p + 9
+</script></div>
+<div id="differentiation-tangent-slider-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage"># A number as text: 3.0 -> "3", 0.5 -> "0.5"
+def num(v):
+    return f"{float(v):g}"
+
+# The tangent at x = a as LaTeX, y = mx + c
+def tangent_tex(a):
+    m = gradient_at(a)
+    c = curve(a) - m*a
+    slope = "" if m == 1 else "-" if m == -1 else num(m)
+    text = "" if m == 0 else slope + "x"
+    if c != 0 or m == 0:
+        text += ("" if text == "" else " + " if c > 0 else " - ") + num(abs(c) if text != "" else c)
+    return "y = " + text
+
+def draw_tangent(a):
+    b, m = curve(a), gradient_at(a)
+    p = plot(lambda t: curve(t), (-1.5, 5), color='blue', thickness=2, legend_label='$y = f(x)$')
+    p += plot(lambda t: b + m*(t - a), (-1.5, 5), color='green', linestyle='--', legend_label='tangent')
+    p += point((a, b), color='black', size=40)
+    show(p, ymin=-6, ymax=14, axes_labels=['$x$', '$y$'], figsize=6)
+</script></div>
+<div class="para" id="differentiation-tangent-slider-5">Click on the slider handle and use the arrow keys to move in steps.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-tangent-slider-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-tangent-slider-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">@interact
+def tangent_live(a=slider([float(j/2) for j in range(-2, 11)], default=4.0, label='point x = a')):
+    a = float(a)
+    show(LatexExpr(rf"\text{{point }} (a, f(a)) = ({num(a)}, {num(curve(a))})"))
+    show(LatexExpr(rf"\text{{gradient }} f'(a) = {num(gradient_at(a))}"))
+    show(LatexExpr(r"\text{tangent: } " + tangent_tex(a)))
+    draw_tangent(a)
+</script></div>
+<div class="para" id="differentiation-tangent-slider-7">Try <span class="process-math">\(a = 1\)</span> and <span class="process-math">\(a = 3\text{,}\)</span> where the gradient is 0 and the tangent is flat. At <span class="process-math">\(a = 4\)</span> the tangent crosses the curve a second time: a tangent touches the curve at its point, but it can meet it again somewhere else. Where the gradient is negative, the tangent slopes down.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-tangent-slider-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 8.2.1: The tangent at a point"><a tabindex="-1" href="#differentiation-tangent-slider" title="Copy heading and permalink for Subsection 8.2.1: The tangent at a point" aria-label="Copy heading and permalink for Subsection 8.2.1: The tangent at a point">🔗</a></div>
+</section>
+<section class="subsection" id="differentiation-powers">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Powers of x</span>
+</h2>
+<div class="para logical" id="differentiation-powers-2">
+<div class="para">Multiply by the power, then take 1 off it. A constant differentiates to 0. Write every term as a power of <span class="process-math">\(x\)</span> before starting:</div>
+<div class="displaymath process-math" id="differentiation-powers-2-2">
+\begin{equation*}
+\sqrt{x} = x^{1/2}, \qquad \frac{1}{x} = x^{-1}, \qquad \frac{1}{x^3} = x^{-3}, \qquad
+\frac{1}{\sqrt{x}} = x^{-1/2}, \qquad \sqrt[3]{x} = x^{1/3}.
+\end{equation*}
+</div>
+<div class="para">Taking 1 off a negative power makes it <em class="emphasis">more</em> negative: <span class="process-math">\(x^{-3}\)</span> becomes <span class="process-math">\(-3x^{-4}\text{,}\)</span> and <span class="process-math">\(x^{-1/2}\)</span> becomes <span class="process-math">\(-\tfrac{1}{2}x^{-3/2}\text{.}\)</span> Take <span class="process-math">\(y = 6\sqrt{x} + \dfrac{5}{x^3}\text{:}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-powers-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-powers-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">example = 6*sqrt(x) + 5/x**3
+diff(example, x)
+</script></div>
+<div class="para" id="differentiation-powers-4">Its gradient at <span class="process-math">\(x = 4\text{,}\)</span> as an exact fraction:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-powers-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-powers-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">diff(example, x).subs(x=4)
+</script></div>
+<div class="para" id="differentiation-powers-6">The same, one line at a time, the way it is written on paper. <code class="code-inline tex2jax_ignore">show_lines</code> typesets a list of lines one under another:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-powers-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-powers-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def show_lines(lines):
+    show(LatexExpr(r"\begin{aligned} " + r" \\ ".join("&" + line for line in lines) + r" \end{aligned}"))
+
+show_lines([r"y = 6\sqrt{x} + \frac{5}{x^3} = 6x^{1/2} + 5x^{-3}",
+            r"\frac{dy}{dx} = 6 \times \tfrac{1}{2}\,x^{-1/2} + 5 \times (-3)\,x^{-4}",
+            r"\frac{dy}{dx} = 3x^{-1/2} - 15x^{-4}",
+            r"x = 4\text{: } 3 \times 4^{-1/2} - 15 \times 4^{-4} = 3 \times \tfrac{1}{2} - 15 \times \tfrac{1}{256} = \tfrac{384}{256} - \tfrac{15}{256} = \tfrac{369}{256}"])
+</script></div>
+<div class="para" id="differentiation-powers-8">Habits that keep this right: write the index form first; differentiate each term on its own, showing the power coming down and the new power; substitute last; leave an exact fraction unless a decimal is asked for.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-powers-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 8.2.2: Powers of x"><a tabindex="-1" href="#differentiation-powers" title="Copy heading and permalink for Subsection 8.2.2: Powers of x" aria-label="Copy heading and permalink for Subsection 8.2.2: Powers of x">🔗</a></div>
+</section>
+<section class="subsection" id="differentiation-tangent-equation">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The equation of a tangent</span>
+</h2>
+<div class="para" id="differentiation-tangent-equation-2">Three things are needed: the point <span class="process-math">\((x_1, y_1)\)</span> on the curve, the gradient <span class="process-math">\(m = \dfrac{dy}{dx}\)</span> there, and then <span class="process-math">\(y - y_1 = m(x - x_1)\text{.}\)</span> Here is the tangent to <span class="process-math">\(y = 2x^3 - 5x + 1\)</span> at <span class="process-math">\(x = 2\text{:}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-tangent-equation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-tangent-equation-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">g(x) = 2*x**3 - 5*x + 1
+m = diff(g, x)(2)
+m, g(2)
+</script></div>
+<div class="para" id="differentiation-tangent-equation-4">The gradient is 19 and the point is <span class="process-math">\((2, 7)\text{.}\)</span> Rearranged to <span class="process-math">\(y = mx + c\text{:}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-tangent-equation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-tangent-equation-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">tangent = expand(g(2) + m*(x - 2))
+tangent
+</script></div>
+<div id="differentiation-tangent-equation-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">show(plot(g(x), (x, -2, 2.6), color='blue', thickness=2)
+     + plot(tangent, (x, 1, 2.6), color='green', linestyle='--')
+     + point((2, g(2)), color='black', size=40), ymin=-12, ymax=20)
+</script></div>
+<div class="para" id="differentiation-tangent-equation-7">Turn it round: where is the gradient 1? Put <span class="process-math">\(\dfrac{dy}{dx} = 1\)</span> and solve. A cubic’s derivative is a quadratic, so there can be two points, each with its own tangent of gradient 1.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-tangent-equation-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-tangent-equation-8" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">solutions = solve(diff(g, x)(x) == 1, x)
+solutions
+</script></div>
+<div id="differentiation-tangent-equation-9" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">for s in solutions:
+    x1 = s.rhs()
+    show(LatexExpr(rf"\text{{point }} ({latex(x1)}, {latex(g(x1))}), \quad \text{{tangent: }} y = ") + latex(expand(g(x1) + (x - x1))))
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 8.2.3: The equation of a tangent"><a tabindex="-1" href="#differentiation-tangent-equation" title="Copy heading and permalink for Subsection 8.2.3: The equation of a tangent" aria-label="Copy heading and permalink for Subsection 8.2.3: The equation of a tangent">🔗</a></div>
+</section>
+<section class="subsection" id="differentiation-rates">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rates of change</span>
+</h2>
+<div class="para" id="differentiation-rates-2">
+<span class="process-math">\(\dfrac{dV}{dt}\)</span> is the rate at which <span class="process-math">\(V\)</span> changes as <span class="process-math">\(t\)</span> goes up. Say a tank holds <span class="process-math">\(V = 40 + 18t - 3t^2\)</span> litres after <span class="process-math">\(t\)</span> minutes of pumping in and out:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-rates-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-rates-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">t = var('t')
+volume = 40 + 18*t - 3*t**2
+rate = diff(volume, t)
+rate, rate.subs(t=1), rate.subs(t=4)
+</script></div>
+<div class="para" id="differentiation-rates-4">At <span class="process-math">\(t = 1\)</span> the rate is 12: the tank is filling at 12 litres per minute. At <span class="process-math">\(t = 4\)</span> it is <span class="process-math">\(-6\text{:}\)</span> the volume is going <em class="emphasis">down</em> at 6 litres per minute. A question asking for the <em class="emphasis">rate of decrease</em> wants the 6, the size of the negative rate, with the sign explained in words.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-rates-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 8.2.4: Rates of change"><a tabindex="-1" href="#differentiation-rates" title="Copy heading and permalink for Subsection 8.2.4: Rates of change" aria-label="Copy heading and permalink for Subsection 8.2.4: Rates of change">🔗</a></div>
+</section>
+<section class="subsection" id="differentiation-normals">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Normals</span>
+</h2>
+<div class="para" id="differentiation-normals-2">The <dfn class="terminology">normal</dfn> at a point is perpendicular to the tangent there, so its gradient is <span class="process-math">\(-\dfrac{1}{m}\text{:}\)</span> two perpendicular gradients multiply to <span class="process-math">\(-1\text{.}\)</span> Note the one exception, a flat tangent (<span class="process-math">\(m = 0\)</span>), whose normal is the vertical line through the point. The helper below builds the normal as an equation; the example is <span class="process-math">\(y = x^2 + 6x - 2\)</span> at <span class="process-math">\(x = 1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-normals-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-normals-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage"># The normal to y = f(x) at x = a, as an equation in x and y
+def normal_line(f, a):
+    m = diff(f(x), x).subs(x=a)
+    return y - f(a) == -(x - a) / m
+
+h(x) = x**2 + 6*x - 2
+h(1), diff(h, x)(1), normal_line(h, 1)
+</script></div>
+<div class="para" id="differentiation-normals-4">The point is <span class="process-math">\((1, 5)\text{,}\)</span> the tangent gradient is 8, and the normal has gradient <span class="process-math">\(-\tfrac{1}{8}\text{.}\)</span> Multiplying through by 8 and collecting terms:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-normals-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-normals-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">expand(8*(normal_line(h, 1).lhs() - normal_line(h, 1).rhs())) == 0
+</script></div>
+<div class="para" id="differentiation-normals-6">That is <span class="process-math">\(x + 8y - 41 = 0\)</span> (Sage may order the terms differently). Draw both lines with equal scales on the axes, so that the right angle looks like one:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-normals-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-normals-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">tangent_h = h(1) + diff(h, x)(1)*(x - 1)
+normal_h = h(1) - (x - 1)/diff(h, x)(1)
+show(plot(h(x), (x, -1.5, 3), color='blue', thickness=2)
+     + plot(tangent_h, (x, 0.5, 1.5), color='green', linestyle='--')
+     + plot(normal_h, (x, -3, 5), color='red')
+     + point((1, h(1)), color='black', size=40),
+     aspect_ratio=1, ymin=-4, ymax=14, figsize=6)
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 8.2.5: Normals"><a tabindex="-1" href="#differentiation-normals" title="Copy heading and permalink for Subsection 8.2.5: Normals" aria-label="Copy heading and permalink for Subsection 8.2.5: Normals">🔗</a></div>
+</section>
+<section class="subsection" id="differentiation-given-tangent">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A tangent that is given</span>
+</h2>
+<div class="para" id="differentiation-given-tangent-2">Sometimes the tangent’s equation is given and the point is not. Take <span class="process-math">\(y = 20 + 7x - x^2\)</span> and the tangent <span class="process-math">\(y = 3x + c\text{,}\)</span> where <span class="process-math">\(c\)</span> is unknown. <em class="emphasis">Gradient method:</em> the tangent has gradient 3, so <span class="process-math">\(\dfrac{dy}{dx} = 3\)</span> at the point of contact.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-given-tangent-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-given-tangent-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">c = var('c')
+curve_2(x) = 20 + 7*x - x**2
+x_touch = solve(diff(curve_2, x)(x) == 3, x)[0].rhs()
+y_touch = curve_2(x_touch)
+x_touch, y_touch, y_touch - 3*x_touch
+</script></div>
+<div class="para" id="differentiation-given-tangent-4">The point is <span class="process-math">\((2, 30)\)</span> and <span class="process-math">\(c = 30 - 3 \times 2 = 24\text{.}\)</span> <em class="emphasis">Discriminant method:</em> the line meets the curve at exactly one point, so setting them equal gives a quadratic with a repeated root, and its discriminant <span class="process-math">\(b^2 - 4ac\)</span> is 0.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-given-tangent-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-given-tangent-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">meeting = expand(curve_2(x) - (3*x + c))        # zero where line meets curve
+meeting
+</script></div>
+<div id="differentiation-given-tangent-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">a2, b2, c2 = [(-meeting).coefficient(x, k) for k in [2, 1, 0]]    # coefficients of the quadratic x^2 - 4x + (c - 20)
+discriminant = b2**2 - 4*a2*c2
+discriminant, solve(discriminant == 0, c)
+</script></div>
+<div class="para" id="differentiation-given-tangent-7">Both methods give <span class="process-math">\(c = 24\text{.}\)</span> The gradient method is shorter; the discriminant method works even when no derivative is available, for example for a line and a circle. With <span class="process-math">\(c = 24\)</span> the repeated root can be read off too:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-given-tangent-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-given-tangent-8" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">factor(meeting.subs(c=24))
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 8.2.6: A tangent that is given"><a tabindex="-1" href="#differentiation-given-tangent" title="Copy heading and permalink for Subsection 8.2.6: A tangent that is given" aria-label="Copy heading and permalink for Subsection 8.2.6: A tangent that is given">🔗</a></div>
+</section>
+<section class="subsection" id="differentiation-tangent-practice">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Practice with random tangent questions</span>
+</h2>
+<div class="para" id="differentiation-tangent-practice-2">Each <code class="code-inline tex2jax_ignore">seed</code> gives a polynomial <span class="process-math">\(y = ax^3 + bx^2 + cx + d\)</span> of degree 2 or 3 and a point <span class="process-math">\(x = x_1\text{.}\)</span> The same seed always gives the same question. Find the equation of the tangent on paper, type it as an equation into <code class="code-inline tex2jax_ignore">my_answer</code> (any form, such as <code class="code-inline tex2jax_ignore">y == 5*x - 3</code> or <code class="code-inline tex2jax_ignore">5*x - y - 3 == 0</code>), and run the check. It recognises two common slips. The worked answer comes last.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-tangent-practice-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-tangent-practice-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage"># A sum of terms as LaTeX: [(2, "x^2"), (-5, "x"), (3, "")] -> 2x^2 - 5x + 3
+def terms_tex(terms):
+    text = ""
+    for number, part in terms:
+        if number == 0:
+            continue
+        size = abs(number)
+        piece = part if (size == 1 and part != "") else str(size) + part
+        if text == "":
+            text = ("-" if number < 0 else "") + piece
+        else:
+            text += (" - " if number < 0 else " + ") + piece
+    return text if text != "" else "0"
+
+def random_tangent_question(seed):
+    set_random_seed(seed)
+    degree = choice([2, 3])
+    nonzero = [k for k in range(-5, 6) if k != 0]
+    p3 = choice(nonzero) if degree == 3 else 0
+    p2 = choice(nonzero)
+    p1 = choice(nonzero)
+    p0 = choice(range(-9, 10))
+    return (p3, p2, p1, p0, choice(range(-3, 4)))
+</script></div>
+<div id="differentiation-tangent-practice-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage"># Is my equation the same line as the right one, in any form?
+def same_line(mine, right):
+    if not SR(mine).is_relational():
+        return False
+    ratio = ((SR(mine).lhs() - SR(mine).rhs()) / (right.lhs() - right.rhs())).simplify_full()
+    return ratio.variables() == () and bool(ratio != 0)
+
+# Compare an answer with the true tangent, and name two common slips
+def check_tangent(mine, f, x1):
+    if mine is None:
+        show(LatexExpr(r"\text{Type your answer first.}"))
+        return
+    slope, height = diff(f(x), x).subs(x=x1), f(x1)
+    if not SR(mine).is_relational():
+        show(LatexExpr(r"\text{Type an equation, with } \texttt{==}\text{, for example } \texttt{y == 2*x + 1}."))
+        return
+    if same_line(mine, y == height + slope*(x - x1)):
+        show(LatexExpr(r"\text{Correct. Now compare your lines of working with the worked answer.}"))
+        return
+    slips = [(y == height + height*(x - x1),
+              r"\text{The gradient is } f'(x_1)\text{, not } f(x_1)\text{: differentiate before you substitute.}"),
+             (y == height + slope*x,
+              r"\text{Use } y - y_1 = m(x - x_1)\text{, with the } x_1 \text{ taken away inside the bracket.}")]
+    for line, message in slips:
+        if same_line(mine, line):
+            show(LatexExpr(r"\text{Not yet. }" + message))
+            return
+    show(LatexExpr(r"\text{Not yet. Check the gradient first, then the point, then the equation.}"))
+</script></div>
+<div id="differentiation-tangent-practice-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage"># The worked answer, one step per line
+def tangent_working(f, x1):
+    slope, height = diff(f(x), x).subs(x=x1), f(x1)
+    intercept = height - slope*x1
+    return [r"\frac{dy}{dx} = " + str(latex(diff(f(x), x))),
+            rf"x = {x1}\text{{: gradient }} m = {latex(slope)}\text{{, and }} y = {latex(height)}",
+            rf"{terms_tex([(1, 'y'), (-height, '')])} = {latex(slope)}({terms_tex([(1, 'x'), (-x1, '')])})",
+            r"y = " + terms_tex([(slope, "x"), (intercept, "")])]
+</script></div>
+<div class="para" id="differentiation-tangent-practice-6">Change the seed for a new question:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-tangent-practice-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-tangent-practice-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">seed = 1
+p3, p2, p1, p0, x1 = random_tangent_question(seed)
+f(x) = p3*x**3 + p2*x**2 + p1*x + p0
+show(LatexExpr(r"\text{Find the tangent to } y = ") + latex(f(x)) + LatexExpr(rf"\text{{ at }} x = {x1}."))
+</script></div>
+<div class="para" id="differentiation-tangent-practice-8">Work it out on paper, then type your answer here and run the cell:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-tangent-practice-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-tangent-practice-9" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">my_answer = None     # the tangent, e.g. y == 5*x - 3
+check_tangent(my_answer, f, x1)
+</script></div>
+<div class="para" id="differentiation-tangent-practice-10">The worked answer:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#differentiation-tangent-practice-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="differentiation-tangent-practice-11" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">show_lines(tangent_working(f, x1))
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 8.2.7: Practice with random tangent questions"><a tabindex="-1" href="#differentiation-tangent-practice" title="Copy heading and permalink for Subsection 8.2.7: Practice with random tangent questions" aria-label="Copy heading and permalink for Subsection 8.2.7: Practice with random tangent questions">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 8.2: Derivatives, Gradients and Tangents"><a tabindex="-1" href="#differentiation-derivatives" title="Copy heading and permalink for Section 8.2: Derivatives, Gradients and Tangents" aria-label="Copy heading and permalink for Section 8.2: Derivatives, Gradients and Tangents">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="differentiation-first-principles.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="differentiation-stationary.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
