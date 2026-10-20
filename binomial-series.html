@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MSM Rational Powers and Series</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/css/theme-default-modern.min.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from 'https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:image" content="https://jagiannelli.github.io/external/images/jg.jpeg">
+<meta property="og:image" content="https://jagiannelli.github.io/external/images/jg.jpeg">
+<meta name="twitter:image:alt" content="Document Logo">
+<meta property="og:image:alt" content="Document Logo">
+<meta name="twitter:title" content="Musings on SageMath">
+<meta property="og:title" content="Musings on SageMath">
+<meta property="book:title" content="Musings on SageMath">
+<meta name="twitter:card" content="summary_large_image">
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-runtime.6ad113829064d43a.bundle.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-runestone.02090e9f6a81e70e.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.54/dist/_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://github.com/jagiannelli"><img src="external/images/jg.jpeg" alt="Logo image"></a><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="jagbook.html"><span class="title">Musings on SageMath</span></a></div>
+<p class="byline">John A Giannelli</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="book-index.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="binomial-expansion.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="binomial.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sequences.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+\newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+\newcommand{\fd}[1]{#1'}
+\newcommand{\sd}[1]{#1''}
+\newcommand{\td}[1]{#1'''}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand \dd[1]  { \,\textrm d{#1}                       }   
+\newcommand \de[2]  { \frac{\mathrm d{#1}}{\mathrm d{#2}}   }   
+\newcommand \intl[4]{ \int\limits_{#1}^{#2}{#3}\dd{#4}      }   
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="about-the-author.html" class="internal"><span class="title">About John A Giannelli</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="dedication.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgements.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Quick Guide to Using SageMath</span></a></div>
+<ul id="ptx-toc-group-sets" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-introduction.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What Is SageMath?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-online.html" class="internal"><span class="codenumber">1.2</span> <span class="title">SageMath Online</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-install.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Installing SageMath Locally</span></a></div>
+<ul id="ptx-toc-group-sage-install" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-install.html#sage-install-conda" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Installing with conda-forge</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-install.html#sage-command-line" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Running Sage from the command line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-install.html#sage-jupyter" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Running Sage in a Jupyter notebook</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="basics.html" class="internal"><span class="codenumber">2</span> <span class="title">Basic Sage Commands</span></a></div>
+<ul id="ptx-toc-group-basics" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="basics-introduction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">What’s in This Chapter</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-executing-commands.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Executing Sage Commands</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-defining-functions.html" class="internal"><span class="codenumber">2.3</span> <span class="title">How to define functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sage-symbolic-manipulation.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Symbolic Manipulation</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-variables-plotting.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Declaring Variables and Plotting</span></a></div>
+<ul id="ptx-toc-group-sage-variables-plotting" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sage-variables-plotting.html#sage-variables-plotting-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Use SageMath to solve differential equations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sage-and-python.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Sage and Python</span></a></div>
+<ul id="ptx-toc-group-sage-and-python" class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Lists, Tuples, and Dictionaries</span></a></div>
+<ul id="ptx-toc-group-sage-and-python-4" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4-3" class="internal"><span class="codenumber">2.6.1.1</span> <span class="title">Lists</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4-4" class="internal"><span class="codenumber">2.6.1.2</span> <span class="title">Tuples</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sage-and-python.html#sage-and-python-4-5" class="internal"><span class="codenumber">2.6.1.3</span> <span class="title">Dictionaries (Associative Arrays)</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="algebra.html" class="internal"><span class="codenumber">3</span> <span class="title">Algebra</span></a></div>
+<ul id="ptx-toc-group-algebra" class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="algebra-factor-theorem.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Polynomials and the Factor Theorem</span></a></div>
+<ul id="ptx-toc-group-algebra-factor-theorem" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algebra-factor-theorem.html#algebra-polynomials" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Polynomials as Sage objects</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algebra-factor-theorem.html#algebra-remainder" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The remainder theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algebra-factor-theorem.html#algebra-unknowns" class="internal"><span class="codenumber">3.1.3</span> <span class="title">The factor theorem with unknown coefficients</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algebra-factor-theorem.html#algebra-solving" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Solving a cubic by testing roots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algebra-factor-theorem.html#algebra-real-roots" class="internal"><span class="codenumber">3.1.5</span> <span class="title">How many real roots? A slider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algebra-factor-theorem.html#algebra-practice" class="internal"><span class="codenumber">3.1.6</span> <span class="title">Practice with random questions</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="binomial.html" class="internal"><span class="codenumber">4</span> <span class="title">The Binomial Theorem</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-binomial">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="binomial-expansion.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The Binomial Expansion for Positive Integers</span></a></div>
+<ul id="ptx-toc-group-binomial-expansion" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-expansion.html#binomial-expansion-pascal" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Combinations and Pascal’s Triangle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-expansion.html#binomial-expansion-terms" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Expanding and Extracting Terms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-expansion.html#binomial-expansion-slider" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Interactive Expansion: A Slider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-expansion.html#binomial-expansion-techniques" class="internal"><span class="codenumber">4.1.4</span> <span class="title">Key Techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-expansion.html#binomial-expansion-practice" class="internal"><span class="codenumber">4.1.5</span> <span class="title">Practice with Random Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="binomial-series.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Rational Powers and Series</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-binomial-series">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-series.html#binomial-greatest-coeff" class="internal"><span class="codenumber">4.2.1</span> <span class="title">The Greatest Coefficient in an Expansion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-series.html#binomial-infinite-series" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Infinite Binomial Series for Rational Powers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-series.html#binomial-surd-approx" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Surd Approximations via Binomial Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="binomial-series.html#binomial-series-practice" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Practice with Rational Powers</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sequences.html" class="internal"><span class="codenumber">5</span> <span class="title">Sequences and Series</span></a></div>
+<ul id="ptx-toc-group-sequences" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sequences-arithmetic.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Arithmetic Sequences</span></a></div>
+<ul id="ptx-toc-group-sequences-arithmetic" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-arithmetic.html#sequences-arithmetic-terms" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Generating Terms and Sums</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-arithmetic.html#sequences-arithmetic-sigma" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Sigma Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-arithmetic.html#sequences-arithmetic-slider" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Interactive Sum: A Slider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-arithmetic.html#sequences-arithmetic-practice" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Practice with Random Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sequences-geometric.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Geometric Sequences and Series</span></a></div>
+<ul id="ptx-toc-group-sequences-geometric" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-geometric.html#sequences-geometric-terms" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Generating Terms and Sums</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-geometric.html#sequences-geometric-convergence" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Convergence and the Sum to Infinity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-geometric.html#sequences-geometric-slider" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Interactive Geometric Series: A Slider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sequences-geometric.html#sequences-geometric-practice" class="internal"><span class="codenumber">5.2.4</span> <span class="title">Practice with Random Questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="coordgeom.html" class="internal"><span class="codenumber">6</span> <span class="title">Coordinate Geometry</span></a></div>
+<ul id="ptx-toc-group-coordgeom" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="coordgeom-lines.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Straight Lines</span></a></div>
+<ul id="ptx-toc-group-coordgeom-lines" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-tools" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Some helper functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-perpendicular" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Perpendicular gradients multiply to <span class="process-math">\(-1\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-forms" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Three forms of a line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-meeting" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Parallel, perpendicular, and where lines meet</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-areas" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Areas of triangles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-angle" class="internal"><span class="codenumber">6.1.6</span> <span class="title">The angle between two lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-model" class="internal"><span class="codenumber">6.1.7</span> <span class="title">A straight line as a model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-ratio" class="internal"><span class="codenumber">6.1.8</span> <span class="title">The ratio in which a line divides a segment</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-lines.html#coordgeom-lines-practice" class="internal"><span class="codenumber">6.1.9</span> <span class="title">Practice with random questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="coordgeom-circles.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Circles</span></a></div>
+<ul id="ptx-toc-group-coordgeom-circles" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-tools" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Some helper functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-line" class="internal"><span class="codenumber">6.2.2</span> <span class="title">A line and a circle meet twice, once or never</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-centre" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Centre and radius</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-properties" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Three circle properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-touching" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Two circles touching</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-three" class="internal"><span class="codenumber">6.2.6</span> <span class="title">A circle through three points</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-outside" class="internal"><span class="codenumber">6.2.7</span> <span class="title">Tangents from a point outside the circle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="coordgeom-circles.html#coordgeom-circles-practice" class="internal"><span class="codenumber">6.2.8</span> <span class="title">Practice with random questions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="exponential.html" class="internal"><span class="codenumber">7</span> <span class="title">Exponential Models</span></a></div>
+<ul id="ptx-toc-group-exponential" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exponential-growth.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Growth, Decay and Doubling</span></a></div>
+<ul id="ptx-toc-group-exponential-growth" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-growth.html#exponential-model" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Why the model is exponential</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-growth.html#exponential-slider" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Growth and decay: a slider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-growth.html#exponential-readings" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Finding A and k from two readings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-growth.html#exponential-percent" class="internal"><span class="codenumber">7.1.4</span> <span class="title">A percentage per step is the same thing</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-growth.html#exponential-time" class="internal"><span class="codenumber">7.1.5</span> <span class="title">Solving for a time</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-growth.html#exponential-practice" class="internal"><span class="codenumber">7.1.6</span> <span class="title">Practice with random questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exponential-logs.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Log Graphs and Fitting Data</span></a></div>
+<ul id="ptx-toc-group-exponential-logs" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-logs.html#exponential-logs-laws" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Taking logs with Sage</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-logs.html#exponential-logs-slider" class="internal"><span class="codenumber">7.2.2</span> <span class="title">The curve and its log graph: two sliders</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-logs.html#exponential-logs-data" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Estimating a and n from data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-logs.html#exponential-logs-straight" class="internal"><span class="codenumber">7.2.4</span> <span class="title">Which graph is straight?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-logs.html#exponential-logs-limits" class="internal"><span class="codenumber">7.2.5</span> <span class="title">Where an exponential model stops working</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="exponential-logs.html#exponential-logs-practice" class="internal"><span class="codenumber">7.2.6</span> <span class="title">Practice with random models</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="differentiation.html" class="internal"><span class="codenumber">8</span> <span class="title">Differentiation</span></a></div>
+<ul id="ptx-toc-group-differentiation" class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="differentiation-first-principles.html" class="internal"><span class="codenumber">8.1</span> <span class="title">First Principles</span></a></div>
+<ul id="ptx-toc-group-differentiation-first-principles" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-first-principles.html#differentiation-chord" class="internal"><span class="codenumber">8.1.1</span> <span class="title">A chord becomes a tangent</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-first-principles.html#differentiation-four-steps" class="internal"><span class="codenumber">8.1.2</span> <span class="title">The method, one step at a time</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-first-principles.html#differentiation-setting-out" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Setting out the working</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-first-principles.html#differentiation-practice" class="internal"><span class="codenumber">8.1.4</span> <span class="title">Practice with random questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="differentiation-first-principles.html#differentiation-trig" class="internal"><span class="codenumber">8.1.5</span> <span class="title">Stretch: sin x and cos x</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="integers.html" class="internal"><span class="codenumber">9</span> <span class="title">Calculus</span></a></div>
+<ul id="ptx-toc-group-integers" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-introduction.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Calculus in SageMath</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-limits.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Calculating Limits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="calculus-derivatives.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Derivatives</span></a></div>
+<ul id="ptx-toc-group-calculus-derivatives" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Examples From Chapter 2</span></a></div>
+<ul id="ptx-toc-group-calculus-derivatives-3" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-2" class="internal"><span class="codenumber">9.3.1.1</span> <span class="title">Section 2.1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-3" class="internal"><span class="codenumber">9.3.1.2</span> <span class="title">Section 2.2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-4" class="internal"><span class="codenumber">9.3.1.3</span> <span class="title">Section 2.3</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-3-5" class="internal"><span class="codenumber">9.3.1.4</span> <span class="title">Section 2.4</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="calculus-derivatives.html#calculus-derivatives-4" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Section 2.6 Implicit Differentiation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="calculus-integration.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Integration</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cap-2017-hw2.html" class="internal"><span class="codenumber">9.5</span> <span class="title">CAP 2017, HW 2 due January 31</span></a></div>
+<ul id="ptx-toc-group-cap-2017-hw2" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw2.html#cap-2017-hw2-6" class="internal"><span class="codenumber">9.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cap-2017-hw3.html" class="internal"><span class="codenumber">9.6</span> <span class="title">CAP 2017, HW 3 due February 7</span></a></div>
+<ul id="ptx-toc-group-cap-2017-hw3" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-rumour" class="internal"><span class="codenumber">9.6.1</span> <span class="title">Rumour Spread and the Logistic Function</span></a></div>
+<ul id="ptx-toc-group-hw3-rumour" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-rumour-6" class="internal"><span class="codenumber">9.6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-decay" class="internal"><span class="codenumber">9.6.2</span> <span class="title">Radioactive Decay: Bismuth-210</span></a></div>
+<ul id="ptx-toc-group-hw3-decay" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-decay-3" class="internal"><span class="codenumber">9.6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-taylor" class="internal"><span class="codenumber">9.6.3</span> <span class="title">Second Derivatives and Taylor Series</span></a></div>
+<ul id="ptx-toc-group-hw3-taylor" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-taylor-4" class="internal"><span class="codenumber">9.6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-mvt" class="internal"><span class="codenumber">9.6.4</span> <span class="title">The Mean Value Theorem</span></a></div>
+<ul id="ptx-toc-group-hw3-mvt" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cap-2017-hw3.html#hw3-mvt-3" class="internal"><span class="codenumber">9.6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="cap-2017-hw3.html#cap-2017-hw3-7" class="internal"><span class="codenumber">9.6.5</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="calculus-references.html" class="internal"><span class="codenumber">9.7</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="differential.html" class="internal"><span class="codenumber">10</span> <span class="title">Differential Equations</span></a></div>
+<ul id="ptx-toc-group-differential" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="first-order-de.html" class="internal"><span class="codenumber">10.1</span> <span class="title">First Order Differential Equations</span></a></div>
+<ul id="ptx-toc-group-first-order-de" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="first-order-de.html#first-order-de-2" class="internal"><span class="codenumber">10.1.1</span> <span class="title">First Example</span></a></div>
+<ul id="ptx-toc-group-first-order-de-2" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-3" class="internal"><span class="codenumber">10.1.1.1</span> <span class="title">The General Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-4" class="internal"><span class="codenumber">10.1.1.2</span> <span class="title">Initial Conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-5" class="internal"><span class="codenumber">10.1.1.3</span> <span class="title">Plotting the Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-6" class="internal"><span class="codenumber">10.1.1.4</span> <span class="title">Numerical Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-2-7" class="internal"><span class="codenumber">10.1.1.5</span> <span class="title">Plotting the Vector Field</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="first-order-de.html#first-order-de-3" class="internal"><span class="codenumber">10.1.2</span> <span class="title">Second Example</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="second-order-de.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Second Order Differential Equations</span></a></div>
+<ul id="ptx-toc-group-second-order-de" class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="second-order-de.html#second-order-de-2" class="internal"><span class="codenumber">10.2.1</span> <span class="title">First Example</span></a></div>
+<ul id="ptx-toc-group-second-order-de-2" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-3" class="internal"><span class="codenumber">10.2.1.1</span> <span class="title">The General Solution</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-4" class="internal"><span class="codenumber">10.2.1.2</span> <span class="title">Initial Conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="second-order-de.html#second-order-de-2-5" class="internal"><span class="codenumber">10.2.1.3</span> <span class="title">Symbolic Differential Equations</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="system-of-de.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Systems Of Equations</span></a></div>
+<ul id="ptx-toc-group-system-of-de" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="system-of-de.html#system-of-de-2" class="internal"><span class="codenumber">10.3.1</span> <span class="title">First Example</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-de.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="differential-references.html" class="internal"><span class="codenumber">10.5</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="linear-algebra-exam.html" class="internal"><span class="codenumber">11</span> <span class="title">Linear Algebra</span></a></div>
+<ul id="ptx-toc-group-linear-algebra-exam" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-introduction.html" class="internal"><span class="codenumber">11.1</span> <span class="title">About This Exam</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a1.html" class="internal"><span class="codenumber">11.2</span> <span class="title">A1</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a2.html" class="internal"><span class="codenumber">11.3</span> <span class="title">A2</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="linear-algebra-a3.html" class="internal"><span class="codenumber">11.4</span> <span class="title">A3</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions.html" class="internal"><span class="codenumber">B.</span> <span class="title">Hints and Solutions to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="book-index.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="binomial-series">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rational Powers and Series</span>
+</h1>
+<section class="introduction" id="binomial-series-2">
+<div class="para logical" id="binomial-series-2-1">
+<div class="para">When <span class="process-math">\(n\)</span> is a positive integer, the product in the combination formula</div>
+<div class="displaymath process-math" id="binomial-series-2-1-2">
+\begin{equation*}
+\binom{n}{r} = \frac{n(n - 1)\cdots(n - r + 1)}{r!}
+\end{equation*}
+</div>
+<div class="para">contains the factor <span class="process-math">\(n - n = 0\)</span> whenever <span class="process-math">\(r &gt; n\text{,}\)</span> terminating the expansion at <span class="process-math">\(n + 1\)</span> terms. But when <span class="process-math">\(n\)</span> is negative or fractional (<span class="process-math">\(n \in \mathbb{Q}\)</span>), the numerator never reaches zero. The expansion continues indefinitely as an <dfn class="terminology">infinite series</dfn>:</div>
+<div class="displaymath process-math" id="binomial-series-2-1-9">
+\begin{equation*}
+(1 + x)^n = 1 + nx + \frac{n(n - 1)}{2!}x^2 + \frac{n(n - 1)(n - 2)}{3!}x^3 + \dots
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="binomial-series-2-2">An infinite series does not always sum to a finite value. The binomial series converges if and only if <span class="process-math">\(|x| &lt; 1\text{.}\)</span> For an expression <span class="process-math">\((1 + kx)^n\text{,}\)</span> replacing <span class="process-math">\(x\)</span> with <span class="process-math">\(kx\)</span> requires <span class="process-math">\(|kx| &lt; 1\text{,}\)</span> giving the <dfn class="terminology">range of validity</dfn> <span class="process-math">\(|x| &lt; \dfrac{1}{|k|}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial-series-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="binomial-series-2-3">This section investigates how term magnitudes grow and shrink in a finite expansion to find the greatest coefficient, develops infinite binomial series for fractional powers in Sage, applies series to find exact rational approximations for surds, and provides diagnostic practice questions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial-series-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="binomial-greatest-coeff">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Greatest Coefficient in an Expansion</span>
+</h2>
+<div class="para logical" id="binomial-greatest-coeff-2">
+<div class="para">In the expansion of <span class="process-math">\((a + bx)^n\text{,}\)</span> the terms do not grow or shrink indefinitely: they rise to a peak and then fall. To locate this peak without evaluating every term, examine the ratio of consecutive term magnitudes:</div>
+<div class="displaymath process-math" id="binomial-greatest-coeff-2-2">
+\begin{equation*}
+\frac{|T_{r+1}|}{|T_r|} = \frac{\binom{n}{r+1} a^{n-r-1} |b|^{r+1}}{\binom{n}{r} a^{n-r} |b|^r} = \frac{n - r}{r + 1} \frac{|b|}{a}.
+\end{equation*}
+</div>
+<div class="para">The terms grow in magnitude as long as this ratio exceeds 1:</div>
+<div class="displaymath process-math" id="binomial-greatest-coeff-2-3">
+\begin{equation*}
+\frac{n - r}{r + 1} \frac{|b|}{a} &gt; 1 \iff (n - r)|b| &gt; (r + 1)a.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial-greatest-coeff-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="binomial-greatest-coeff-3">
+<div class="para">Consider <span class="process-math">\((2 - 5x)^8\text{.}\)</span> Here <span class="process-math">\(n = 8, a = 2, b = -5\text{.}\)</span> The condition for growth is:</div>
+<div class="displaymath process-math" id="binomial-greatest-coeff-3-3">
+\begin{equation*}
+\frac{8 - r}{r + 1} \times \frac{5}{2} &gt; 1 \iff 5(8 - r) &gt; 2(r + 1) \iff 40 - 5r &gt; 2r + 2 \iff 7r &lt; 38 \iff r &lt; \frac{38}{7} \approx 5.43.
+\end{equation*}
+</div>
+<div class="para">Thus the magnitudes grow for <span class="process-math">\(r = 0, 1, 2, 3, 4, 5\text{,}\)</span> peaking at <span class="process-math">\(r = 6\text{,}\)</span> and shrink thereafter. Because <span class="process-math">\(b = -5\)</span> is negative, terms with even <span class="process-math">\(r\)</span> are positive and terms with odd <span class="process-math">\(r\)</span> are negative. Since <span class="process-math">\(r = 6\)</span> is even, it is positive and yields the <dfn class="terminology">greatest coefficient</dfn> in the expansion:</div>
+<div class="displaymath process-math" id="binomial-greatest-coeff-3-11">
+\begin{equation*}
+T_6 = \binom{8}{6} 2^2 (-5)^6 = 28 \times 4 \times 15625 = 1{,}750{,}000.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial-greatest-coeff-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="binomial-greatest-coeff-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display latex
+import math
+x = var('x')
+
+def show_lines(lines):
+    show(LatexExpr(r"\begin{aligned} " + r" \\ ".join("&" + line for line in lines) + r" \end{aligned}"))
+
+n, a, b = 8, 2, -5
+ratios = []
+for r_val in range(8):
+    ratio = QQ((n - r_val) * abs(b)) / QQ((r_val + 1) * a)
+    status = r"\text{grow}" if ratio > 1 else r"\text{shrink}"
+    ratios.append(rf"r = {r_val}\text{{ to }} {r_val + 1}\text{{: }} \frac{{{n} - {r_val}}}{{{r_val} + 1}} \times \frac{{{abs(b)}}}{{{a}}} = {latex(ratio)} \approx {float(ratio):.3f} \quad ({status})")
+show_lines(ratios)
+
+coeffs_all = [binomial(8, r_val) * (2**(8 - r_val)) * ((-5)**r_val) for r_val in range(9)]
+show(LatexExpr(rf"\text{{Coefficients }} [r=0 \dots 8]: {latex(coeffs_all)}"))
+show(LatexExpr(rf"\text{{Greatest coefficient is at }} r = 6\text{{: }} \binom{{8}}{{6}} 2^2 (-5)^6 = {max(coeffs_all)}"))
+p_bars = bar_chart([float(c) / 10**6 for c in coeffs_all], axes_labels=['$r$', 'million'])
+show(p_bars, figsize=[6, 3])
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 4.2.1: The Greatest Coefficient in an Expansion"><a tabindex="-1" href="#binomial-greatest-coeff" title="Copy heading and permalink for Subsection 4.2.1: The Greatest Coefficient in an Expansion" aria-label="Copy heading and permalink for Subsection 4.2.1: The Greatest Coefficient in an Expansion">🔗</a></div>
+</section>
+<section class="subsection" id="binomial-infinite-series">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Infinite Binomial Series for Rational Powers</span>
+</h2>
+<div class="para" id="binomial-infinite-series-2">Sage’s built-in <code class="code-inline tex2jax_ignore">binomial(n, r)</code> accepts rational arguments for <span class="process-math">\(n\text{.}\)</span> For example, with <span class="process-math">\(n = -\frac{1}{2}\text{,}\)</span> the combination coefficients yield the series for <span class="process-math">\((1 + x)^{-1/2} = \dfrac{1}{\sqrt{1 + x}}\text{.}\)</span> Series expansions can also be generated using <code class="code-inline tex2jax_ignore">taylor(f, x, 0, k)</code>:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial-infinite-series-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="binomial-infinite-series-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">p = QQ(-1)/2
+show_lines([
+    rf"\text{{Combination coefficients for }} n = -\frac{{1}}{{2}}\text{{:}}",
+    rf"\binom{{-1/2}}{{0}} = 1",
+    rf"\binom{{-1/2}}{{1}} = -\frac{{1}}{{2}}",
+    rf"\binom{{-1/2}}{{2}} = \frac{{(-1/2)(-3/2)}}{{2!}} = \frac{{3}}{{8}}",
+    rf"\binom{{-1/2}}{{3}} = \frac{{(-1/2)(-3/2)(-5/2)}}{{3!}} = -\frac{{5}}{{16}}",
+    rf"(1 + x)^{{-1/2}} = 1 - \frac{{1}}{{2}}x + \frac{{3}}{{8}}x^2 - \frac{{5}}{{16}}x^3 + \dots \quad \text{{for }} |x| < 1"
+])
+
+f_test = (1 + 3*x)**(QQ(-1)/2)
+t_series = taylor(f_test, x, 0, 3)
+show(LatexExpr(rf"\text{{Taylor expansion of }} (1 + 3x)^{{-1/2}}\text{{: }} {latex(t_series)} + \dots"))
+</script></div>
+<div class="para" id="binomial-infinite-series-4">The <dfn class="terminology">range of validity</dfn> is visually evident when plotting polynomial approximations against the true curve. For <span class="process-math">\(f(x) = (1 + 2x)^{-1/2}\text{,}\)</span> the validity condition is <span class="process-math">\(|2x| &lt; 1 \iff |x| &lt; \frac{1}{2}\text{.}\)</span> Within the interval <span class="process-math">\(\left(-\frac{1}{2}, \frac{1}{2}\right)\text{,}\)</span> higher-degree polynomials adhere to the curve with increasing precision; outside it, they diverge:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial-infinite-series-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="binomial-infinite-series-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f_curve = 1 / sqrt(1 + 2*x)
+p_conv = plot(f_curve, (x, -0.48, 0.9), color='blue', thickness=2, legend_label='$f(x) = (1 + 2x)^{-1/2}$')
+for deg, col in [(1, 'orange'), (2, 'red'), (4, 'green')]:
+    p_conv += plot(taylor(f_curve, x, 0, deg), (x, -0.48, 0.9), color=col, linestyle='--', legend_label=f'degree {deg}')
+p_conv += line([(-0.5, 0), (-0.5, 4)], color='grey', linestyle=':')
+p_conv += line([(0.5, 0), (0.5, 4)], color='grey', linestyle=':')
+show(p_conv, ymin=0, ymax=4, figsize=[6, 4])
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 4.2.2: Infinite Binomial Series for Rational Powers"><a tabindex="-1" href="#binomial-infinite-series" title="Copy heading and permalink for Subsection 4.2.2: Infinite Binomial Series for Rational Powers" aria-label="Copy heading and permalink for Subsection 4.2.2: Infinite Binomial Series for Rational Powers">🔗</a></div>
+</section>
+<section class="subsection" id="binomial-surd-approx">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Surd Approximations via Binomial Series</span>
+</h2>
+<div class="para logical" id="binomial-surd-approx-2">
+<div class="para">Binomial series provide a systematic method for approximating irrational roots with fractions. Consider expanding</div>
+<div class="displaymath process-math" id="binomial-surd-approx-2-1">
+\begin{equation*}
+f(x) = \frac{2 - x}{\sqrt{1 + 3x}} = (2 - x)(1 + 3x)^{-1/2}
+\end{equation*}
+</div>
+<div class="para">up to the term in <span class="process-math">\(x^2\text{.}\)</span> First expand <span class="process-math">\((1 + 3x)^{-1/2}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="binomial-surd-approx-2-4">
+\begin{equation*}
+(1 + 3x)^{-1/2} = 1 + \left(-\frac{1}{2}\right)(3x) + \frac{\left(-\frac{1}{2}\right)\left(-\frac{3}{2}\right)}{2!} (3x)^2 + \dots = 1 - \frac{3}{2}x + \frac{27}{8}x^2 + \dots
+\end{equation*}
+</div>
+<div class="para">Multiplying by <span class="process-math">\((2 - x)\)</span> and discarding terms of degree higher than 2:</div>
+<div class="displaymath process-math" id="binomial-surd-approx-2-6">
+\begin{equation*}
+(2 - x)\left(1 - \frac{3}{2}x + \frac{27}{8}x^2\right) = 2 - 3x + \frac{27}{4}x^2 - x + \frac{3}{2}x^2 = 2 - 4x + \frac{33}{4}x^2.
+\end{equation*}
+</div>
+<div class="para">The expansion is valid for <span class="process-math">\(|3x| &lt; 1 \iff |x| &lt; \frac{1}{3}\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial-surd-approx-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="binomial-surd-approx-3">
+<div class="para">Now evaluate both sides at <span class="process-math">\(x = \frac{1}{22}\text{,}\)</span> which lies comfortably within the validity interval <span class="process-math">\(|x| &lt; \frac{1}{3}\text{:}\)</span>
+</div>
+<ul class="disc" id="binomial-surd-approx-3-3">
+<li id="binomial-surd-approx-3-3-1">
+<div class="para logical" id="binomial-surd-approx-3-3-1-1">
+<div class="para">The left-hand side is:</div>
+<div class="displaymath process-math" id="binomial-surd-approx-3-3-1-1-1">
+\begin{equation*}
+\frac{2 - 1/22}{\sqrt{1 + 3/22}} = \frac{43/22}{\sqrt{25/22}} = \frac{43/22}{5/\sqrt{22}} = \frac{43\sqrt{22}}{110}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial-surd-approx-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#binomial-surd-approx-3-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="binomial-surd-approx-3-3-2">
+<div class="para logical" id="binomial-surd-approx-3-3-2-1">
+<div class="para">The right-hand side is:</div>
+<div class="displaymath process-math" id="binomial-surd-approx-3-3-2-1-1">
+\begin{equation*}
+2 - 4\left(\frac{1}{22}\right) + \frac{33}{4}\left(\frac{1}{22}\right)^2 = 2 - \frac{2}{11} + \frac{33}{1936} = \frac{323}{176}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial-surd-approx-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#binomial-surd-approx-3-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">Equating the two yields a rational approximation for <span class="process-math">\(\sqrt{22}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="binomial-surd-approx-3-5">
+\begin{equation*}
+\frac{43\sqrt{22}}{110} \approx \frac{323}{176} \implies \sqrt{22} \approx \frac{323 \times 110}{176 \times 43} = \frac{1615}{344} \approx 4.69477.
+\end{equation*}
+</div>
+<div class="para">The true value is <span class="process-math">\(\sqrt{22} \approx 4.69042\text{,}\)</span> so just two terms of the series achieve an error of under <span class="process-math">\(0.0044\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial-surd-approx-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="binomial-surd-approx-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f_surd = (2 - x) / sqrt(1 + 3*x)
+series_2 = taylor(f_surd, x, 0, 2)
+show_lines([
+    rf"\text{{Taylor expansion to degree 2: }} {latex(series_2)}",
+    rf"\text{{Range of validity: }} |3x| < 1 \iff |x| < \frac{{1}}{{3}}"
+])
+sub_exact = series_2.subs(x=QQ(1)/22)
+approx_sqrt = QQ(sub_exact * 110 / 43)
+show_lines([
+    rf"\text{{At }} x = \frac{{1}}{{22}}\text{{: Right-hand side is }} {latex(sub_exact)}",
+    rf"\frac{{43\sqrt{{22}}}}{{110}} \approx {latex(sub_exact)} \implies \sqrt{{22}} \approx {latex(approx_sqrt)} \approx {float(approx_sqrt):.5f}",
+    rf"\text{{True value: }} \sqrt{{22}} \approx {float(sqrt(22)):.5f}"
+])
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 4.2.3: Surd Approximations via Binomial Series"><a tabindex="-1" href="#binomial-surd-approx" title="Copy heading and permalink for Subsection 4.2.3: Surd Approximations via Binomial Series" aria-label="Copy heading and permalink for Subsection 4.2.3: Surd Approximations via Binomial Series">🔗</a></div>
+</section>
+<section class="subsection" id="binomial-series-practice">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Practice with Rational Powers</span>
+</h2>
+<div class="para" id="binomial-series-practice-2">Each <code class="code-inline tex2jax_ignore">seed</code> generates a randomized rational binomial expression <span class="process-math">\(f(x) = (1 + kx)^p\text{.}\)</span> The task is to find the first three coefficients <span class="process-math">\([c_0, c_1, c_2]\)</span> in ascending powers of <span class="process-math">\(x\text{,}\)</span> and state the radius of validity <span class="process-math">\(R\)</span> such that the series converges for <span class="process-math">\(|x| &lt; R\text{.}\)</span> The checker identifies wrong powers, forgotten factors of <span class="process-math">\(2!\text{,}\)</span> missing powers in <span class="process-math">\((kx)^2\text{,}\)</span> and slips in the validity bound.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial-series-practice-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="binomial-series-practice-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def random_series_question(seed):
+    set_random_seed(seed)
+    p = choice([QQ(-1)/2, QQ(1)/2, QQ(-1), QQ(-2)])
+    k = choice([-4, -3, -2, 2, 3, 4])
+
+    k_sign = "+" if k > 0 else "-"
+    k_abs = abs(k)
+    k_text = "x" if k_abs == 1 else f"{k_abs}x"
+
+    if p == QQ(1)/2:
+        expr_latex = rf"\sqrt{{1 {k_sign} {k_text}}}"
+    elif p == QQ(-1)/2:
+        expr_latex = rf"\frac{{1}}{{\sqrt{{1 {k_sign} {k_text}}}}}"
+    elif p == -1:
+        expr_latex = rf"\frac{{1}}{{1 {k_sign} {k_text}}}"
+    else:
+        expr_latex = rf"\frac{{1}}{{(1 {k_sign} {k_text})^{{{abs(p)}}}}}"
+
+    text = [
+        rf"\text{{Given the function }} f(x) = {expr_latex}\text{{:}}",
+        rf"\text{{(a) Find the first three terms in ascending powers of }} x\text{{.}}",
+        rf"\text{{(b) State the range of validity in the form }} |x| < R \text{{ (give }} R \text{{ as an exact fraction).}}"
+    ]
+
+    c0 = QQ(1)
+    c1 = QQ(p * k)
+    c2 = QQ(p * (p - 1) / 2 * (k**2))
+    R = QQ(1) / abs(k)
+
+    working = [
+        rf"\text{{Rewrite as an index: }} f(x) = (1 {k_sign} {k_text})^{{{latex(p)}}}",
+        rf"\text{{Binomial series formula: }} (1 + y)^n = 1 + ny + \frac{{n(n-1)}}{{2!}} y^2 + \dots",
+        rf"\text{{Here }} y = {k}x \text{{ and }} n = {latex(p)}\text{{:}}",
+        rf"\text{{constant: }} 1",
+        rf"x \text{{ term: }} ({latex(p)})({k}x) = {latex(c1)}x",
+        rf"x^2 \text{{ term: }} \frac{{({latex(p)})({latex(p-1)})}}{{2}} ({k}x)^2 = \frac{{{latex(p*(p-1))}}}{{2}} \times {k**2}x^2 = {latex(c2)}x^2",
+        rf"\text{{First three terms: }} 1 {('+' if c1>0 else '-')} {latex(abs(c1))}x {('+' if c2>0 else '-')} {latex(abs(c2))}x^2",
+        rf"\text{{Range of validity: the series converges for }} |{k}x| < 1 \iff |x| < {latex(R)}\text{{.}}"
+    ]
+    return {'p': p, 'k': k, 'text': text, 'answers': ([c0, c1, c2], R), 'working': working}
+
+def check_series_answers(my_terms, my_radius, question):
+    if my_terms is None or my_radius is None:
+        show(LatexExpr(r"\text{Type your answers first in the cell below.}"))
+        return
+    right_terms, right_R = question['answers']
+    p, k = question['p'], question['k']
+    errors = []
+
+    for r_idx, (mine, right) in enumerate(zip(my_terms, right_terms)):
+        if QQ(mine) != right:
+            power_name = rf"x^{{{r_idx}}}" if r_idx > 1 else ("x" if r_idx == 1 else r"\text{constant}")
+            msg = None
+            if r_idx == 1:
+                if QQ(mine) == -right:
+                    msg = rf"\text{{sign error: }} ({latex(p)})({k}x) = {latex(right)}x\text{{.}}"
+                elif QQ(mine) == -p * k:
+                    msg = rf"\text{{power slip: index is }} {latex(p)}\text{{, not }} {latex(-p)}\text{{.}}"
+            elif r_idx == 2:
+                if QQ(mine) == p * (p - 1) * (k**2):
+                    msg = r"\text{forgotten factor: remember to divide by } 2!\text{.} "
+                elif QQ(mine) == p * (p - 1) / 2 * k:
+                    msg = rf"\text{{bracket error: }} ({k}x)^2 = {k**2}x^2\text{{, remember to square }} {k}\text{{.}}"
+                elif QQ(mine) == -right:
+                    msg = r"\text{sign error in the product of signs.}"
+            if msg is None:
+                msg = rf"\text{{expected }} {latex(right)}\text{{.}}"
+            errors.append(rf"\text{{The }} {power_name} \text{{ coefficient is not }} {latex(QQ(mine))}\text{{: }} {msg}")
+
+    if QQ(my_radius) != right_R:
+        if QQ(my_radius) == abs(k):
+            errors.append(rf"\text{{The radius }} R \text{{ is not }} {latex(QQ(my_radius))}\text{{: }} |{k}x| < 1 \implies |x| < \frac{{1}}{{{abs(k)}}}\text{{.}}")
+        elif QQ(my_radius) == 1:
+            errors.append(rf"\text{{The radius }} R \text{{ is not }} 1\text{{: divide by the coefficient }} |{k}| = {abs(k)}\text{{.}}")
+        else:
+            errors.append(rf"\text{{The radius }} R \text{{ is not }} {latex(QQ(my_radius))}\text{{: expected }} {latex(right_R)}\text{{.}}")
+
+    if errors:
+        show_lines([r"\text{Not quite yet:}"] + errors)
+    else:
+        show(LatexExpr(r"\text{Correct! All coefficients and the radius of validity are correct.}"))
+</script></div>
+<div class="para" id="binomial-series-practice-4">Change the seed for a new question:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial-series-practice-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="binomial-series-practice-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">seed = 1
+series_question = random_series_question(seed)
+show_lines(series_question['text'])
+</script></div>
+<div class="para" id="binomial-series-practice-6">Work it out on paper, type your three coefficients <code class="code-inline tex2jax_ignore">[c0, c1, c2]</code> and your radius <code class="code-inline tex2jax_ignore">R</code> below, and run the cell. Fractions such as <code class="code-inline tex2jax_ignore">1/3</code> or <code class="code-inline tex2jax_ignore">27/8</code> are accepted:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial-series-practice-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="binomial-series-practice-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">my_terms = [1, 0, 0]
+my_radius = 1
+check_series_answers(my_terms, my_radius, series_question)
+</script></div>
+<div class="para" id="binomial-series-practice-8">The step-by-step worked answer:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#binomial-series-practice-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="binomial-series-practice-9" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">show_lines(series_question['working'])
+</script></div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 4.2.4: Practice with Rational Powers"><a tabindex="-1" href="#binomial-series-practice" title="Copy heading and permalink for Subsection 4.2.4: Practice with Rational Powers" aria-label="Copy heading and permalink for Subsection 4.2.4: Practice with Rational Powers">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 4.2: Rational Powers and Series"><a tabindex="-1" href="#binomial-series" title="Copy heading and permalink for Section 4.2: Rational Powers and Series" aria-label="Copy heading and permalink for Section 4.2: Rational Powers and Series">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="binomial-expansion.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sequences.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
